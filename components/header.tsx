@@ -13,10 +13,7 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* LEFT: Logo */}
           <div className="flex items-center gap-2">
-            <img src="/logo-softineers.png" className="w-8 h-8" />
-            <span className="font-semibold text-xl text-gray-800">
-              Softineers
-            </span>
+            <img src="/images/codexa.png" className="w-40 h-16" />
           </div>
 
           {/* NAVIGATION */}
@@ -38,16 +35,38 @@ export default function Header() {
             {/* SERVICES - MEGA DROPDOWN */}
             <div
               className="relative"
-              onMouseEnter={() => setShowServices(true)}
-              onMouseLeave={() => setShowServices(false)}
+              onMouseEnter={() => {
+                const w = window as any;
+                clearTimeout(w.__servicesTimeout);
+                setShowServices(true);
+              }}
+              onMouseLeave={() => {
+                const w = window as any;
+                w.__servicesTimeout = setTimeout(() => {
+                  setShowServices(false);
+                }, 150);
+              }}
             >
-              <button className="text-gray-700 hover:text-blue-600 flex items-center gap-1">
+              <button className="text-gray-700 hover:text-blue-600 flex items-center gap-1 cursor-pointer">
                 Services <span className="text-xs">▼</span>
               </button>
 
               {/* FULL WIDTH MEGA MENU */}
               {showServices && (
-                <div className="fixed left-0 w-full mt-4 bg-white border-t border-gray-200 shadow-xl z-50">
+                <div
+                  className="fixed left-0 w-full mt-4 bg-white border-t border-gray-200 shadow-xl z-50"
+                  onMouseEnter={() => {
+                    const w = window as any;
+                    clearTimeout(w.__servicesTimeout);
+                    setShowServices(true);
+                  }}
+                  onMouseLeave={() => {
+                    const w = window as any;
+                    w.__servicesTimeout = setTimeout(() => {
+                      setShowServices(false);
+                    }, 150);
+                  }}
+                >
                   <div className="container mx-auto px-8 py-10 grid grid-cols-4 gap-10">
                     {/* COLUMN 1 */}
                     <div>
@@ -55,13 +74,27 @@ export default function Header() {
                         Software Development
                       </h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li>ERP Software Development</li>
-                        <li>HRM Software Development</li>
-                        <li>LMS Software Development</li>
-                        <li>OTA Software Development</li>
-                        <li>Hotel Management Software</li>
-                        <li>Restaurant Management Software</li>
-                        <li>Custom Ecommerce Development</li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          ERP Software Development
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          HRM Software Development
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          LMS Software Development
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          OTA Software Development
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Hotel Management Software
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Restaurant Management Software
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Custom Ecommerce Development
+                        </li>
                       </ul>
                     </div>
 
@@ -71,13 +104,27 @@ export default function Header() {
                         Software Development
                       </h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li>Web App Development</li>
-                        <li>Mobile App Development</li>
-                        <li>Odoo Development</li>
-                        <li>React App Development</li>
-                        <li>Node.js App Development</li>
-                        <li>Laravel App Development</li>
-                        <li>Magento Ecommerce Development</li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Web App Development
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Mobile App Development
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Odoo Development
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          React App Development
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Node.js App Development
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Laravel App Development
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Magento Ecommerce Development
+                        </li>
                       </ul>
                     </div>
 
@@ -87,13 +134,27 @@ export default function Header() {
                         Web Development
                       </h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li>Custom Website Development</li>
-                        <li>WordPress Website Development</li>
-                        <li>Construction Website Design</li>
-                        <li>Restaurant Website Design</li>
-                        <li>Plumbing Website Design</li>
-                        <li>Law Firm Website Design</li>
-                        <li>Accountant Website Design</li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Custom Website Development
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          WordPress Website Development
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Construction Website Design
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Restaurant Website Design
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Plumbing Website Design
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Law Firm Website Design
+                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">
+                          Accountant Website Design
+                        </li>
                       </ul>
                     </div>
 
