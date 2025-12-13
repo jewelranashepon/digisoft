@@ -1,6 +1,12 @@
 "use client";
 import { useState } from "react";
-import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
+import {
+  Menu,
+  X,
+  ArrowUpRight,
+  ChevronDown,
+  ChevronsRight,
+} from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,17 +26,17 @@ export default function Header() {
 
           <nav className="hidden lg:flex items-center gap-1">
             <a
-              href="#"
+              href="/"
               className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
             >
               Home
             </a>
 
             <a
-              href="#"
+              href="/about-us"
               className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
             >
-              About
+              About Us
             </a>
 
             <div
@@ -81,93 +87,91 @@ export default function Header() {
                     }}
                   >
                     <div className="container mx-auto py-12">
-                      <div className="grid grid-cols-4 gap-8">
+                      <div className="grid grid-cols-5 gap-8">
                         <div className="space-y-6">
                           <div>
-                            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">
-                              Enterprise Solutions
+                            <h3 className="text-sm font-semibold text-blue-600 tracking-wider mb-4">
+                              Web Development
                             </h3>
-                            <ul className="space-y-3">
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                                >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>ERP Software Development</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                                >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>HRM Software Development</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                                >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>LMS Software Development</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                                >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>OTA Software Development</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
 
-                          <div className="pt-4 border-t border-gray-100">
                             <ul className="space-y-3">
                               <li>
                                 <a
                                   href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
                                 >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Hotel Management Software</span>
+                                  <span className="text-orange-600">»</span>
+                                  <span>WordPress Website</span>
                                 </a>
                               </li>
+
                               <li>
                                 <a
                                   href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
                                 >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Restaurant Management Software</span>
+                                  <span className="text-orange-600">»</span>
+                                  <span>Web App</span>
                                 </a>
                               </li>
+
                               <li>
                                 <a
                                   href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
                                 >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Custom Ecommerce Development</span>
+                                  <span className="text-orange-600">»</span>
+                                  <span>Laravel Website</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Custom Website</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Small Business Website</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Shopify Website</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Affiliate Website</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Ecommerce Website</span>
                                 </a>
                               </li>
                             </ul>
@@ -176,172 +180,258 @@ export default function Header() {
 
                         <div className="space-y-6">
                           <div>
-                            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">
-                              App Development
-                            </h3>
-                            <ul className="space-y-3">
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                                >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Web App Development</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                                >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Mobile App Development</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                                >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Odoo Development</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                                >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>React App Development</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                                >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Node.js App Development</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                                >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Laravel App Development</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                                >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Magento Ecommerce Development</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-
-                        <div className="space-y-6">
-                          <div>
-                            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">
+                            <h3 className="text-sm font-semibold text-blue-600 tracking-wider mb-4">
                               Web Design
                             </h3>
+
                             <ul className="space-y-3">
                               <li>
                                 <a
                                   href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
                                 >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Custom Website Development</span>
+                                  <span className="text-orange-600">»</span>
+                                  <span>NDIS Web Design</span>
                                 </a>
                               </li>
+
                               <li>
                                 <a
                                   href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
                                 >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>WordPress Website Development</span>
+                                  <span className="text-orange-600">»</span>
+                                  <span>Cleaning Web Design</span>
                                 </a>
                               </li>
+
                               <li>
                                 <a
                                   href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
                                 >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Construction Website Design</span>
+                                  <span className="text-orange-600">»</span>
+                                  <span>Doctor Web Design</span>
                                 </a>
                               </li>
+
                               <li>
                                 <a
                                   href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
                                 >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Restaurant Website Design</span>
+                                  <span className="text-orange-600">»</span>
+                                  <span>Dentist Web Design</span>
                                 </a>
                               </li>
+
                               <li>
                                 <a
                                   href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
                                 >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Plumbing Website Design</span>
+                                  <span className="text-orange-600">»</span>
+                                  <span>Law Firm Web Design</span>
                                 </a>
                               </li>
+
                               <li>
                                 <a
                                   href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
                                 >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Law Firm Website Design</span>
+                                  <span className="text-orange-600">»</span>
+                                  <span>Accounting Web Design</span>
                                 </a>
                               </li>
+
                               <li>
                                 <a
                                   href="#"
-                                  className="group flex items-start gap-2 text-sm text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
                                 >
-                                  <span className="mt-0.5 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    →
-                                  </span>
-                                  <span>Accountant Website Design</span>
+                                  <span className="text-orange-600">»</span>
+                                  <span>Tourism Web Design</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Restaurant Web Design</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div className="space-y-6">
+                          <div>
+                            <h3 className="text-sm font-semibold text-blue-600 tracking-wider mb-4">
+                              Digital Marketing
+                            </h3>
+
+                            <ul className="space-y-3">
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Local SEO for Small Business</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Search Engine Optimisation</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>eCommerce SEO</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Search Engine Marketing</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Content Marketing</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Social Media Marketing</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Email Marketing</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div className="space-y-6">
+                          <div>
+                            <h3 className="text-sm font-semibold text-blue-600 tracking-wider mb-4">
+                              Local SEO
+                            </h3>
+
+                            <ul className="space-y-3">
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>NDIS SEO</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Law Firm SEO</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Accounting SEO</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Doctor SEO</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Dentist SEO</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Cleaning SEO</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Tourism SEO</span>
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  href="#"
+                                  className="flex items-center gap-2 text-sm text-orange-600"
+                                >
+                                  <span className="text-orange-600">»</span>
+                                  <span>Restaurant SEO</span>
                                 </a>
                               </li>
                             </ul>
@@ -404,17 +494,23 @@ export default function Header() {
             </div>
 
             <a
-              href="#"
+              href="/portfolio"
               className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
             >
-              Case Studies
+              Portfolio
             </a>
 
             <a
-              href="#"
+              href="/blog"
               className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
             >
               Blog
+            </a>
+            <a
+              href="/contact-us"
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
+            >
+              Contact Us
             </a>
           </nav>
 

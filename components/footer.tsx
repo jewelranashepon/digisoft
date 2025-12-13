@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -15,13 +15,21 @@ export default function Footer() {
               </div>
               <span className="font-semibold">Softineers</span>
             </div>
-            <p className="text-sm text-muted-foreground mb-6">We want to make an impact that grows business.</p>
+            <p className="text-sm text-muted-foreground mb-6">
+              We want to make an impact that grows business.
+            </p>
 
             {/* Awards */}
             <div className="flex gap-3">
-              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center text-xs">🏆</div>
-              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center text-xs">⭐</div>
-              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center text-xs">🎯</div>
+              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center text-xs">
+                🏆
+              </div>
+              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center text-xs">
+                ⭐
+              </div>
+              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center text-xs">
+                🎯
+              </div>
             </div>
           </div>
 
@@ -154,10 +162,69 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* SEO Locations Bar */}
+        <div className="bg-sky-400 text-white py-6 px-4 mb-8">
+          <div className="max-w-7xl mx-auto space-y-4">
+            {/* SEO Services */}
+            <div>
+              <h5 className="font-semibold text-sm mb-2">SEO Services</h5>
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                {[
+                  "Hobart",
+                  "Perth",
+                  "Sydney",
+                  "Brisbane",
+                  "Adelaide",
+                  "Melbourne",
+                  "Canberra",
+                  "Queensland",
+                  "Gold Coast",
+                  "Darwin",
+                  "Newcastle",
+                  "Wagga Wagga",
+                ].map((city) => (
+                  <span key={city} className="hover:underline cursor-pointer">
+                    {city}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Web Design & Development */}
+            <div>
+              <h5 className="font-semibold text-sm mb-2">
+                Web Design &amp; Development
+              </h5>
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                {[
+                  "Hobart",
+                  "Perth",
+                  "Sydney",
+                  "Brisbane",
+                  "Adelaide",
+                  "Melbourne",
+                  "Canberra",
+                  "Queensland",
+                  "Gold Coast",
+                  "Darwin",
+                  "Newcastle",
+                  "Wagga Wagga",
+                ].map((city) => (
+                  <span key={city} className="hover:underline cursor-pointer">
+                    {city}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom */}
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">© 2025 Softineers. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">
+              © 2025 Softineers. All rights reserved.
+            </p>
             <div className="flex gap-4">
               <a
                 href="#"
@@ -188,5 +255,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
