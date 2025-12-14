@@ -53,7 +53,9 @@ export default function Header() {
                 }, 150);
               }}
             >
-              <button className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200 flex items-center gap-1.5">
+              <a 
+              href="/services"
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200 flex items-center gap-1.5">
                 Services
                 <ChevronDown
                   size={16}
@@ -61,7 +63,7 @@ export default function Header() {
                     showServices ? "rotate-180" : ""
                   }`}
                 />
-              </button>
+              </a>
 
               {showServices && (
                 <>

@@ -18,7 +18,7 @@ export default function BlogCard({ post }: BlogCardProps) {
 
   return (
     <div className="group h-full flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-slate-100/50">
-      <div className="relative h-48 overflow-hidden bg-gradient-to-br from-slate-200 to-slate-300">
+      <div className="relative h-60 overflow-hidden bg-gradient-to-br from-slate-200 to-slate-300">
         <Image
           src={post.featured_image}
           alt={post.title}

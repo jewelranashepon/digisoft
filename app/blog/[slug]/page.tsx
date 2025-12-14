@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <main className="min-h-screen bg-slate-50">
       <BlogHero />
 
-      <article className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <article className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 py-12">
         {/* Back link */}
         <Link
           href="/blog"
@@ -157,7 +157,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 href={`/blog/${p.slug}`}
                 className="flex gap-3 bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow"
               >
-                <div className="relative w-24 h-24 flex-shrink-0">
+                <div className="relative w-40 h-32 flex-shrink-0">
                   <Image
                     src={p.featured_image}
                     alt={p.title}
