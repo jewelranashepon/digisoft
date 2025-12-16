@@ -59,7 +59,7 @@ export default function FAQComponent() {
       <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-[blob_7s_infinite_4s]" />
 
       {/* Main Container */}
-      <div className="container mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">

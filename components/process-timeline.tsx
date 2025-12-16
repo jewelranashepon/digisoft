@@ -245,7 +245,7 @@ export default function ProcessCards() {
         </div>
 
         {/* THREE CARDS */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-3">
           {steps.map((step, index) => (
             <div
               key={index}

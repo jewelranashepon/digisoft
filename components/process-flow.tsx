@@ -45,7 +45,7 @@ const processes = [
 
 export default function ProcessFlow() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 xl:px-0 bg-slate-50">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">
@@ -59,7 +59,7 @@ export default function ProcessFlow() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {processes.map((process, index) => (
             <div
               key={index}

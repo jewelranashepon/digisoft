@@ -30,7 +30,7 @@ export default function Clients() {
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
-      <div className="container mx-auto">
+      <div className="max-w-7xl mx-auto">
         <p className="text-center text-slate-500 mb-12">
           Trusted by leading companies worldwide
         </p>

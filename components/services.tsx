@@ -230,23 +230,6 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 "use client";
 import { useState } from "react";
 import {
@@ -265,7 +248,12 @@ const services = [
     icon: Globe,
     description:
       "Custom, responsive websites built with modern technologies. We create stunning web experiences that engage visitors and convert them into customers. Our websites are optimized for performance, SEO, and user experience.",
-    features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Mobile First"],
+    features: [
+      "Responsive Design",
+      "SEO Optimized",
+      "Fast Loading",
+      "Mobile First",
+    ],
   },
   {
     id: 1,
@@ -273,7 +261,12 @@ const services = [
     icon: Zap,
     description:
       "Interactive web applications that deliver real-time functionality. We build scalable, secure applications using React, Node.js, and modern frameworks to handle complex business logic with ease.",
-    features: ["Real-time Updates", "Cloud Integration", "Scalable Architecture", "Security First"],
+    features: [
+      "Real-time Updates",
+      "Cloud Integration",
+      "Scalable Architecture",
+      "Security First",
+    ],
   },
   {
     id: 2,
@@ -281,7 +274,12 @@ const services = [
     icon: Smartphone,
     description:
       "Native and cross-platform mobile apps for iOS and Android. We create intuitive, high-performance applications that provide seamless user experiences across all devices.",
-    features: ["iOS & Android", "Offline Support", "Push Notifications", "App Store Ready"],
+    features: [
+      "iOS & Android",
+      "Offline Support",
+      "Push Notifications",
+      "App Store Ready",
+    ],
   },
   {
     id: 3,
@@ -289,7 +287,12 @@ const services = [
     icon: Search,
     description:
       "Strategic SEO services to improve your online visibility and organic traffic. We optimize your website's technical aspects, content, and backlinks for better search engine rankings.",
-    features: ["Technical SEO", "Content Strategy", "Link Building", "Analytics"],
+    features: [
+      "Technical SEO",
+      "Content Strategy",
+      "Link Building",
+      "Analytics",
+    ],
   },
   {
     id: 4,
@@ -297,7 +300,12 @@ const services = [
     icon: LifeBuoy,
     description:
       "Comprehensive IT support and maintenance services. We monitor, maintain, and troubleshoot your systems to ensure maximum uptime and optimal performance for your business.",
-    features: ["24/7 Monitoring", "Quick Response", "Preventive Care", "Security Updates"],
+    features: [
+      "24/7 Monitoring",
+      "Quick Response",
+      "Preventive Care",
+      "Security Updates",
+    ],
   },
 ];
 
@@ -308,7 +316,7 @@ export default function Services() {
 
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
-      <div className="container mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="mb-16 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6">
@@ -351,7 +359,6 @@ export default function Services() {
 
         {/* CONTENT GRID (5 COLS) */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
-          
           {/* LEFT CONTENT → col-span-3 */}
           <div className="lg:col-span-3 order-2 lg:order-1">
             {/* <div className="mb-8">
@@ -409,7 +416,6 @@ export default function Services() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

@@ -65,8 +65,8 @@ export default function Testimonials() {
   const visible = testimonials.slice(start, start + ITEMS_PER_PAGE);
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
-      <div className="container mx-auto">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-4 text-slate-900">
