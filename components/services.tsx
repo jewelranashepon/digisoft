@@ -90,7 +90,7 @@ export default function Services() {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="mb-16">
+        <div className="mb-16 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6">
             <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></div>
             <p className="text-blue-700 font-semibold text-sm tracking-wide uppercase">
@@ -99,17 +99,11 @@ export default function Services() {
           </div>
 
           <h2 className="text-5xl md:text-6xl font-bold mb-6 text-slate-900 leading-tight">
-            What Services Do We
-            <br />
+              What Services{" "}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-              Provide?
+              Do We Provide?
             </span>
           </h2>
-
-          <p className="text-slate-600 text-lg max-w-2xl">
-            Comprehensive digital solutions tailored to your business needs,
-            delivered with expertise and dedication.
-          </p>
         </div>
 
         {/* Service Tabs */}
