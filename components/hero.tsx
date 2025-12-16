@@ -60,11 +60,11 @@ export default function HeroSlider() {
       </AnimatePresence>
 
       {/* CONTENT */}
-      <div className="relative container max-w-4xl min-h-[calc(100vh-7rem)] flex items-center">
+      <div className="relative container max-w-7xl mx-auto min-h-[calc(100vh-7rem)] flex items-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
-            className="space-y-8"
+            className="space-y-8 max-w-4xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

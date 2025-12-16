@@ -232,7 +232,7 @@ export default function ProcessCards() {
         />
       </div>
 
-      <div className="container mx-auto relative">
+      <div className="max-w-7xl mx-auto relative">
         {/* HEADER */}
         <div className="mb-16 w-full text-center">
          

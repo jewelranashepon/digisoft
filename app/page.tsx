@@ -1,3 +1,4 @@
+import AboutUs from "@/components/AboutUs";
 import Clients from "@/components/clients";
 import CTA from "@/components/cta";
 import FAQComponent from "@/components/FAQComponent";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <AboutUs />
       <ProcessTimeline />
       <ProcessFlow />
       <Services />

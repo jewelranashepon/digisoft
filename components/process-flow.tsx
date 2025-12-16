@@ -45,8 +45,8 @@ const processes = [
 
 export default function ProcessFlow() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
-      <div className="container mx-auto">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 xl:px-0 bg-slate-50">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">
           <span className="text-sm font-semibold tracking-widest uppercase text-blue-600">
