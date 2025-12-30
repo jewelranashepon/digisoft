@@ -33,45 +33,66 @@ export function ServiceHeroSection() {
   };
 
   return (
-    <section className="min-h-screen w-full bg-white px-4 py-16 md:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid min-h-[80vh] grid-cols-1 items-center gap-12 lg:grid-cols-5">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-teal-50/40 to-blue-50 px-4 py-20 md:px-8">
+      {/* Decorative Blobs */}
+      <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-teal-400/20 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl">
+        <div className="grid min-h-[80vh] grid-cols-1 items-center gap-16 lg:grid-cols-5">
           {/* Left Content */}
-          <div className="lg:col-span-3 space-y-6">
-            <span className="inline-block rounded-full bg-teal-50 px-4 py-1 text-sm font-semibold text-teal-600">
-              Vehicle Cybersecurity
+          <div className="lg:col-span-3 space-y-8">
+            <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-lg">
+              🚗 Vehicle Cybersecurity
             </span>
 
-            <h1 className="text-2xl font-bold leading-tight text-gray-900 md:text-3xl lg:text-4xl">
+            <h1 className="text-3xl font-extrabold leading-tight text-gray-900 md:text-4xl lg:text-5xl">
               Securing the Future of{" "}
-              <span className="bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-teal-500 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
                 Connected Vehicles
               </span>
             </h1>
 
             <p className="max-w-2xl text-lg leading-relaxed text-gray-600">
               Wireless connectivity powers modern vehicles — from navigation to
-              safety systems. But with connectivity comes risk. We help
-              automotive innovators protect critical systems from emerging
-              cybersecurity threats.
+              advanced safety systems. But every connection introduces risk. We
+              protect your automotive ecosystem from evolving cyber threats.
             </p>
 
             <p className="max-w-2xl text-gray-600">
-              At <strong>Intelleora</strong>, we secure next-generation vehicle
-              gateways, baseband modems, and wireless modules to ensure trust,
-              safety, and reliability.
+              At <strong>Intelleora</strong>, we specialize in securing vehicle
+              gateways, baseband modems, and wireless modules — delivering
+              trust, safety, and long-term reliability.
             </p>
+
+            {/* Highlights */}
+            <div className="flex flex-wrap gap-6 pt-4">
+              {[
+                "Automotive-Grade Security",
+                "Wireless Threat Protection",
+                "Compliance Ready",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-gray-700 shadow-md"
+                >
+                  ✔ {item}
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Right Form */}
           <div className="lg:col-span-2 flex items-center justify-center">
-            <div className="w-full max-w-md rounded-2xl border border-gray-200 bg-white p-8 shadow-xl md:p-10">
-              <div className="mb-8">
+            <div className="relative w-full max-w-md rounded-3xl border border-white/60 bg-white/80 p-8 shadow-2xl backdrop-blur-xl md:p-10">
+              <div className="absolute inset-x-0 -top-1 h-1 rounded-t-3xl bg-gradient-to-r from-teal-500 to-blue-600" />
+
+              <div className="mb-8 text-center">
                 <h2 className="text-3xl font-bold text-gray-900">
                   Let’s Talk 👋
                 </h2>
                 <p className="mt-2 text-sm text-gray-500">
-                  Your information is safe with us.
+                  Get expert guidance. No spam. Ever.
                 </p>
               </div>
 
@@ -82,7 +103,7 @@ export function ServiceHeroSection() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="h-12 border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+                  className="h-12 rounded-xl border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                 />
 
                 <Input
@@ -92,7 +113,7 @@ export function ServiceHeroSection() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="h-12 border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+                  className="h-12 rounded-xl border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                 />
 
                 <Input
@@ -102,7 +123,7 @@ export function ServiceHeroSection() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="h-12 border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+                  className="h-12 rounded-xl border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                 />
 
                 <Textarea
@@ -112,15 +133,15 @@ export function ServiceHeroSection() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="resize-none border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+                  className="resize-none rounded-xl border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                 />
 
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="h-12 w-full bg-gradient-to-r from-teal-500 to-blue-600 text-base font-semibold text-white transition hover:opacity-90"
+                  className="h-12 w-full rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 text-base font-semibold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl"
                 >
-                  {isSubmitting ? "Submitting..." : "Submit Now"}
+                  {isSubmitting ? "Submitting..." : "Get Free Consultation"}
                 </Button>
               </form>
             </div>

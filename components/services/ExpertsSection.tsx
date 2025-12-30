@@ -5,81 +5,75 @@ import Image from "next/image";
 
 export function TalkToExperts() {
   return (
-    <section className="w-full bg-background py-16 px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full overflow-hidden bg-gradient-to-br from-slate-50 via-teal-50/40 to-blue-50/40 py-20 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
-          <div className="space-y-6 animate-in fade-in slide-in-from-left-8 duration-700">
-            {/* Decorative Dots */}
-            <div className="flex gap-2">
-              <div className="size-3 rounded-full bg-[#FF6B2B]" />
-              <div className="size-3 rounded-full bg-[#FF6B2B]" />
-              <div className="size-3 rounded-full bg-[#FF6B2B]" />
-            </div>
+        <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
+          {/* LEFT CONTENT */}
+          <div className="space-y-7 animate-in fade-in slide-in-from-left-8 duration-700">
+            {/* Badge */}
+            <span className="inline-block rounded-full bg-teal-100 px-4 py-1 text-sm font-semibold text-teal-700">
+              Talk to Professionals
+            </span>
 
             {/* Heading */}
-            <h2 className="text-4xl sm:text-5xl font-bold text-foreground leading-tight text-balance">
-              Talk to the Experts
+            <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight text-gray-900">
+              Talk to the{" "}
+              <span className="bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent">
+                Experts
+              </span>
             </h2>
 
-            {/* Body Content */}
-            <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            {/* Description */}
+            <div className="space-y-4 text-base sm:text-lg leading-relaxed text-gray-600 max-w-xl">
               <p>
-                If your website is buried on page 2 or 22, nobody can find you.
-                Your potential customers shop elsewhere. You need to get
-                noticed. You need to climb the rankings. You need to get on the
-                first page of search engines.
+                If your website is hidden beyond page one, your customers won’t
+                find you. Visibility matters. Rankings matter. Being discovered
+                matters.
               </p>
 
               <p>
-                Talk to the experts.{" "}
-                <span className="font-semibold text-[#FF6B2B]">
+                At{" "}
+                <span className="font-semibold text-teal-600">
                   Rise Digital Media
-                </span>{" "}
-                has been helping businesses just like yours for years. We know
-                how to create a web site that gets results. And if you&apos;ve
-                already got a site, we know how to give it a makeover so it
-                seriously gets noticed.
+                </span>
+                , we help brands dominate search results, attract qualified
+                traffic, and convert visitors into customers — consistently.
               </p>
             </div>
 
-            {/* CTA Button */}
+            {/* CTA */}
             <div className="pt-2">
               <Button
                 size="lg"
-                className="bg-[#FF6B2B] hover:bg-[#FF5515] text-white font-semibold px-8 py-6 text-base transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="h-14 rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 px-10 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-xl"
               >
-                GET HELP WITH YOUR SEO
+                Get Help With Your SEO
               </Button>
             </div>
           </div>
 
-          {/* Right Illustration */}
+          {/* RIGHT IMAGE ONLY */}
           <div className="relative animate-in fade-in slide-in-from-right-8 duration-700 delay-200">
-            {/* Decorative Frame Effect */}
-            <div className="relative">
-              {/* Orange border frame - offset layer */}
-              <div className="absolute -right-4 -bottom-4 w-full h-full border-4 border-[#FF6B2B] rounded-lg" />
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+              <Image
+                src="/images/image.png"
+                alt="SEO strategy illustration showing analytics, growth charts, and digital marketing concepts"
+                width={650}
+                height={450}
+                className="w-full h-auto object-cover"
+                priority
+              />
 
-              {/* Main image container */}
-              <div className="relative bg-white rounded-lg overflow-hidden shadow-xl border-4 border-[#FF6B2B]">
-                <Image
-                  src="/images/image.png"
-                  alt="SEO Strategy Illustration - Computer monitor with SEO elements, analytics charts, target icon, and digital marketing symbols"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                  priority
-                />
-              </div>
+              {/* Soft Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/10 to-blue-600/10" />
             </div>
-
-            {/* Floating Elements Animation */}
-            <div className="absolute -top-4 -left-4 size-8 bg-[#FFD700] rounded-full animate-bounce opacity-80" />
-            <div className="absolute top-1/4 -right-2 size-6 bg-[#4ECDC4] rounded-full animate-pulse opacity-70" />
           </div>
         </div>
       </div>
+
+      {/* Background Blur Accents */}
+      <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-teal-400/20 blur-3xl" />
+      <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" />
     </section>
   );
 }
