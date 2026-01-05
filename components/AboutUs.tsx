@@ -2,22 +2,16 @@ import { TrendingUp, FileText, Check } from "lucide-react";
 
 export default function AboutUs() {
   return (
-    <section className="min-h-screen bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+    <section className="h-auto bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            {/* <div className="inline-block">
-              <span className="bg-green-100 text-green-800 text-sm font-medium px-4 py-2 rounded-md">
-                ABOUT US
-              </span>
-            </div> */}
-
             <h2 className="text-4xl lg:text-5xl font-serif leading-tight">
               Empowering You to Secure Your{" "}
               <span className="italic text-sky-500">Wealth & Legacy</span>
             </h2>
 
-            <p className="text-slate-900 text-lg leading-relaxed">
+            <p className="text-black text-lg leading-relaxed">
               Founded with a vision to modernize estate planning, Wealthly
               provides cutting-edge digital tools that simplify financial
               management and inheritance planning. We bring together advanced
@@ -36,7 +30,7 @@ export default function AboutUs() {
                   <h3 className="text-xl font-semibold mb-1">
                     Real-Time Wealth Visualization
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-black">
                     Monitor net worth, asset allocation, and portfolio growth in
                     real time.
                   </p>
@@ -53,7 +47,7 @@ export default function AboutUs() {
                   <h3 className="text-xl font-semibold mb-1">
                     Secure Digital Document Vault
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-black">
                     Store critical documents such as wills, asset certificates,
                     etc.
                   </p>

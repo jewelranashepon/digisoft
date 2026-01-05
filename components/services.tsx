@@ -315,17 +315,10 @@ export default function Services() {
   const IconComponent = activeService.icon;
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="mb-16 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6">
-            <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-            <p className="text-blue-700 font-semibold text-sm uppercase">
-              Our Services
-            </p>
-          </div>
-
+        <div className="mb-16 text-center"> 
           <h2 className="text-5xl md:text-6xl font-bold text-slate-900">
             What Services{" "}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
