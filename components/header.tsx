@@ -5,7 +5,6 @@ import {
   X,
   ArrowUpRight,
   ChevronDown,
-  ChevronsRight,
 } from "lucide-react";
 
 export default function Header() {
@@ -19,9 +18,9 @@ export default function Header() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
               <img
-                src="/images/codexa.png"
+                src="/images/logo.png"
                 alt="Codexa"
-                className="w-36 h-auto object-contain"
+                className="w-68 h-auto object-contain"
               />
             </div>
 
@@ -101,7 +100,7 @@ export default function Header() {
                               <ul className="space-y-3">
                                 <li>
                                   <a
-                                    href="#"
+                                    href="/services/wordpress-website"
                                     className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
                                   >
                                     <span className="text-orange-600">»</span>
@@ -111,7 +110,7 @@ export default function Header() {
 
                                 <li>
                                   <a
-                                    href="#"
+                                    href="/services/web-app"
                                     className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
                                   >
                                     <span className="text-orange-600">»</span>
@@ -121,7 +120,7 @@ export default function Header() {
 
                                 <li>
                                   <a
-                                    href="#"
+                                    href="/services/laravel-website"
                                     className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
                                   >
                                     <span className="text-orange-600">»</span>
@@ -131,7 +130,7 @@ export default function Header() {
 
                                 <li>
                                   <a
-                                    href="#"
+                                    href="/services/custom-website"
                                     className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
                                   >
                                     <span className="text-orange-600">»</span>
@@ -141,7 +140,7 @@ export default function Header() {
 
                                 <li>
                                   <a
-                                    href="#"
+                                    href="/services/small-business-website"
                                     className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
                                   >
                                     <span className="text-orange-600">»</span>
@@ -151,7 +150,7 @@ export default function Header() {
 
                                 <li>
                                   <a
-                                    href="#"
+                                    href="/services/shopify-website"
                                     className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
                                   >
                                     <span className="text-orange-600">»</span>
@@ -161,7 +160,7 @@ export default function Header() {
 
                                 <li>
                                   <a
-                                    href="#"
+                                    href="/services/affiliate-website"
                                     className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
                                   >
                                     <span className="text-orange-600">»</span>
@@ -171,7 +170,7 @@ export default function Header() {
 
                                 <li>
                                   <a
-                                    href="#"
+                                    href="/services/ecommerce-website"
                                     className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
                                   >
                                     <span className="text-orange-600">»</span>
