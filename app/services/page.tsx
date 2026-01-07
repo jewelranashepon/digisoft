@@ -70,9 +70,17 @@ export default function ServicesPage() {
           {filteredServices.map((service) => (
             <div
               key={service.id}
-              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2"
+              className="relative group overflow-hidden rounded-xl 
+                 bg-slate-800 border border-slate-200/60
+                 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)]
+                 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]
+                 transition-all duration-500 hover:-translate-y-2"
             >
-              <div className="relative h-56">
+              {/* Gradient Overlay (same as mission card) */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/40 to-cyan-500/40 opacity-70 group-hover:opacity-100 transition-opacity duration-500 z-0" />
+
+              {/* Image */}
+              <div className="relative h-56 z-10">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -81,16 +89,19 @@ export default function ServicesPage() {
                 />
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">
+              {/* Content */}
+              <div className="relative z-10 p-6">
+                <h3 className="text-xl font-bold mb-3 text-white">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-5">
+
+                <p className="text-white/80 text-sm mb-5">
                   {service.description}
                 </p>
+
                 <Link
                   href={`/services/${service.id}`}
-                  className="inline-flex items-center gap-2 text-blue-600 font-medium"
+                  className="inline-flex items-center gap-2 text-white font-medium group-hover:gap-3 transition-all"
                 >
                   Read More <ArrowRight className="w-4 h-4" />
                 </Link>

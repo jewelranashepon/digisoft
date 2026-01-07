@@ -159,9 +159,9 @@ export default function FAQComponent() {
               <div className="relative bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 rounded-3xl p-1 shadow-2xl">
                 <div className="bg-white rounded-3xl p-8 h-full">
                   <img
-                    src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg"
                     alt="Customer support"
-                    className="w-full h-full object-cover rounded-2xl shadow-xl"
+                    className="w-full h-[400px] object-cover rounded-2xl shadow-xl"
                   />
                 </div>
               </div>

@@ -57,13 +57,13 @@ export default function AboutUs() {
           </div>
 
           <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-xl overflow-hidden shadow-2xl">
               <img
                 src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
                 alt="Professional team"
                 className="w-full h-auto object-cover"
               />
-              <div className="absolute bottom-20 left-6 bg-white/90 backdrop-blur-sm px-5 py-3 rounded-lg shadow-lg flex items-center gap-3">
+              {/* <div className="absolute bottom-20 left-6 bg-white/90 backdrop-blur-sm px-5 py-3 rounded-lg shadow-lg flex items-center gap-3">
                 <span className="text-gray-800 font-medium">
                   Financial Management
                 </span>
@@ -76,7 +76,7 @@ export default function AboutUs() {
                 <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
                   <Check className="w-4 h-4 text-white" strokeWidth={3} />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

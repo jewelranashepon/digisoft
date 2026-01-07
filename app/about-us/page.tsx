@@ -1,5 +1,9 @@
 "use client";
 
+import AboutBanner from "@/components/about-us/AboutBanner";
+import AboutUsShowcase from "@/components/about-us/AboutUsShowcase";
+import StrategicIdentity from "@/components/about-us/StrategicIdentity";
+import WhyChooseUsSection from "@/components/about-us/WhyChooseUsSection";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -18,12 +22,11 @@ import { useEffect, useState, useRef } from "react";
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <HeroSection />
-
-      {/* Main About Section */}
-      <MainAboutSection />
-
+      <AboutBanner />
+      <AboutUsShowcase />
+      {/* Why Choose Us Section */}
+      <WhyChooseUsSection />
+      <StrategicIdentity />
       {/* Professional Services Section */}
       <ProfessionalServicesSection />
 
@@ -32,9 +35,6 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <TeamSection />
-
-      {/* Why Choose Us Section */}
-      <WhyChooseUsSection />
 
       {/* CTA Section */}
       <CTASection />
@@ -516,93 +516,93 @@ function TeamCard({
   );
 }
 
-function WhyChooseUsSection() {
-  const reasons = [
-    {
-      icon: Zap,
-      title: "Lightning Fast",
-      description:
-        "Quick turnaround times without compromising on quality or attention to detail.",
-    },
-    {
-      icon: Shield,
-      title: "Secure & Reliable",
-      description:
-        "Enterprise-grade security protocols ensure your data and projects are protected.",
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovative Solutions",
-      description:
-        "Cutting-edge technology and creative approaches to solve complex problems.",
-    },
-    {
-      icon: Users,
-      title: "Dedicated Support",
-      description:
-        "24/7 support team ready to assist you with any questions or concerns.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Measurable Growth",
-      description:
-        "Data-driven strategies that deliver real results and sustainable growth.",
-    },
-    {
-      icon: Award,
-      title: "Award Winning",
-      description:
-        "Recognized industry leaders with a proven track record of success.",
-    },
-  ];
+// function WhyChooseUsSection() {
+//   const reasons = [
+//     {
+//       icon: Zap,
+//       title: "Lightning Fast",
+//       description:
+//         "Quick turnaround times without compromising on quality or attention to detail.",
+//     },
+//     {
+//       icon: Shield,
+//       title: "Secure & Reliable",
+//       description:
+//         "Enterprise-grade security protocols ensure your data and projects are protected.",
+//     },
+//     {
+//       icon: Lightbulb,
+//       title: "Innovative Solutions",
+//       description:
+//         "Cutting-edge technology and creative approaches to solve complex problems.",
+//     },
+//     {
+//       icon: Users,
+//       title: "Dedicated Support",
+//       description:
+//         "24/7 support team ready to assist you with any questions or concerns.",
+//     },
+//     {
+//       icon: TrendingUp,
+//       title: "Measurable Growth",
+//       description:
+//         "Data-driven strategies that deliver real results and sustainable growth.",
+//     },
+//     {
+//       icon: Award,
+//       title: "Award Winning",
+//       description:
+//         "Recognized industry leaders with a proven track record of success.",
+//     },
+//   ];
 
-  return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
-        <div className="text-center mb-16 animate-fadeIn">
-          <span className="text-blue-600 font-semibold text-sm tracking-widest uppercase">
-            Why Choose Us
-          </span>
-          <h2 className="text-5xl font-bold text-slate-900 mt-4">
-            What Makes Us
-            <br />
-            <span className="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
-              Different
-            </span>
-          </h2>
-        </div>
+//   return (
+//     <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50">
+//       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
+//         <div className="text-center mb-16 animate-fadeIn">
+//           <span className="text-blue-600 font-semibold text-sm tracking-widest uppercase">
+//             Why Choose Us
+//           </span>
+//           <h2 className="text-5xl font-bold text-slate-900 mt-4">
+//             What Makes Us
+//             <br />
+//             <span className="bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
+//               Different
+//             </span>
+//           </h2>
+//         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reasons.map((reason, index) => (
-            <Card
-              key={index}
-              className="group p-8 hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-blue-300 overflow-hidden relative"
-              style={{
-                animation: `fadeInUp 0.6s ease-out ${index * 0.08}s backwards`,
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-orange-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+//         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+//           {reasons.map((reason, index) => (
+//             <Card
+//               key={index}
+//               className="group p-8 hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-blue-300 overflow-hidden relative"
+//               style={{
+//                 animation: `fadeInUp 0.6s ease-out ${index * 0.08}s backwards`,
+//               }}
+//             >
+//               <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-orange-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-              <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-orange-600 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <reason.icon className="w-7 h-7" />
-                </div>
+//               <div className="relative">
+//                 <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-orange-600 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform duration-300">
+//                   <reason.icon className="w-7 h-7" />
+//                 </div>
 
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  {reason.title}
-                </h3>
+//                 <h3 className="text-xl font-bold text-slate-900 mb-3">
+//                   {reason.title}
+//                 </h3>
 
-                <p className="text-slate-600 leading-relaxed">
-                  {reason.description}
-                </p>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+//                 <p className="text-slate-600 leading-relaxed">
+//                   {reason.description}
+//                 </p>
+//               </div>
+//             </Card>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 function CTASection() {
   return (
