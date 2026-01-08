@@ -6,21 +6,21 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+    image: "/images/banner-1.jpeg",
     title: "Cutting-Edge Software",
     highlight: "Development Company",
     description:
       "We build scalable, secure and high-performance software solutions for modern businesses.",
   },
   {
-    image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg",
+    image: "images/banner-2.jpeg",
     title: "Powerful Web & Mobile",
     highlight: "Digital Experiences",
     description:
       "From web platforms to mobile apps, we create products users love and trust.",
   },
   {
-    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+    image: "images/banner-3.jpeg",
     title: "AI, Cloud & Cyber",
     highlight: "Future-Ready Solutions",
     description:
@@ -55,7 +55,7 @@ export default function HeroSlider() {
             alt="Hero background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-900/65 to-blue-900/70" />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/50 via-slate-900/40 to-blue-900/50" />
         </motion.div>
       </AnimatePresence>
 
@@ -70,19 +70,19 @@ export default function HeroSlider() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white text-shadow-lg">
               {slides[index].title}{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 {slides[index].highlight}
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-200 leading-relaxed max-w-2xl">
+            <p className="text-lg sm:text-xl text-slate-200 leading-relaxed max-w-2xl text-shadow-lg">
               {slides[index].description}
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
-              <button className="group px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-600/25 hover:scale-[1.05] flex items-center gap-2">
+              <button className="group px-8 py-4 bg-gradient-to-br from-[#0b3a6f] to-[#0f172a] text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:scale-[1.05] flex items-center gap-2">
                 Learn More
                 <ArrowRight
                   size={18}
@@ -90,7 +90,7 @@ export default function HeroSlider() {
                 />
               </button>
 
-              <button className="px-8 py-4 bg-white/10 backdrop-blur-md border-2 border-white/20 text-white rounded-xl font-semibold hover:bg-white/20 hover:border-white/30 transition-all duration-300">
+              <button className="px-8 py-4 bg-white backdrop-blur-md border-2 border-white/20 text-slate-800 rounded-xl font-semibold hover:bg-white/20 hover:border-white/30 transition-all duration-300">
                 Let’s Talk →
               </button>
             </div>
