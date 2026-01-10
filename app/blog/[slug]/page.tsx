@@ -1,4 +1,5 @@
 import BlogHero from "@/components/blog/BlogHero";
+import PageBanner from "@/components/common/PageBanner";
 import { blogPosts, BlogPost } from "@/lib/blogData";
 import { ArrowLeft, Calendar } from "lucide-react";
 import Image from "next/image";
@@ -75,9 +76,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <main className="min-h-screen bg-slate-50">
-      <BlogHero />
+      {/* ✅ Dynamic Banner */}
+      <PageBanner
+        title={post.title.split(" ")[0]} // First word of the title
+        highlight={post.title.split(" ").slice(1).join(" ")} // Rest of the title highlighted
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Blog", href: "/blog" },
+          { label: post.title },
+        ]}
+      />
 
-      <article className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 py-12">
+      <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 py-12">
         {/* Back link */}
         <Link
           href="/blog"
@@ -132,7 +142,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {/* Content */}
             <div className="prose prose-lg max-w-none mt-10 prose-headings:font-bold prose-headings:text-slate-900 prose-p:text-slate-700">
               {post.content.split("\n\n").map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                <p key={index} className="text-lg">{paragraph}</p>
               ))}
             </div>
 
@@ -167,10 +177,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
                 <div className="p-3 flex flex-col justify-between">
                   <h3 className="font-medium text-slate-900">{p.title}</h3>
-                  <p className="text-xs text-slate-500">{new Date(p.date).toLocaleDateString("en-US")}</p>
+                  <p className="text-xs text-slate-500">
+                    {new Date(p.date).toLocaleDateString("en-US")}
+                  </p>
                   <div className="flex gap-1 mt-1 flex-wrap">
                     {p.tags?.map((tag) => (
-                      <span key={tag} className="text-xs text-blue-600">{tag}</span>
+                      <span key={tag} className="text-xs text-blue-600">
+                        {tag}
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -182,5 +196,3 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     </main>
   );
 }
-
-

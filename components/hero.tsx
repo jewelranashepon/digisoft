@@ -82,7 +82,7 @@ export default function HeroSlider() {
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
-              <button className="group px-8 py-4 bg-gradient-to-br from-[#0b3a6f] to-[#0f172a] text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:scale-[1.05] flex items-center gap-2">
+              <button className="group px-8 py-4 bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:scale-[1.05] flex items-center gap-2">
                 Learn More
                 <ArrowRight
                   size={18}

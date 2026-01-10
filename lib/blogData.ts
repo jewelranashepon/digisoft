@@ -6,11 +6,13 @@ export interface BlogPost {
   content: string;
   featured_image: string;
   date: string;
+  author?: string;
 }
 
 export const blogPosts: BlogPost[] = [
   {
     id: "1",
+    author: "Digisoft",
     title: "Affordable NDIS SEO Services For NDIS Service Providers",
     slug: "affordable-ndis-seo-services",
     excerpt:

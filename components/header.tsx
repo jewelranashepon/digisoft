@@ -524,7 +524,7 @@ export default function Header() {
               </a>
 
               {/* Primary – Brand Button */}
-              <button className="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-[#0b3a6f] to-[#0f172a] px-5 py-3 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:bg-blue-700 hover:shadow-lg active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent">
+              <button className="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-cyan-600 px-5 py-3 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:bg-blue-700 hover:shadow-lg active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent">
                 Contact Us
               </button>
             </div>
