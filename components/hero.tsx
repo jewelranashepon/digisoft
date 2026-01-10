@@ -39,7 +39,7 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden pt-20 pb-10 px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen overflow-hidden pt-20 xl:pt-28 pb-10 px-4 sm:px-6 lg:px-8">
       {/* BACKGROUND */}
       <AnimatePresence mode="wait">
         <motion.div

@@ -4,6 +4,7 @@ import AboutBanner from "@/components/about-us/AboutBanner";
 import AboutUsShowcase from "@/components/about-us/AboutUsShowcase";
 import StrategicIdentity from "@/components/about-us/StrategicIdentity";
 import WhyChooseUsSection from "@/components/about-us/WhyChooseUsSection";
+import CTA from "@/components/cta";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -28,16 +29,16 @@ export default function AboutPage() {
       <WhyChooseUsSection />
       <StrategicIdentity />
       {/* Professional Services Section */}
-      <ProfessionalServicesSection />
+      {/* <ProfessionalServicesSection /> */}
 
       {/* Statistics Section */}
-      <StatisticsSection />
+      {/* <StatisticsSection /> */}
 
       {/* Team Section */}
-      <TeamSection />
+      {/* <TeamSection /> */}
 
       {/* CTA Section */}
-      <CTASection />
+      <CTA />
     </div>
   );
 }

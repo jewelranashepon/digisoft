@@ -8,6 +8,7 @@ import BlogHero from "@/components/blog/BlogHero";
 import { services, Category } from "@/data/services";
 import { cn } from "@/lib/utils";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import PageBanner from "@/components/common/PageBanner";
 
 const tabsData = [
   { id: "web-dev", label: "Web Development" },
@@ -40,21 +41,13 @@ export default function ServicesPage() {
 
   return (
     <div className="bg-gradient-to-b from-gray-50 via-white to-gray-50">
-      <BlogHero />
+      <PageBanner
+        title="Our"
+        highlight="Services"
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
+      />
 
       <section className="container mx-auto px-4 py-20">
-        {/* HEADER */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6">
-            Our Services
-          </h1>
-          <p className="text-lg text-gray-500">
-            Everything you need to grow your business online.
-          </p>
-        </div>
-
-        {/* GLASSMORPHISM / WATERDROP TABS */}
-        {/* GLASS / WATERDROP STYLE TABS */}
         <Tabs
           value={activeTab}
           onValueChange={(value) => setActiveTab(value as Category)}
