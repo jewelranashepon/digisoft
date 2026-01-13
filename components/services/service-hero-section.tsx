@@ -1,39 +1,42 @@
-"use client";
+"use client"
 
-import type React from "react";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import type React from "react"
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { ServiceDetail } from "@/data/service-details"
 
-export function ServiceHeroSection() {
+interface Props {
+  data: ServiceDetail["heroSection"]
+}
+
+export function ServiceHeroSection({ data }: Props) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log("Form submitted:", formData);
-    setIsSubmitting(false);
-  };
+    e.preventDefault()
+    setIsSubmitting(true)
+    await new Promise((resolve) => setTimeout(resolve, 1500))
+    console.log("Form submitted:", formData)
+    setIsSubmitting(false)
+  }
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }));
-  };
+    }))
+  }
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-teal-50/40 to-blue-50 px-4 py-20 md:px-8">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-teal-50/40 to-blue-50 px-4 pt-32 pb-20 md:px-8">
       {/* Decorative Blobs */}
       <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-teal-400/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl" />
@@ -42,41 +45,25 @@ export function ServiceHeroSection() {
         <div className="grid min-h-[80vh] grid-cols-1 items-center gap-16 lg:grid-cols-5">
           {/* Left Content */}
           <div className="lg:col-span-3 space-y-8">
-            <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-lg">
-              🚗 Vehicle Cybersecurity
-            </span>
+            {/* <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-lg">
+              {data.badge}
+            </span> */}
 
             <h1 className="text-3xl font-extrabold leading-tight text-gray-900 md:text-4xl lg:text-5xl">
-              Securing the Future of{" "}
+              {data.heading}{" "}
               <span className="bg-gradient-to-r from-teal-500 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Connected Vehicles
+                {data.subheading}
               </span>
             </h1>
 
-            <p className="max-w-2xl text-lg leading-relaxed text-gray-600">
-              Wireless connectivity powers modern vehicles — from navigation to
-              advanced safety systems. But every connection introduces risk. We
-              protect your automotive ecosystem from evolving cyber threats.
-            </p>
+            <p className="max-w-2xl text-lg leading-relaxed text-gray-600">{data.description}</p>
 
-            <p className="max-w-2xl text-gray-600">
-              At <strong>Intelleora</strong>, we specialize in securing vehicle
-              gateways, baseband modems, and wireless modules — delivering
-              trust, safety, and long-term reliability.
-            </p>
+            {data.descriptionExtra && <p className="max-w-2xl text-gray-600">{data.descriptionExtra}</p>}
 
-            {/* Highlights */}
             <div className="flex flex-wrap gap-6 pt-4">
-              {[
-                "Automotive-Grade Security",
-                "Wireless Threat Protection",
-                "Compliance Ready",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-gray-700 shadow-md"
-                >
-                  ✔ {item}
+              {data.highlights.map((item) => (
+                <div key={item} className="rounded-xl bg-white px-5 py-3 text-sm font-semibold text-gray-700 shadow-md">
+                  {item}
                 </div>
               ))}
             </div>
@@ -88,12 +75,8 @@ export function ServiceHeroSection() {
               <div className="absolute inset-x-0 -top-1 h-1 rounded-t-3xl bg-gradient-to-r from-teal-500 to-blue-600" />
 
               <div className="mb-8 text-center">
-                <h2 className="text-3xl font-bold text-gray-900">
-                  Let’s Talk 👋
-                </h2>
-                <p className="mt-2 text-sm text-gray-500">
-                  Get expert guidance. No spam. Ever.
-                </p>
+                <h2 className="text-3xl font-bold text-gray-900">Let's Talk 👋</h2>
+                <p className="mt-2 text-sm text-gray-500">Get expert guidance. No spam. Ever.</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -149,5 +132,5 @@ export function ServiceHeroSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
