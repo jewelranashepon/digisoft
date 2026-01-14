@@ -47,10 +47,13 @@ export interface ServiceDetail {
   bottlenecksSection: {
     heading: string;
     description: string;
-    items: string[];
+    items: {
+      title: string;
+      description: string;
+    }[];
     selectedIndex: number;
-    selectedTitle: string;
-    selectedDescription: string;
+    selectedTitle?: string;
+    selectedDescription?: string;
   };
   whyChooseUs: {
     heading: string;
@@ -75,6 +78,12 @@ export interface ServiceDetail {
     ctaDescription: string;
     ctaButton1: string;
     ctaButton2: string;
+  };
+  faqSection?: {
+    items: {
+      question: string;
+      answer: string;
+    }[];
   };
 }
 
@@ -223,22 +232,41 @@ export const doctorSeoService: ServiceDetail = {
       },
     ],
   },
+
   bottlenecksSection: {
     heading: "Common Doctor SEO Challenges",
     description:
       "We help healthcare practices overcome SEO obstacles that limit patient growth.",
     items: [
-      "Low Local Visibility",
-      "Intense Competition",
-      "Medical Content Guidelines",
-      "Poor Website Conversions",
-      "Limited Authority",
+      {
+        title: "Low Local Visibility",
+        description:
+          "Many patients search for doctors locally before making a choice. Without strong local SEO, your practice remains invisible to nearby patients actively seeking medical services. Our local SEO strategies ensure your clinic appears prominently in Google Maps and local search results.",
+      },
+      {
+        title: "Intense Competition",
+        description:
+          "The healthcare sector is highly competitive. Competing with established clinics and hospitals can be challenging. We identify opportunities for your practice to stand out online and attract more patients.",
+      },
+      {
+        title: "Medical Content Guidelines",
+        description:
+          "Creating content for medical websites requires strict compliance with guidelines and accuracy. Our team ensures your content is informative, trustworthy, and aligned with Google’s standards for medical content.",
+      },
+      {
+        title: "Poor Website Conversions",
+        description:
+          "A website may get traffic but still fail to convert visitors into patients. We optimize your website’s design, calls-to-action, and user experience to increase appointment bookings and inquiries.",
+      },
+      {
+        title: "Limited Authority",
+        description:
+          "Medical practices need credibility to rank higher in search results. We help build online authority through backlinks, reviews, and authoritative content to enhance your reputation in the medical community.",
+      },
     ],
-    selectedIndex: 0,
-    selectedTitle: "Low Local Visibility",
-    selectedDescription:
-      "Many patients search for doctors locally before making a choice. Without strong local SEO, your practice remains invisible to nearby patients actively seeking medical services. Our local SEO strategies ensure your clinic appears prominently in Google Maps and local search results.",
+    selectedIndex: 0, // default selected card
   },
+
   whyChooseUs: {
     heading: "Why Choose Us For Your",
     headingHighlight: "Doctor SEO",
@@ -497,6 +525,48 @@ export const wordPressWebsiteService: ServiceDetail = {
     ctaButton1: "GET YOUR FREE PROPOSAL",
     ctaButton2: "SCHEDULE A CONSULTATION",
   },
+  faqData: [
+    {
+      question: "What is Doctor SEO?",
+      answer:
+        "Doctor SEO is the process of optimising a medical website so patients can easily find doctors, clinics, and healthcare services through Google search results.",
+    },
+    {
+      question: "Why is SEO important for doctors?",
+      answer:
+        "SEO for doctors increases online visibility, builds trust, and generates consistent patient enquiries, helping your practice grow sustainably.",
+    },
+    {
+      question: "Is local SEO important for doctors?",
+      answer:
+        "Yes. Local SEO for doctors ensures your clinic appears in Google Maps and “near me” searches, attracting patients in your area.",
+    },
+    {
+      question: "How long does Doctor SEO take to work?",
+      answer:
+        "Most practices see measurable improvements within 3–6 months with ongoing optimisation, tracking, and adjustments.",
+    },
+    {
+      question: "What services are included in Doctor SEO?",
+      answer:
+        "Medical SEO services for doctors, clinics & healthcare sites often include keyword research, on-page and off-page SEO, content optimisation, technical SEO, and local SEO strategies.",
+    },
+    {
+      question: "Can AI SEO improve my doctor website rankings?",
+      answer:
+        "Yes. AI SEO for doctors leverages artificial intelligence to analyse patient search behaviour, optimise content, and improve rankings faster and more accurately.",
+    },
+    {
+      question: "Do I need a specialist SEO agency for doctors?",
+      answer:
+        "Absolutely. A dedicated SEO agency for doctors understands healthcare compliance, local search trends, and patient-focused strategies that general SEO agencies might miss.",
+    },
+    {
+      question: "How does Doctor SEO increase patient enquiries?",
+      answer:
+        "By using Doctor SEO strategies like targeted keywords, local optimisation, content marketing, and reputation management, more patients find your website and book appointments.",
+    },
+  ],
 };
 
 export const webAppService: ServiceDetail = {
@@ -675,6 +745,12 @@ export const webAppService: ServiceDetail = {
     ctaButton1: "START YOUR PROJECT",
     ctaButton2: "VIEW OUR PORTFOLIO",
   },
+  seoServicesDetails: {
+    heading: "",
+    headingHighlight: "",
+    description: "",
+    steps: [],
+  },
 };
 
 const placeholderService = (
@@ -826,6 +902,12 @@ const placeholderService = (
       "Our team of experts is ready to help you achieve your goals. Get in touch today for a free consultation.",
     ctaButton1: "GET YOUR FREE PROPOSAL",
     ctaButton2: "CONTACT OUR TEAM",
+  },
+  seoServicesDetails: {
+    heading: "",
+    headingHighlight: "",
+    description: "",
+    steps: [],
   },
 });
 

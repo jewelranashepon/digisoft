@@ -26,7 +26,7 @@ export function TalkToExpertsDynamic({ data }: Props) {
               </span>
             </h2>
 
-            <div className="space-y-4 text-base sm:text-lg leading-relaxed text-gray-600">
+            <div className="space-y-4 text-base sm:text-lg leading-relaxed text-slate-900">
               {data.description.map((paragraph, idx) => (
                 <p key={idx}>{paragraph}</p>
               ))}

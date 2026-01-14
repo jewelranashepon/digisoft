@@ -56,9 +56,9 @@ export function ServiceHeroSection({ data }: Props) {
               </span>
             </h1>
 
-            <p className="max-w-2xl text-lg leading-relaxed text-gray-600">{data.description}</p>
+            <p className="max-w-2xl text-lg leading-relaxed text-slate-900">{data.description}</p>
 
-            {data.descriptionExtra && <p className="max-w-2xl text-gray-600">{data.descriptionExtra}</p>}
+            {data.descriptionExtra && <p className="max-w-2xl text-slate-900">{data.descriptionExtra}</p>}
 
             <div className="flex flex-wrap gap-6 pt-4">
               {data.highlights.map((item) => (
@@ -71,8 +71,8 @@ export function ServiceHeroSection({ data }: Props) {
 
           {/* Right Form */}
           <div className="lg:col-span-2 flex items-center justify-center">
-            <div className="relative w-full max-w-md rounded-3xl border border-white/60 bg-white/80 p-8 shadow-2xl backdrop-blur-xl md:p-10">
-              <div className="absolute inset-x-0 -top-1 h-1 rounded-t-3xl bg-gradient-to-r from-teal-500 to-blue-600" />
+            <div className="relative w-full max-w-md rounded-3xl border-b-4 border-cyan-600 bg-white/80 p-8 shadow-2xl backdrop-blur-xl md:p-10">
+              {/* <div className="absolute inset-x-0 -top-1 h-1 rounded-t-3xl bg-gradient-to-r from-teal-500 to-blue-600" /> */}
 
               <div className="mb-8 text-center">
                 <h2 className="text-3xl font-bold text-gray-900">Let's Talk 👋</h2>
@@ -86,7 +86,7 @@ export function ServiceHeroSection({ data }: Props) {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="h-12 rounded-xl border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+                  className="h-12 rounded-lg border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                 />
 
                 <Input
@@ -96,7 +96,7 @@ export function ServiceHeroSection({ data }: Props) {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="h-12 rounded-xl border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+                  className="h-12 rounded-lg border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                 />
 
                 <Input
@@ -106,7 +106,7 @@ export function ServiceHeroSection({ data }: Props) {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="h-12 rounded-xl border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+                  className="h-12 rounded-lg border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                 />
 
                 <Textarea
@@ -116,13 +116,13 @@ export function ServiceHeroSection({ data }: Props) {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="resize-none rounded-xl border-gray-300 focus:border-teal-500 focus:ring-teal-500"
+                  className="resize-none rounded-lg border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                 />
 
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="h-12 w-full rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 text-base font-semibold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl"
+                  className="h-12 w-full rounded-lg bg-gradient-to-r from-teal-500 to-blue-600 text-base font-semibold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl"
                 >
                   {isSubmitting ? "Submitting..." : "Get Free Consultation"}
                 </Button>

@@ -8,6 +8,7 @@ import { WhyChooseUsDynamic } from "@/components/services/why-choose-us-dynamic"
 import SEOServicesSectionDynamic from "@/components/services/seo-services-section-dynamic";
 import { getServiceDetails } from "@/data/service-details";
 import SeoServices from "@/components/services/seo-services";
+import FaqSection from "@/components/services/faq-section";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -48,7 +49,8 @@ export default async function ServiceDetailsPage({ params }: Props) {
       <ServiceProcessDynamic data={serviceDetails.processSection} />
       <BottlenecksSectionDynamic data={serviceDetails.bottlenecksSection} />
       <WhyChooseUsDynamic data={serviceDetails.whyChooseUs} />
-      <SEOServicesSectionDynamic data={serviceDetails.seoServices} />
+      {/* <SEOServicesSectionDynamic data={serviceDetails.seoServices} /> */}
+      <FaqSection data={serviceDetails.faqSection?.items} />
     </>
   );
 }

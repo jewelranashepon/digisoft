@@ -47,11 +47,12 @@ export default function SeoServices({ data }: Props) {
               {data.headingHighlight}
             </span>
           </h2>
-          <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+          <p className="mt-6 text-lg text-slate-800 leading-relaxed">
             {data.description}
           </p>
         </div>
 
+        {/* Services Grid */}
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {data.steps.map((step, index) => {
@@ -60,21 +61,37 @@ export default function SeoServices({ data }: Props) {
             return (
               <div
                 key={index}
-                className="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition-all hover:shadow-xl"
+                className="relative flex h-full flex-col overflow-hidden rounded-2xl bg-slate-50 border border-slate-200 shadow-sm transition-all hover:shadow-xl"
               >
-                <div
-                  className={`mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl ${step.bg}`}
-                >
-                  <Icon className={step.color} size={26} />
+                {/* BIG BACKGROUND ICON */}
+                <div className="pointer-events-none absolute right-[-30px] top-1/2 -translate-y-1/2 opacity-[0.06]">
+                  <Icon size={200} className="text-indigo-600" />
                 </div>
 
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  {step.title}
-                </h3>
+                {/* ================= TOP SECTION ================= */}
+                <div className="relative z-10 flex items-center gap-4 p-6 border-b border-slate-200">
+                  {/* ICON */}
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-100">
+                    <Icon size={26} className="text-indigo-600" />
+                  </div>
 
-                <p className="text-slate-600 leading-relaxed">
-                  {step.description}
-                </p>
+                  {/* HEADER */}
+                  <h3 className="text-lg font-bold text-slate-900 leading-tight">
+                    {step.title}
+                  </h3>
+                </div>
+
+                {/* ================= BOTTOM SECTION ================= */}
+                <div className="relative z-10 flex flex-1 flex-col p-6">
+                  <p className="text-base text-slate-900 leading-relaxed">
+                    {step.description}
+                  </p>
+
+                  {/* CTA — ALWAYS AT BOTTOM */}
+                  <button className="mt-auto w-full rounded-full bg-indigo-600 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700">
+                    Learn More
+                  </button>
+                </div>
               </div>
             );
           })}
