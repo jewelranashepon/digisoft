@@ -15,18 +15,17 @@ export default function CTA() {
           <div className="relative max-w-7xl mx-auto z-10 px-8 py-16 md:px-16 flex flex-col items-center text-center">
             {/* Headline with specialized gradient */}
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight leading-tight md:leading-[1.1]">
-              Let’s build something{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                extraordinary
-              </span>{" "}
-              together
+              Book a Free Discovery Call with{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
+                Codexa Digital
+              </span>
             </h2>
 
             {/* Support Text */}
             <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-              From initial strategy to final deployment, our team transforms
-              your complex business ideas into scalable, high-impact digital
-              solutions.
+              Our team’s goal is to understand your business and see if we’re
+              the right fit. If not, we’ll be honest and share tips to help you
+              move forward.
             </p>
 
             {/* Action Buttons */}

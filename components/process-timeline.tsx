@@ -173,50 +173,26 @@
 //   );
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { ArrowRight, Zap, Search, Settings, Rocket } from "lucide-react";
 
 const steps = [
   {
     icon: Search,
-    title: "Discovery & Analysis",
+    title: "Deep Understanding First",
     description:
-      "We analyze your business structure, audience, and competitors to identify strengths and growth opportunities.",
+      "We take time to learn about your business, your goals, and your market. This helps us find real opportunities for growth before we build anything.",
   },
   {
     icon: Settings,
-    title: "Tailored Solutions",
+    title: "Solutions Built for You",
     description:
-      "Based on insights, we design and implement customized solutions aligned with your business goals.",
+      "We don’t use one-size-fits-all plans. Every strategy is tailored to your business, using smart SEO, AI-driven insights, and clear digital marketing strategies.",
   },
   {
     icon: Rocket,
-    title: "Deployment & Support",
+    title: "Reliable Growth & Ongoing Support",
     description:
-      "We deploy efficiently and provide continuous monitoring, updates, and long-term technical support.",
+      "We launch with care and stay with you after. From updates to ongoing optimisation, we support your growth every step of the way.",
   },
 ];
 
@@ -235,11 +211,10 @@ export default function ProcessCards() {
       <div className="max-w-7xl mx-auto relative">
         {/* HEADER */}
         <div className="mb-16 w-full text-center">
-         
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 text-white leading-tight tracking-tight">
-            Best Pathway to{" "}
-            <span className="bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              Development
+          <h2 className="text-5xl md:text-6xl font-semibold mb-6 text-white leading-tight tracking-tight">
+            Why Businesses{" "}
+            <span className="bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">
+              Choose Us
             </span>
           </h2>
         </div>
@@ -264,7 +239,7 @@ export default function ProcessCards() {
                 {step.title}
               </h3>
 
-              <p className="text-slate-400 text-lg leading-relaxed font-light mb-6 group-hover:text-slate-300 transition-colors duration-300">
+              <p className="text-white/70 text-lg leading-relaxed font-light mb-6 group-hover:text-slate-300 transition-colors duration-300">
                 {step.description}
               </p>
 

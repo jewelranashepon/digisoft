@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { ChevronDown, HelpCircle, Sparkles } from 'lucide-react';
+import { useState } from "react";
+import { ChevronDown, HelpCircle, Sparkles } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -10,29 +10,45 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: 'What services do you offer?',
+    question: "How can Codexa Digital help grow my business?",
     answer:
-      'We provide comprehensive solutions including web development, mobile applications, cloud services, and custom software development tailored to your business needs.',
+      "We help businesses grow through results-driven SEO, AI SEO, and digital marketing strategies that increase visibility, leads, and revenue.",
   },
   {
-    question: 'How long does a typical project take?',
+    question: "Why choose Codexa Digital as your SEO & AI search agency?",
     answer:
-      'Project timelines vary based on complexity and scope. A basic website typically takes 2-4 weeks, while complex applications can take 3-6 months. We provide detailed timelines during consultation.',
+      "We combine technical SEO services, Generative Engine Optimisation (GEO), and data-driven strategies to deliver real, measurable growth—not vanity metrics.",
   },
   {
-    question: 'What is your pricing structure?',
+    question: "What digital marketing services do you offer?",
     answer:
-      'We offer flexible pricing models including fixed-price projects, hourly rates, and monthly retainers. Pricing depends on project scope, technology stack, and timeline requirements.',
+      "We provide SEO services, local SEO Australia, AI SEO, web development, social media marketing services, and full digital marketing strategies.",
   },
   {
-    question: 'Do you provide ongoing support?',
+    question: "How do you measure success in digital marketing campaigns?",
     answer:
-      'Yes, we offer comprehensive maintenance packages including bug fixes, updates, security patches, and feature enhancements. Support plans are customizable based on your needs.',
+      "We track key metrics like keyword rankings, traffic growth, conversions, leads, and ROI to ensure campaigns deliver measurable results.",
   },
   {
-    question: 'What technologies do you work with?',
+    question: "Can you guarantee leads or sales?",
     answer:
-      'We specialize in modern technologies including React, Next.js, Node.js, TypeScript, Python, and cloud platforms like AWS and Azure. We stay current with industry best practices.',
+      "No ethical SEO agency can guarantee exact numbers, but our proven SEO and AI-driven strategies consistently deliver strong performance and growth.",
+  },
+  {
+    question:
+      "What makes your approach different from other digital marketing agencies?",
+    answer:
+      "We focus on performance and revenue. As a specialist SEO service provider, we use advanced AI SEO, technical optimisation, and industry-specific SEO services.",
+  },
+  {
+    question: "Do you work with businesses of all sizes?",
+    answer:
+      "Yes. We work with startups, small businesses, and established brands across multiple industries.",
+  },
+  {
+    question: "Do you offer web design and development services?",
+    answer:
+      "Yes. Our web design services and web development solutions are built to support SEO, user experience, and conversions.",
   },
 ];
 
@@ -46,7 +62,8 @@ export default function FAQComponent() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 py-20 px-4 sm:px-6 lg:px-8">
       {/* Grid Background */}
-      <div className="absolute inset-0 
+      <div
+        className="absolute inset-0 
          [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]
          -z-10 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%27%23cbd5e1%27%20fill-opacity%3D%270.4%27%3E%3Cpath%20d%3D%27M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%27/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"
       />
@@ -59,12 +76,12 @@ export default function FAQComponent() {
       <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-[blob_7s_infinite_4s]" />
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
             <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-slate-900 bg-clip-text text-transparent">
-              Frequently Asked {" "}
+              Frequently Asked{" "}
             </span>
             <span className="bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
               Questions
@@ -73,7 +90,7 @@ export default function FAQComponent() {
         </div>
 
         {/* FAQ & Image */}
-        <div className="grid grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 gap-12 items-center">
           {/* FAQ List */}
           <div className="space-y-4">
             {faqs.map((faq, index) => (
@@ -91,15 +108,15 @@ export default function FAQComponent() {
                     <div
                       className={`mt-1 p-2 rounded-lg transition-all duration-300 ${
                         openIndex === index
-                          ? 'bg-gradient-to-br from-blue-500 to-cyan-500 shadow-lg shadow-blue-300/50'
-                          : 'bg-gradient-to-br from-slate-200 to-slate-300 group-hover:from-blue-400 group-hover:to-cyan-400'
+                          ? "bg-gradient-to-br from-blue-500 to-cyan-500 shadow-lg shadow-blue-300/50"
+                          : "bg-gradient-to-br from-slate-200 to-slate-300 group-hover:from-blue-400 group-hover:to-cyan-400"
                       }`}
                     >
                       <HelpCircle
                         className={`w-5 h-5 transition-colors duration-300 ${
                           openIndex === index
-                            ? 'text-white'
-                            : 'text-slate-600 group-hover:text-white'
+                            ? "text-white"
+                            : "text-slate-600 group-hover:text-white"
                         }`}
                       />
                     </div>
@@ -107,8 +124,8 @@ export default function FAQComponent() {
                     <h3
                       className={`text-lg font-semibold transition-colors duration-200 ${
                         openIndex === index
-                          ? 'bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent'
-                          : 'text-slate-900 group-hover:text-blue-600'
+                          ? "bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
+                          : "text-slate-900 group-hover:text-blue-600"
                       }`}
                     >
                       {faq.question}
@@ -118,15 +135,15 @@ export default function FAQComponent() {
                   <div
                     className={`flex-shrink-0 mt-1 p-1.5 rounded-lg transition-all duration-300 ${
                       openIndex === index
-                        ? 'bg-gradient-to-br from-blue-100 to-cyan-100 rotate-180'
-                        : 'bg-slate-100 group-hover:bg-blue-100'
+                        ? "bg-gradient-to-br from-blue-100 to-cyan-100 rotate-180"
+                        : "bg-slate-100 group-hover:bg-blue-100"
                     }`}
                   >
                     <ChevronDown
                       className={`w-5 h-5 transition-all duration-300 ${
                         openIndex === index
-                          ? 'text-blue-600'
-                          : 'text-slate-600 group-hover:text-blue-600'
+                          ? "text-blue-600"
+                          : "text-slate-600 group-hover:text-blue-600"
                       }`}
                     />
                   </div>
@@ -135,7 +152,9 @@ export default function FAQComponent() {
                 {/* Answer */}
                 <div
                   className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    openIndex === index
+                      ? "max-h-96 opacity-100"
+                      : "max-h-0 opacity-0"
                   }`}
                 >
                   <div className="px-6 pb-6 pl-20">
@@ -152,7 +171,7 @@ export default function FAQComponent() {
           </div>
 
           {/* Image Side */}
-          <div>
+          {/* <div>
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition duration-500" />
 
@@ -171,7 +190,7 @@ export default function FAQComponent() {
                 <div className="text-sm font-medium">Support</div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

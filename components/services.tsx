@@ -16,68 +16,54 @@ const services = [
     icon: Globe,
     image: "/images/services/website-development.png",
     description:
-      "Custom, responsive websites built with modern technologies. We create stunning web experiences that engage visitors and convert them into customers. Our websites are optimized for performance, SEO, and user experience.",
+      "We make website that help your business work better. They are fast, safe, and easy to use.",
     features: [
-      "Responsive Design",
-      "SEO Optimized",
-      "Fast Loading",
-      "Mobile First",
+      "Made just for your business needs",
+      "Safe and reliable",
+      "Works fast without delays",
+      "Connects easily with your current tools",
     ],
   },
   {
     id: 1,
-    name: "Web App Development",
+    name: "Mobile App Development",
     icon: Zap,
     image: "/images/services/web-app-development.png",
     description:
-      "Interactive web applications that deliver real-time functionality. We build scalable, secure applications using React, Node.js, and modern frameworks to handle complex business logic with ease.",
+      "We create mobile apps for iPhone and Android that people enjoy using.",
     features: [
-      "Real-time Updates",
-      "Cloud Integration",
-      "Scalable Architecture",
-      "Security First",
+      "Works on iPhone and Android",
+      "Simple and easy to use",
+      "Fast and smooth",
+      "Helps your business grow",
     ],
   },
   {
     id: 2,
-    name: "Mobile App Development",
+    name: "SEO Optimisation",
     icon: Smartphone,
     image: "/images/services/mobile-app-development.jpg",
     description:
-      "Native and cross-platform mobile apps for iOS and Android. We create intuitive, high-performance applications that provide seamless user experiences across all devices.",
+      "Our SEO services help your website show up higher on Google so more people can find you.",
     features: [
-      "iOS & Android",
-      "Offline Support",
-      "Push Notifications",
-      "App Store Ready",
+      "Improve your website pages",
+      "Reach local customers in Australia",
+      "Use AI SEO & Generative Engine Optimisation (GEO)",
+      "Get more visitors with smart keywords",
     ],
   },
   {
     id: 3,
-    name: "SEO Optimization",
+    name: "IT Support",
     icon: Search,
     image: "/images/services/seo-optimization.png",
     description:
-      "Strategic SEO services to improve your online visibility and organic traffic. We optimize your website's technical aspects, content, and backlinks for better search engine rankings.",
+      "We help keep your computers and systems safe and running well.",
     features: [
-      "Technical SEO",
-      "Content Strategy",
-      "Link Building",
-      "Analytics",
-    ],
-  },
-  {
-    id: 4,
-    name: "IT Support",
-    icon: LifeBuoy,
-    image: "/images/services/it-support.jpg",
-    description:
-      "Comprehensive IT support and maintenance services. We monitor, maintain, and troubleshoot your systems to ensure maximum uptime and optimal performance for your business.",
-    features: [
-      "24/7 Monitoring",
-      "Quick Response",
-      "Preventive Care",
-      "Security Updates",
+      "24/7 help when you need it",
+      "Keep systems updated and secure",
+      "Help with hardware and software",
+      "Grow your IT as your business grows",
     ],
   },
 ];
@@ -160,7 +146,7 @@ export default function Services() {
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
               <div className="aspect-video bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-600 flex items-center justify-center">
                 {/* <IconComponent size={80} className="text-white/30" /> */}
-                <img src={activeService.image} className="w-full h-full"/>
+                <img src={activeService.image} className="w-full h-full" />
               </div>
 
               <div className="p-8 bg-gradient-to-br from-slate-50 to-white space-y-4">

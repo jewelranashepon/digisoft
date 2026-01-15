@@ -13,44 +13,51 @@ import {
 const processes = [
   {
     icon: Lightbulb,
-    label: "Brainstorming Ideas",
-    description: "Generate innovative solutions and creative concepts",
+    label: "Strategic Planning",
+    description:
+      "At Codexa Digital, we make clear plans to help your business grow. We use smart digital marketing strategies and industry knowledge to get you noticed online.",
   },
   {
     icon: Palette,
-    label: "Product Design",
-    description: "Craft intuitive and beautiful user experiences",
+    label: "User-Centric Design",
+    description:
+      "We create websites that are clean and easy to use. They work on any device, so visitors can find what they need without confusion.",
   },
   {
     icon: Code,
-    label: "Front-End Development",
-    description: "Build responsive and interactive interfaces",
+    label: "Interface Development",
+    description:
+      "Our web development and technical SEO services make your site fast, reliable, and smooth. Users have a better experience, and your website performs better.",
   },
   {
     icon: Search,
-    label: "SEO Optimization",
-    description: "Maximize visibility and organic reach",
+    label: "Search Visibility",
+    description:
+      "As a top SEO & AI Search agency, we help your business show up on Google. We use SEO, AI SEO, and GEO techniques to reach the right audience.",
   },
   {
     icon: Server,
-    label: "Back-End Development",
-    description: "Develop scalable and robust infrastructure",
+    label: "System Architecture",
+    description:
+      "We build strong, safe, and scalable systems that help your business grow. Your website works smoothly and fits with your SEO services.",
   },
   {
     icon: Megaphone,
-    label: "Digital Marketing",
-    description: "Drive engagement and amplify your message",
+    label: "Growth Acceleration",
+    description:
+      "We use social media marketing and local SEO in Australia to get more visitors. We help you engage customers, build trust, and grow sales.",
   },
 ];
 
 export default function ProcessFlow() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 xl:px-0 bg-slate-50">
+    <section className="py-10 lg:py-16 px-4 sm:px-6 lg:px-8 xl:px-0 bg-slate-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-5xl font-bold text-slate-900">
-            From Vision to <span className="text-blue-600">Impact</span>
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-semibold text-slate-900 max-w-5xl mx-auto leading-tight">
+            Our Marketing Process for Your <br />
+            <span className="text-blue-600">Online Presence</span>
           </h2>
         </div>
 

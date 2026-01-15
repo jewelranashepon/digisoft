@@ -7,24 +7,24 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     image: "/images/banner-1.jpeg",
-    title: "Cutting-Edge Software",
-    highlight: "Development Company",
+    title: "Digital Marketing Agency for",
+    highlight: "Business Growth",
     description:
-      "We build scalable, secure and high-performance software solutions for modern businesses.",
+      "Get a free audit of your website and digital marketing performance. Discover how our results-driven strategies help you increase revenue and outperform competitors.",
   },
   {
     image: "images/banner-2.jpeg",
-    title: "Powerful Web & Mobile",
-    highlight: "Digital Experiences",
+    title: "All-in-One Solutions to Grow Your",
+    highlight: "Business Online",
     description:
-      "From web platforms to mobile apps, we create products users love and trust.",
+      "Codexa Digital drives real traffic, generates authentic leads, and attracts loyal customers every day, helping businesses like yours grow, succeed, and stand out online.",
   },
   {
     image: "images/banner-3.jpeg",
-    title: "AI, Cloud & Cyber",
-    highlight: "Future-Ready Solutions",
+    title: "Claim Your Free Website &",
+    highlight: "Marketing Audit",
     description:
-      "We help businesses grow with AI, automation, cloud infrastructure and cyber security.",
+      "See exactly how your business is performing online. Our free audit reviews your website, SEO, and digital marketing efforts to uncover opportunities for growth. ",
   },
 ];
 
