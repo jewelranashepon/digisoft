@@ -1396,7 +1396,7 @@ export const dentistWebDesignService: ServiceDetail = {
         icon: "users",
         title: "Understanding Your Dental Practice & Patients",
         description:
-          "We learn about your clinic, treatments, and patient types to design a website that builds trust, reduces anxiety, and encourages appointment bookings.",
+          "A successful dental website starts with understanding your clinic and services, from general dentistry to orthodontics. We design sites that build trust, address patient concerns, and make it easy for visitors to feel confident and book an appointment.",
         color: "text-emerald-600",
         bg: "bg-emerald-50",
       },
@@ -1404,7 +1404,7 @@ export const dentistWebDesignService: ServiceDetail = {
         icon: "search",
         title: "Dental Market & Competitor Research",
         description:
-          "We analyse competing dental websites to identify opportunities for differentiation through stronger branding, clearer services, and better usability.",
+          "The dental industry is highly competitive online. We analyse local dental clinic websites to find gaps in design, content, and usability, then create a modern, patient-focused website that clearly differentiates your practice and builds trust.",
         color: "text-blue-600",
         bg: "bg-blue-50",
       },
@@ -1412,7 +1412,7 @@ export const dentistWebDesignService: ServiceDetail = {
         icon: "layout",
         title: "Patient-Friendly Design & UX",
         description:
-          "We create clean, welcoming layouts with clear service pages, dentist profiles, testimonials, and strong calls-to-action that guide patients naturally.",
+          "Dental websites should be clean, welcoming, and easy to navigate. We design professional layouts with clear services, strong calls-to-action, and highlighted credentials and testimonials—guiding patients to book appointments with confidence.",
         color: "text-purple-600",
         bg: "bg-purple-50",
       },
@@ -1420,7 +1420,7 @@ export const dentistWebDesignService: ServiceDetail = {
         icon: "smartphone",
         title: "Mobile-Responsive & SEO-Ready Structure",
         description:
-          "We design responsive websites with SEO-friendly structure and fast loading pages to improve local visibility and patient access on all devices.",
+          "Most dental patients search on mobile. We build fast, fully responsive, and SEO-friendly websites that work on any device, improve local search visibility, and help patients easily find services and book appointments.",
         color: "text-orange-600",
         bg: "bg-orange-50",
       },
@@ -1428,7 +1428,7 @@ export const dentistWebDesignService: ServiceDetail = {
         icon: "line-chart",
         title: "Performance Tracking & Ongoing Improvements",
         description:
-          "We track appointments, user behaviour, and traffic sources to refine design and content continuously for better patient engagement and conversions.",
+          "A dental website should evolve over time. We use analytics to track traffic, patient actions, and bookings, then refine design and content to boost engagement, conversions, and long-term clinic growth.",
         color: "text-pink-600",
         bg: "bg-pink-50",
       },
@@ -1436,34 +1436,34 @@ export const dentistWebDesignService: ServiceDetail = {
   },
 
   bottlenecksSection: {
-    heading: "Common Dentist Web Design Challenges",
+    heading: "Common Dentist Web Design Challenges & Our Solutions",
     description:
-      "We solve the most common issues that reduce patient trust, visibility, and appointment bookings for dental clinics.",
+      "Many dental clinics struggle with website issues that reduce online visibility, patient trust, and appointment bookings. We identify and solve these challenges with modern, patient-focused web design.",
     items: [
       {
         title: "Outdated or Slow Websites",
         description:
-          "Slow-loading and outdated websites reduce trust and cause potential patients to leave before booking an appointment.",
+          "Slow-loading and outdated websites create a poor first impression and reduce patient trust. We design modern, fast-loading dental websites that look professional, load quickly, and encourage visitors to stay and explore your services.",
       },
       {
         title: "Poor Mobile Experience",
         description:
-          "Non-responsive websites frustrate patients searching on mobile devices, making it harder to view services or book appointments.",
+          "Most patients search for dental services on their phones. Non-responsive websites make it difficult to view treatments or contact the clinic. We create fully responsive designs that work smoothly across mobile, tablet, and desktop devices.",
       },
       {
         title: "Unclear Treatment Information",
         description:
-          "Confusing or incomplete treatment details make patients hesitant and reduce enquiries.",
+          "When treatment details are unclear or confusing, patients hesitate to book. We structure treatment pages with clear explanations, benefits, and FAQs, helping patients understand their options and feel confident choosing your clinic.",
       },
       {
         title: "Lack of Easy Appointment Options",
         description:
-          "Missing or hard-to-find booking forms and contact options lead to lost appointment opportunities.",
+          "If booking is difficult or hidden, potential patients leave. We integrate clear calls-to-action, online booking forms, click-to-call buttons, and contact options that make scheduling appointments quick and effortless.",
       },
       {
         title: "Low Local Search Visibility",
         description:
-          "Without SEO-friendly structure, dental websites fail to appear in local searches and Google Maps, missing potential patients.",
+          "Without SEO-friendly structure, many dental websites fail to appear in local search results and Google Maps. We build SEO-optimised websites with clean structure, fast performance, and local optimisation to attract nearby patients actively searching for dental care.",
       },
     ],
     selectedIndex: 0,
@@ -1478,42 +1478,42 @@ export const dentistWebDesignService: ServiceDetail = {
       {
         title: "Dental Practice–Focused Design",
         description:
-          "We design websites specifically for dental clinics and oral healthcare providers, focusing on cleanliness, comfort, and professionalism.",
+          "We design websites specifically for dental clinics and oral healthcare providers. Our approach focuses on cleanliness, comfort, and professionalism—helping patients feel relaxed while clearly presenting your dental services and expertise.",
         icon: "map",
         color: "from-blue-500 to-blue-400",
       },
       {
         title: "Patient-Friendly Website Structure",
         description:
-          "Clear navigation, organised treatment pages, and simple booking options make it easy for patients to take action.",
+          "Dental patients want quick answers and easy booking. We design dentist websites with clear navigation, organised treatment pages, and simple appointment enquiry options, making it easy for visitors to understand services and take action.",
         icon: "image",
         color: "from-emerald-500 to-emerald-400",
       },
       {
         title: "Trust-Building Visuals & Branding",
         description:
-          "Welcoming design, dentist profiles, clinic images, and testimonials help build confidence and long-term patient relationships.",
+          "We create dentist websites that build confidence through welcoming design, consistent branding, and thoughtful content layout. From dentist profiles to clinic images and patient testimonials, every element supports trust and long-term patient relationships.",
         icon: "calendar-check",
         color: "from-purple-500 to-purple-400",
       },
       {
         title: "Mobile-Optimised & Fast Performance",
         description:
-          "Fully responsive dentist websites that load quickly and perform smoothly across all devices.",
+          "Most patients search for dental services on their phones. We build fully responsive dentist websites that load quickly and function smoothly across all devices, ensuring a seamless experience from first visit to appointment request.",
         icon: "smartphone",
         color: "from-orange-500 to-orange-400",
       },
       {
         title: "SEO-Ready for Local Visibility",
         description:
-          "SEO-friendly structure and local optimisation help your clinic appear in nearby dental searches and Google Maps.",
+          "Our dentist web design includes SEO-friendly structure, optimised page layouts, and local search readiness. This helps your clinic appear in nearby dental searches and Google Maps, attracting patients actively looking for care.",
         icon: "smartphone",
         color: "from-cyan-500 to-teal-400",
       },
       {
         title: "Analytics & Continuous Improvement",
         description:
-          "We track patient behaviour and appointment enquiries to continuously improve conversions and patient acquisition.",
+          "We monitor website traffic, appointment enquiries, and user behaviour to understand patient engagement. Using this data, we continuously improve design and content to increase conversions and improve patient acquisition over time.",
         icon: "trending-up",
         color: "from-emerald-500 to-emerald-400",
       },
@@ -1698,7 +1698,7 @@ export const lawFirmWebDesignService: ServiceDetail = {
         icon: "users",
         title: "Understanding Your Practice & Client Needs",
         description:
-          "We analyse your areas of law, target clients, and expectations to design a website that communicates authority, trust, and professionalism.",
+          "An effective law firm website starts with understanding your practice and clients. We design professional, trust-focused websites that clearly present your legal services and guide visitors to contact your firm or book consultations with confidence.",
         color: "text-emerald-600",
         bg: "bg-emerald-50",
       },
@@ -1706,7 +1706,7 @@ export const lawFirmWebDesignService: ServiceDetail = {
         icon: "search",
         title: "Competitor & Market Research",
         description:
-          "We review competitor law firm websites to uncover opportunities for differentiation through stronger branding, clarity, and usability.",
+          "The legal industry is highly competitive online. We analyse competitor law firm websites to identify gaps and opportunities, then design a clear, professional website that differentiates your firm and builds client trust.",
         color: "text-blue-600",
         bg: "bg-blue-50",
       },
@@ -1714,7 +1714,7 @@ export const lawFirmWebDesignService: ServiceDetail = {
         icon: "layout",
         title: "Strategic Design & User Experience",
         description:
-          "We create professional layouts with intuitive navigation and strong calls-to-action that guide visitors toward consultations.",
+          "We design clean, professional, and client-friendly law firm websites with intuitive navigation and clear calls-to-action. By highlighting your expertise, credentials, and case results, we build trust and convert visitors into clients.",
         color: "text-purple-600",
         bg: "bg-purple-50",
       },
@@ -1722,7 +1722,7 @@ export const lawFirmWebDesignService: ServiceDetail = {
         icon: "smartphone",
         title: "Mobile-Responsive & SEO-Optimized",
         description:
-          "We build fully responsive websites with SEO best practices to improve local and national visibility across devices.",
+          "Most clients search for legal services on mobile. We build fast, fully responsive, and SEO-optimised websites that improve search visibility and help potential clients find and contact your law firm easily.",
         color: "text-orange-600",
         bg: "bg-orange-50",
       },
@@ -1730,7 +1730,7 @@ export const lawFirmWebDesignService: ServiceDetail = {
         icon: "line-chart",
         title: "Tracking, Analytics & Continuous Improvement",
         description:
-          "We monitor enquiries, engagement, and user behaviour to refine design and content for better conversions over time.",
+          "A high-performing website needs ongoing monitoring. We use analytics to track visitor behavior and inquiries, refining design and content to boost engagement, conversions, and support your law firm’s growth.",
         color: "text-pink-600",
         bg: "bg-pink-50",
       },
@@ -1738,34 +1738,34 @@ export const lawFirmWebDesignService: ServiceDetail = {
   },
 
   bottlenecksSection: {
-    heading: "Common Law Firm Website Challenges",
+    heading: "Common Law Firm Website Challenges & Our Solutions",
     description:
-      "We solve the most common issues that reduce visibility, trust, and consultation enquiries for law firms.",
+      "Many law firms face website issues that reduce online visibility, client trust, and consultation enquiries. We address these challenges with professional, client-focused web design that builds authority and drives conversions.",
     items: [
       {
         title: "Slow or Outdated Websites",
         description:
-          "Outdated layouts and slow loading times reduce credibility and cause potential clients to leave before contacting your firm.",
+          "Outdated designs and slow-loading pages create a poor first impression and reduce credibility. We build modern, fast, and professional websites that instill confidence, keep visitors engaged, and encourage them to reach out for consultations.",
       },
       {
         title: "Poor Mobile Usability",
         description:
-          "Websites not optimised for mobile devices frustrate users and limit enquiries from clients searching on phones.",
+          "Most clients search for legal services on mobile devices. Websites that aren’t mobile-friendly frustrate users and limit inquiries. We design fully responsive sites that perform seamlessly on smartphones, tablets, and desktops, ensuring a smooth experience for every visitor.",
       },
       {
         title: "Unclear Practice Area Information",
         description:
-          "Vague or poorly structured service pages make it difficult for clients to understand how you can help them.",
+          "When practice areas are vague or poorly organized, potential clients struggle to understand your expertise. We create structured, clear, and detailed service pages that communicate your legal capabilities and help clients feel confident in contacting your firm.",
       },
       {
         title: "Complex Navigation & Weak CTAs",
         description:
-          "Confusing navigation and hidden contact options reduce consultation requests and engagement.",
+          "Confusing menus, hidden contact forms, and unclear calls-to-action reduce engagement and consultation requests. We simplify navigation, prominently display key actions, and guide visitors naturally toward booking a consultation or submitting an inquiry.",
       },
       {
         title: "Low Search Visibility",
         description:
-          "Without SEO-ready structure, law firm websites fail to appear in relevant legal searches and miss qualified leads.",
+          "Without SEO-ready structure, law firm websites fail to appear in relevant searches, losing potential clients. We implement SEO best practices, optimized content, and local search strategies to improve visibility, attract qualified leads, and grow your client base.",
       },
     ],
     selectedIndex: 0,
@@ -1780,42 +1780,42 @@ export const lawFirmWebDesignService: ServiceDetail = {
       {
         title: "Legal Industry–Focused Design",
         description:
-          "We design websites specifically for law firms and legal professionals, focusing on authority, clarity, and professionalism.",
+          "We design websites specifically for law firms and legal professionals. Our approach focuses on authority, clarity, and professionalism—helping your firm present its expertise clearly while building confidence with potential clients from the first visit.",
         icon: "map",
         color: "from-blue-500 to-blue-400",
       },
       {
         title: "Client Journey–Driven Structure",
         description:
-          "Clear navigation, structured practice area pages, and prominent contact options make it easy for clients to reach out.",
+          "Legal clients often visit a website during stressful situations. We design law firm websites with clear navigation, well-structured practice area pages, and prominent contact options, making it easy for visitors to find information and reach out for legal support.",
         icon: "image",
         color: "from-emerald-500 to-emerald-400",
       },
       {
-        title: "Trust & Professional Branding",
+        title: "Trust, Credibility & Professional Branding",
         description:
-          "Attorney profiles, case highlights, and testimonials reinforce credibility and showcase your firm’s strengths.",
+          "We create law firm websites that communicate reliability through clean design, consistent branding, and strong content presentation. Attorney profiles, case highlights, and testimonials are positioned to reinforce credibility and showcase your firm’s strengths.",
         icon: "calendar-check",
         color: "from-purple-500 to-purple-400",
       },
       {
         title: "Mobile-Responsive & Fast Performance",
         description:
-          "Fully responsive law firm websites that load quickly and perform smoothly across all devices.",
+          "Many clients search for legal services on mobile devices. We build fully responsive law firm websites that load quickly and perform smoothly across all devices, ensuring accessibility and a positive user experience.",
         icon: "smartphone",
         color: "from-orange-500 to-orange-400",
       },
       {
-        title: "SEO-Ready Framework",
+        title: "SEO-Ready Framework for Legal Visibility",
         description:
-          "SEO-friendly structure and clean architecture help your firm rank in legal searches and attract qualified enquiries.",
+          "Our law firm web design includes SEO-friendly structure, optimised page layouts, and clean site architecture. This helps your firm appear in relevant legal searches, attract qualified enquiries, and improve online visibility.",
         icon: "smartphone",
         color: "from-cyan-500 to-teal-400",
       },
       {
         title: "Performance Tracking & Optimisation",
         description:
-          "We track engagement and enquiries to continuously refine your website for higher conversions and growth.",
+          "We track website engagement, enquiry submissions, and user behaviour to understand how visitors interact with your site. Using these insights, we continuously refine design and structure to improve conversions and long-term performance.",
         icon: "trending-up",
         color: "from-emerald-500 to-emerald-400",
       },
@@ -1906,11 +1906,9 @@ export const seoOptimisationService: ServiceDetail = {
     heading: "Grow Your Business Online with",
     subheading: "Powerful SEO Solutions",
     description:
-      "Want more visibility, more website visitors, and real business growth? Codexa Digital is a trusted SEO Company delivering result-focused Search Engine Optimisation Services for businesses across Australia. Our goal is simple: help your website rank higher, attract the right audience, and turn visitors into customers. As a leading SEO Agency Australia, we use ethical, data-driven SEO strategies to improve rankings, build trust, and drive long-term success. Our experienced SEO Experts focus on real results, not shortcuts.",
-
+      "Want more visibility, more website visitors, and real business growth? Codexa Digital is a trusted SEO company delivering result-focused search engine optimisation for businesses across Australia. Our goal is simple: help your website rank higher, attract the right audience, and turn visitors into customers.",
     descriptionExtra:
-      "We focus on sustainable SEO growth using proven strategies that improve visibility, authority, and conversions. Every SEO campaign is built around your business goals and long-term success.",
-
+      "As a leading SEO agency in Australia, we use ethical, data-driven SEO strategies to improve rankings, build trust, and drive long-term success. Our experienced SEO experts focus on real results, not shortcuts. We focus on sustainable SEO growth using proven strategies that improve visibility, authority, and conversions. Every SEO campaign is built around your business goals and long-term success.",
     highlights: [
       "✔ Ethical & Data-Driven SEO",
       "✔ Higher Rankings & Targeted Traffic",
@@ -1924,25 +1922,24 @@ export const seoOptimisationService: ServiceDetail = {
     heading: "Turn Website Traffic into",
     headingHighlight: "Real Leads",
     description: [
-      "Getting traffic is not enough if it does not convert. Many businesses struggle with inconsistent leads and slow growth. With Codexa Digital’s SEO Services, your website becomes easier to find when people actively search for your products or services.",
-      "Our SEO Consultants help create steady online visibility so your business can grow with confidence.",
-      "With clear strategies and ongoing optimisation, you get predictable traffic and better enquiries over time.",
+      "Getting traffic is not enough if it does not convert. Many businesses struggle with inconsistent leads and slow growth. With Codexa Digital’s SEO services, your website becomes easier to find when people actively search for your products or services.",
+      "Our SEO consultants help create steady online visibility so your business can grow with confidence. With clear strategies and ongoing optimisation, you get predictable traffic and better enquiries over time.",
     ],
-    buttonText: "Get SEO Help",
+    buttonText: "Get Your Free SEO Consultation Today!",
     image: "/images/seo-consultation.jpg",
   },
 
   seoServicesDetails: {
-    heading: "Search Engine",
+    heading: "Our Search Engine",
     headingHighlight: "Optimisation Services",
     description:
-      "Complete SEO solutions designed to improve rankings, visibility, and conversions.",
+      "Our complete SEO services are designed to improve your website’s visibility, attract the right audience, and deliver steady, long-term growth online.",
     steps: [
       {
         icon: "filesearch",
         title: "Website SEO Audit",
         description:
-          "We review your website structure, content, speed, and technical setup to identify issues and create a clear SEO roadmap.",
+          "We check your website’s structure, content, speed, and technical setup. This helps us find problems that stop your site from ranking well. We then create a clear SEO plan to improve performance.",
         color: "text-blue-600",
         bg: "bg-blue-50",
       },
@@ -1950,7 +1947,7 @@ export const seoOptimisationService: ServiceDetail = {
         icon: "layout",
         title: "On-Page SEO Optimisation",
         description:
-          "We optimise page titles, headings, keywords, and internal links so search engines clearly understand your website.",
+          "Our SEO specialists improve page titles, headings, keywords, and links. This helps search engines understand what your website is about. Better on-page SEO helps your pages rank higher.",
         color: "text-emerald-600",
         bg: "bg-emerald-50",
       },
@@ -1958,7 +1955,7 @@ export const seoOptimisationService: ServiceDetail = {
         icon: "link",
         title: "Off-Page SEO & Authority Building",
         description:
-          "We build high-quality backlinks from trusted websites to improve authority, credibility, and rankings.",
+          "We build quality backlinks from trusted and relevant websites. This increases your website’s trust and authority online. Stronger authority helps improve search rankings.",
         color: "text-purple-600",
         bg: "bg-purple-50",
       },
@@ -1966,7 +1963,7 @@ export const seoOptimisationService: ServiceDetail = {
         icon: "map-pin",
         title: "Local SEO Optimisation",
         description:
-          "We optimise Google Business Profiles, local listings, and reviews to improve local visibility and Google Maps rankings.",
+          "We optimise your Google Business Profile and local listings. This helps your business show up in local searches and Google Maps. Local SEO makes it easier for nearby customers to find you.",
         color: "text-orange-600",
         bg: "bg-orange-50",
       },
@@ -1974,7 +1971,7 @@ export const seoOptimisationService: ServiceDetail = {
         icon: "edit",
         title: "SEO Content Optimisation",
         description:
-          "We create and improve service pages, blogs, and FAQs using language that matches real search behaviour.",
+          "We create and improve service pages, blogs, and FAQs. All content is written in simple, clear language. This helps attract users who are searching for your services.",
         color: "text-pink-600",
         bg: "bg-pink-50",
       },
@@ -1982,7 +1979,7 @@ export const seoOptimisationService: ServiceDetail = {
         icon: "line-chart",
         title: "SEO Tracking & Reporting",
         description:
-          "We track rankings, traffic, and conversions with clear reports that show measurable progress and growth.",
+          "We track keyword rankings, website traffic, and conversions. You receive easy-to-read reports showing real progress. This helps measure growth and plan next steps.",
         color: "text-teal-600",
         bg: "bg-teal-50",
       },
@@ -1993,47 +1990,98 @@ export const seoOptimisationService: ServiceDetail = {
     heading: "Our Step-by-Step",
     headingHighlight: "SEO Process",
     description:
-      "A proven SEO process focused on sustainable rankings and long-term growth.",
+      "We follow a simple, proven SEO process to help your website rank higher, attract the right visitors, and grow your business online.",
     steps: [
       {
         icon: "search",
-        title: "Keyword & Search Intent Research",
+        title: "Step 1: Keyword & Search Intent Research",
         description:
-          "We research what your audience searches for and focus on high-value keywords that bring real traffic.",
+          "We research what your ideal customers are searching for on Google. This helps us choose high-value keywords that match real search intent, bringing visitors who are more likely to enquire or buy.",
         color: "text-emerald-600",
         bg: "bg-emerald-50",
       },
       {
         icon: "users",
-        title: "Competitor SEO Analysis",
+        title: "Step 2: Competitor SEO Analysis",
         description:
-          "We analyse competitors to identify gaps, strengths, and ranking opportunities.",
+          "We study your competitors’ websites, content, and rankings to find gaps and opportunities they are missing. We then build a smarter SEO plan to help you rank above them.",
         color: "text-blue-600",
         bg: "bg-blue-50",
       },
       {
         icon: "zap",
-        title: "Technical SEO Improvements",
+        title: "Step 3: Technical SEO Improvements",
         description:
-          "We fix site speed, mobile usability, indexing, security, and site structure for better performance.",
+          "We fix website speed, mobile issues, indexing, and security problems. A strong technical setup improves user experience and keeps visitors on your website longer.",
         color: "text-purple-600",
         bg: "bg-purple-50",
       },
       {
         icon: "map",
-        title: "Local & Voice Search Optimisation",
+        title: "Step 4: Local & Voice Search Optimisation",
         description:
-          "We optimise for Google Maps, local searches, and voice queries to improve discoverability.",
+          "We optimise your website for local searches, Google Maps, and voice queries like 'near me' to help people find your business easily when searching nearby.",
         color: "text-orange-600",
         bg: "bg-orange-50",
       },
       {
         icon: "shield-check",
-        title: "Reputation & Trust Building",
+        title: "Step 5: Reputation & Trust Building",
         description:
-          "We support review management and trust signals to improve credibility and user confidence.",
+          "We support review management and online trust signals. Positive reviews and clear information build customer confidence, improving credibility and conversion rates.",
         color: "text-pink-600",
         bg: "bg-pink-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Choose Codexa Digital as Your",
+    headingHighlight: "SEO Agency?",
+    description:
+      "As one of the best SEO agencies in Australia, we focus on sustainable growth using proven, ethical SEO methods.",
+    benefits: [
+      {
+        title: "Smart Keyword Research",
+        description:
+          "We research what real people search for before making any plan, ensuring your website attracts visitors ready to take action.",
+        icon: "search",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Competitor-Driven SEO Strategy",
+        description:
+          "We study your top competitors to uncover gaps and build a stronger strategy so your business can rank higher.",
+        icon: "target",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Local & Voice Search Optimisation",
+        description:
+          "Optimisation for Google Maps and voice queries to reach nearby customers on smart devices.",
+        icon: "map-pin",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Technical SEO for Faster Websites",
+        description:
+          "We fix speed and mobile errors to keep visitors happy and improve search engine performance.",
+        icon: "zap",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Clear Content Written for Users",
+        description:
+          "Simple and helpful content that builds trust, answers questions, and encourages enquiries.",
+        icon: "edit",
+        color: "from-cyan-500 to-teal-400",
+      },
+      {
+        title: "Continuous Monitoring & Improvement",
+        description:
+          "We track results every month and refine our strategy to deliver steady growth over time.",
+        icon: "trending-up",
+        color: "from-emerald-500 to-emerald-400",
       },
     ],
   },
@@ -2041,94 +2089,44 @@ export const seoOptimisationService: ServiceDetail = {
   bottlenecksSection: {
     heading: "Common SEO Problems We Solve",
     description:
-      "We fix the most common SEO issues that stop websites from growing and converting.",
+      "Many businesses face challenges that stop growth and reduce online trust. Our SEO experts solve these common issues effectively.",
     items: [
       {
-        title: "Low Search Visibility",
+        title: "1. Low Online Visibility",
         description:
-          "Websites that do not rank for the right keywords miss valuable traffic and leads.",
+          "Many businesses struggle to appear on Google. Without proper optimisation, your website stays hidden. A trusted SEO agency helps improve visibility and reach.",
       },
       {
-        title: "Wrong Keyword Targeting",
+        title: "2. Wrong Keyword Targeting",
         description:
-          "Targeting irrelevant or low-value keywords results in traffic that does not convert.",
+          "Using broad keywords attracts the wrong audience. We focus on high-intent keywords that match what real customers search for, driving relevant traffic.",
       },
       {
-        title: "Weak or Unoptimised Content",
+        title: "3. Weak or Unclear Content",
         description:
-          "Poor content fails to match search intent and reduces rankings and engagement.",
+          "Poor content fails to explain your services. We improve website content so search engines and users clearly understand your business, increasing engagement.",
       },
       {
-        title: "Slow Website Performance",
+        title: "4. Low Conversions & Enquiries",
         description:
-          "Slow-loading websites hurt rankings, user experience, and conversions.",
+          "Even with traffic, many websites fail to turn visitors into leads. We improve page structure and calls-to-action to turn visits into forms and sales.",
       },
       {
-        title: "Low Conversion Rates",
+        title: "5. Slow or Technically Weak Websites",
         description:
-          "SEO traffic without optimisation often fails to generate enquiries or sales.",
+          "Slow speed and mobile issues hurt rankings. We fix technical SEO problems to improve performance, user experience, and long-term growth.",
       },
     ],
     selectedIndex: 0,
   },
 
-  whyChooseUs: {
-    heading: "Why Choose Codexa Digital as Your",
-    headingHighlight: "SEO Agency",
-    description:
-      "We focus on sustainable SEO growth using proven, ethical strategies.",
-    benefits: [
-      {
-        title: "Smart Keyword Research",
-        description:
-          "Keyword strategies based on real search data and user intent.",
-        icon: "search",
-        color: "from-blue-500 to-blue-400",
-      },
-      {
-        title: "Competitor-Driven SEO Strategy",
-        description:
-          "We analyse competitors to uncover opportunities and outrank them.",
-        icon: "target",
-        color: "from-emerald-500 to-emerald-400",
-      },
-      {
-        title: "Local & Voice Search Optimisation",
-        description:
-          "Optimisation for local searches and voice queries to reach nearby customers.",
-        icon: "map-pin",
-        color: "from-purple-500 to-purple-400",
-      },
-      {
-        title: "Technical SEO Expertise",
-        description:
-          "Faster, mobile-friendly websites with strong technical foundations.",
-        icon: "zap",
-        color: "from-orange-500 to-orange-400",
-      },
-      {
-        title: "Content Written for Users",
-        description: "Clear, helpful content designed to rank and convert.",
-        icon: "edit",
-        color: "from-cyan-500 to-teal-400",
-      },
-      {
-        title: "Continuous Monitoring & Improvement",
-        description:
-          "Ongoing optimisation to maintain rankings and long-term growth.",
-        icon: "trending-up",
-        color: "from-emerald-500 to-emerald-400",
-      },
-    ],
-  },
-
   seoServices: {
     badge: "Complete SEO Solutions",
-    heading: "What Does Our",
-    headingHighlight: "SEO Optimisation Include?",
+    heading: "Rank Business with Us as A",
+    headingHighlight: "Trusted SEO Company!",
     description: [
-      "Our SEO services focus on visibility, authority, and conversions.",
-      "We use proven methods to drive long-term, sustainable growth.",
+      "Codexa Digital is here to help your business turn search visibility into real growth.",
+      "Our SEO experts deliver reliable search engine optimisation services designed to increase visibility, traffic, and business growth.",
     ],
     services: [
       "SEO Audits & Strategy",
@@ -2166,14 +2164,44 @@ export const seoOptimisationService: ServiceDetail = {
           "Yes. Local SEO helps your business appear in location-based searches and Google Maps.",
       },
       {
-        question: "How long does SEO take to work?",
-        answer:
-          "Most websites see results within 3–6 months, with steady growth over time.",
-      },
-      {
         question: "Do you provide ongoing SEO support?",
         answer:
-          "Yes. Our SEO Services include continuous optimisation, tracking, and improvement.",
+          "Yes. Our SEO services include continuous optimisation, tracking, and improvement.",
+      },
+      {
+        question: "How long does it take to see results from SEO?",
+        answer:
+          "SEO does not give instant results. Most websites start seeing improvements in traffic and rankings within 3 to 6 months. Strong and lasting results grow over time as your website gains trust and authority.",
+      },
+      {
+        question: "How can I check if SEO is working for my business or product?",
+        answer:
+          "You can track SEO success by checking website traffic, keyword rankings, enquiries, calls, and form submissions. If more people are finding your site and taking action, your SEO is working.",
+      },
+      {
+        question: "How do I know if my website needs SEO?",
+        answer:
+          "If your website gets low traffic, does not rank on Google, or brings very few enquiries, it likely needs SEO. Slow loading speed, poor mobile design, and outdated content are also signs SEO is needed.",
+      },
+      {
+        question: "How do search engines work?",
+        answer:
+          "Search engines scan websites, understand the content, and store information in a database. When someone searches, the engine shows the most helpful and relevant pages based on quality, keywords, and user experience.",
+      },
+      {
+        question: "Is SEO better than paid advertising?",
+        answer:
+          "SEO brings long-term traffic without paying for every click. While ads stop when the budget ends, SEO continues to deliver results over time and builds lasting trust.",
+      },
+      {
+        question: "Does SEO work on mobile devices?",
+        answer:
+          "Yes. Mobile-friendly websites rank better and give users a smoother experience. Google prefers websites that work well on phones and tablets.",
+      },
+      {
+        question: "How often should SEO be updated?",
+        answer:
+          "SEO should be reviewed regularly. Search engines change rules, and competitors improve their sites, so ongoing updates help maintain and grow rankings.",
       },
     ],
   },
@@ -2795,7 +2823,6 @@ export const cleaningWebDesignService: ServiceDetail = {
   },
 };
 
-
 export const doctorWebDesignService: ServiceDetail = {
   id: "doctor-web-design",
   title: "Doctor Web Design",
@@ -2805,11 +2832,11 @@ export const doctorWebDesignService: ServiceDetail = {
   heroSection: {
     badge: "🏥 Doctor Website Design Services",
     heading: "Modern & Patient-Focused Web Design",
-    subheading: "for Doctors and Healthcare Practices",
+    subheading: "for Doctors",
     description:
-      "Looking to create a professional website that builds trust and attracts more patients? My Doctor Web Design Services help healthcare professionals establish a strong online presence with clean, modern, and patient-friendly websites.",
+      "Looking to create a professional website that builds trust and attracts more patients? My Doctor Web Design Services help healthcare professionals establish a strong online presence with clean, modern, and patient-friendly websites. As a specialist in web design for doctors, I create custom medical websites designed to improve user experience, increase engagement, and convert visitors into appointment bookings. Every website is built with patient trust, clarity, and performance in mind.",
     descriptionExtra:
-      "As a specialist in web design for doctors, I create custom medical websites designed to improve user experience, increase engagement, and convert visitors into appointment bookings. Every website is built with patient trust, clarity, and performance in mind.",
+      "I specialise in doctor and healthcare website design, creating fast, secure, and mobile-friendly websites that reflect your medical expertise. From solo practitioners to multi-location clinics, my approach focuses on usability, accessibility, and long-term digital growth.",
     highlights: [
       "✔ Patient-Friendly, Professional Websites",
       "✔ Mobile & Desktop Optimised",
@@ -2825,6 +2852,7 @@ export const doctorWebDesignService: ServiceDetail = {
     description: [
       "Your website is often the first impression patients have of your practice. With professional doctor web design, patients can easily find information, understand your services, and book appointments without confusion.",
       "Whether you run a private clinic, a medical centre, or a specialised practice, my doctor website design solutions ensure a smooth patient journey across all devices.",
+      "By combining modern UI/UX design, mobile responsiveness, fast loading speeds, and SEO-ready structure, I build medical websites that attract, engage, and convert patients—supporting credibility, patient trust, and long-term success.",
     ],
     buttonText: "Get Your Doctor Website",
     image: "/images/doctor-web-design-consultation.jpg",
@@ -2834,7 +2862,7 @@ export const doctorWebDesignService: ServiceDetail = {
     heading: "Our Doctor Website",
     headingHighlight: "Design Services",
     description:
-      "Professional doctor web design services to attract patients, improve credibility, and increase appointment bookings.",
+      "Build a Professional Online Presence for Your Medical Practice. We design custom websites for doctors and healthcare practices that highlight your expertise, services, and patient care. Our websites help attract new patients, build trust, and make it easy for visitors to book appointments.",
     steps: [
       {
         icon: "layout",
@@ -2848,7 +2876,7 @@ export const doctorWebDesignService: ServiceDetail = {
         icon: "palette",
         title: "Modern Design & Branding",
         description:
-          "Clean layouts, professional visuals, and consistent branding convey trust and expertise, giving patients confidence in your services.",
+          "We focus on clean layouts, professional visuals, and consistent branding that convey trust and expertise. Your website will give patients confidence in your services before they even visit your clinic.",
         color: "text-emerald-600",
         bg: "bg-emerald-50",
       },
@@ -2864,7 +2892,7 @@ export const doctorWebDesignService: ServiceDetail = {
         icon: "search",
         title: "SEO-Optimised Structure",
         description:
-          "SEO-friendly architecture, fast loading speeds, and structured content improve search engine visibility, helping patients find your practice.",
+          "We develop websites with SEO-friendly architecture, fast loading speeds, and structured content to improve visibility in search engines, helping patients find your practice when they need it most.",
         color: "text-orange-600",
         bg: "bg-orange-50",
       },
@@ -2872,7 +2900,7 @@ export const doctorWebDesignService: ServiceDetail = {
         icon: "bar-chart-2",
         title: "Analytics & Performance Monitoring",
         description:
-          "Tracking tools monitor website traffic, appointment requests, and user engagement, allowing continuous improvement of performance and patient conversion.",
+          "We implement tracking and analytics tools to monitor website traffic, appointment requests, and user engagement. This allows us to continually improve the website’s performance and patient conversion rates.",
         color: "text-pink-600",
         bg: "bg-pink-50",
       },
@@ -2889,7 +2917,7 @@ export const doctorWebDesignService: ServiceDetail = {
         icon: "users",
         title: "Understanding Your Medical Practice & Patients",
         description:
-          "We learn about your services, specialties, and patient expectations. Every page is structured to help patients feel informed, comfortable, and confident.",
+          "A great doctor website begins with understanding your services, specialties, and patient needs. We study your practice and patient behavior to design a site that builds trust, communicates expertise, and helps patients feel confident in choosing your care.",
         color: "text-emerald-600",
         bg: "bg-emerald-50",
       },
@@ -2897,7 +2925,7 @@ export const doctorWebDesignService: ServiceDetail = {
         icon: "search",
         title: "Medical Industry Research & Digital Positioning",
         description:
-          "We analyse competitor websites and digital trends to position your website effectively while maintaining professionalism and compliance.",
+          "The healthcare field is competitive and trust-driven. We study local doctor and clinic websites to spot gaps and opportunities. Using professional design and clear messaging, we create a compliant website that stands out and builds patient trust.",
         color: "text-blue-600",
         bg: "bg-blue-50",
       },
@@ -2905,7 +2933,7 @@ export const doctorWebDesignService: ServiceDetail = {
         icon: "layout",
         title: "Clear Structure & Patient-Focused User Experience",
         description:
-          "Navigation is intuitive, service pages are clear, and important actions like booking appointments are easy to find.",
+          "We create doctor websites focused on clarity and simplicity. Intuitive navigation, clear service pages, and easy-to-find actions help patients access credentials, expertise, and clinic info—boosting engagement and appointment requests.",
         color: "text-purple-600",
         bg: "bg-purple-50",
       },
@@ -2913,7 +2941,7 @@ export const doctorWebDesignService: ServiceDetail = {
         icon: "smartphone",
         title: "Mobile-Responsive & SEO-Optimised Website Design",
         description:
-          "Fully responsive, fast-loading, and SEO-ready websites improve patient experience and local search visibility.",
+          "Most patients search for doctors on mobile. We build fully responsive, fast, and SEO-friendly websites that work on any device, boost local visibility, and attract patients actively seeking care.",
         color: "text-orange-600",
         bg: "bg-orange-50",
       },
@@ -2921,7 +2949,7 @@ export const doctorWebDesignService: ServiceDetail = {
         icon: "bar-chart-2",
         title: "Performance Monitoring & Continuous Optimisation",
         description:
-          "We integrate analytics to track engagement and continuously refine content, design, and functionality for optimal patient conversions.",
+          "A successful medical website needs ongoing improvement. We use analytics to track traffic, appointments, and user behavior, refining design and content to boost engagement, conversions, and long-term practice growth.",
         color: "text-pink-600",
         bg: "bg-pink-50",
       },
@@ -2937,42 +2965,42 @@ export const doctorWebDesignService: ServiceDetail = {
       {
         title: "Healthcare-Focused Website Design",
         description:
-          "Websites specifically designed for doctors, clinics, and healthcare practices, focusing on trust, clarity, and professionalism.",
+          "We create websites specifically for doctors, clinics, and healthcare practices. Our designs focus on professionalism, trust, and clarity—helping patients understand your services, specialties, and expertise at a glance.",
         icon: "layout",
         color: "from-blue-500 to-blue-400",
       },
       {
         title: "Patient-Centered Website Structure",
         description:
-          "Clear service pages, doctor profiles, and appointment booking options make it easy for patients to access information and take action.",
+          "Medical patients often seek information quickly and want reassurance. We design doctor websites with clear service pages, easy-to-find doctor profiles, and simple appointment booking options, ensuring visitors can access information and take action without confusion.",
         icon: "users",
         color: "from-emerald-500 to-emerald-400",
       },
       {
         title: "Trust & Credibility Through Design",
         description:
-          "Professional layouts, consistent branding, and clear presentation of services establish trust and encourage appointment bookings.",
+          "We build doctor websites that establish credibility with professional layouts, consistent branding, and clear presentation of services. Elements like doctor credentials, patient testimonials, and clinic information strengthen trust and encourage patients to book appointments.",
         icon: "shield",
         color: "from-purple-500 to-purple-400",
       },
       {
         title: "Mobile-Responsive & Fast-Loading",
         description:
-          "Websites perform seamlessly across all devices, providing a smooth, reliable experience for patients.",
+          "Most patients browse healthcare websites on mobile devices. We develop fully responsive doctor websites that perform seamlessly on smartphones, tablets, and desktops, providing a smooth, reliable experience for all visitors.",
         icon: "smartphone",
         color: "from-orange-500 to-orange-400",
       },
       {
         title: "SEO-Optimised for Local and National Visibility",
         description:
-          "SEO-friendly structure and local search readiness ensure your practice appears in Google searches and Maps.",
+          "Our doctor web design includes SEO-friendly structure, optimised page layouts, and local search readiness. This ensures your practice appears in Google searches and Maps, attracting patients actively looking for healthcare services in your area.",
         icon: "search",
         color: "from-pink-500 to-pink-400",
       },
       {
         title: "Analytics & Continuous Improvement",
         description:
-          "Tracking and analytics allow ongoing refinement of content, design, and functionality for improved patient conversion.",
+          "We implement tracking tools to monitor website traffic, appointment requests, and user engagement. These insights allow us to continuously refine content, design, and functionality, ensuring your website consistently converts visitors into patients and grows your practice.",
         icon: "bar-chart-2",
         color: "from-cyan-500 to-teal-400",
       },
@@ -2982,32 +3010,32 @@ export const doctorWebDesignService: ServiceDetail = {
   bottlenecksSection: {
     heading: "Common Doctor Web Design Challenges & Our Solutions",
     description:
-      "We address challenges that limit online visibility, patient engagement, and appointment bookings for healthcare practices.",
+      "We tackle the key issues that often limit a healthcare practice’s online presence, patient engagement, and appointment bookings. Our solutions ensure your website is fast, professional, and patient-friendly.",
     items: [
       {
         title: "Slow-Loading Websites",
         description:
-          "We build fast, optimized websites to ensure patients can access information quickly and efficiently.",
+          "Patients expect instant access to information. Slow-loading sites frustrate visitors and reduce conversions. We optimize images, code, and server performance to create websites that load quickly and provide a seamless browsing experience.",
       },
       {
         title: "Outdated Layouts",
         description:
-          "Modern, professional designs improve trust and present your services clearly to patients.",
+          "Old-fashioned or cluttered designs can make your practice appear unprofessional and hard to navigate. We create modern, clean, and visually appealing layouts that highlight your services, specialties, and credentials, building trust and credibility.",
       },
       {
         title: "Poor Mobile Usability",
         description:
-          "Fully responsive designs provide smooth navigation across devices, enhancing patient experience.",
+          "Most patients search for doctors on mobile devices. Non-responsive websites frustrate users and increase bounce rates. Our fully responsive designs adapt perfectly to smartphones, tablets, and desktops, ensuring smooth navigation and a consistent experience on every device.",
       },
       {
         title: "Unclear Service Information",
         description:
-          "Service pages are structured to provide clarity, reduce uncertainty, and help patients make informed decisions.",
+          "If patients can’t quickly understand your services, they may look elsewhere. We structure service pages with clear headings, concise descriptions, and easy-to-read content, helping visitors make informed decisions and increasing the likelihood of appointment bookings.",
       },
       {
         title: "Lack of Online Booking Features",
         description:
-          "We integrate clear appointment booking options to increase patient conversions.",
+          "Many medical websites fail to make booking easy, leading to lost opportunities. We integrate intuitive online booking systems, contact forms, and call-to-action buttons, simplifying the appointment process and increasing patient conversions.",
       },
     ],
     selectedIndex: 0,
@@ -3083,10 +3111,6 @@ export const doctorWebDesignService: ServiceDetail = {
     ],
   },
 };
-
-
-
-
 
 export const restaurantWebDesignService: ServiceDetail = {
   id: "restaurant-web-design",
@@ -3377,14 +3401,14 @@ export const restaurantWebDesignService: ServiceDetail = {
           "Absolutely. A specialist agency understands the food and hospitality industry, creating websites that engage diners, reflect your brand, and convert visitors into customers effectively.",
       },
       {
-        question: "How does Restaurant Web Design increase reservations and sales?",
+        question:
+          "How does Restaurant Web Design increase reservations and sales?",
         answer:
           "By providing an attractive, easy-to-navigate, mobile-friendly website with clear menus, contact information, and online booking options, more visitors are encouraged to make reservations, place orders, and engage with your restaurant.",
       },
     ],
   },
 };
-
 
 export const wordPressWebsiteService: ServiceDetail = {
   id: "wordpress-website",
@@ -3609,187 +3633,887 @@ export const wordPressWebsiteService: ServiceDetail = {
   ],
 };
 
-export const webAppService: ServiceDetail = {
-  id: "web-app",
-  title: "Web App Development",
-  description: "Scalable web applications tailored to your business needs.",
+// Seo Service Section Data Start Here:
+export const ndisSeoService: ServiceDetail = {
+  id: "ndis-seo",
+  title: "NDIS SEO Services",
+  description:
+    "Result-focused SEO services for NDIS providers to increase visibility, attract participant enquiries, and achieve long-term growth through local and strategic SEO.",
+
   heroSection: {
-    badge: "💻 Web App Development",
-    heading: "Powerful Custom",
-    subheading: "Web Applications",
+    badge: "🌱 Grow Your NDIS Business with Digital Marketing",
+    heading: "NDIS SEO Services",
+    subheading: "Result-Focused SEO for NDIS Providers",
     description:
-      "We build modern web applications using the latest technologies to ensure performance, scalability, and long-term reliability.",
+      "Looking to get more participant enquiries? Our NDIS SEO services help your business appear on Google when people search for support in your area, making it easier for participants and families to find you.",
     descriptionExtra:
-      "From SaaS platforms to internal tools, our web app development delivers solutions that scale with your business.",
+      "As a trusted SEO agency, we provide affordable NDIS SEO and a proven strategy tailored to your specific needs. From local SEO to complete SEO marketing campaigns, our expert team improves your website visibility, drives more enquiries, and ensures steady long-term growth. With a clear, results-driven approach, we make sure your NDIS services reach the people who need them most, giving your practice a stronger online presence and sustainable success.",
     highlights: [
-      "✔ Modern Technologies",
-      "✔ Scalable Architecture",
-      "✔ Cloud Ready",
+      "✔ Affordable NDIS SEO Services",
+      "✔ Local SEO for NDIS Providers",
+      "✔ Long-Term, Sustainable Growth Strategy",
     ],
-    image: "/professional-service.jpg",
+    image: "/images/ndis-seo-hero.jpg",
   },
+
   talkToExperts: {
-    badge: "Talk to Professionals",
-    heading: "Talk to the",
-    headingHighlight: "Experts",
+    badge: "Talk to NDIS SEO Experts",
+    heading: "Result-Focused SEO Agency",
+    headingHighlight: "for NDIS Providers",
     description: [
-      "Modern web applications power today's successful businesses. Whether you need a SaaS platform, dashboard, or custom tool, we build it.",
-      "Our team specializes in building web apps that are fast, secure, and built to scale with your growing business.",
+      "NDIS providers need to be easy to find online, and our SEO services help your business appear when participants and families search for support. As a trusted NDIS SEO marketing agency, we use a clear strategy and a strong local SEO approach to help you stand out on Google and AI search platforms.",
+      "Our services ensure that the right people can find and contact your business, building trust even before the first call. Every provider is different, which is why our SEO for NDIS providers is tailored to your goals, services, and location, with affordable options to suit your needs. As an experienced SEO agency for NDIS providers, we focus on long-term growth using proven strategies that keep your business visible and help you achieve sustainable success.",
     ],
-    buttonText: "Get Help With Your Web App",
-    image: "/team-consultation.jpg",
+    buttonText: "Request Free NDIS SEO Consultation",
+    image: "/images/ndis-seo-consultation.jpg",
   },
-  processSection: {
-    heading: "Our Proven",
-    headingHighlight: "Web App Development Process",
+
+  seoServicesDetails: {
+    heading: "Our SEO Services",
+    headingHighlight: "for NDIS Providers",
     description:
-      "From concept to launch, we deliver scalable web applications.",
+      "Boost your online visibility and attract more participants with our expert NDIS SEO services designed for trust, authority, and local reach.",
     steps: [
       {
-        icon: "lightbulb",
-        title: "Concept & Strategy",
+        icon: "layout",
+        title: "On-Page SEO for NDIS Providers",
         description:
-          "We collaborate to define your app's vision, features, and success metrics.",
-        color: "text-emerald-600",
-        bg: "bg-emerald-50",
-      },
-      {
-        icon: "pen-tool",
-        title: "Design & Prototyping",
-        description:
-          "We create intuitive UI/UX designs and interactive prototypes.",
+          "We optimise your website pages, headings, keywords, internal links, and service descriptions. This ensures search engines clearly understand your NDIS services and show your site to people actively searching for support. We also improve page layouts, meta descriptions, and headings to make your website more appealing to visitors and boost engagement.",
         color: "text-blue-600",
         bg: "bg-blue-50",
       },
       {
-        icon: "code",
-        title: "Development",
+        icon: "link",
+        title: "Off-Page SEO & Authority Building",
         description:
-          "We build your app using modern technologies and best practices.",
+          "We build strong backlinks from trusted healthcare, disability, and business websites. This improves your website’s authority and trust, helping your NDIS services rank higher and reach more participants. We also monitor backlink quality and competitor strategies to ensure your website maintains a strong online reputation.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "map-pin",
+        title: "Local SEO for NDIS Providers",
+        description:
+          "Local SEO is essential for NDIS businesses. We optimise your Google Business Profile, local listings, and reviews so nearby participants and carers can easily find your services. Our local SEO strategy helps you appear on Google Maps and local searches, driving more local traffic and calls to your business. We also focus on location-based keywords to attract participants in your service areas.",
         color: "text-purple-600",
         bg: "bg-purple-50",
       },
       {
-        icon: "zap",
-        title: "Testing & Optimization",
+        icon: "file-text",
+        title: "Content Optimisation for NDIS Services",
         description:
-          "Rigorous testing ensures quality, performance, and security.",
+          "We create and improve service pages, blogs, and FAQs that explain your NDIS supports in clear, simple language. This builds trust, answers common questions, and helps convert visitors into enquiries. Additionally, we update content regularly to keep it relevant, accurate, and aligned with search engine trends.",
         color: "text-orange-600",
         bg: "bg-orange-50",
       },
       {
-        icon: "send",
-        title: "Deployment & Launch",
-        description: "We deploy your app and ensure a smooth launch.",
+        icon: "bar-chart-2",
+        title: "Conversion Tracking & SEO Reporting",
+        description:
+          "We track website traffic, keyword rankings, and enquiries to monitor performance. You receive easy-to-understand reports showing what’s working and where improvements are needed. This ensures continuous growth for your NDIS business. We also provide insights on user behaviour and engagement to guide future marketing strategies.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Step-by-Step",
+    headingHighlight: "NDIS SEO Strategy",
+    description:
+      "A proven SEO process designed to attract the right participants and grow your NDIS business sustainably.",
+    steps: [
+      {
+        icon: "search",
+        title: "01. NDIS Keyword & Client Research",
+        description:
+          "We research what participants, carers, and families are searching for online. By targeting the right NDIS SEO keywords, we attract visitors who are more likely to contact your business. This ensures your content reaches the right audience and drives meaningful enquiries.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "users",
+        title: "02. Competitor Review for NDIS SEO",
+        description:
+          "We study other NDIS providers’ websites, content, and backlinks. This helps us find gaps and opportunities so your business can stand out and rank above competitors. It also helps us identify strategies that are working in your niche so we can outperform them.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "settings",
+        title: "03. Technical SEO Setup",
+        description:
+          "We improve website speed, mobile performance, security, site structure, and indexing. Strong technical SEO helps search engines crawl your site easily and gives visitors a smooth experience. This creates a faster, safer, and more user-friendly website that keeps participants engaged.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "map",
+        title: "04. Local SEO & Google Business Profile Optimisation",
+        description:
+          "We fully optimise your Google Business Profile, manage local citations, and improve map visibility. This helps your NDIS services show up when people search nearby. Optimising for local searches ensures more calls, visits, and enquiries from participants in your area.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "star",
+        title: "05. Reviews & Online Reputation Management",
+        description:
+          "Reviews are very important for NDIS providers. We help manage reviews and encourage positive feedback to build trust, improve rankings, and increase enquiries. A strong online reputation also enhances credibility and encourages more families to choose your services.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Choose Codexa Digital for",
+    headingHighlight: "NDIS SEO?",
+    description:
+      "Trusted, affordable, and results-driven SEO services designed specifically for NDIS providers.",
+    benefits: [
+      {
+        title: "Smart NDIS Keyword Research",
+        description:
+          "We focus on high-intent keywords related to SEO for NDIS service providers, helping you attract the right audience. This ensures your website reaches people who are most likely to become participants or clients.",
+        icon: "search",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Competitor & Market Insights",
+        description:
+          "We analyse competitors to find ranking opportunities and create a stronger SEO plan for your NDIS business. By understanding the market, we can develop strategies that outperform competitors and capture more leads.",
+        icon: "users",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Local & Voice Search Optimisation",
+        description:
+          "Our local SEO for NDIS providers ensures your services appear in Google Maps and voice searches. This makes it easier for participants and families nearby to find and contact your business quickly.",
+        icon: "map-pin",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Technical SEO Excellence",
+        description:
+          "We fix speed, mobile, and technical issues so your website performs better on Google. A technically strong website improves user experience, boosts rankings, and keeps visitors engaged longer.",
+        icon: "settings",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Clear, Helpful NDIS Content",
+        description:
+          "We write content that explains your services simply, builds trust, and encourages enquiries. Well-crafted content also answers common questions, helping families feel confident choosing your services.",
+        icon: "file-text",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Ongoing Tracking & Improvement",
+        description:
+          "We monitor results and refine your NDIS SEO marketing strategy to deliver long-term growth. Continuous improvement ensures your business stays ahead in search rankings and consistently attracts new participants.",
+        icon: "bar-chart-2",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Common NDIS SEO Problems & How We Fix Them",
+    description:
+      "Many NDIS providers face challenges when trying to grow their online presence and attract participants. As a trusted SEO agency for NDIS providers, we solve these issues using targeted keywords, strong local SEO, quality backlinks, better content, and technical improvements.",
+    items: [
+      {
+        title: "Low Local Visibility",
+        description:
+          "If your business doesn’t appear in local searches, nearby participants and families may never find you, leading to fewer enquiries and missed opportunities. Improving local visibility ensures more people in your area can discover and choose your services.",
+      },
+      {
+        title: "Wrong or Broad Keywords",
+        description:
+          "Generic keywords attract the wrong audience and waste time and resources. Targeted NDIS keywords help reach people actively looking for your services. Using the right keywords increases relevant traffic and improves the chances of real enquiries.",
+      },
+      {
+        title: "Weak Online Trust",
+        description:
+          "Families need confidence in your services. Few reviews, inconsistent information, or unclear content can make potential participants hesitant to contact you. Building credibility online encourages more participants to engage with your services.",
+      },
+      {
+        title: "Outdated or Unclear Content",
+        description:
+          "Old or confusing content fails to engage visitors. Clear, updated service pages and FAQs answer questions and encourage enquiries. Fresh and well-structured content keeps visitors informed and boosts your search rankings.",
+      },
+      {
+        title: "Low Enquiry Rates",
+        description:
+          "Even with traffic, weak CTAs or confusing navigation can prevent visitors from contacting you. Optimising calls-to-action and website flow increases conversions and leads.",
+      },
+      {
+        title: "Slow or Mobile-Unfriendly Websites",
+        description:
+          "Websites that load slowly or don’t work well on mobile frustrate visitors and reduce search rankings. A fast, mobile-friendly website improves user experience and encourages more enquiries.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Affordable NDIS SEO Solutions",
+    heading: "Ready to Grow with",
+    headingHighlight: "Affordable NDIS SEO?",
+    description: [
+      "Whether you are starting a new NDIS website or want to improve your current one, our team is here to help.",
+      "As an affordable NDIS SEO marketing agency, we deliver clear strategies that bring real results and increased participant enquiries.",
+    ],
+    services: [
+      "NDIS Keyword Research",
+      "On-Page & Technical SEO",
+      "Local SEO & Google Maps Optimisation",
+      "Content Optimisation",
+      "Authority Building & Backlinks",
+      "SEO Reporting & Tracking",
+    ],
+    quote:
+      "We help NDIS providers grow online visibility, trust, and enquiries with proven SEO strategies.",
+    image: "/images/ndis-seo-team.jpg",
+    ctaHeading: "Request a Free NDIS SEO Consultation Today",
+    ctaDescription:
+      "Whether starting fresh or improving an existing website, our team delivers affordable, results-driven NDIS SEO.",
+    ctaButton1: "REQUEST FREE CONSULTATION",
+    ctaButton2: "CONTACT OUR TEAM",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "1. What is NDIS SEO?",
+        answer:
+          "NDIS SEO is the process of optimising your website so it ranks higher for NDIS-related searches. This helps participants and carers find your services online.",
+      },
+      {
+        question: "2. Why is SEO important for NDIS providers?",
+        answer:
+          "Most people search online for NDIS services. Good SEO increases visibility, trust, and enquiries.",
+      },
+      {
+        question: "3. What marketing methods work best for NDIS service providers?",
+        answer:
+          "The best marketing methods for NDIS providers include NDIS SEO, local SEO, a clear website, and good online reviews. These help people find your services easily when they search online.",
+      },
+      {
+        question: "4. How does SEO help NDIS providers grow online?",
+        answer:
+          "SEO helps your website appear higher on Google. With a good NDIS SEO strategy, more people can find your services, visit your website, and contact you.",
+      },
+      {
+        question: "5. What digital marketing tips should NDIS providers follow?",
+        answer:
+          "NDIS providers should: Use simple language on their website, focus on local SEO for NDIS providers, keep their Google Business Profile updated, and ask happy clients for reviews. These steps help build trust and attract enquiries.",
+      },
+      {
+        question: "6. Is local SEO important for NDIS businesses?",
+        answer:
+          "Yes. Local SEO for NDIS providers helps you appear in nearby searches and Google Maps.",
+      },
+      {
+        question: "7. Do NDIS websites need to be mobile-friendly?",
+        answer:
+          "Yes. Mobile-friendly sites rank better and keep visitors engaged.",
+      },
+      {
+        question: "8. How long does NDIS SEO take to work?",
+        answer:
+          "Most improvements appear within 3–6 months. SEO works best as a long-term strategy.",
+      },
+      {
+        question: "9. Should NDIS providers hire a digital marketing agency?",
+        answer:
+          "Yes. An SEO agency for NDIS providers can manage SEO, save time, and help your business grow faster with the right strategy.",
+      },
+    ],
+  },
+};
+
+
+// Digital Marketing Data Start Here 
+export const localSeoSmallBusinessService: ServiceDetail = {
+  id: "local-seo-small-business",
+  title: "Local SEO Services for Small Business",
+  description:
+    "Affordable and proven Local SEO services to help small businesses in Australia appear on Google, attract nearby customers, and grow steadily.",
+
+  heroSection: {
+    badge: "🚀 Boost Your Small Business with Local SEO",
+    heading: "Local SEO Services",
+    subheading: "For Small Businesses",
+    description:
+      "Want more local customers? Our Local SEO services help your small business appear on Google when people search for products or services nearby.",
+    descriptionExtra:
+      "Codexa Digital is a trusted Local SEO agency offering affordable and proven SEO for small businesses in Australia. We focus on simple and effective Local SEO strategies, including on-page optimisation, keyword targeting, and Google Business Profile setup. Our SEO services are designed to help local businesses attract nearby customers, increase website traffic, and grow steadily. With the right Local SEO for small business, you can improve visibility, build trust, and stand out in your local area.",
+    highlights: [
+      "✔ Affordable Small Business SEO",
+      "✔ Google Business Profile Optimisation",
+      "✔ Strategic Local Keyword Targeting",
+    ],
+    image: "/images/local-seo-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Get 10X Traffic with Codexa Digital",
+    heading: "Stand Out in Your Local Area",
+    headingHighlight: "for Small Businesses",
+    description: [
+      "Small businesses need to be easy to find online, and our small business SEO services help you appear when customers search for local services. Using proven local SEO strategies, we help your business stand out on Google Search, Maps, and AI-powered search tools.",
+      "Local SEO for small business makes it easier for nearby customers to find and contact you, bringing visitors who are more likely to enquire. Smart SEO turns searches into real phone calls, messages, and enquiries, while our long-term approach keeps your business visible and growing over time.",
+    ],
+    buttonText: "Book a Free Local SEO Consultation Today!",
+    image: "/images/small-business-seo-consultation.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "Our Local SEO Services",
+    headingHighlight: "for Small Business",
+    description:
+      "Our Local SEO services help small businesses get found online by nearby customers and turn local searches into real enquiries.",
+    steps: [
+      {
+        icon: "search",
+        title: "Website & Local SEO Audit",
+        description:
+          "We review your website’s structure, speed, content, and technical setup in detail. This helps us find issues that affect rankings and user experience, ensuring your site is ready to compete in local search.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "layout",
+        title: "Local On-Page Optimisation",
+        description:
+          "We improve page titles, headings, keywords, internal links, and service pages. This helps search engines understand your services and location, making your site more relevant for local searches.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "link",
+        title: "Off-Page SEO & Trust Building",
+        description:
+          "We build quality backlinks from trusted local and business websites. Off-page SEO helps your site rank higher and gain trust, increasing confidence for both search engines and customers.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "map-pin",
+        title: "Google Business Profile Optimisation",
+        description:
+          "We optimise your profile with accurate business details to improve visibility on Google Maps and 'near me' searches, driving more calls and visits to your physical or service location.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "file-text",
+        title: "Local Content Optimisation",
+        description:
+          "We create service pages, blogs, and FAQs using simple language to answer customer questions. Good content builds trust and supports higher rankings in local search results.",
         color: "text-pink-600",
         bg: "bg-pink-50",
       },
       {
         icon: "bar-chart-2",
-        title: "Support & Growth",
-        description: "Ongoing support, updates, and feature enhancements.",
-        color: "text-teal-600",
-        bg: "bg-teal-50",
+        title: "Tracking & SEO Reports",
+        description:
+          "We track traffic, keyword rankings, and enquiries. You receive clear reports showing performance and insights that guide ongoing improvements for steady growth.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
       },
     ],
   },
-  bottlenecksSection: {
-    heading: "Web App Development Challenges",
+
+  processSection: {
+    heading: "Our Guide for",
+    headingHighlight: "Local SEO Strategy",
     description:
-      "We overcome technical obstacles to deliver quality applications.",
-    items: [
-      "Performance Issues",
-      "Scalability Problems",
-      "Security Risks",
-      "Poor UX Design",
-      "Maintenance Complexity",
+      "Helping small businesses improve local visibility and attract nearby customers with clear, easy steps.",
+    steps: [
+      {
+        icon: "key",
+        title: "01. Local Keyword Research",
+        description:
+          "We find the exact words people use when searching for local services online, helping you reach customers ready to contact you and ranking you for high-intent keywords.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "users",
+        title: "02. Competitor Research",
+        description:
+          "We analyse other local businesses to find gaps and missed opportunities in their strategy, positioning your business to rank higher and capture their market share.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "settings",
+        title: "03. Technical SEO Setup",
+        description:
+          "We improve website speed, mobile usability, and security. This helps search engines crawl your site easily while improving user experience and customer engagement.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "map",
+        title: "04. Local Listings & Map Visibility",
+        description:
+          "We update and optimise your business listings across key platforms to ensure you appear on Google Maps and local search results when customers search nearby.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "star",
+        title: "05. Reviews & Online Trust Building",
+        description:
+          "We help you collect and manage customer reviews. Positive reviews improve trust, local rankings, and click-through rates, making customers feel confident choosing you.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
     ],
-    selectedIndex: 0,
-    selectedTitle: "Performance Issues",
-    selectedDescription:
-      "Slow web apps frustrate users and lose revenue. We build apps optimized for performance from day one.",
   },
+
   whyChooseUs: {
-    heading: "Why Choose Us For Your",
-    headingHighlight: "Web App",
+    heading: "What Makes Codexa Digital",
+    headingHighlight: "Local SEO Different?",
     description:
-      "We deliver scalable, modern web applications that drive business growth.",
+      "A focus on attracting nearby customers who are ready to engage through proven strategies and clear reporting.",
     benefits: [
       {
-        title: "Expert Development Team",
+        title: "Smart Local Keyword Targeting",
         description:
-          "Our experienced developers bring expertise across all modern web technologies.",
-        icon: "code",
-        color: "from-pink-500 to-pink-400",
+          "We choose keywords that real local customers use, improving your local SEO results and attracting people ready to buy or enquire.",
+        icon: "search",
+        color: "from-blue-500 to-blue-400",
       },
       {
-        title: "Scalable Architecture",
+        title: "Competitor & Market Research",
         description:
-          "We build apps designed to scale seamlessly as your business grows.",
-        icon: "layers",
-        color: "from-teal-500 to-teal-400",
-      },
-      {
-        title: "Modern Tech Stack",
-        description:
-          "We use cutting-edge technologies for speed, reliability, and performance.",
-        icon: "zap",
-        color: "from-purple-500 to-purple-400",
-      },
-      {
-        title: "Cloud Deployment",
-        description: "Your app is deployed on reliable cloud infrastructure.",
-        icon: "cloud",
+          "Studying your local area helps us build stronger strategies that outperform your competition and give you a better chance to rank higher.",
+        icon: "users",
         color: "from-emerald-500 to-emerald-400",
       },
       {
-        title: "Security Focused",
+        title: "Local & Voice Search Optimisation",
         description:
-          "We implement security best practices at every level of development.",
-        icon: "shield",
+          "Optimised for 'near me' and voice searches, capturing new local traffic from phones and smart devices that competitors often miss.",
+        icon: "mic",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Technical SEO Support",
+        description:
+          "We fix speed and mobile issues so your site performs better on Google and provides visitors with a smooth, professional experience.",
+        icon: "settings",
         color: "from-orange-500 to-orange-400",
       },
       {
-        title: "24/7 Support",
+        title: "Clear and Simple Content",
         description:
-          "We provide continuous monitoring and support for your application.",
-        icon: "headphones",
-        color: "from-rose-500 to-rose-400",
+          "Easy-to-read content that builds trust and encourages visitors to contact your business, specifically written for the Australian market.",
+        icon: "file-text",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Ongoing Improvements",
+        description:
+          "We track performance and make regular updates, ensuring your SEO delivers steady, long-term growth and stays competitive.",
+        icon: "trending-up",
+        color: "from-cyan-500 to-teal-400",
       },
     ],
   },
+
+  bottlenecksSection: {
+    heading: "Common Local SEO Problems We Fix",
+    description:
+      "At Codexa Digital, we identify and fix the challenges that stop small businesses from ranking locally.",
+    items: [
+      {
+        title: "Low Local Visibility",
+        description:
+          "Many small businesses struggle to appear in local searches. We improve your visibility so nearby customers can find you when it matters most.",
+      },
+      {
+        title: "Wrong Keywords",
+        description:
+          "Using generic terms misses customers ready to buy. We target the right local search terms that your customers actually use.",
+      },
+      {
+        title: "Poor Online Trust",
+        description:
+          "Low trust drives people to competitors. We build credibility with quality backlinks, review management, and engaging content.",
+      },
+      {
+        title: "Outdated Website Content",
+        description:
+          "Old content confuses visitors. We update pages to accurately reflect your services, helping you rank higher and stay relevant.",
+      },
+      {
+        title: "Few Enquiries",
+        description:
+          "We use targeted SEO strategies to attract the right visitors, turning local searches into calls, messages, and form submissions.",
+      },
+      {
+        title: "Slow or Mobile-Unfriendly Sites",
+        description:
+          "We optimise speed and mobile layout to keep visitors happy. A fast, mobile-friendly site is essential for local rankings.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
   seoServices: {
-    badge: "Complete Web App Solutions",
-    heading: "What Does Our Web App",
-    headingHighlight: "Development Include?",
+    badge: "Affordable Local SEO Solutions",
+    heading: "Ready to Grow with",
+    headingHighlight: "Affordable Local SEO?",
     description: [
-      "Our web app development is comprehensive, covering design, development, testing, and deployment.",
-      "We deliver production-ready applications optimized for performance and user experience.",
+      "Whether you are starting a new website or improving an old one, Codexa Digital is here to help.",
+      "Our local SEO services are affordable, clear, and built for real results for small businesses in Australia.",
     ],
     services: [
-      "UI/UX Design",
-      "Full Stack Development",
-      "API Development",
-      "Database Design",
-      "Security Implementation",
-      "Cloud Deployment",
-      "Performance Optimization",
-      "24/7 Monitoring & Support",
+      "Local Keyword Targeting",
+      "Google Business Profile Setup",
+      "Local Citation Building",
+      "Voice Search Optimisation",
+      "Review Management Strategy",
+      "Monthly SEO Performance Reports",
     ],
     quote:
-      "We build web apps that solve real business problems and deliver measurable ROI.",
-    image: "/business-success.jpg",
-    ctaHeading: "Ready to Build Your Custom",
+      "We turn local searches into real phone calls and enquiries for small businesses.",
+    image: "/images/small-business-team.jpg",
+    ctaHeading: "Book a Free Local SEO Consultation Today!",
     ctaDescription:
-      "Let's transform your idea into a powerful web application. Our team is ready to help.",
-    ctaButton1: "START YOUR PROJECT",
-    ctaButton2: "VIEW OUR PORTFOLIO",
+      "Stop losing customers to your local competitors. Let us help you dominate your local search area.",
+    ctaButton1: "REQUEST FREE CONSULTATION",
+    ctaButton2: "CONTACT OUR TEAM",
   },
+
+  faqSection: {
+    items: [
+      {
+        question: "Which local SEO methods work best for small businesses?",
+        answer:
+          "The best local SEO methods include using local keywords, setting up Google Business Profile, getting customer reviews, and having a mobile-friendly website.",
+      },
+      {
+        question: "How much money should a small business spend on local SEO?",
+        answer:
+          "Most small businesses spend a small monthly amount. The cost depends on your goals, location, and competition, but local SEO is usually affordable.",
+      },
+      {
+        question: "What is the 80/20 rule in SEO, and how can small businesses use it?",
+        answer:
+          "The 80/20 rule means that a few SEO actions bring most results. Small businesses should focus on the most important keywords, pages, and local searches.",
+      },
+      {
+        question: "Is local SEO worth the effort for small businesses?",
+        answer:
+          "Yes. Local SEO helps small businesses get more local customers, calls, and enquiries without paying for ads all the time.",
+      },
+      {
+        question: "How does Google help tradies grow their business?",
+        answer:
+          "Google helps tradies by showing their business on Google Search and Maps. Tools like Google Business Profile and reviews help customers find and trust them.",
+      },
+      {
+        question: "What steps can tradies take to improve local SEO?",
+        answer:
+          "Tradies can improve local SEO by updating Google Business Profile, adding service areas to their website, getting reviews, and using local keywords.",
+      },
+      {
+        question: "What is local SEO, and why is it important for tradies?",
+        answer:
+          "Local SEO helps tradies appear when people search for services nearby. It brings more local customers and increases trust.",
+      },
+      {
+        question: "How can tradies optimise their website for local SEO?",
+        answer:
+          "Tradies should add their location to website pages, list services clearly, show contact details, and make sure the site works well on mobile.",
+      },
+    ],
+  },
+};
+
+export const ecommerceSeoService: ServiceDetail = {
+  id: "ecommerce-seo",
+  title: "eCommerce SEO Services",
+  description:
+    "Result-driven eCommerce SEO services to help online stores grow traffic, increase sales, and build long-term brand visibility on Google.",
+
+  heroSection: {
+    badge: "🛒 eCommerce SEO Marketing",
+    heading: "Get Your Online Store",
+    subheading: "Found and Sell More",
+    description:
+      "Selling online is not easy when your store does not appear on Google. If shoppers cannot see your products, they will buy from competitors instead. Codexa Digital is a trusted eCommerce SEO agency in Australia helping online stores grow traffic, sales, and brand visibility.",
+    descriptionExtra:
+      "As a professional eCommerce SEO company, we focus on helping online businesses rank better, reach real buyers, and increase revenue. Our experienced SEO experts use safe and proven methods that support long-term growth, not quick tricks. We bring ready-to-buy customers to your store by focusing on high-intent search terms.",
+    highlights: [
+      "✔ High-Intent Keyword Targeting",
+      "✔ Mobile-First Store Optimisation",
+      "✔ Long-Term Revenue Growth",
+    ],
+    image: "/images/ecommerce-seo-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Talk to eCommerce SEO Experts",
+    heading: "Bring Ready-to-Buy Customers",
+    headingHighlight: "to Your Store",
+    description: [
+      "Traffic alone does not grow an online store. Many businesses get visitors who leave without buying. Our eCommerce SEO services focus on attracting people who are already searching for products like yours.",
+      "With help from a skilled eCommerce SEO consultant, your store becomes easier to find, easier to use, and easier to trust. This leads to more product views, more checkouts, and better sales over time.",
+    ],
+    buttonText: "Book Your Free eCommerce SEO Consultation Today!",
+    image: "/images/ecommerce-consultation.jpg",
+  },
+
   seoServicesDetails: {
-    heading: "",
-    headingHighlight: "",
-    description: "",
-    steps: [],
+    heading: "What Our eCommerce",
+    headingHighlight: "SEO Services Include",
+    description:
+      "Our eCommerce SEO marketing services are built to support online stores at every stage of growth.",
+    steps: [
+      {
+        icon: "layout",
+        title: "Store Performance Review",
+        description:
+          "We examine your store layout, product pages, loading speed, mobile experience, and technical setup to find hidden problems that block rankings and sales.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "package",
+        title: "Product & Collection SEO",
+        description:
+          "Our eCommerce SEO specialists improve product titles, descriptions, URLs, images, and internal links so Google can rank them for the right searches.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "link",
+        title: "Link & Brand Authority Building",
+        description:
+          "We earn links from trusted and relevant websites, increasing your store’s authority and improving rankings across product and category pages.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "map-pin",
+        title: "Location-Based eCommerce SEO",
+        description:
+          "Whether you sell across Australia or target specific regions, we help your store appear in the right local and national searches.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "edit",
+        title: "Content That Helps Buyers Decide",
+        description:
+          "We optimise product guides, blogs, and FAQs with clear, simple language to help customers feel confident buying from you.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "bar-chart-2",
+        title: "Tracking, Sales & SEO Reports",
+        description:
+          "We monitor keyword rankings, traffic, product clicks, and conversions, providing clear updates on your store's improvement.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "How We Improve",
+    headingHighlight: "eCommerce Rankings Step by Step",
+    description:
+      "Our eCommerce SEO marketing process follows clear steps to deliver steady results.",
+    steps: [
+      {
+        icon: "search",
+        title: "Step 1: Buyer-Focused Keyword Research",
+        description:
+          "We research search terms shoppers use when they are ready to buy, focusing on high-intent keywords to bring visitors who are more likely to place orders.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "users",
+        title: "Step 2: Competitor Store Research",
+        description:
+          "We study top-ranking online stores in your niche to find gaps and missed opportunities, building a smarter SEO plan for your store.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "zap",
+        title: "Step 3: Technical Improvements",
+        description:
+          "We fix slow loading pages, mobile problems, and crawl errors while improving site security and structure for a better checkout experience.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "shopping-bag",
+        title: "Step 4: Optimising for Search, Shopping & Voice",
+        description:
+          "We optimise for Google Shopping results and voice searches like 'best product near me' to help more shoppers find you easily.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "shield-check",
+        title: "Step 5: Building Trust Signals",
+        description:
+          "We support reviews, brand signals, and clear business information to improve credibility, rankings, and customer confidence.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Online Stores",
+    headingHighlight: "Choose Codexa Digital",
+    description:
+      "We are known as the best eCommerce SEO company because we focus on real growth for online businesses.",
+    benefits: [
+      {
+        title: "Smart Product Keyword Targeting",
+        description:
+          "We focus on high-intent searches that lead to sales, attracting customers who are ready to purchase products online.",
+        icon: "target",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Strategy Based on Competitor Data",
+        description:
+          "We use data from top competitors to build stronger SEO plans that help your store rank higher in your specific industry.",
+        icon: "bar-chart",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Mobile-First Store Optimisation",
+        description:
+          "We optimise for mobile devices and fast loading to create a smooth shopping experience for the majority of phone-based shoppers.",
+        icon: "smartphone",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Clean Technical SEO",
+        description:
+          "Our team fixes errors affecting speed, indexing, and usability, ensuring search engines can rank your store without technical hurdles.",
+        icon: "settings",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Clear and Helpful Content",
+        description:
+          "We create simple content that explains products and benefits clearly, building trust and increasing your conversion rates.",
+        icon: "file-text",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Ongoing SEO Growth",
+        description:
+          "SEO is not a one-time task; we track results monthly and improve strategies to ensure your store grows steadily over time.",
+        icon: "trending-up",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "eCommerce SEO Challenges We Solve",
+    description:
+      "Many online stores struggle with the same problems. Our eCommerce SEO agency identifies and fixes them for good.",
+    items: [
+      {
+        title: "1. Products Not Showing on Google",
+        description:
+          "Many stores stay hidden in search results. We improve product visibility so your store appears when customers search for products online.",
+      },
+      {
+        title: "2. Traffic That Does Not Convert",
+        description:
+          "Targeting the wrong audience leads to high bounce rates. We target buyer-focused keywords and improve user experience to bring traffic that buys.",
+      },
+      {
+        title: "3. Confusing Product Pages",
+        description:
+          "Unclear content drives shoppers away. We rewrite product descriptions to clearly explain features and benefits, building trust and sales.",
+      },
+      {
+        title: "4. Low Sales Despite Visitors",
+        description:
+          "We improve store layout, calls-to-action, and the checkout flow to turn existing visitors into paying customers.",
+      },
+      {
+        title: "5. Slow or Broken Store Performance",
+        description:
+          "Slow stores lose rankings and customers. We fix speed, mobile issues, and technical errors to ensure your store sells more.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Scale Your Online Store",
+    heading: "Grow Your Store with a",
+    headingHighlight: "Trusted eCommerce SEO Agency",
+    description: [
+      "Codexa Digital is a reliable eCommerce SEO agency helping Australian online stores grow sales and visibility.",
+      "Our eCommerce SEO services are built to support long-term success and scalable revenue.",
+    ],
+    services: [
+      "Buyer-Intent Keyword Research",
+      "Product & Category Page Optimisation",
+      "Google Shopping & Product Search SEO",
+      "Mobile-First Technical SEO",
+      "Authority Building & Backlinks",
+      "Sales & Conversion Tracking",
+    ],
+    quote: "We help online businesses turn search visibility into actual sales and checkouts.",
+    image: "/images/ecommerce-team.jpg",
+    ctaHeading: "Book Your Free eCommerce SEO Consultation Today!",
+    ctaDescription:
+      "Ready to scale your online sales? Let our experts build a data-driven SEO strategy for your store.",
+    ctaButton1: "GET FREE CONSULTATION",
+    ctaButton2: "CONTACT OUR TEAM",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "What does eCommerce SEO do?",
+        answer: "It improves product and category rankings on Google to increase sales and visibility for your online store.",
+      },
+      {
+        question: "Is SEO important for online stores?",
+        answer: "Yes. SEO helps customers find your products without you having to pay for every single click through advertising.",
+      },
+      {
+        question: "How long before results appear?",
+        answer: "Most stores see progress in 3–6 months, with stronger and more sustainable results growing over time.",
+      },
+      {
+        question: "How can I track SEO success?",
+        answer: "You can track success through keyword rankings, organic traffic, product clicks, and actual sales/enquiries.",
+      },
+      {
+        question: "Does eCommerce SEO work on mobile?",
+        answer: "Yes. In fact, it is essential. Mobile-friendly stores rank significantly better and convert more customers.",
+      },
+      {
+        question: "Should SEO be updated regularly?",
+        answer: "Yes. Ongoing updates are required to keep your store competitive, visible, and aligned with search engine changes.",
+      },
+    ],
   },
 };
 
@@ -3951,6 +4675,1162 @@ const placeholderService = (
   },
 });
 
+
+export const searchEngineMarketingService: ServiceDetail = {
+  id: "search-engine-marketing",
+  title: "Search Engine Marketing (SEM) Services",
+  description:
+    "Increase visibility, traffic, and sales through smart paid and organic search strategies designed for fast and measurable results.",
+
+  heroSection: {
+    badge: "🚀 SEM & Paid Search Experts",
+    heading: "Grow Faster Online with Powerful",
+    subheading: "Search Engine Marketing",
+    description:
+      "Getting customers online is harder than ever. If your business does not appear on Google at the right time, customers choose competitors instead. Codexa Digital is a reliable search engine marketing agency in Australia helping businesses increase visibility, traffic, and sales through smart paid and organic strategies.",
+    descriptionExtra:
+      "As a professional search engine marketing company, we focus on bringing fast and measurable results. Our experienced SEM experts use proven, ethical methods to help businesses reach the right audience and grow steadily, not just temporarily. We combine strategic ad placements with data-driven insights to ensure your budget delivers the highest possible return.",
+    highlights: [
+      "✔ Fast & Measurable Results",
+      "✔ High-Intent Audience Targeting",
+      "✔ Scalable Paid Search Strategies",
+    ],
+    image: "/images/sem-marketing-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Reach Ready-to-Buy Customers",
+    heading: "Reach Customers Who Want",
+    headingHighlight: "Your Service",
+    description: [
+      "Online success is not about traffic alone. Many businesses get clicks but no enquiries or sales. Our search engine marketing services focus on reaching users who are actively searching for your products or services right now.",
+      "With support from a skilled search engine marketing consultant, your ads and search presence become more targeted, more visible, and more effective. This leads to better clicks, stronger leads, and a higher return on investment for your marketing spend.",
+    ],
+    buttonText: "Book Your Free SEM Consultation Today!",
+    image: "/images/sem-consultant-expert.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "What Our Search Engine",
+    headingHighlight: "Marketing Services Cover",
+    description:
+      "Our SEO and SEM services are designed to support businesses at every stage of growth, from local startups to national brands.",
+    steps: [
+      {
+        icon: "monitor",
+        title: "Account & Website Review",
+        description:
+          "We review your website, ad accounts, landing pages, and tracking setup to find issues that reduce performance and increase ad costs.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "key",
+        title: "Keyword & Campaign Setup",
+        description:
+          "Our SEM consultants select high-intent keywords and build structured campaigns to ensure your ads appear for searches that bring real business value.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "edit-3",
+        title: "Ad Copy & Quality Score Improvement",
+        description:
+          "We create clear, simple ad messages that attract clicks. Better ads improve quality scores, reduce costs, and increase conversion rates.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "globe",
+        title: "Local & National SEM Targeting",
+        description:
+          "Whether you target one city or all of Australia, our SEM firm helps your business show up in the right locations to improve lead quality.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "layout",
+        title: "Landing Page Optimisation",
+        description:
+          "We improve landing page content so visitors understand your offer quickly, turning more clicks into calls, forms, and sales.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "pie-chart",
+        title: "Tracking, Reports & Optimisation",
+        description:
+          "We track costs and performance, providing easy-to-read reports that show exactly what is working and where to improve.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Step-by-Step",
+    headingHighlight: "SEM Process",
+    description:
+      "Our search engine marketing approach follows clear steps to deliver steady and scalable results for your business.",
+    steps: [
+      {
+        icon: "target",
+        title: "Step 1: Intent-Based Keyword Research",
+        description:
+          "We research search terms people use when they are ready to take action, focusing on keywords that bring enquiries rather than just traffic.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "search",
+        title: "Step 2: Competitor Advertising Research",
+        description:
+          "We analyse competitor ads and landing pages to find gaps they miss, allowing us to build a smarter plan to outperform them.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "settings",
+        title: "Step 3: Technical & Tracking Setup",
+        description:
+          "We fix tracking issues and conversion errors to ensure every click is measured correctly, allowing for better data-driven decisions.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "zap",
+        title: "Step 4: Search, Display & Smart Campaign Optimisation",
+        description:
+          "We optimise search ads, remarketing, and smart campaigns while supporting voice and mobile search behaviour for maximum reach.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "shield-check",
+        title: "Step 5: Trust, Relevance & Conversion Signals",
+        description:
+          "We improve ad relevance and trust signals to increase customer confidence, click-through rates, and overall conversions.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Businesses Choose",
+    headingHighlight: "Codexa Digital for SEM",
+    description:
+      "We are recognised as a trusted SEM company because we focus on real business results and measurable ROI.",
+    benefits: [
+      {
+        title: "High-Intent Keyword Targeting",
+        description:
+          "We target keywords that show strong buying intent, bringing the right audience directly to your sales funnel.",
+        icon: "mouse-pointer",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Data-Driven Campaign Strategy",
+        description:
+          "We use competitor insights and performance data to improve results while actively reducing wasted budget.",
+        icon: "database",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Mobile-First SEM Campaigns",
+        description:
+          "Our campaigns are fully optimised for phones and tablets, ensuring a smooth experience for mobile searchers.",
+        icon: "smartphone",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Clean Campaign Structure",
+        description:
+          "We organise ad groups and bids carefully to save money and boost performance through better account management.",
+        icon: "layers",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Clear & Simple Ad Messaging",
+        description:
+          "We craft easy-to-understand messages that encourage users to take action and improve click-through rates.",
+        icon: "message-square",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Continuous SEM Improvement",
+        description:
+          "We monitor, test, and refine your campaigns regularly to ensure they perform better over time as data accumulates.",
+        icon: "trending-up",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Common SEM Problems We Fix",
+    description:
+      "Many businesses face the same challenges with paid search. Our SEM agency identifies and solves them efficiently.",
+    items: [
+      {
+        title: "1. Ads Not Appearing on Google",
+        description:
+          "Poor setup or low quality scores can hide your ads. We improve visibility and placement to ensure you reach the right audience.",
+      },
+      {
+        title: "2. Clicks Without Results",
+        description:
+          "Getting clicks without leads wastes your budget. We focus on high-intent targeting to bring visitors who actually want to buy.",
+      },
+      {
+        title: "3. Confusing Ads or Landing Pages",
+        description:
+          "Unclear messaging makes people leave. We improve copy and page clarity to boost engagement and total conversions.",
+      },
+      {
+        title: "4. High Ad Costs, Low Returns",
+        description:
+          "Poorly structured campaigns increase costs. We optimise bids and keywords to reduce waste and improve your ROI.",
+      },
+      {
+        title: "5. Poor Tracking & Reporting",
+        description:
+          "Without proper tracking, it's impossible to see what works. We fix analytics so you can make informed growth decisions.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Scale with Paid Search",
+    heading: "Partner with Us as Your",
+    headingHighlight: "Search Engine Marketing Agency",
+    description: [
+      "Codexa Digital is a results-focused search engine marketing agency in Australia helping businesses grow through paid search.",
+      "Our SEM services approach is built for long-term success and immediate impact on your bottom line.",
+    ],
+    services: [
+      "Google Ads (Search & Display)",
+      "Remarketing & Retargeting",
+      "Keyword Intent Research",
+      "Landing Page Optimisation",
+      "Conversion Tracking Setup",
+      "Competitor Ad Analysis",
+    ],
+    quote: "We turn your marketing budget into a powerful tool for customer acquisition and growth.",
+    image: "/images/sem-team-collaboration.jpg",
+    ctaHeading: "Book Your Free SEM Consultation Today!",
+    ctaDescription:
+      "Stop wasting ad spend. Let our SEM experts build a campaign that actually delivers leads and sales.",
+    ctaButton1: "GET FREE SEM AUDIT",
+    ctaButton2: "TALK TO AN EXPERT",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "What is Search Engine Marketing (SEM)?",
+        answer: "SEM uses paid ads to help your business appear on Google search results quickly, targeting specific keywords and audiences.",
+      },
+      {
+        question: "Is SEM better than SEO?",
+        answer: "SEM delivers faster results, while SEO builds long-term organic growth. Using both together usually provides the best overall visibility.",
+      },
+      {
+        question: "How soon can SEM show results?",
+        answer: "Most campaigns show results within days once the ads go live and are approved by the search platform.",
+      },
+      {
+        question: "How do I track SEM success?",
+        answer: "You can track success through clicks, cost-per-lead, total sales, and your return on ad spend (ROAS).",
+      },
+      {
+        question: "Does SEM work on mobile devices?",
+        answer: "Yes. In fact, the majority of SEM traffic today comes from mobile users, so we optimise all campaigns for phones.",
+      },
+      {
+        question: "Should SEM campaigns be updated regularly?",
+        answer: "Yes. Regular updates, bid adjustments, and ad testing help improve performance and reduce your overall costs.",
+      },
+      {
+        question: "Is Search Engine Marketing the Same as SEO or Paid Search?",
+        answer: "SEM mainly focuses on paid search ads (PPC). SEO is different because it improves organic rankings without paying for clicks. A complete strategy uses both.",
+      },
+      {
+        question: "Is Google Ads Part of Search Engine Marketing?",
+        answer: "Yes. Google Ads is the most popular tool for SEM, allowing businesses to show ads at the top of search results and on partner websites.",
+      },
+      {
+        question: "How Do I Choose a Search Engine Marketing Agency?",
+        answer: "Look for a trusted agency with proven results. Ensure they offer keyword research, transparent tracking, and ongoing optimisation by experienced consultants.",
+      },
+    ],
+  },
+};
+
+
+export const contentMarketingService: ServiceDetail = {
+  id: "content-marketing",
+  title: "Content Marketing Services",
+  description:
+    "Grow your brand and build trust with expert content marketing strategies designed to improve visibility, engagement, and conversions.",
+
+  heroSection: {
+    badge: "✍️ Expert Content Marketing",
+    heading: "Grow Your Brand with",
+    subheading: "Expert Content Marketing",
+    description:
+      "Getting your message seen online is harder than ever. If your content doesn’t reach the right audience, customers choose competitors instead. Codexa Digital is a trusted content marketing agency in Australia, helping businesses improve visibility, engagement, and conversions through smart content strategies.",
+    descriptionExtra:
+      "As a professional marketing company, we focus on creating valuable and measurable results. Our experienced content marketing experts use proven methods to build trust, attract the right audience, and support long-term growth. We don't just write words; we craft stories that resonate with your customers and drive action.",
+    highlights: [
+      "✔ Strategic SEO-Optimised Content",
+      "✔ Increased Brand Authority",
+      "✔ Conversion-Driven Messaging",
+    ],
+    image: "/images/content-marketing-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Reach Your Audience",
+    heading: "Reach the Audience with",
+    headingHighlight: "Content About Your Brand",
+    description: [
+      "Traffic alone does not create growth. Many businesses attract visitors who leave without taking action. Our content marketing services focus on reaching users who are genuinely interested in your products or services.",
+      "With help from a skilled content marketing consultant, your website, blogs, social posts, and guides become more engaging, visible, and effective. This leads to more clicks, stronger leads, and a higher return on investment.",
+    ],
+    buttonText: "Book Your Free Content Marketing Consultation Today!",
+    image: "/images/content-strategy-consultation.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "What Our Content",
+    headingHighlight: "Marketing Services Include",
+    description:
+      "Our digital content marketing strategy covers all aspects of growth, ensuring your brand stays relevant and authoritative.",
+    steps: [
+      {
+        icon: "search",
+        title: "Content Audit & Strategy Review",
+        description:
+          "We check your website, blog, and social media to find what is working. A clear review helps us fix gaps and increase engagement and results.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "edit-3",
+        title: "Content Creation & SEO Optimisation",
+        description:
+          "Our experts create blogs, guides, and service pages using targeted keywords. This helps your content rank higher on Google and attracts the right people.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "award",
+        title: "Brand Authority & Link Building",
+        description:
+          "We create helpful content that other trusted websites want to link to. This improves your brand’s trust and boosts your search rankings.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "share-2",
+        title: "Social & Digital Promotion",
+        description:
+          "Our team shares your content on social media and email to expand your reach. More reach means more website visitors and brand awareness.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "mouse-pointer",
+        title: "Conversion-Focused Landing Pages",
+        description:
+          "We improve landing pages with clear messages and simple buttons, helping turn casual readers into qualified leads and customers.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "bar-chart",
+        title: "Tracking, Reporting & Optimisation",
+        description:
+          "We track interactions and engagement. Our consultants review results and make improvements to ensure your content performs better over time.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Step-by-Step",
+    headingHighlight: "Content Marketing Process",
+    description:
+      "Our process helps turn ideas into content that people read, trust, and act on.",
+    steps: [
+      {
+        icon: "users",
+        title: "Step 1: Audience & Keyword Research",
+        description:
+          "We find out what your customers search for online, focusing on topics and keywords they care about to bring visitors who are ready to take action.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "trending-up",
+        title: "Step 2: Competitor Content Analysis",
+        description:
+          "We study competitor content to find missed opportunities. This analysis helps your content stand out and perform better in your industry.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "file-text",
+        title: "Step 3: Content Planning & Creation",
+        description:
+          "Our team creates blogs, guides, and visuals in simple language. We educate readers and guide them toward taking the next step with your brand.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "globe",
+        title: "Step 4: SEO & Distribution Optimisation",
+        description:
+          "We optimise content for SEO rankings and share it across social and email channels, ensuring it reaches the widest possible audience.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "check-circle",
+        title: "Step 5: Engagement & Authority Building",
+        description:
+          "We build trust through brand mentions and backlinks, making your business look reliable and professional to both users and search engines.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Businesses Choose",
+    headingHighlight: "Codexa Digital",
+    description:
+      "We are recognised as content marketing experts because we focus on real results and sustainable growth for online businesses.",
+    benefits: [
+      {
+        title: "High-Value Keyword & Topic Targeting",
+        description:
+          "We focus on topics your audience is already searching for, reaching readers exactly when they want to learn or buy.",
+        icon: "search",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Data-Driven Content Strategy",
+        description:
+          "As a trusted Australian agency, we use data and competitor analysis to see what works best before we start writing.",
+        icon: "database",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Mobile & Digital Optimisation",
+        description:
+          "We ensure your content loads fast and looks perfect on mobile phones, keeping visitors happy and improving search rankings.",
+        icon: "smartphone",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Structured & Consistent Content",
+        description:
+          "We keep your blogs and pages organised and easy to follow, making your business information simple to find and digest.",
+        icon: "layers",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Clear & Engaging Messaging",
+        description:
+          "Our experts write in clear language that explains your benefits without confusing jargon, building immediate trust with readers.",
+        icon: "message-circle",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Ongoing Optimisation",
+        description:
+          "We regularly update old content and improve underperforming pages to ensure your business grows steadily over time.",
+        icon: "refresh-cw",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Common Content Marketing Challenges We Solve",
+    description:
+      "We fix the problems that prevent content from bringing in results for your business.",
+    items: [
+      {
+        title: "1. Content That Doesn’t Rank",
+        description:
+          "Poorly optimised blogs stay hidden. Our SEO strategies improve visibility so your audience can find your helpful guides easily.",
+      },
+      {
+        title: "2. Traffic That Doesn’t Convert",
+        description:
+          "Visitors often leave without acting. We create conversion-driven content that guides visitors to sign up or buy.",
+      },
+      {
+        title: "3. Weak or Confusing Messaging",
+        description:
+          "Complicated content drives people away. We craft simple, persuasive messaging that helps anyone understand your services.",
+      },
+      {
+        title: "4. Low Brand Authority",
+        description:
+          "It's hard to trust a business without quality content. We produce high-value pieces that position your brand as a leading industry expert.",
+      },
+      {
+        title: "5. Poor Tracking & Results",
+        description:
+          "Without measurement, you're guessing. We track engagement and ROI to show what works and continuously improve your campaigns.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Scale with Expert Content",
+    heading: "Partner with a",
+    headingHighlight: "Trusted Content Marketing Agency",
+    description: [
+      "Codexa Digital is a results-focused content marketing agency in Australia helping businesses grow through clear, engaging, and optimised content.",
+      "Our content strategies are built to support long-term brand authority and sustainable organic growth.",
+    ],
+    services: [
+      "Blog Writing & Management",
+      "SEO Content Strategy",
+      "Whitepapers & E-books",
+      "Landing Page Copywriting",
+      "Social Media Content",
+      "Email Marketing Content",
+    ],
+    quote: "Helpful content is the bridge that turns a stranger into a loyal customer.",
+    image: "/images/content-team-working.jpg",
+    ctaHeading: "Book Your Free Content Marketing Consultation Today!",
+    ctaDescription:
+      "Ready to build your brand authority? Let our experts craft a content strategy that works for you.",
+    ctaButton1: "REQUEST FREE AUDIT",
+    ctaButton2: "VIEW OUR PACKAGES",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "What is content marketing?",
+        answer: "Content marketing involves creating and sharing valuable blogs, guides, and posts to attract, educate, and convert your target audience.",
+      },
+      {
+        question: "Is content marketing better than SEO?",
+        answer: "SEO helps you rank in search results, while content marketing engages and converts those visitors. Together, they are the key to long-term growth.",
+      },
+      {
+        question: "How soon can I see results?",
+        answer: "Content marketing usually shows measurable results in 3–6 months, as search engines index your content and your brand authority grows.",
+      },
+      {
+        question: "How do I measure success?",
+        answer: "We track metrics like organic traffic, social shares, time-on-page, leads generated, and total conversions.",
+      },
+      {
+        question: "Does content marketing work on mobile devices?",
+        answer: "Yes. Mobile-friendly content is essential for reaching readers where they are and is a major ranking factor for Google.",
+      },
+      {
+        question: "Should content marketing strategies be updated regularly?",
+        answer: "Yes. Updating older content keeps it relevant for users and helps maintain high search rankings as information changes.",
+      },
+      {
+        question: "How do I choose a content marketing agency?",
+        answer: "Look for an agency with proven results, a clear data-driven strategy, strong SEO skills, and a commitment to ongoing optimisation.",
+      },
+    ],
+  },
+};
+
+
+export const socialMediaMarketingService: ServiceDetail = {
+  id: "social-media-marketing",
+  title: "Social Media Marketing Services",
+  description:
+    "Grow your brand awareness, engagement, and sales across major platforms with data-driven social media marketing and professional management.",
+
+  heroSection: {
+    badge: "📱 Social Media Marketing That Helps Your Business Grow",
+    heading: "Social Media Marketing",
+    subheading: "Agency in Australia",
+    description:
+      "Getting noticed online is not easy anymore. If your business is not active and visible on social media, customers will choose other brands. Codexa Digital is a trusted Social Media Marketing Agency in Australia helping businesses grow awareness, engagement, and sales across major platforms.",
+    descriptionExtra:
+      "As an experienced advertising digital marketing agency, we focus on real and measurable results. Our skilled marketing consultants use proven strategies to help brands connect with the right audience and grow steadily through social media. Likes and followers alone do not grow a business; we focus on meaningful impact.",
+    highlights: [
+      "✔ Strategic Social Media Management",
+      "✔ High-ROI Paid Advertising",
+      "✔ Engagement & Brand Growth",
+    ],
+    image: "/images/social-media-marketing-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Connect with Your Audience",
+    heading: "Connect with the Right",
+    headingHighlight: "Audience on Social Media",
+    description: [
+      "Many brands post often but see no real results. Our social media marketing services focus on reaching people who are genuinely interested in your business and ready to engage.",
+      "With help from a professional social media marketing consultant, your social pages become more active, more trusted, and more effective. This leads to better engagement, more enquiries, and higher returns from your marketing efforts.",
+    ],
+    buttonText: "Book Your Free Social Media Consultation Today!",
+    image: "/images/social-media-consultation.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "What Our Social Media",
+    headingHighlight: "Marketing Services Include",
+    description:
+      "Our SMM services are designed to support businesses of all sizes, including targeted social media marketing for small business.",
+    steps: [
+      {
+        icon: "search",
+        title: "Audit & Strategy Planning",
+        description:
+          "We review your social pages, content, and ads to see what is working. A clear social media marketing strategy helps guide better results and growth.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "edit-3",
+        title: "Content Creation & Management",
+        description:
+          "Our team plans and creates posts, reels, and stories. With professional social media management, your brand stays active and consistent across all platforms.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "megaphone",
+        title: "Social Media Advertising",
+        description:
+          "We manage paid campaigns on Facebook and Instagram. Our social media advertising focuses on reaching the right audience and increasing leads and sales.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "user-plus",
+        title: "Brand Growth & Engagement",
+        description:
+          "We help grow your followers the right way, focusing on real engagement, comments, and shares rather than fake numbers.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "target",
+        title: "Lead & Conversion Focus",
+        description:
+          "We optimise content and ads to encourage action. Clear messages and strong calls-to-action help turn casual viewers into loyal customers.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "bar-chart-2",
+        title: "Tracking, Reporting & Improvement",
+        description:
+          "We track reach, clicks, and sales. Our marketing consultants review results and improve campaigns regularly for better performance.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Simple",
+    headingHighlight: "Social Media Marketing Process",
+    description:
+      "We follow a clear and easy process to help brands grow on social media step by step.",
+    steps: [
+      {
+        icon: "users",
+        title: "Step 1: Find Your Audience & Platforms",
+        description:
+          "We look at where your customers spend time online and choose the platforms that match your business, ensuring your posts show up where your audience is active.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "trending-up",
+        title: "Step 2: Check Competitors & the Market",
+        description:
+          "We study what your competitors are doing to find opportunities they miss. Knowing the market makes your strategy stronger and smarter.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "calendar",
+        title: "Step 3: Plan Content & Post Regularly",
+        description:
+          "We create easy-to-follow content calendars with posts that teach, entertain, and show your brand clearly. Good planning keeps people coming back.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "zap",
+        title: "Step 4: Run Ads & Promote Smartly",
+        description:
+          "We create ads targeting users most likely to respond. We monitor and adjust these ads to save money and get more clicks, leads, and sales.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "message-circle",
+        title: "Step 5: Engage & Build Trust",
+        description:
+          "We reply to comments and messages quickly. This makes your business look active and reliable, turning followers into paying customers.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Businesses Choose",
+    headingHighlight: "Codexa Digital",
+    description:
+      "We are known as one of the best social media marketing agencies because we focus on real growth, not guesswork.",
+    benefits: [
+      {
+        title: "Smart Audience Targeting",
+        description:
+          "We focus on people most likely to buy, aiming for quality engagement that leads to more sales, not just high numbers.",
+        icon: "target",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Data-Based Strategy",
+        description:
+          "As a professional advertising digital marketing agency, we make decisions using real data to avoid wasted spend.",
+        icon: "database",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Mobile-First Social Media Campaigns",
+        description:
+          "Our content is designed for mobile users so posts look perfect and get more clicks on phones and tablets.",
+        icon: "smartphone",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Clear & Consistent Branding",
+        description:
+          "We use the same style, colors, and tone on all posts so people recognise and trust your business across all platforms.",
+        icon: "brush",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Simple & Engaging Content",
+        description:
+          "We avoid confusing jargon. Our posts are easy to read and fun, encouraging people to take immediate action.",
+        icon: "smile",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Ongoing Growth & Optimisation",
+        description:
+          "We check results every month and adjust ads and targeting to ensure your business grows steadily over time.",
+        icon: "trending-up",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Common Social Media Marketing Problems We Fix",
+    description:
+      "Many businesses struggle with social media. Our social media marketing agency helps solve these common issues.",
+    items: [
+      {
+        title: "1. Low Reach and Visibility",
+        description:
+          "If posts aren't seen, they bring no value. Our management improves reach using proven methods so more people share your content.",
+      },
+      {
+        title: "2. Followers but No Sales",
+        description:
+          "Followers don't always equal growth. We focus on real actions that turn followers into enquiries and customers.",
+      },
+      {
+        title: "3. Unclear or Confusing Content",
+        description:
+          "Confusing posts drive users away. We create simple, clear content so users understand your message in seconds.",
+      },
+      {
+        title: "4. High Ad Spend, Low Results",
+        description:
+          "Poor targeting wastes your budget. Our well-planned advertising campaigns improve ROI and lower wasted spend.",
+      },
+      {
+        title: "5. No Tracking or Insights",
+        description:
+          "Without tracking, you can't see what works. We provide clear reports so you can make informed business decisions.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Scale Your Social Presence",
+    heading: "Work with a Trusted",
+    headingHighlight: "Social Media Marketing Agency",
+    description: [
+      "Codexa Digital is a results-driven Social Media Marketing Agency in Australia helping businesses grow through smart content, ads, and engagement.",
+      "Our SMM services approach is built for long-term success and consistent brand growth.",
+    ],
+    services: [
+      "Full Social Media Management",
+      "Paid Social Media Advertising",
+      "Content Strategy & Planning",
+      "Monthly Performance Reporting",
+      "Brand Growth & Engagement",
+      "Competitor Social Analysis",
+    ],
+    quote: "Social media is about building a community around your brand, not just broadcasting ads.",
+    image: "/images/social-media-team.jpg",
+    ctaHeading: "Book Your Free Social Media Marketing Consultation Today!",
+    ctaDescription:
+      "Ready to turn your social media into a growth engine? Let our experts build the right plan for your brand.",
+    ctaButton1: "REQUEST FREE AUDIT",
+    ctaButton2: "TALK TO AN EXPERT",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "What is social media marketing?",
+        answer: "It uses social platforms like Facebook and Instagram to promote your brand, connect with customers, and grow sales.",
+      },
+      {
+        question: "Is social media marketing good for small businesses?",
+        answer: "Yes. Social media marketing for small business helps reach highly targeted customers with much lower budgets than traditional ads.",
+      },
+      {
+        question: "How long before I see results?",
+        answer: "Most businesses see a boost in engagement within weeks and stronger results in leads and sales within 2–3 months.",
+      },
+      {
+        question: "Do you manage ads and content?",
+        answer: "Yes. Our full social media management includes professional content creation, regular posting, and paid ad management.",
+      },
+      {
+        question: "Does social media marketing work on mobile?",
+        answer: "Absolutely. Most users browse social media on mobile, so all our campaigns are designed to be mobile-friendly.",
+      },
+      {
+        question: "Do I need a social media marketing consultant?",
+        answer: "A consultant helps create the right plan, target the right audience, and improve results, saving you time and money.",
+      },
+      {
+        question: "What is the difference between social media management and advertising?",
+        answer: "Management is about organic posting and engaging with followers. Advertising uses paid budgets to reach new people faster. Both work together for growth.",
+      },
+    ],
+  },
+};
+
+
+export const emailMarketingService: ServiceDetail = {
+  id: "email-marketing",
+  title: "Email Marketing Services",
+  description:
+    "Nurture leads, retain customers, and drive consistent sales with data-driven and AI-powered email marketing strategies.",
+
+  heroSection: {
+    badge: "📧 AI-Powered Email Marketing",
+    heading: "Data-Driven & AI-Powered",
+    subheading: "Email Marketing Strategies",
+    description:
+      "Looking to nurture leads, retain customers, and drive consistent sales through email? Our Email Marketing Services help businesses build strong customer relationships, increase engagement, and convert subscribers into loyal clients.",
+    descriptionExtra:
+      "As a results-focused digital marketing agency, we deliver tailored email marketing solutions designed to boost open rates, clicks, and long-term revenue growth. We specialise in strategic email marketing, helping brands communicate effectively with their audience using personalised, data-driven campaigns. From automated sequences to AI-powered segmentation, our approach focuses on measurable performance and real business impact.",
+    highlights: [
+      "✔ AI-Powered Content Optimisation",
+      "✔ Automated Sales Funnels",
+      "✔ Advanced Audience Segmentation",
+    ],
+    image: "/images/email-marketing-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Grow with Professional Email",
+    heading: "Nurture Prospects and",
+    headingHighlight: "Retain Customers",
+    description: [
+      "Email remains one of the most powerful digital marketing channels. With professional email marketing strategies, your message reaches the right audience at the right time—driving engagement, trust, and conversions.",
+      "Whether you run an eCommerce store, service-based business, or multi-location brand, our email marketing strategies ensure consistent communication and brand visibility. We help your business turn email subscribers into active customers—supporting growth, stability, and long-term success.",
+    ],
+    buttonText: "Request a Free Email Marketing Consultation Today",
+    image: "/images/email-strategy-experts.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "Email Marketing Services",
+    headingHighlight: "for Business Growth",
+    description:
+      "Complete email solutions designed to improve deliverability, engagement, and long-term revenue.",
+    steps: [
+      {
+        icon: "search",
+        title: "Audit & Strategy Planning",
+        description:
+          "We conduct a complete audit of campaigns, lists, and flows to identify engagement gaps and deliverability issues, forming a clear roadmap for growth.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "mail",
+        title: "Campaign Creation & Optimisation",
+        description:
+          "We create and optimise newsletters and promotional emails, focusing on subject lines and CTAs to ensure higher open and click-through rates.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "users",
+        title: "Audience Segmentation",
+        description:
+          "We segment your list based on user behaviour and buying journeys. Personalised messaging ensures relevance, trust, and higher conversion rates.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "refresh-cw",
+        title: "Automation & Email Funnels",
+        description:
+          "We build automated sequences like welcome emails, abandoned cart reminders, and lead nurturing funnels to convert subscribers consistently.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "cpu",
+        title: "AI-Powered Optimisation",
+        description:
+          "Using AI tools, we analyse performance to optimise send times and content relevance, ensuring your campaigns align with modern user trends.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "bar-chart",
+        title: "Performance Tracking",
+        description:
+          "We track revenue impact, conversions, and open rates. Detailed reporting allows for continuous optimisation and measurable business results.",
+        color: "text-teal-600",
+        bg: "bg-teal-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Strategic",
+    headingHighlight: "Email Marketing Process",
+    description:
+      "A five-step approach to turning email subscribers into loyal brand advocates.",
+    steps: [
+      {
+        icon: "file-search",
+        title: "01 Audience Research & List Analysis",
+        description:
+          "We analyse subscriber lists, customer behaviour, and buying intent to ensure we target the people most likely to engage and convert.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "layout",
+        title: "02 Campaign Planning & Content Strategy",
+        description:
+          "We design a clear strategy for newsletters, announcements, and retention campaigns that feel relevant to the customer rather than just promotional.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "smartphone",
+        title: "03 Email Design & Technical Optimisation",
+        description:
+          "We optimise layouts for mobile responsiveness and inbox compatibility to avoid spam filters and provide a smooth reading experience.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "zap",
+        title: "04 Automation & Personalised Funnels",
+        description:
+          "We build automated welcome and post-purchase follow-ups that nurture relationships and build trust without manual effort.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "line-chart",
+        title: "05 Tracking & Continuous Optimisation",
+        description:
+          "Using data-driven insights, we refine subject lines and timing to ensure ongoing improvement in sustainable growth and ROI.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Choose Us as Your",
+    headingHighlight: "Email Marketing Agency?",
+    description:
+      "We combine ethical communication with advanced AI technology to deliver measurable results.",
+    benefits: [
+      {
+        title: "Strategy-Driven Expertise",
+        description:
+          "Tailored email services focused on building long-term customer relationships and brand trust.",
+        icon: "award",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Advanced Data Strategies",
+        description:
+          "Campaigns built around audience behaviour and conversion tracking for consistent improvements.",
+        icon: "database",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Targeted & Scalable Coverage",
+        description:
+          "Optimised for both small local lists and large-scale global outreach with high deliverability.",
+        icon: "trending-up",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "AI-Powered Optimisation",
+        description:
+          "We use AI to perfect subject lines and send times, keeping you ahead of email platform algorithms.",
+        icon: "zap",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Full Lifecycle Marketing",
+        description:
+          "Support for lead nurturing, retention, and re-engagement flows to ensure sustainable growth.",
+        icon: "refresh-cw",
+        color: "from-cyan-500 to-teal-400",
+      },
+      {
+        title: "Transparent Reporting",
+        description:
+          "Detailed reports focusing on measurable ROI, engagement metrics, and actual revenue generated.",
+        icon: "pie-chart",
+        color: "from-emerald-500 to-emerald-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Email Marketing Challenges & Our Solutions",
+    description:
+      "We address common email marketing bottlenecks to restore engagement and drive sales.",
+    items: [
+      {
+        title: "Low Open Rates",
+        description:
+          "We solve this using AI-optimised subject lines and improved sender reputation to ensure your emails actually get seen.",
+      },
+      {
+        title: "Poor Segmentation",
+        description:
+          "We fix irrelevant messaging by categorising your audience based on behaviour, interests, and their specific buyer journey.",
+      },
+      {
+        title: "Deliverability Issues",
+        description:
+          "We clean your lists and fix technical authentication settings to ensure your emails land in the inbox, not the spam folder.",
+      },
+      {
+        title: "Lack of Automation",
+        description:
+          "We replace manual effort with automated workflows that nurture leads 24/7, improving consistency and customer trust.",
+      },
+      {
+        title: "High Unsubscribe Rates",
+        description:
+          "We improve content value and relevance, ensuring that subscribers stay engaged with your brand over the long term.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Consistent Sales via Email",
+    heading: "Ready to Grow with",
+    headingHighlight: "Strategic Email Marketing?",
+    description: [
+      "Whether launching your first campaign or improving existing efforts, our services are designed for long-term results.",
+      "Work with experienced specialists who understand how to engage audiences through strategic and ethical email communication.",
+    ],
+    services: [
+      "Email List Management & Cleaning",
+      "Automated Drip Campaigns",
+      "AI-Powered Content Optimisation",
+      "Lead Nurturing & Sales Funnels",
+      "Newsletter Design & Management",
+      "E-commerce Retention Flows",
+    ],
+    quote: "Email is the only channel where you truly own the connection with your audience.",
+    image: "/images/email-campaign-team.jpg",
+    ctaHeading: "Ready to Boost Your Email ROI?",
+    ctaDescription:
+      "Start building stronger relationships with your customers today through data-driven campaigns.",
+    ctaButton1: "REQUEST FREE EMAIL AUDIT",
+    ctaButton2: "VIEW CASE STUDIES",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "What is Email Marketing?",
+        answer:
+          "Email marketing is the process of sending targeted messages to subscribers to build relationships, promote products or services, and encourage customer engagement and conversions.",
+      },
+      {
+        question: "Why is email marketing important for businesses?",
+        answer:
+          "Email marketing helps businesses stay connected with their audience, build trust, and generate consistent leads and sales with a high return on investment.",
+      },
+      {
+        question: "Does email marketing still work today?",
+        answer:
+          "Yes. Email marketing remains one of the most effective digital marketing channels when combined with personalisation, automation, and data-driven strategies.",
+      },
+      {
+        question: "How long does email marketing take to show results?",
+        answer:
+          "Many businesses see engagement and conversion improvements within the first few weeks, with stronger results developing over time through continuous optimisation.",
+      },
+      {
+        question: "Can AI improve email marketing performance?",
+        answer:
+          "Yes. AI-powered tools analyse subscriber behaviour, optimise subject lines and send times, and improve content relevance for better engagement and conversions.",
+      },
+      {
+        question: "Do I need a professional email marketing agency?",
+        answer:
+          "Working with an agency ensures strategic planning, better deliverability, compliance, and higher-performing campaigns compared to unmanaged manual efforts.",
+      },
+      {
+        question: "How does email marketing increase sales and enquiries?",
+        answer:
+          "By sending relevant, timely, and personalised messages, email marketing nurtures leads, re-engages previous customers, and encourages direct actions such as purchases or bookings.",
+      },
+    ],
+  },
+};
+
+
 const laravelWebsiteService = placeholderService(
   "laravel-website",
   "Laravel Website",
@@ -3979,38 +5859,17 @@ const ecommerceWebsiteService = placeholderService(
 
 
 
-const localSeoSmallBusinessService = placeholderService(
-  "local-seo-small-business",
-  "Local SEO for Small Business",
-);
 
-const ecommerceSeoService = placeholderService(
-  "ecommerce-seo",
-  "eCommerce SEO",
-);
-const searchEngineMarketingService = placeholderService(
-  "search-engine-marketing",
-  "Search Engine Marketing",
-);
-const contentMarketingService = placeholderService(
-  "content-marketing",
-  "Content Marketing",
-);
-const socialMediaMarketingService = placeholderService(
-  "social-media-marketing",
-  "Social Media Marketing",
-);
-const emailMarketingService = placeholderService(
-  "email-marketing",
-  "Email Marketing",
-);
 
-const ndisSeoService = placeholderService("ndis-seo", "NDIS SEO");
+
+
+
 const lawFirmSeoService = placeholderService("law-firm-seo", "Law Firm SEO");
 const accountingSeoService = placeholderService(
   "accounting-seo",
   "Accounting SEO",
 );
+
 const dentistSeoService = placeholderService("dentist-seo", "Dentist SEO");
 const tourismSeoService = placeholderService("tourism-seo", "Tourism SEO");
 const restaurantSeoService = placeholderService(
@@ -4021,7 +5880,6 @@ const restaurantSeoService = placeholderService(
 export const serviceDetailsMap: Record<string, ServiceDetail> = {
   "doctor-seo": doctorSeoService,
   "wordpress-website": wordPressWebsiteService,
-  "web-app": webAppService,
   "laravel-website": laravelWebsiteService,
   "custom-website": customWebsiteService,
   "small-business-website": smallBusinessWebsiteService,
