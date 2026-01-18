@@ -18,7 +18,6 @@ export default function Home() {
       <ProcessTimeline />
       <ProcessFlow />
       <Services />
-      {/* <ServiceCards /> */}
       <FAQComponent />
       <Testimonial />
       <CTA />

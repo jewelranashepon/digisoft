@@ -30,7 +30,7 @@ export default async function ServiceDetailsPage({ params }: Props) {
 
   return (
     <>
-      {!hasCustomContent && (
+      {/* {!hasCustomContent && (
         <div className="mx-auto max-w-4xl px-4 py-8">
           <div className="rounded-lg border-2 border-amber-200 bg-amber-50 p-6">
             <h2 className="mb-2 text-lg font-semibold text-amber-900">
@@ -42,7 +42,7 @@ export default async function ServiceDetailsPage({ params }: Props) {
             </p>
           </div>
         </div>
-      )}
+      )} */}
       <ServiceHeroSection data={serviceDetails.heroSection} />
       <TalkToExpertsDynamic data={serviceDetails.talkToExperts} />
       <SeoServices data={serviceDetails.seoServicesDetails} />

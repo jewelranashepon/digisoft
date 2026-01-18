@@ -7,6 +7,7 @@ import {
   MapPin,
   PenTool,
   LineChart,
+  HelpCircle,
 } from "lucide-react";
 
 const icons: Record<string, any> = {
@@ -56,7 +57,7 @@ export default function SeoServices({ data }: Props) {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {data.steps.map((step, index) => {
-            const Icon = icons[step.icon];
+            const Icon = icons[step.icon] || HelpCircle;
 
             return (
               <div
@@ -88,6 +89,7 @@ export default function SeoServices({ data }: Props) {
                   </p>
 
                   {/* CTA — ALWAYS AT BOTTOM */}
+                  <div className="mt-2"></div>
                   <button className="mt-auto w-full rounded-full bg-indigo-600 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700">
                     Learn More
                   </button>

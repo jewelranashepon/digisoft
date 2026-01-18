@@ -19,17 +19,13 @@ export default function FaqSection({ data = [] }: Props) {
   };
 
   return (
-    <section className="py-28 bg-gray-50">
+    <section className="py-10 lg:py-16 bg-gray-50">
       <div className="container mx-auto px-4 max-w-5xl">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-4xl font-bold text-gray-900">
             Frequently Asked Questions
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Get answers to the most common questions about Doctor SEO and how it
-            can help your medical practice.
-          </p>
         </div>
 
         {/* FAQ List */}
@@ -75,7 +71,7 @@ export default function FaqSection({ data = [] }: Props) {
 
                 {/* Answer */}
                 <div
-                  className={`px-5 pb-5 text-gray-700 text-sm leading-relaxed transition-all duration-300 overflow-hidden ${
+                  className={`px-5 pb-5 text-slate-900 text-base leading-relaxed transition-all duration-300 overflow-hidden ${
                     isActive ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"
                   }`}
                 >
