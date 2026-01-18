@@ -5831,6 +5831,312 @@ export const emailMarketingService: ServiceDetail = {
 };
 
 
+export const accountingSeoService: ServiceDetail = {
+  id: "accounting-seo",
+  title: "Accounting SEO Services",
+  description:
+    "Comprehensive, results-driven SEO services for accounting firms designed to improve search engine visibility, attract qualified clients, and generate consistent, long-term growth through strategic and industry-focused optimisation.",
+
+  heroSection: {
+    badge: "📊 Real Results from Accounting SEO Services",
+    heading: "Real Results from Accounting",
+    subheading: "SEO Services",
+    description:
+      "Looking to grow your accounting firm online and attract more qualified clients? Codexa Digital’s Accounting SEO services help accountants increase search engine rankings, drive targeted website traffic, and convert visitors into paying clients.",
+    descriptionExtra:
+      "At Codexa Digital, we specialise in SEO for accounting and financial service firms. Our proven, industry-specific SEO strategies focus on ranking your website higher on Google, strengthening online credibility, and delivering a steady flow of qualified enquiries. Every optimisation decision is guided by data, client intent, and long-term business growth goals.",
+    highlights: [
+      "✔ Industry-Specific Accounting SEO Strategies",
+      "✔ Qualified Lead Generation for Accounting Firms",
+      "✔ Sustainable, Long-Term Organic Growth",
+    ],
+    image: "/images/accounting-seo-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Secure a Steady Stream of Accounting Clients",
+    heading: "Predictable Client Growth",
+    headingHighlight: "for Accounting Firms",
+    description: [
+      "As an accounting firm owner, consistent client enquiries are essential for hiring staff, expanding services, and planning long-term growth. Relying on referrals alone can lead to unpredictable results and stalled progress.",
+      "With Codexa Digital’s Accounting SEO services, your website becomes a reliable client acquisition channel. By improving visibility in Google search results, your firm is discovered regularly by businesses and individuals actively searching for accounting services, creating stable and predictable growth.",
+    ],
+    buttonText: "Request Free Accounting SEO Consultation",
+    image: "/images/accounting-seo-consultation.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "Our Accounting SEO Services",
+    headingHighlight: "for Sustainable Firm Growth",
+    description:
+      "End-to-end Accounting SEO services designed to strengthen visibility, authority, and lead generation for accounting firms of all sizes.",
+    steps: [
+      {
+        icon: "search",
+        title: "Accounting Website Audit",
+        description:
+          "We conduct a detailed audit of your accounting website, reviewing structure, content quality, technical performance, and SEO foundations. This audit identifies gaps, weaknesses, and missed opportunities, forming a clear roadmap to improve rankings, usability, and lead generation.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "layout",
+        title: "On-Page SEO for Accountants",
+        description:
+          "We optimise page titles, meta descriptions, headings, service pages, keywords, and internal links. This ensures search engines clearly understand your accounting services and match your website with users actively searching for accountants.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "link",
+        title: "Off-Page SEO & Authority Building",
+        description:
+          "We build high-quality backlinks from trusted finance, accounting, and business websites. This increases your firm’s authority, strengthens trust signals, and improves rankings in competitive accounting search results.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "map-pin",
+        title: "Local SEO for Accounting Firms",
+        description:
+          "Local SEO optimisation includes Google Business Profile setup, citation management, review optimisation, and local keyword targeting to help nearby clients find your firm quickly and confidently.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "file-text",
+        title: "Content Optimisation for Accounting Services",
+        description:
+          "We create and refine service pages, blogs, and FAQs using clear, professional language. Content is aligned with real client searches to attract leads, answer questions, and establish trust in your expertise.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "bar-chart-2",
+        title: "Conversion Tracking & Performance Reporting",
+        description:
+          "We track website traffic, rankings, enquiries, and user behaviour. Clear, easy-to-understand reports show progress, identify opportunities, and guide ongoing SEO improvements.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Step-by-Step",
+    headingHighlight: "Accounting SEO Process",
+    description:
+      "A structured, proven SEO process designed to increase online visibility, attract qualified accounting clients, and support long-term firm growth.",
+    steps: [
+      {
+        icon: "search",
+        title: "Client & Keyword Analysis",
+        description:
+          "We research high-intent accounting keywords based on client needs, location, and search intent. This ensures your SEO strategy targets searches most likely to generate qualified enquiries and strong ROI.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "users",
+        title: "Competitor Accounting SEO Review",
+        description:
+          "We analyse competitor websites, backlink profiles, content strategies, and rankings. This reveals gaps, opportunities, and winning tactics to help your firm outperform competitors.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "settings",
+        title: "Technical SEO Optimisation",
+        description:
+          "We optimise site speed, mobile responsiveness, security, site architecture, structured data, and indexing. Strong technical SEO improves rankings and creates a better experience for visitors.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "map",
+        title: "Local SEO & Google Business Optimisation",
+        description:
+          "We optimise your Google Business Profile, manage citations, enhance map visibility, and encourage reviews so your firm dominates local accounting searches.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "star",
+        title: "Reputation & Review Management",
+        description:
+          "We help manage online reviews, respond professionally, and encourage positive feedback. A strong reputation builds trust, improves rankings, and increases enquiries.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Codexa Digital Is the Best Choice for",
+    headingHighlight: "Accounting SEO",
+    description:
+      "Specialist SEO expertise built specifically for accounting firms that want measurable growth and long-term success.",
+    benefits: [
+      {
+        title: "Advanced Keyword Research & Strategy",
+        description:
+          "We target high-value accounting keywords aligned with real client intent to attract qualified leads, not just traffic.",
+        icon: "search",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Competitor Analysis & Opportunity Identification",
+        description:
+          "In-depth competitor research uncovers ranking opportunities and helps your firm stay ahead in competitive markets.",
+        icon: "users",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Local & Voice Search Optimisation",
+        description:
+          "Optimised for local searches and voice queries so your firm appears in Google Maps, local results, and smart devices.",
+        icon: "map-pin",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Technical SEO & Website Performance",
+        description:
+          "We ensure fast loading, mobile-friendly, secure websites that search engines and users both prefer.",
+        icon: "settings",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Content Optimisation & Client Engagement",
+        description:
+          "Professional accounting content educates clients, answers questions, and builds confidence in your services.",
+        icon: "file-text",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Performance Tracking & Continuous Improvement",
+        description:
+          "Ongoing monitoring, reporting, and optimisation ensure sustained growth and measurable SEO success.",
+        icon: "bar-chart-2",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Common Accounting SEO Challenges & How We Solve Them",
+    description:
+      "Accounting firms often face challenges that limit online visibility, engagement, and client growth. We identify and fix these issues with targeted SEO solutions.",
+    items: [
+      {
+        title: "Low Local Visibility",
+        description:
+          "Optimising local listings and Google Maps ensures nearby clients can easily find your firm.",
+      },
+      {
+        title: "Targeting the Wrong Keywords",
+        description:
+          "Focused keyword research attracts users actively searching for accounting services, not irrelevant traffic.",
+      },
+      {
+        title: "Weak Online Authority",
+        description:
+          "High-quality backlinks and reputation signals strengthen credibility and improve rankings.",
+      },
+      {
+        title: "Outdated or Unclear Content",
+        description:
+          "Clear, updated content improves engagement, trust, and search engine performance.",
+      },
+      {
+        title: "Low Conversion Rates",
+        description:
+          "Optimised CTAs, structure, and user journeys turn visitors into enquiries.",
+      },
+      {
+        title: "Technical SEO Issues",
+        description:
+          "Fixing speed, mobile, and technical problems improves usability and ranking potential.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Accounting SEO Solutions",
+    heading: "Ready to Grow Your Accounting Firm with",
+    headingHighlight: "Accounting SEO?",
+    description: [
+      "Targeted, efficient, and data-driven SEO strategies built specifically for accounting firms.",
+      "Focused on increasing visibility, attracting qualified clients, and delivering measurable business growth.",
+    ],
+    services: [
+      "Accounting Website Audit",
+      "On-Page & Technical SEO",
+      "Local SEO & Google Maps Optimisation",
+      "Accounting Content Creation & Optimisation",
+      "Authority Building & Link Acquisition",
+      "SEO Reporting & Performance Tracking",
+    ],
+    quote:
+      "We help accounting firms build predictable growth with proven, industry-focused SEO strategies.",
+    image: "/images/accounting-seo-team.jpg",
+    ctaHeading: "Request a Free Accounting SEO Consultation Today",
+    ctaDescription:
+      "Whether launching a new website or scaling an established firm, our Accounting SEO experts are ready to help you grow.",
+    ctaButton1: "REQUEST FREE CONSULTATION",
+    ctaButton2: "CONTACT OUR TEAM",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "What is SEO for accountants?",
+        answer:
+          "SEO for accountants is the process of optimising an accounting firm’s website to rank higher in search results, attract targeted traffic, and generate qualified client enquiries.",
+      },
+      {
+        question: "Why is SEO important for accounting firms?",
+        answer:
+          "Most clients search online for accounting services. SEO improves visibility, builds trust, and helps your firm consistently attract new clients.",
+      },
+      {
+        question: "How can SEO benefit accountants in their marketing efforts?",
+        answer:
+          "SEO increases organic traffic, supports brand credibility, and generates qualified leads that complement other marketing channels.",
+      },
+      {
+        question: "What is digital marketing, and why is it important for accountants?",
+        answer:
+          "Digital marketing includes SEO, PPC, content marketing, email campaigns, and social media. It helps accounting firms grow online visibility and attract clients efficiently.",
+      },
+      {
+        question: "Can Codexa Digital handle social media for accountants?",
+        answer:
+          "Yes. We manage platforms like LinkedIn, Facebook, and Instagram to support brand visibility and complement SEO strategies.",
+      },
+      {
+        question: "Is local SEO important for accounting firms?",
+        answer:
+          "Absolutely. Local SEO ensures your firm appears in Google Maps and nearby searches, attracting clients in your service area.",
+      },
+      {
+        question: "Do accounting websites need to be mobile-friendly for SEO?",
+        answer:
+          "Yes. Mobile-friendly websites provide better user experience and rank higher in Google search results.",
+      },
+      {
+        question: "How long does it take to see results from Accounting SEO?",
+        answer:
+          "Most firms see noticeable improvements within 3–6 months, with continued growth through ongoing optimisation.",
+      },
+    ],
+  },
+};
+
+
+
+
+
 const laravelWebsiteService = placeholderService(
   "laravel-website",
   "Laravel Website",
@@ -5865,10 +6171,8 @@ const ecommerceWebsiteService = placeholderService(
 
 
 const lawFirmSeoService = placeholderService("law-firm-seo", "Law Firm SEO");
-const accountingSeoService = placeholderService(
-  "accounting-seo",
-  "Accounting SEO",
-);
+
+
 
 const dentistSeoService = placeholderService("dentist-seo", "Dentist SEO");
 const tourismSeoService = placeholderService("tourism-seo", "Tourism SEO");
