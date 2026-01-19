@@ -3410,228 +3410,6 @@ export const restaurantWebDesignService: ServiceDetail = {
   },
 };
 
-export const wordPressWebsiteService: ServiceDetail = {
-  id: "wordpress-website",
-  title: "WordPress Website",
-  description: "Custom WordPress websites optimized for speed and security.",
-  heroSection: {
-    badge: "🌐 WordPress Web Development",
-    heading: "Professional Custom",
-    subheading: "WordPress Websites",
-    description:
-      "We design and develop high-performance WordPress websites that are secure, SEO-friendly, and easy to manage. Perfect for businesses that want flexibility and growth.",
-    descriptionExtra:
-      "From small business sites to large-scale platforms, our WordPress expertise ensures your website is optimized for performance and conversions.",
-    highlights: [
-      "✔ Custom WordPress Themes",
-      "✔ SEO & Speed Optimization",
-      "✔ Secure & Scalable",
-    ],
-    image: "/professional-service.jpg",
-  },
-  talkToExperts: {
-    badge: "Talk to Professionals",
-    heading: "Talk to the",
-    headingHighlight: "Experts",
-    description: [
-      "WordPress is the most popular website platform globally, powering over 40% of websites. But not all WordPress sites are created equal.",
-      "Our team builds custom WordPress websites designed for speed, security, and conversions. We ensure your site stands out from the competition.",
-    ],
-    buttonText: "Get Help With Your WordPress Website",
-    image: "/team-consultation.jpg",
-  },
-  processSection: {
-    heading: "Our Proven",
-    headingHighlight: "WordPress Development Process",
-    description:
-      "A strategic, results-driven approach that delivers high-performance websites.",
-    steps: [
-      {
-        icon: "target",
-        title: "Discovery & Planning",
-        description:
-          "We understand your business goals, target audience, and website requirements.",
-        color: "text-emerald-600",
-        bg: "bg-emerald-50",
-      },
-      {
-        icon: "pen-tool",
-        title: "Custom Theme Development",
-        description:
-          "We create custom WordPress themes tailored to your brand and requirements.",
-        color: "text-blue-600",
-        bg: "bg-blue-50",
-      },
-      {
-        icon: "plug",
-        title: "Plugin Integration & Setup",
-        description:
-          "We integrate essential plugins for functionality, SEO, and performance.",
-        color: "text-purple-600",
-        bg: "bg-purple-50",
-      },
-      {
-        icon: "zap",
-        title: "Performance Optimization",
-        description:
-          "We optimize your site for speed, security, and search engines.",
-        color: "text-orange-600",
-        bg: "bg-orange-50",
-      },
-      {
-        icon: "check-circle-2",
-        title: "Testing & Launch",
-        description:
-          "Comprehensive testing ensures your site is perfect before launch.",
-        color: "text-pink-600",
-        bg: "bg-pink-50",
-      },
-      {
-        icon: "bar-chart-2",
-        title: "Support & Maintenance",
-        description:
-          "Ongoing support and maintenance keep your site running smoothly.",
-        color: "text-teal-600",
-        bg: "bg-teal-50",
-      },
-    ],
-  },
-  bottlenecksSection: {
-    heading: "Common WordPress Challenges",
-    description:
-      "We solve problems that limit your WordPress site's performance.",
-    items: [
-      "Slow Loading Times",
-      "Security Vulnerabilities",
-      "Poor SEO",
-      "Limited Scalability",
-      "Outdated Design",
-    ],
-    selectedIndex: 0,
-    selectedTitle: "Slow Loading Times",
-    selectedDescription:
-      "A slow WordPress site frustrates visitors and hurts your rankings. We optimize every aspect of your site for lightning-fast performance.",
-  },
-  whyChooseUs: {
-    heading: "Why Choose Us For Your",
-    headingHighlight: "WordPress Website",
-    description:
-      "We deliver custom WordPress solutions that are fast, secure, and designed to grow your business.",
-    benefits: [
-      {
-        title: "Expert WordPress Developers",
-        description:
-          "Our team brings years of WordPress development experience and expertise.",
-        icon: "users",
-        color: "from-pink-500 to-pink-400",
-      },
-      {
-        title: "Custom Solutions",
-        description:
-          "We build custom themes and functionality tailored to your specific needs.",
-        icon: "pen-tool",
-        color: "from-teal-500 to-teal-400",
-      },
-      {
-        title: "Performance Focused",
-        description:
-          "Speed matters. We optimize for fast loading and excellent user experience.",
-        icon: "zap",
-        color: "from-purple-500 to-purple-400",
-      },
-      {
-        title: "SEO Optimized",
-        description:
-          "Built for search engines from the ground up to improve your rankings.",
-        icon: "search",
-        color: "from-emerald-500 to-emerald-400",
-      },
-      {
-        title: "Security First",
-        description:
-          "Your site is protected with the latest security best practices.",
-        icon: "shield-check",
-        color: "from-orange-500 to-orange-400",
-      },
-      {
-        title: "Ongoing Support",
-        description:
-          "We provide continuous support and maintenance for your WordPress site.",
-        icon: "headphones",
-        color: "from-rose-500 to-rose-400",
-      },
-    ],
-  },
-  seoServices: {
-    badge: "Custom WordPress Solutions",
-    heading: "What Does Our WordPress",
-    headingHighlight: "Development Include?",
-    description: [
-      "Our WordPress development service is comprehensive, covering everything from initial setup to ongoing maintenance.",
-      "We deliver professionally built WordPress sites optimized for performance, SEO, and conversions.",
-    ],
-    services: [
-      "Custom Theme Development",
-      "Plugin Integration",
-      "Performance Optimization",
-      "Security Hardening",
-      "SEO Configuration",
-      "Responsive Design",
-      "Maintenance & Support",
-      "Training & Documentation",
-    ],
-    quote:
-      "We build WordPress websites that look great, perform fast, and drive real results for your business.",
-    image: "/business-success.jpg",
-    ctaHeading: "Ready to Get Your Custom",
-    ctaDescription:
-      "Our WordPress experts are ready to build a website that drives growth for your business. Let's get started today.",
-    ctaButton1: "GET YOUR FREE PROPOSAL",
-    ctaButton2: "SCHEDULE A CONSULTATION",
-  },
-  faqData: [
-    {
-      question: "What is Doctor SEO?",
-      answer:
-        "Doctor SEO is the process of optimising a medical website so patients can easily find doctors, clinics, and healthcare services through Google search results.",
-    },
-    {
-      question: "Why is SEO important for doctors?",
-      answer:
-        "SEO for doctors increases online visibility, builds trust, and generates consistent patient enquiries, helping your practice grow sustainably.",
-    },
-    {
-      question: "Is local SEO important for doctors?",
-      answer:
-        "Yes. Local SEO for doctors ensures your clinic appears in Google Maps and “near me” searches, attracting patients in your area.",
-    },
-    {
-      question: "How long does Doctor SEO take to work?",
-      answer:
-        "Most practices see measurable improvements within 3–6 months with ongoing optimisation, tracking, and adjustments.",
-    },
-    {
-      question: "What services are included in Doctor SEO?",
-      answer:
-        "Medical SEO services for doctors, clinics & healthcare sites often include keyword research, on-page and off-page SEO, content optimisation, technical SEO, and local SEO strategies.",
-    },
-    {
-      question: "Can AI SEO improve my doctor website rankings?",
-      answer:
-        "Yes. AI SEO for doctors leverages artificial intelligence to analyse patient search behaviour, optimise content, and improve rankings faster and more accurately.",
-    },
-    {
-      question: "Do I need a specialist SEO agency for doctors?",
-      answer:
-        "Absolutely. A dedicated SEO agency for doctors understands healthcare compliance, local search trends, and patient-focused strategies that general SEO agencies might miss.",
-    },
-    {
-      question: "How does Doctor SEO increase patient enquiries?",
-      answer:
-        "By using Doctor SEO strategies like targeted keywords, local optimisation, content marketing, and reputation management, more patients find your website and book appointments.",
-    },
-  ],
-};
 
 // Seo Service Section Data Start Here:
 export const ndisSeoService: ServiceDetail = {
@@ -6134,33 +5912,2432 @@ export const accountingSeoService: ServiceDetail = {
 };
 
 
+// Website Development Services
+export const laravelWebsiteService: ServiceDetail = {
+  id: "laravel-website",
+  title: "Laravel Website Development Services",
+  description:
+    "Professional Laravel Website Development Services focused on building secure, scalable, and high-performance web applications that support long-term business growth and stability.",
+
+  heroSection: {
+    badge: "🚀 Laravel Website Development Services",
+    heading: "Custom Laravel",
+    subheading: "Web Applications for Growth",
+    description:
+      "Looking for professional Laravel Website Development Services to build a secure, scalable, and high-performance web application? We help startups, businesses, and enterprises create custom Laravel solutions designed for reliability, performance, and long-term success.",
+    descriptionExtra:
+      "As a specialised Laravel development company, we build custom Laravel web applications with clean code, strong security, and scalable architecture. Every project is carefully planned to ensure maintainability, performance optimisation, and future-ready system design.",
+    highlights: [
+      "✔ Custom Laravel Web Application Development",
+      "✔ Secure, Scalable & High-Performance Architecture",
+      "✔ Clean Code & Long-Term Maintainability",
+    ],
+    image: "/images/laravel-website-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Build Scalable Laravel Applications",
+    heading: "Future-Ready Laravel Solutions",
+    headingHighlight: "for Growing Businesses",
+    description: [
+      "Businesses often struggle with slow, insecure, or poorly structured web applications that limit growth and increase maintenance costs. Choosing the right framework and development approach is critical for long-term success.",
+      "With our Laravel Website Development Services, your application is built to scale from day one. We focus on performance, security, and flexibility so your Laravel application supports growth instead of holding it back.",
+    ],
+    buttonText: "Request Free Laravel Consultation",
+    image: "/images/laravel-consultation.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "Our Laravel Website Development",
+    headingHighlight: "Services",
+    description:
+      "End-to-end Laravel development services designed to deliver secure, scalable, and maintainable web applications for modern businesses.",
+    steps: [
+      {
+        icon: "layout",
+        title: "Custom Laravel Web Application Development",
+        description:
+          "We build fully custom Laravel web applications tailored to your business requirements. Each solution is designed with scalability, performance, and clean architecture in mind.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "database",
+        title: "Backend Architecture & Database Optimisation",
+        description:
+          "We design robust backend systems, optimise databases, and ensure efficient data handling for high performance and reliability.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "link",
+        title: "API Development & Third-Party Integrations",
+        description:
+          "Secure APIs and seamless third-party integrations connect your Laravel application with external services, tools, and platforms.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "shield",
+        title: "Application Security & Best Practices",
+        description:
+          "We implement Laravel security best practices including authentication, authorization, and data protection to reduce risks.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "bar-chart-2",
+        title: "Performance Optimisation & Scalability",
+        description:
+          "We optimise speed, caching, and server performance to ensure your Laravel application can handle growth and high traffic.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "settings",
+        title: "Maintenance & Ongoing Support",
+        description:
+          "Post-launch support includes updates, optimisation, and scaling assistance to keep your Laravel application running smoothly.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Proven",
+    headingHighlight: "Laravel Development Process",
+    description:
+      "A structured Laravel development process focused on business goals, performance, and long-term scalability.",
+    steps: [
+      {
+        icon: "search",
+        title: "Requirement Analysis & Planning",
+        description:
+          "We analyse your business goals, target users, and technical requirements to design the right Laravel architecture from the start.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "code",
+        title: "Clean & Secure Development",
+        description:
+          "Our Laravel developers build the application using clean code standards, secure practices, and scalable system design.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "activity",
+        title: "Testing & Quality Assurance",
+        description:
+          "We thoroughly test performance, security, and functionality to ensure a reliable and stable Laravel application.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "rocket",
+        title: "Deployment & Optimisation",
+        description:
+          "After launch, we monitor performance, optimise speed, and support ongoing improvements as your business grows.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Choose Us for",
+    headingHighlight: "Laravel Website Development",
+    description:
+      "Specialist Laravel expertise focused on performance, scalability, and long-term business value.",
+    benefits: [
+      {
+        title: "Laravel-Focused Development Expertise",
+        description:
+          "We specialise exclusively in Laravel development, ensuring deep framework knowledge and best practices.",
+        icon: "code",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Business-Driven Solutions",
+        description:
+          "Every Laravel application is built around real business goals, not just technical features.",
+        icon: "briefcase",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Scalable & Secure Architecture",
+        description:
+          "We design systems that grow with your business while maintaining strong security standards.",
+        icon: "shield",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Clean Code & Maintainability",
+        description:
+          "Well-structured code makes future updates easier, faster, and more cost-effective.",
+        icon: "settings",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Performance-Optimised Applications",
+        description:
+          "Fast-loading, optimised Laravel applications improve user experience and system reliability.",
+        icon: "bar-chart-2",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Ongoing Support & Optimisation",
+        description:
+          "We support your Laravel application after launch with updates, scaling, and performance improvements.",
+        icon: "refresh-cw",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Common Laravel Development Challenges We Solve",
+    description:
+      "Many businesses face technical and performance issues with Laravel applications. We fix these problems with clean architecture and best practices.",
+    items: [
+      {
+        title: "Slow Application Performance",
+        description:
+          "Performance optimisation and efficient architecture improve speed and responsiveness.",
+      },
+      {
+        title: "Security Vulnerabilities",
+        description:
+          "Secure coding practices and Laravel security features reduce risks and threats.",
+      },
+      {
+        title: "Poor Code Structure",
+        description:
+          "Clean, modular code improves maintainability and reduces long-term costs.",
+      },
+      {
+        title: "Limited Scalability",
+        description:
+          "Scalable system design ensures your application grows with user demand.",
+      },
+      {
+        title: "High Maintenance Costs",
+        description:
+          "Well-planned development reduces bugs and simplifies future updates.",
+      },
+      {
+        title: "Outdated Laravel Systems",
+        description:
+          "We refactor or rebuild existing Laravel applications for better performance and stability.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Laravel Development Solutions",
+    heading: "Ready to Build Your",
+    headingHighlight: "Laravel Website?",
+    description: [
+      "Custom Laravel Website Development Services designed for performance, security, and scalability.",
+      "Ideal for startups, growing businesses, and enterprise-level applications.",
+    ],
+    services: [
+      "Custom Laravel Web Application Development",
+      "Backend Architecture & Database Optimisation",
+      "API Development & Integrations",
+      "Laravel Security & Performance Optimisation",
+      "Application Refactoring & Rebuilds",
+      "Ongoing Maintenance & Support",
+    ],
+    quote:
+      "We build Laravel web applications that support long-term business growth, not short-term fixes.",
+    image: "/images/laravel-team.jpg",
+    ctaHeading: "Request a Free Laravel Development Consultation",
+    ctaDescription:
+      "Whether you need a new Laravel website or a complex web application, our experts are ready to help.",
+    ctaButton1: "REQUEST FREE CONSULTATION",
+    ctaButton2: "CONTACT OUR TEAM",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "What is Laravel website development?",
+        answer:
+          "Laravel website development is the process of building secure and scalable web applications using the Laravel PHP framework.",
+      },
+      {
+        question: "Why should I choose Laravel for web application development?",
+        answer:
+          "Laravel offers strong security, clean architecture, scalability, and excellent performance, making it ideal for modern web applications.",
+      },
+      {
+        question: "Do you offer custom Laravel development?",
+        answer:
+          "Yes. We provide fully custom Laravel development based on your business requirements.",
+      },
+      {
+        question: "Can you improve or rebuild an existing Laravel website?",
+        answer:
+          "Yes. We can optimise, refactor, or rebuild existing Laravel applications to improve performance and scalability.",
+      },
+      {
+        question: "How long does a Laravel web development project take?",
+        answer:
+          "Most Laravel projects take four to twelve weeks depending on features, complexity, and integrations.",
+      },
+      {
+        question: "Do you provide ongoing Laravel support and maintenance?",
+        answer:
+          "Yes. We offer maintenance, performance optimisation, and scaling support after launch.",
+      },
+      {
+        question: "Is Laravel suitable for high traffic websites?",
+        answer:
+          "Yes. With proper optimisation and architecture, Laravel can handle high traffic and large user bases.",
+      },
+    ],
+  },
+};
 
 
 
-const laravelWebsiteService = placeholderService(
-  "laravel-website",
-  "Laravel Website",
-);
-const customWebsiteService = placeholderService(
-  "custom-website",
-  "Custom Website",
-);
-const smallBusinessWebsiteService = placeholderService(
-  "small-business-website",
-  "Small Business Website",
-);
-const shopifyWebsiteService = placeholderService(
-  "shopify-website",
-  "Shopify Website",
-);
-const affiliateWebsiteService = placeholderService(
-  "affiliate-website",
-  "Affiliate Website",
-);
-const ecommerceWebsiteService = placeholderService(
-  "ecommerce-website",
-  "eCommerce Website",
-);
+export const customWebsiteService: ServiceDetail = {
+  id: "custom-website",
+  title: "Custom Website Development Services",
+  description:
+    "Professional Custom Website Development Services designed to help businesses stand out online, improve credibility, and drive conversions through high-quality, scalable, and SEO-friendly websites.",
+
+  heroSection: {
+    badge: "💻 Custom Website Development Services",
+    heading: "Custom Website",
+    subheading: "Design & Development for Growth",
+    description:
+      "Looking for professional Custom Website Development Services that help your business stand out online? We build high-quality custom websites designed to improve visibility, credibility, and conversions.",
+    descriptionExtra:
+      "As a custom website development company, we create websites tailored to your business goals, users, and industry. Every website is built from scratch to ensure performance, security, scalability, and strong search engine visibility that supports long-term growth.",
+    highlights: [
+      "✔ Fully Custom Website Design & Development",
+      "✔ SEO-Friendly, Fast & Secure Websites",
+      "✔ Scalable Solutions Built for Business Growth",
+    ],
+    image: "/images/custom-website-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Build a Website That Converts",
+    heading: "Custom Websites Built",
+    headingHighlight: "for Real Business Results",
+    description: [
+      "Template-based websites often limit flexibility, performance, and search visibility. Many businesses struggle with slow load times, outdated designs, and low conversions because their websites are not built around real user needs.",
+      "Our Custom Website Development Services focus on usability, speed, mobile optimisation, and SEO-friendly structure. The result is a website that reflects your brand, engages users, and supports consistent business growth.",
+    ],
+    buttonText: "Request Free Custom Website Consultation",
+    image: "/images/custom-website-consultation.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "Our Custom Website",
+    headingHighlight: "Development Services",
+    description:
+      "End-to-end custom website design and development services tailored to modern businesses and growing brands.",
+    steps: [
+      {
+        icon: "layout",
+        title: "Custom Website Design",
+        description:
+          "We design unique, brand-focused website layouts that align with your business goals and provide an engaging user experience.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "code",
+        title: "Responsive Website Development",
+        description:
+          "Fully responsive development ensures your website works seamlessly across mobile, tablet, and desktop devices.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "database",
+        title: "Backend Functionality & CMS",
+        description:
+          "We build clean backend systems and content structures that make your website easy to manage, update, and scale.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "zap",
+        title: "Performance Optimisation",
+        description:
+          "Speed optimisation, clean code, and modern standards ensure fast-loading pages and smooth performance.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "search",
+        title: "SEO-Friendly Website Structure",
+        description:
+          "We implement SEO-friendly URLs, clean structure, and optimised content layouts to support higher search rankings.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "shield",
+        title: "Website Security & Maintenance",
+        description:
+          "Security best practices protect your website, while ongoing support ensures long-term stability and growth.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Proven",
+    headingHighlight: "Custom Website Process",
+    description:
+      "A structured website development process designed to support usability, performance, and long-term success.",
+    steps: [
+      {
+        icon: "search",
+        title: "Discovery & Strategy",
+        description:
+          "We understand your business goals, target audience, and competitors to design a website that supports users and search engines.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "pen-tool",
+        title: "Design & Development",
+        description:
+          "Using modern technologies and best practices, we design and build your custom website with speed, security, and SEO in mind.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "check-circle",
+        title: "Testing & Quality Assurance",
+        description:
+          "We test across devices and browsers to ensure performance, usability, and stability before launch.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "rocket",
+        title: "Launch & Ongoing Optimisation",
+        description:
+          "After launch, we provide support, updates, and optimisation to keep your website performing at its best.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Choose Us for",
+    headingHighlight: "Custom Website Development",
+    description:
+      "A results-focused approach to custom website design and development built around your business goals.",
+    benefits: [
+      {
+        title: "100% Custom Website Solutions",
+        description:
+          "We design and develop websites from scratch, not templates, ensuring full flexibility and control.",
+        icon: "layout",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Business-Driven Design",
+        description:
+          "Every design decision supports branding, user experience, and conversions.",
+        icon: "briefcase",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Fast, Secure & Scalable Websites",
+        description:
+          "Our websites are built for performance, security, and future growth.",
+        icon: "shield",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "SEO-Friendly Structure",
+        description:
+          "Clean structure and optimisation help improve search rankings and organic visibility.",
+        icon: "search",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Mobile-First Development",
+        description:
+          "Responsive design ensures smooth experiences across all devices.",
+        icon: "smartphone",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Ongoing Support & Maintenance",
+        description:
+          "We support your website after launch with updates and optimisation.",
+        icon: "refresh-cw",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Common Custom Website Challenges We Solve",
+    description:
+      "Many businesses face issues caused by template-based or outdated websites. Our custom solutions fix these problems.",
+    items: [
+      {
+        title: "Slow Website Speed",
+        description:
+          "Optimised code and performance tuning improve load times and user experience.",
+      },
+      {
+        title: "Poor Search Rankings",
+        description:
+          "SEO-friendly structure helps improve visibility in search engines.",
+      },
+      {
+        title: "Outdated Design",
+        description:
+          "Modern, custom design strengthens brand credibility and trust.",
+      },
+      {
+        title: "Low Conversions",
+        description:
+          "Clear structure and CTAs guide visitors toward enquiries and actions.",
+      },
+      {
+        title: "Limited Scalability",
+        description:
+          "Custom architecture allows your website to grow with your business.",
+      },
+      {
+        title: "Difficult Website Management",
+        description:
+          "Clean backend systems make updates and content management easy.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Custom Website Solutions",
+    heading: "Ready to Build Your",
+    headingHighlight: "Custom Website?",
+    description: [
+      "Custom Website Development Services designed to deliver measurable business results.",
+      "Ideal for business websites, service companies, portfolios, and growing brands.",
+    ],
+    services: [
+      "Custom Website Design & Development",
+      "Responsive & Mobile-Friendly Development",
+      "SEO-Friendly Website Structure",
+      "Performance & Speed Optimisation",
+      "Website Redesign Services",
+      "Ongoing Maintenance & Support",
+    ],
+    quote:
+      "We build custom websites that improve visibility, engagement, and conversions.",
+    image: "/images/custom-website-team.jpg",
+    ctaHeading: "Request a Free Custom Website Consultation",
+    ctaDescription:
+      "Whether you need a new website or a complete redesign, our experts are ready to help.",
+    ctaButton1: "REQUEST FREE CONSULTATION",
+    ctaButton2: "CONTACT OUR TEAM",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "What is custom website development?",
+        answer:
+          "Custom website development is the process of designing and building a website specifically for your business goals, users, and requirements without using pre-built templates.",
+      },
+      {
+        question: "Why should I choose custom website design instead of a template?",
+        answer:
+          "Custom websites offer better performance, flexibility, branding control, SEO, and scalability compared to template-based websites.",
+      },
+      {
+        question: "Are custom websites SEO friendly?",
+        answer:
+          "Yes. Custom websites allow full control over structure, speed, content, and technical SEO, helping improve search engine rankings.",
+      },
+      {
+        question: "Are custom websites mobile friendly?",
+        answer:
+          "Yes. All our custom websites are fully responsive and work smoothly across mobile, tablet, and desktop devices.",
+      },
+      {
+        question: "How long does custom website development take?",
+        answer:
+          "Most custom website projects are completed within four to eight weeks depending on features and complexity.",
+      },
+      {
+        question: "Can you redesign an existing website?",
+        answer:
+          "Yes. We provide custom website redesign services to improve performance, design, and search visibility.",
+      },
+      {
+        question: "Do you provide support after website launch?",
+        answer:
+          "Yes. We offer ongoing maintenance, updates, and performance optimisation after launch.",
+      },
+      {
+        question: "Is custom website development good for business growth?",
+        answer:
+          "Yes. A well-built custom website improves credibility, visibility, user experience, and conversions, supporting long-term business growth.",
+      },
+    ],
+  },
+};
+
+export const wordPressWebsiteService: ServiceDetail = {
+  id: "wordpress-website",
+  title: "WordPress Website Development Services",
+  description:
+    "Professional WordPress Website Development Services designed to build fast, secure, and scalable websites that help businesses grow online, improve visibility, and convert visitors into customers.",
+
+  heroSection: {
+    badge: "🧩 WordPress Website Development Services",
+    heading: "Professional WordPress",
+    subheading: "Websites for Business Growth",
+    description:
+      "Looking for reliable WordPress Website Development Services to build a professional, easy-to-manage, and high-performing website? We design and develop custom WordPress websites tailored to your business goals, users, and industry.",
+    descriptionExtra:
+      "As an experienced WordPress development company, we build websites that combine strong design, clean code, and SEO-friendly structure. Every WordPress website is optimised for speed, security, scalability, and long-term success—giving you full control over content and growth.",
+    highlights: [
+      "✔ Custom WordPress Design & Development",
+      "✔ Fast, Secure & SEO-Friendly Websites",
+      "✔ Easy Content Management & Scalability",
+    ],
+    image: "/images/wordpress-website-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Grow with WordPress",
+    heading: "Flexible WordPress Websites",
+    headingHighlight: "Built to Scale",
+    description: [
+      "Many businesses choose WordPress for its flexibility, but poorly built themes and plugins often lead to slow speed, security risks, and limited growth. A professionally developed WordPress website solves these problems.",
+      "Our WordPress Website Development Services focus on performance, usability, and SEO. We build websites that are easy to manage, load fast, rank well in search engines, and support your business as it grows.",
+    ],
+    buttonText: "Request Free WordPress Consultation",
+    image: "/images/wordpress-consultation.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "Our WordPress Website",
+    headingHighlight: "Development Services",
+    description:
+      "End-to-end WordPress development services designed to deliver performance, flexibility, and long-term value.",
+    steps: [
+      {
+        icon: "layout",
+        title: "Custom WordPress Website Design",
+        description:
+          "We design unique WordPress layouts that reflect your brand, engage users, and support conversions—without relying on bloated templates.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "code",
+        title: "Theme & Plugin Development",
+        description:
+          "Custom themes and plugins ensure clean code, better performance, and features tailored to your business needs.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "smartphone",
+        title: "Responsive & Mobile-Friendly Design",
+        description:
+          "Every WordPress website is fully responsive, providing smooth performance across mobile, tablet, and desktop devices.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "search",
+        title: "SEO-Friendly WordPress Structure",
+        description:
+          "We build WordPress websites with clean URLs, fast loading pages, and optimised content structure to support higher rankings.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "shield",
+        title: "WordPress Security & Performance",
+        description:
+          "Security hardening, updates, and performance optimisation protect your site and ensure reliable speed.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "settings",
+        title: "Maintenance & Ongoing Support",
+        description:
+          "We provide updates, backups, performance tuning, and technical support after launch.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+ processSection: {
+  heading: "Our Step-by-Step",
+  headingHighlight: "WordPress Development Process",
+  description:
+    "A clear and structured WordPress development process designed to deliver performance, usability, security, and long-term business growth.",
+  steps: [
+    {
+      icon: "search",
+      title: "Discovery & Requirements Analysis",
+      description:
+        "We start by understanding your business goals, target audience, content needs, and competitors to define the right WordPress strategy.",
+      color: "text-emerald-600",
+      bg: "bg-emerald-50",
+    },
+    {
+      icon: "layout",
+      title: "Website Structure & Planning",
+      description:
+        "We plan the site structure, page hierarchy, and content flow to ensure a strong user experience and SEO-friendly foundation.",
+      color: "text-blue-600",
+      bg: "bg-blue-50",
+    },
+    {
+      icon: "pen-tool",
+      title: "Custom Design & UI Development",
+      description:
+        "Custom WordPress designs are created to match your brand identity, improve engagement, and support conversions.",
+      color: "text-purple-600",
+      bg: "bg-purple-50",
+    },
+    {
+      icon: "code",
+      title: "WordPress Development & Integration",
+      description:
+        "We develop the website using clean code, custom themes or plugins, and integrate required features and functionality.",
+      color: "text-orange-600",
+      bg: "bg-orange-50",
+    },
+    {
+      icon: "check-circle",
+      title: "Testing & Quality Assurance",
+      description:
+        "Thorough testing across browsers and devices ensures speed, security, responsiveness, and stable performance before launch.",
+      color: "text-pink-600",
+      bg: "bg-pink-50",
+    },
+    {
+      icon: "rocket",
+      title: "Launch & Ongoing Optimisation",
+      description:
+        "After launch, we monitor performance, apply optimisations, and provide support to keep your WordPress site growing.",
+      color: "text-cyan-600",
+      bg: "bg-cyan-50",
+    },
+  ],
+},
+
+
+  whyChooseUs: {
+    heading: "Why Choose Us for",
+    headingHighlight: "WordPress Website Development",
+    description:
+      "Business-focused WordPress development built for performance, flexibility, and long-term success.",
+    benefits: [
+      {
+        title: "WordPress Expertise",
+        description:
+          "We specialise in professional WordPress development, not generic theme setups.",
+        icon: "code",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Custom, Not Bloated Themes",
+        description:
+          "Clean, lightweight WordPress builds improve speed and reliability.",
+        icon: "layout",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "SEO & Performance Focus",
+        description:
+          "SEO-friendly structure and fast load times help improve rankings and user experience.",
+        icon: "search",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Secure & Scalable Websites",
+        description:
+          "We build WordPress websites that grow with your business while staying secure.",
+        icon: "shield",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Easy Content Management",
+        description:
+          "WordPress allows you to manage and update content without technical skills.",
+        icon: "edit",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Ongoing Support & Maintenance",
+        description:
+          "We support your WordPress website after launch with updates and optimisation.",
+        icon: "refresh-cw",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Common WordPress Website Problems We Solve",
+    description:
+      "Many WordPress websites suffer from poor performance and security due to improper development. We fix these issues.",
+    items: [
+      {
+        title: "Slow Website Speed",
+        description:
+          "Performance optimisation improves load times and user experience.",
+      },
+      {
+        title: "Security Vulnerabilities",
+        description:
+          "WordPress hardening and best practices reduce risks and threats.",
+      },
+      {
+        title: "Overloaded Themes & Plugins",
+        description:
+          "Clean builds remove unnecessary plugins and improve stability.",
+      },
+      {
+        title: "Poor SEO Structure",
+        description:
+          "SEO-friendly structure helps improve search engine rankings.",
+      },
+      {
+        title: "Outdated Design",
+        description:
+          "Modern WordPress design improves credibility and engagement.",
+      },
+      {
+        title: "Difficult Content Management",
+        description:
+          "Custom dashboards and training make WordPress easy to use.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "WordPress Website Solutions",
+    heading: "Ready to Build Your",
+    headingHighlight: "WordPress Website?",
+    description: [
+      "Professional WordPress Website Development Services built for performance and growth.",
+      "Ideal for business websites, blogs, service companies, and content-driven brands.",
+    ],
+    services: [
+      "Custom WordPress Website Design",
+      "Theme & Plugin Development",
+      "Responsive & Mobile-Friendly Design",
+      "SEO-Friendly WordPress Setup",
+      "WordPress Redesign & Optimisation",
+      "Ongoing Maintenance & Support",
+    ],
+    quote:
+      "We build WordPress websites that are fast, secure, and easy to manage.",
+    image: "/images/wordpress-team.jpg",
+    ctaHeading: "Request a Free WordPress Website Consultation",
+    ctaDescription:
+      "Whether you need a new WordPress website or want to improve an existing one, our experts are ready to help.",
+    ctaButton1: "REQUEST FREE CONSULTATION",
+    ctaButton2: "CONTACT OUR TEAM",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "What is WordPress website development?",
+        answer:
+          "WordPress website development is the process of designing and building websites using the WordPress content management system.",
+      },
+      {
+        question: "Is WordPress good for business websites?",
+        answer:
+          "Yes. WordPress is flexible, scalable, SEO-friendly, and ideal for most business websites.",
+      },
+      {
+        question: "Do you build custom WordPress websites?",
+        answer:
+          "Yes. We build fully custom WordPress websites tailored to your business needs.",
+      },
+      {
+        question: "Are WordPress websites SEO friendly?",
+        answer:
+          "Yes. With proper structure and optimisation, WordPress websites can rank very well in search engines.",
+      },
+      {
+        question: "Are WordPress websites mobile friendly?",
+        answer:
+          "Yes. All our WordPress websites are fully responsive across devices.",
+      },
+      {
+        question: "How long does a WordPress website take to build?",
+        answer:
+          "Most WordPress websites are completed within three to six weeks depending on features and complexity.",
+      },
+      {
+        question: "Do you provide WordPress maintenance?",
+        answer:
+          "Yes. We offer ongoing WordPress updates, security, and performance optimisation.",
+      },
+      {
+        question: "Can you redesign an existing WordPress website?",
+        answer:
+          "Yes. We redesign and optimise existing WordPress websites for better performance and results.",
+      },
+    ],
+  },
+};
+
+export const webAppService: ServiceDetail = {
+  id: "web-app",
+  title: "Web Application Development Services",
+  description:
+    "Advanced Web Application Development Services designed to build secure, scalable, and high-performance web applications that support complex business operations, user engagement, and long-term digital growth.",
+
+  heroSection: {
+    badge: "⚙️ Web Application Development Services",
+    heading: "Custom Web",
+    subheading: "Applications Built for Scale",
+    description:
+      "Looking for professional Web Application Development Services to build a powerful, secure, and scalable digital product? We design and develop custom web applications that help businesses streamline operations, improve user experience, and support long-term growth.",
+    descriptionExtra:
+      "As a full-service web application development company, we build custom web apps tailored to your business logic, workflows, and users. Every application is engineered with clean architecture, strong security, high performance, and scalability in mind—ensuring your web app grows with your business, not against it.",
+    highlights: [
+      "✔ Custom Web Applications Built from Scratch",
+      "✔ Secure, Scalable & High-Performance Architecture",
+      "✔ Business-Focused UX, Logic & System Design",
+    ],
+    image: "/images/web-app-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Build Powerful Web Applications",
+    heading: "Turn Complex Ideas",
+    headingHighlight: "into Scalable Web Apps",
+    description: [
+      "Many businesses struggle with rigid software, disconnected systems, and tools that cannot scale with growth. Off-the-shelf solutions often fail to match real workflows or support future expansion.",
+      "Our Web Application Development Services focus on building custom solutions that automate processes, manage data efficiently, and deliver seamless user experiences. We design web apps that solve real business problems and support long-term operational and digital growth.",
+    ],
+    buttonText: "Request Free Web App Consultation",
+    image: "/images/web-app-consultation.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "Our Web Application",
+    headingHighlight: "Development Services",
+    description:
+      "End-to-end web application development services covering strategy, architecture, development, integration, and long-term optimisation.",
+    steps: [
+      {
+        icon: "layers",
+        title: "Custom Web Application Development",
+        description:
+          "We build fully custom web applications based on your business logic, workflows, and functional requirements. Each application is designed for performance, flexibility, and scalability.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "layout",
+        title: "UI/UX Design for Web Apps",
+        description:
+          "User-focused interface and experience design ensures intuitive navigation, clarity, and high engagement across complex application workflows.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "database",
+        title: "Backend Architecture & Database Design",
+        description:
+          "We design robust backend systems, APIs, and databases that handle large data volumes, complex logic, and high user activity efficiently.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "link",
+        title: "API Development & System Integrations",
+        description:
+          "Secure APIs and integrations connect your web app with third-party services, internal systems, and external platforms.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "shield",
+        title: "Security, Authentication & Access Control",
+        description:
+          "We implement strong security measures including authentication, role-based access, data protection, and compliance best practices.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "bar-chart-2",
+        title: "Performance Optimisation & Scalability",
+        description:
+          "Caching, load optimisation, and scalable architecture ensure your web application performs reliably under growth and high traffic.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Structured",
+    headingHighlight: "Web Application Development Process",
+    description:
+      "A proven, step-by-step development process designed to deliver stable, scalable, and future-ready web applications.",
+    steps: [
+      {
+        icon: "search",
+        title: "Discovery & Business Analysis",
+        description:
+          "We deeply analyse your business goals, workflows, users, and technical needs to define clear requirements and success metrics.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "map",
+        title: "System Architecture & Planning",
+        description:
+          "We design application architecture, data models, and system flows that support performance, scalability, and maintainability.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "pen-tool",
+        title: "UI/UX Design & Prototyping",
+        description:
+          "Interactive wireframes and designs are created to validate user flows and usability before development begins.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "code",
+        title: "Agile Web App Development",
+        description:
+          "Our developers build the application using clean code, modular structure, and agile delivery for flexibility and speed.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "check-circle",
+        title: "Testing, QA & Security Review",
+        description:
+          "Comprehensive testing ensures functionality, performance, security, and reliability across devices and environments.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "rocket",
+        title: "Deployment, Monitoring & Scaling",
+        description:
+          "We deploy the web application, monitor performance, and continuously optimise as usage and business needs grow.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Choose Us for",
+    headingHighlight: "Web Application Development",
+    description:
+      "A business-driven approach to building web applications that are reliable, scalable, and designed for long-term success.",
+    benefits: [
+      {
+        title: "Custom-Built Web Applications",
+        description:
+          "Every web app is built specifically for your business logic—never generic or one-size-fits-all.",
+        icon: "layers",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Scalable & Future-Ready Architecture",
+        description:
+          "We design systems that scale smoothly as users, data, and features grow.",
+        icon: "trending-up",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Security-First Development",
+        description:
+          "Strong authentication, access control, and secure coding practices protect your data and users.",
+        icon: "shield",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Performance-Optimised Systems",
+        description:
+          "Fast load times, efficient queries, and optimised workflows ensure smooth performance.",
+        icon: "zap",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Clean Code & Maintainability",
+        description:
+          "Well-structured codebases reduce bugs and make future updates easier and cost-effective.",
+        icon: "code",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Ongoing Support & Optimisation",
+        description:
+          "We support your web application after launch with enhancements, monitoring, and scaling.",
+        icon: "refresh-cw",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Common Web Application Challenges We Solve",
+    description:
+      "Many businesses struggle with unreliable, slow, or unscalable web applications. Our custom development approach solves these issues.",
+    items: [
+      {
+        title: "Unscalable Systems",
+        description:
+          "We design architectures that handle growth without performance degradation.",
+      },
+      {
+        title: "Slow Performance",
+        description:
+          "Optimised backend logic and caching improve speed and responsiveness.",
+      },
+      {
+        title: "Security Risks",
+        description:
+          "Secure authentication and data protection reduce vulnerabilities.",
+      },
+      {
+        title: "Poor User Experience",
+        description:
+          "UX-driven design improves usability across complex workflows.",
+      },
+      {
+        title: "Disconnected Tools & Systems",
+        description:
+          "APIs and integrations unify data and workflows.",
+      },
+      {
+        title: "High Maintenance Costs",
+        description:
+          "Clean architecture reduces long-term development and maintenance costs.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Web Application Solutions",
+    heading: "Ready to Build Your",
+    headingHighlight: "Web Application?",
+    description: [
+      "Custom Web Application Development Services built for performance, security, and scale.",
+      "Ideal for SaaS platforms, dashboards, internal systems, and customer-facing applications.",
+    ],
+    services: [
+      "Custom Web Application Development",
+      "UI/UX Design & Prototyping",
+      "Backend Architecture & API Development",
+      "System Integrations & Automation",
+      "Security & Performance Optimisation",
+      "Ongoing Support & Scaling",
+    ],
+    quote:
+      "We build web applications that solve complex problems and support long-term business growth.",
+    image: "/images/web-app-team.jpg",
+    ctaHeading: "Request a Free Web Application Consultation",
+    ctaDescription:
+      "Whether you're building a new web app or scaling an existing platform, our experts are ready to help.",
+    ctaButton1: "REQUEST FREE CONSULTATION",
+    ctaButton2: "CONTACT OUR TEAM",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "What is web application development?",
+        answer:
+          "Web application development is the process of building interactive, dynamic software applications that run in a web browser and support complex business logic.",
+      },
+      {
+        question: "How is a web app different from a website?",
+        answer:
+          "Web apps are interactive and data-driven, while websites are primarily informational.",
+      },
+      {
+        question: "Do you build custom web applications?",
+        answer:
+          "Yes. All our web applications are fully custom-built based on your business requirements.",
+      },
+      {
+        question: "Are web applications scalable?",
+        answer:
+          "Yes. With proper architecture and optimisation, web applications can scale to handle large user bases and data volumes.",
+      },
+      {
+        question: "How long does a web app project take?",
+        answer:
+          "Most web application projects take eight to sixteen weeks depending on complexity and features.",
+      },
+      {
+        question: "Do you provide support after launch?",
+        answer:
+          "Yes. We offer ongoing maintenance, optimisation, and scaling support.",
+      },
+      {
+        question: "Are web applications secure?",
+        answer:
+          "Yes. We follow secure development practices to protect data, users, and systems.",
+      },
+    ],
+  },
+};
+
+
+export const smallBusinessWebsiteService: ServiceDetail = {
+  id: "small-business-website",
+  title: "Small Business Website Development Services",
+  description:
+    "Professional Small Business Website Development Services designed to establish a strong online presence, generate leads, and provide a professional digital storefront for local businesses and startups.",
+
+  heroSection: {
+    badge: "⚡ Affordable & Professional Websites",
+    heading: "Small Business",
+    subheading: "Websites That Drive Results",
+    description:
+      "Looking for professional Small Business Website Development Services to help your brand stand out? We create fast, mobile-responsive, and SEO-friendly websites that turn visitors into customers, allowing you to compete effectively in the digital marketplace.",
+    descriptionExtra:
+      "We specialise in helping local businesses, service providers, and startups launch high-quality websites without the enterprise price tag. Every site is built with a focus on user experience, lead generation, and ease of management, ensuring your business has a reliable foundation for growth.",
+    highlights: [
+      "✔ High-Converting Lead Generation Designs",
+      "✔ Fully Mobile-Responsive & Fast Loading",
+      "✔ Easy-to-Manage Content Management Systems",
+    ],
+    image: "/images/small-business-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Get Your Business Online",
+    heading: "Professional Web Presence",
+    headingHighlight: "Without the Complexity",
+    description: [
+      "Many small businesses suffer from outdated websites that don't work on mobile or fail to rank on Google. This leads to lost opportunities and a poor brand image that drives potential customers to competitors.",
+      "With our Small Business Website Development Services, we simplify the process. We handle the technical heavy lifting—from hosting and security to SEO and design—so you can focus on running your business while your website works for you 24/7.",
+    ],
+    buttonText: "Get Your Free Website Quote",
+    image: "/images/small-business-consultation.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "Our Small Business Web",
+    headingHighlight: "Solutions",
+    description:
+      "Tailored web development services focused on visibility, usability, and growth for local and growing businesses.",
+    steps: [
+      {
+        icon: "layout",
+        title: "Responsive Web Design",
+        description:
+          "We create beautiful, modern designs that look perfect on smartphones, tablets, and desktops, ensuring a seamless experience for every visitor.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "search",
+        title: "Local SEO Optimisation",
+        description:
+          "We build your site with local SEO best practices to help your business appear in search results when local customers are looking for your services.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "edit-3",
+        title: "Content Management (CMS)",
+        description:
+          "Get full control over your content. We use user-friendly platforms like WordPress or Webflow, making it easy for you to update text and images anytime.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "zap",
+        title: "Speed & Performance",
+        description:
+          "Slow websites lose customers. We optimise every image and line of code to ensure your site loads lightning-fast on all connections.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "mail",
+        title: "Lead Capture & Contact Forms",
+        description:
+          "We integrate strategic call-to-actions and secure contact forms to ensure it's as easy as possible for customers to reach out to you.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "lock",
+        title: "Security & SSL Setup",
+        description:
+          "Every website includes SSL certification and security hardening to protect your business and your customers' data from online threats.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Proven",
+    headingHighlight: "6-Step Launch Framework",
+    description:
+      "A streamlined, transparent process designed to get your small business online quickly without sacrificing quality or performance.",
+    steps: [
+      {
+        icon: "search",
+        title: "1. Discovery & Strategy",
+        description:
+          "We start by understanding your business goals, target audience, and competitors. This allows us to create a strategic roadmap tailored to your specific market.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "layout",
+        title: "2. Wireframing & Design",
+        description:
+          "We design a visual mockup of your site, focusing on user experience (UX) and conversion paths to ensure visitors know exactly how to contact you.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "code",
+        title: "3. Professional Development",
+        description:
+          "Our developers bring the design to life using clean, fast-loading code. We ensure the site is fully responsive and looks great on every device.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "file-text",
+        title: "4. Content & SEO Integration",
+        description:
+          "We integrate your text and images while optimizing every page for search engines (SEO) to help local customers find you on Google.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "check-square",
+        title: "5. Testing & Quality Assurance",
+        description:
+          "Before going live, we perform rigorous speed tests, link checks, and cross-browser audits to ensure a flawless launch.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "rocket",
+        title: "6. Launch & Growth Support",
+        description:
+          "After launch, we provide CMS training and 30 days of technical support to ensure your new website starts driving results immediately.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Choose Us for Your",
+    headingHighlight: "Business Website",
+    description:
+      "Personalised service and professional results tailored specifically for the needs of small businesses.",
+    benefits: [
+      {
+        title: "Affordable, Transparent Pricing",
+        description:
+          "High-quality web design shouldn't break the bank. We offer clear pricing with no hidden monthly fees.",
+        icon: "dollar-sign",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Focus on Lead Generation",
+        description:
+          "We don't just build pretty sites; we build marketing tools designed to grow your customer base.",
+        icon: "trending-up",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Mobile-First Approach",
+        description:
+          "Since most local searches happen on phones, we ensure your mobile experience is second to none.",
+        icon: "smartphone",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Fast Turnaround Times",
+        description:
+          "We value your time. Our streamlined process gets your business online in weeks, not months.",
+        icon: "clock",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Ongoing Local Support",
+        description:
+          "We're your partners for the long haul, offering maintenance and help whenever you need updates.",
+        icon: "heart",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "SEO-Ready From Day 1",
+        description:
+          "Your site is built with the technical foundations Google loves, giving you a head start in rankings.",
+        icon: "search",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Common Small Business Challenges We Solve",
+    description:
+      "We eliminate the technical hurdles that prevent small businesses from succeeding online.",
+    items: [
+      {
+        title: "High Agency Costs",
+        description:
+          "We provide enterprise-level quality at a price point that makes sense for smaller budgets.",
+      },
+      {
+        title: "Difficult to Update",
+        description:
+          "No more waiting for developers to change a phone number. Our CMS solutions are simple to use.",
+      },
+      {
+        title: "Poor Google Rankings",
+        description:
+          "We fix the technical SEO issues that keep your business hidden from local customers.",
+      },
+      {
+        title: "Slow Loading Times",
+        description:
+          "We optimise your site's performance to prevent frustrated users from leaving.",
+      },
+      {
+        title: "Non-Mobile Friendly",
+        description:
+          "We ensure your site works perfectly on all devices, capturing every potential lead.",
+      },
+      {
+        title: "Unprofessional Look",
+        description:
+          "We replace generic templates with professional designs that build trust with your audience.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Small Business Growth",
+    heading: "Ready to Launch Your",
+    headingHighlight: "Business Website?",
+    description: [
+      "Affordable Small Business Website Development Services designed to increase your visibility and sales.",
+      "Perfect for local service providers, retail shops, and professional consultants.",
+    ],
+    services: [
+      "Custom Business Website Design",
+      "One-Page Landing Pages",
+      "Local SEO Setup & Optimisation",
+      "WordPress & CMS Integration",
+      "E-commerce for Small Shops",
+      "Website Maintenance & Hosting",
+    ],
+    quote:
+      "Your website is your most important employee—it should work hard to bring you business every single day.",
+    image: "/images/small-business-team.jpg",
+    ctaHeading: "Claim Your Free Small Business Website Audit",
+    ctaDescription:
+      "Whether you need a brand new site or a refresh of your current one, our team is here to help you grow.",
+    ctaButton1: "GET A FREE QUOTE",
+    ctaButton2: "VIEW OUR WORK",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "How much does a small business website cost?",
+        answer:
+          "Cost varies based on the number of pages and features, but we offer packages specifically designed to be affordable for small business budgets.",
+      },
+      {
+        question: "How long does it take to get my website live?",
+        answer:
+          "A typical small business website takes between 2 to 4 weeks from the initial kickoff to launch.",
+      },
+      {
+        question: "Will I be able to update the website myself?",
+        answer:
+          "Absolutely. we build on user-friendly platforms and provide training so you can manage your own content easily.",
+      },
+      {
+        question: "Do you provide website hosting?",
+        answer:
+          "Yes, we offer reliable and secure hosting packages so you don't have to worry about the technical setup.",
+      },
+      {
+        question: "Will my website work on mobile phones?",
+        answer:
+          "Yes. Every website we build is 'responsive,' meaning it automatically adjusts to look great on any screen size.",
+      },
+      {
+        question: "Can you help me rank on Google?",
+        answer:
+          "Yes. We include foundational SEO in every build and offer ongoing SEO services to help you climb the search results.",
+      },
+      {
+        question: "Do I own the website once it's finished?",
+        answer:
+          "Yes, you have 100% ownership of your website, its files, and its domain once the project is completed.",
+      },
+    ],
+  },
+};
+
+
+
+export const shopifyWebsiteService: ServiceDetail = {
+  id: "shopify-website",
+  title: "Shopify E-commerce Development Services",
+  description:
+    "Professional Shopify Website Development Services designed to build high-converting, scalable, and secure online stores that drive sales and simplify business management.",
+
+  heroSection: {
+    badge: "🛍️ Expert Shopify Solutions",
+    heading: "Custom Shopify",
+    subheading: "Stores That Sell",
+    description:
+      "Ready to launch or scale your online store? Our Shopify Website Development Services provide everything you need to create a powerful e-commerce presence, from custom theme design to seamless app integrations and performance optimization.",
+    descriptionExtra:
+      "As specialized Shopify developers, we focus on building stores that don't just look great but are engineered for conversions. We handle the technical complexities of liquid coding, checkout optimization, and mobile commerce so you can focus on scaling your brand.",
+    highlights: [
+      "✔ Custom Shopify Theme Development & Setup",
+      "✔ High-Conversion UX/UI Design",
+      "✔ Seamless App & Payment Gateway Integration",
+    ],
+    image: "/images/shopify-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Scale Your E-commerce Brand",
+    heading: "Future-Proof Your Store",
+    headingHighlight: "on Shopify",
+    description: [
+      "Running an online store with slow load times, poor mobile navigation, or a clunky checkout process leads to abandoned carts and lost revenue. In the competitive world of e-commerce, your store needs to be flawless.",
+      "Our Shopify Development Services solve these bottlenecks. We build optimized, secure, and easy-to-manage stores that provide a world-class shopping experience for your customers while giving you the tools to manage inventory and orders effortlessly.",
+    ],
+    buttonText: "Request Free Shopify Consultation",
+    image: "/images/shopify-consultation.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "Our Shopify Development",
+    headingHighlight: "Capabilities",
+    description:
+      "End-to-end e-commerce solutions built on the world's most reliable platform, tailored to your unique brand identity.",
+    steps: [
+      {
+        icon: "shopping-bag",
+        title: "Custom Shopify Store Setup",
+        description:
+          "Full store configuration including domain setup, shipping rules, tax settings, and payment provider integration.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "palette",
+        title: "Bespoke Theme Development",
+        description:
+          "Unique, brand-specific Shopify themes built from scratch or customized to provide a premium look and feel.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "layers",
+        title: "App Integration & Customization",
+        description:
+          "Enhancing store functionality with essential apps for reviews, loyalty programs, subscriptions, and marketing automation.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "refresh-cw",
+        title: "Store Migration to Shopify",
+        description:
+          "Safe and secure migration of products, customers, and order history from platforms like WooCommerce, Magento, or Wix.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "zap",
+        title: "Performance & Speed Optimization",
+        description:
+          "Optimizing Liquid code, images, and scripts to ensure your store passes Core Web Vitals and keeps customers engaged.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "bar-chart",
+        title: "Conversion Rate Optimization (CRO)",
+        description:
+          "Strategic layout changes and checkout improvements designed specifically to turn more visitors into paying customers.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Strategic",
+    headingHighlight: "Shopify Build Process",
+    description:
+      "A systematic 6-step approach to launching a successful Shopify store that is optimized for both users and search engines.",
+    steps: [
+      {
+        icon: "clipboard-list",
+        title: "1. Audit & Strategy",
+        description:
+          "We analyze your product catalog, target audience, and sales goals to determine the best Shopify plan and store architecture.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "layout",
+        title: "2. UI/UX Store Design",
+        description:
+          "Our designers create a mobile-first visual identity that highlights your products and makes the purchasing journey intuitive.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "code",
+        title: "3. Development & Liquid Coding",
+        description:
+          "We develop your store using Shopify’s Liquid engine, ensuring clean code, fast loading, and easy backend management.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "package",
+        title: "4. Product & Data Setup",
+        description:
+          "We handle bulk product uploads, collections, tags, and inventory settings, ensuring your catalog is organized and searchable.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "shield-check",
+        title: "5. QA & Payment Testing",
+        description:
+          "We run end-to-end transaction tests to ensure payments, discounts, and notifications work perfectly across all devices.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "rocket",
+        title: "6. Launch & Training",
+        description:
+          "After the store goes live, we provide a hands-on training session so you can manage orders, products, and reports with ease.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "The Advantage of Our",
+    headingHighlight: "Shopify Expertise",
+    description:
+      "We combine technical Shopify knowledge with e-commerce marketing strategy to build stores that actually grow.",
+    benefits: [
+      {
+        title: "Certified Shopify Knowledge",
+        description:
+          "Deep expertise in Shopify’s ecosystem, Liquid templating, and the latest Online Store 2.0 features.",
+        icon: "award",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Mobile-Commerce Specialists",
+        description:
+          "Since 70%+ of shoppers use mobile, we prioritize the mobile experience above all else.",
+        icon: "smartphone",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Conversion-Focused Design",
+        description:
+          "Every element is placed strategically to reduce friction and increase your average order value (AOV).",
+        icon: "target",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "SEO-Optimized Architecture",
+        description:
+          "We structure your collections and products to ensure maximum visibility in Google Shopping and Search.",
+        icon: "search",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Scalable Infrastructure",
+        description:
+          "We build stores that can handle everything from your first sale to massive Black Friday traffic spikes.",
+        icon: "trending-up",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Ongoing Partner Support",
+        description:
+          "We don't just launch and leave. We provide ongoing support to help you add features as you grow.",
+        icon: "users",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Overcoming Shopify Challenges",
+    description:
+      "Avoid the common pitfalls that prevent Shopify stores from reaching their full potential.",
+    items: [
+      {
+        title: "Slow Theme Performance",
+        description:
+          "Heavy themes kill conversions. We optimize Liquid and scripts for lightning-fast loading.",
+      },
+      {
+        title: "App Bloat & High Costs",
+        description:
+          "Too many apps slow down sites. We use custom code to replace unnecessary apps and save you money.",
+      },
+      {
+        title: "Poor Mobile UX",
+        description:
+          "We fix navigation and checkout issues that cause mobile shoppers to drop off.",
+      },
+      {
+        title: "Checkout Abandonment",
+        description:
+          "We optimize the trust signals and flow of your store to maximize successful completions.",
+      },
+      {
+        title: "Inventory Sync Issues",
+        description:
+          "We ensure your stock levels are accurately synced across all sales channels and marketplaces.",
+      },
+      {
+        title: "Weak SEO Structure",
+        description:
+          "We fix Shopify's native SEO limitations to ensure your products rank higher than competitors.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "E-commerce Growth",
+    heading: "Ready to Start Selling",
+    headingHighlight: "on Shopify?",
+    description: [
+      "Custom Shopify Website Development Services designed to build, launch, and scale your online brand.",
+      "Proven strategies to increase traffic, conversions, and customer loyalty.",
+    ],
+    services: [
+      "Custom Shopify Theme Development",
+      "Store Migration & Replatforming",
+      "Shopify App Development & Setup",
+      "E-commerce SEO & Marketing",
+      "B2B & Shopify Plus Solutions",
+      "Ongoing Maintenance & Support",
+    ],
+    quote:
+      "Your Shopify store is more than a website—it is the engine of your retail business. We make sure it runs perfectly.",
+    image: "/images/shopify-team.jpg",
+    ctaHeading: "Get Your Free Shopify Store Strategy Session",
+    ctaDescription:
+      "Whether you're launching a new brand or upgrading an existing store, our Shopify experts are ready to help.",
+    ctaButton1: "START YOUR PROJECT",
+    ctaButton2: "VIEW CASE STUDIES",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "Why should I use Shopify instead of other platforms?",
+        answer:
+          "Shopify is built specifically for commerce. It offers unmatched security, hosting, and a vast ecosystem of apps that make scaling a retail business easier than any other platform.",
+      },
+      {
+        question: "Can you migrate my products from WooCommerce or Magento?",
+        answer:
+          "Yes, we specialize in secure migrations. We move your products, customer data, and order history while ensuring your SEO rankings are protected.",
+      },
+      {
+        question: "Will I be able to manage orders and inventory myself?",
+        answer:
+          "Absolutely. Shopify’s dashboard is very user-friendly, and we provide a full training session to ensure you're comfortable managing your store.",
+      },
+      {
+        question: "Does Shopify include hosting and SSL?",
+        answer:
+          "Yes, Shopify is a hosted platform. Your monthly Shopify subscription includes secure hosting, an SSL certificate, and unlimited bandwidth.",
+      },
+      {
+        question: "How long does it take to build a custom Shopify store?",
+        answer:
+          "A standard custom store build typically takes between 4 to 8 weeks, depending on the complexity of the design and the number of products.",
+      },
+      {
+        question: "Can Shopify handle high traffic and large volumes of sales?",
+        answer:
+          "Yes, Shopify is designed for scale. From small startups to global brands on Shopify Plus, the platform can handle thousands of transactions per minute.",
+      },
+      {
+        question: "Do you offer custom app development for Shopify?",
+        answer:
+          "Yes, if an off-the-shelf app doesn't meet your needs, we can build custom Shopify apps or private integrations for your store.",
+      },
+    ],
+  },
+};
+
+export const affiliateWebsiteService: ServiceDetail = {
+  id: "affiliate-website",
+  title: "Affiliate Website Development Services",
+  description:
+    "Professional Affiliate Website Development Services focused on building high-traffic, high-conversion niche sites that maximize passive income through strategic design and SEO.",
+
+  heroSection: {
+    badge: "💰 Build Your Passive Income Asset",
+    heading: "High-Converting",
+    subheading: "Affiliate Marketing Websites",
+    description:
+      "Looking to build a profitable affiliate empire? Our Affiliate Website Development Services help you launch niche-specific platforms optimized for Amazon Associates, specialized networks, and lead generation, turning traffic into consistent revenue.",
+    descriptionExtra:
+      "We build more than just blogs; we build conversion engines. From automated product comparison tables to speed-optimized review templates, every element is engineered to encourage clicks and satisfy search engine algorithms for long-term rankings.",
+    highlights: [
+      "✔ Automated Product Comparison & Pricing Tables",
+      "✔ Advanced SEO Framework for Niche Rankings",
+      "✔ High-CTR Layouts & Call-to-Action Placements",
+    ],
+    image: "/images/affiliate-website-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Scale Your Affiliate Revenue",
+    heading: "Turn Clicks into Commission",
+    headingHighlight: "with Expert Architecture",
+    description: [
+      "The affiliate landscape is highly competitive. Standard templates often fail because they lack the technical SEO and conversion-focused layouts required to rank and convert in 2024 and beyond.",
+      "Our specialized Affiliate Development Services focus on the 'Core Web Vitals' and user intent. We build sites that load instantly, provide genuine value to users, and make it incredibly easy for them to click your affiliate links.",
+    ],
+    buttonText: "Request Affiliate Site Strategy",
+    image: "/images/affiliate-consultation.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "Our Affiliate Website",
+    headingHighlight: "Features",
+    description:
+      "Custom-built tools and features designed to give your affiliate business a competitive edge and higher earnings per click (EPC).",
+    steps: [
+      {
+        icon: "layout",
+        title: "Dynamic Comparison Tables",
+        description:
+          "Mobile-friendly tables that allow users to compare product features and prices side-by-side, significantly increasing CTR.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "search",
+        title: "Siloed SEO Architecture",
+        description:
+          "Strategic internal linking and category structuring (Siloing) to build topical authority and dominate niche search results.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "zap",
+        title: "Auto-Updating Affiliate Links",
+        description:
+          "Integration with APIs (like Amazon PA-API) to ensure prices and stock levels are always accurate without manual updates.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "star",
+        title: "Custom Review Systems",
+        description:
+          "Structured data (Schema Markup) for star ratings and 'Pros/Cons' boxes to ensure your reviews stand out in Google Search results.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "shield",
+        title: "Affiliate Disclosure Management",
+        description:
+          "Seamless and compliant disclosure placements to satisfy legal requirements while maintaining a professional look.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "bar-chart-2",
+        title: "Heatmap & Click Tracking",
+        description:
+          "Integration with tracking tools to monitor which buttons and links are performing best, allowing for data-driven optimizations.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Strategic",
+    headingHighlight: "Affiliate Build Process",
+    description:
+      "A data-driven 6-step workflow designed to take your niche idea from concept to a revenue-generating digital asset.",
+    steps: [
+      {
+        icon: "target",
+        title: "1. Niche & Keyword Analysis",
+        description:
+          "We analyze search volume and keyword difficulty to ensure your site is built on a foundation of profitable, rankable topics.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "map",
+        title: "2. Content Strategy & Siloing",
+        description:
+          "We plan the site structure to ensure maximum link equity distribution, making it easier for new content to rank quickly.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "framer",
+        title: "3. Conversion-First UI Design",
+        description:
+          "We create custom layouts for 'Best X for Y' and 'Product Review' pages that are proven to convert cold traffic into clicks.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "code",
+        title: "4. Development & Performance",
+        description:
+          "We build a lightweight, ultra-fast site using clean code to ensure your affiliate site passes all Google Core Web Vitals.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "database",
+        title: "5. API & Network Integration",
+        description:
+          "We connect your site to affiliate networks and set up automated tracking and product data fetching where possible.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "rocket",
+        title: "6. SEO Launch & Indexing",
+        description:
+          "After launch, we handle technical indexing and provide a roadmap for content publishing to build early momentum.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Choose Us for",
+    headingHighlight: "Affiliate Development",
+    description:
+      "We don't just build sites; we build high-yielding digital real estate for professional affiliate marketers.",
+    benefits: [
+      {
+        title: "Deep Affiliate Expertise",
+        description:
+          "We understand the nuances of CTR, EPC, and niche authority that generic web agencies often overlook.",
+        icon: "briefcase",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Performance First Coding",
+        description:
+          "Speed is a ranking factor. Our sites are built to be lightning-fast to reduce bounce rates and improve SEO.",
+        icon: "zap",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Advanced Schema Integration",
+        description:
+          "We use JSON-LD structured data so your product ratings and prices appear directly in search results.",
+        icon: "code",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Custom Data Management",
+        description:
+          "From custom post types for 'Pros & Cons' to automatic price fetching, we build custom solutions for your niche.",
+        icon: "database",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Mobile-Responsive Reviews",
+        description:
+          "Over 60% of affiliate clicks come from mobile. We ensure your comparison tables work perfectly on small screens.",
+        icon: "smartphone",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "Scalable Architecture",
+        description:
+          "Our sites are built to scale from 10 pages to 10,000 pages without losing performance or organization.",
+        icon: "trending-up",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Affiliate Challenges We Solve",
+    description:
+      "Technical hurdles can kill an affiliate site before it even gains traction. We eliminate these roadblocks.",
+    items: [
+      {
+        title: "Poor Click-Through Rates",
+        description:
+          "We replace boring layouts with high-visibility buttons and tables that encourage user interaction.",
+      },
+      {
+        title: "Slow Site Speed",
+        description:
+          "Heavy affiliate sites lose rankings. We optimize images and code for a near-instant user experience.",
+      },
+      {
+        title: "Google Ranking Drops",
+        description:
+          "We build 'Helpful Content' ready structures that protect you from algorithmic updates.",
+      },
+      {
+        title: "Broken Affiliate Links",
+        description:
+          "We implement link management systems to monitor and redirect broken or expired affiliate offers.",
+      },
+      {
+        title: "Mobile UX Issues",
+        description:
+          "We design tables and reviews that remain fully functional and readable on mobile devices.",
+      },
+      {
+        title: "Lack of Trust/Authority",
+        description:
+          "We implement professional 'Author Boxes' and expertise signals to satisfy Google's E-E-A-T requirements.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Passive Income Growth",
+    heading: "Ready to Build Your",
+    headingHighlight: "Affiliate Empire?",
+    description: [
+      "Custom Affiliate Website Development Services focused on high-traffic niches and high-conversion layouts.",
+      "Ideal for Amazon Associates, SaaS affiliates, and lead generation experts.",
+    ],
+    services: [
+      "Niche Site Strategy & Architecture",
+      "Amazon Associates API Integration",
+      "Price Comparison & Table Design",
+      "Advanced SEO & Schema Implementation",
+      "Page Speed & Performance Optimization",
+      "Link Management & Tracking Setup",
+    ],
+    quote:
+      "In affiliate marketing, the best content only wins if the platform is built for conversion and speed.",
+    image: "/images/affiliate-team.jpg",
+    ctaHeading: "Get a Free Affiliate Site Audit & Strategy",
+    ctaDescription:
+      "Whether you're starting your first niche site or scaling a portfolio, we have the technical expertise to help you succeed.",
+    ctaButton1: "START YOUR PROJECT",
+    ctaButton2: "VIEW OUR PORTFOLIO",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "What is an affiliate website?",
+        answer:
+          "An affiliate website is a platform that reviews or recommends products/services. When a user clicks your link and makes a purchase, you earn a commission.",
+      },
+      {
+        question: "Can you build sites for Amazon Associates?",
+        answer:
+          "Yes, we specialize in Amazon niche sites, including PA-API integration for real-time pricing and stock updates.",
+      },
+      {
+        question: "Do you provide the content for the website?",
+        answer:
+          "While our primary focus is development and strategy, we can help you create content templates and provide guidelines for SEO-optimized affiliate writing.",
+      },
+      {
+        question: "Is the site mobile-friendly?",
+        answer:
+          "Absolutely. Every affiliate site we build is mobile-first, ensuring that comparison tables and review boxes look great on all devices.",
+      },
+      {
+        question: "How do you handle SEO?",
+        answer:
+          "We build the site with a siloed architecture, integrate JSON-LD Schema for rich snippets, and optimize for Core Web Vitals from day one.",
+      },
+      {
+        question: "What platform do you use?",
+        answer:
+          "We typically use WordPress for affiliate sites because of its powerful SEO capabilities and flexible plugins, but we can also build custom solutions if needed.",
+      },
+      {
+        question: "Can you help me choose a niche?",
+        answer:
+          "During our strategy phase, we can provide data on keyword competition and search volume to help you validate your chosen niche.",
+      },
+    ],
+  },
+};
+
+export const ecommerceWebsiteService: ServiceDetail = {
+  id: "ecommerce-website",
+  title: "E-commerce Website Development Services",
+  description:
+    "Professional E-commerce Website Development Services focused on creating secure, high-conversion online stores that streamline shopping experiences and maximize digital revenue.",
+
+  heroSection: {
+    badge: "🛒 Scalable E-commerce Solutions",
+    heading: "Custom E-commerce",
+    subheading: "Platforms Built for Sales",
+    description:
+      "Looking for professional E-commerce Website Development Services to take your retail business online? We build robust, feature-rich online stores that combine stunning design with high-performance functionality to drive customer loyalty and growth.",
+    descriptionExtra:
+      "From small boutiques to large-scale marketplaces, we develop e-commerce solutions that simplify inventory management, secure payments, and shipping logistics. Our focus is on creating a frictionless path to purchase that increases your average order value and repeat customer rate.",
+    highlights: [
+      "✔ High-Performance Online Store Development",
+      "✔ Secure Payment Gateway & Logic Integration",
+      "✔ Advanced Inventory & Order Management",
+    ],
+    image: "/images/ecommerce-hero.jpg",
+  },
+
+  talkToExperts: {
+    badge: "Boost Your Online Sales",
+    heading: "Empower Your Brand",
+    headingHighlight: "with Modern Commerce",
+    description: [
+      "Running an online store on a slow, outdated, or difficult-to-navigate platform leads to high bounce rates and abandoned carts. Modern shoppers expect instant load times and a secure, one-click checkout experience.",
+      "With our E-commerce Website Development Services, we eliminate technical friction. We build scalable stores that handle high traffic, protect sensitive customer data, and provide the marketing tools you need to stay competitive in the digital age.",
+    ],
+    buttonText: "Request E-commerce Strategy",
+    image: "/images/ecommerce-consultation.jpg",
+  },
+
+  seoServicesDetails: {
+    heading: "Our E-commerce",
+    headingHighlight: "Development Stack",
+    description:
+      "Comprehensive features designed to provide a world-class shopping experience while giving you total control over your business operations.",
+    steps: [
+      {
+        icon: "credit-card",
+        title: "Secure Payment Integration",
+        description:
+          "Integration with global payment processors like Stripe, PayPal, and local gateways, ensuring PCI-compliant and secure transactions.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "package",
+        title: "Inventory & Catalog Management",
+        description:
+          "Advanced systems to manage thousands of SKUs, real-time stock updates, product variations, and complex categorization.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "truck",
+        title: "Shipping & Logistics Automation",
+        description:
+          "Automated shipping rate calculations, label generation, and real-time order tracking integrations with major carriers.",
+      color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "users",
+        title: "Customer Account Systems",
+        description:
+          "Seamless user registration, order history, wishlists, and personalized recommendations to increase customer lifetime value.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "search",
+        title: "Advanced Product Filtering",
+        description:
+          "Fast, faceted search and filtering systems that allow customers to find exactly what they are looking for in seconds.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "bar-chart",
+        title: "Sales Analytics & Reporting",
+        description:
+          "Deep integration with analytics tools to track sales performance, customer behavior, and conversion funnels.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  processSection: {
+    heading: "Our Comprehensive",
+    headingHighlight: "E-commerce Build Process",
+    description:
+      "A rigorous 6-step framework to ensure your online store is secure, fast, and ready to process orders from day one.",
+    steps: [
+      {
+        icon: "users",
+        title: "1. Requirements & User Flow",
+        description:
+          "We map out the customer journey, from the first click to the final 'Thank You' page, ensuring every step is optimized.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "file-code",
+        title: "2. Architecture & Data Schema",
+        description:
+          "We design the database structure to handle complex product attributes, variants, and customer data securely.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "monitor",
+        title: "3. UI/UX Prototype Design",
+        description:
+          "We create high-fidelity designs focused on mobile responsiveness and trust-building elements (reviews, trust badges).",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "shopping-cart",
+        title: "4. Development & Integrations",
+        description:
+          "Our developers build the core functionality, integrating your ERP, CRM, and payment systems for a unified experience.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "shield-check",
+        title: "5. Security & Stress Testing",
+        description:
+          "We perform penetration testing and load testing to ensure your store stays online during sales spikes and protects user data.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "rocket",
+        title: "6. Launch & Optimization",
+        description:
+          "After launching, we monitor conversion rates and site performance, making iterative improvements to maximize ROI.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: "Why Choose Us for Your",
+    headingHighlight: "E-commerce Project",
+    description:
+      "Specialist expertise in building high-performance digital stores that convert visitors into loyal customers.",
+    benefits: [
+      {
+        title: "Conversion-Centric Approach",
+        description:
+          "We don't just build websites; we build sales tools optimized for the highest possible conversion rate.",
+        icon: "trending-up",
+        color: "from-blue-500 to-blue-400",
+      },
+      {
+        title: "Mobile-First Commerce",
+        description:
+          "Since most shopping happens on mobile, we prioritize a 'thumb-friendly' and fast mobile shopping experience.",
+        icon: "smartphone",
+        color: "from-emerald-500 to-emerald-400",
+      },
+      {
+        title: "Enterprise-Grade Security",
+        description:
+          "We implement SSL, two-factor authentication, and secure coding practices to protect your business and customers.",
+        icon: "lock",
+        color: "from-purple-500 to-purple-400",
+      },
+      {
+        title: "Scalable Infrastructure",
+        description:
+          "Our solutions grow with you, from 10 orders a day to 10,000, without crashing or slowing down.",
+        icon: "database",
+        color: "from-orange-500 to-orange-400",
+      },
+      {
+        title: "Seamless Third-Party Sync",
+        description:
+          "We connect your store with your existing accounting, inventory, and marketing software automatically.",
+        icon: "refresh-cw",
+        color: "from-pink-500 to-pink-400",
+      },
+      {
+        title: "SEO-Ready Product Pages",
+        description:
+          "We ensure your products are easily discoverable on Google with optimized metadata and schema markup.",
+        icon: "search",
+        color: "from-cyan-500 to-teal-400",
+      },
+    ],
+  },
+
+  bottlenecksSection: {
+    heading: "Common E-commerce Roadblocks We Eliminate",
+    description:
+      "We solve the technical and strategic issues that cause online stores to lose customers and revenue.",
+    items: [
+      {
+        title: "High Cart Abandonment",
+        description:
+          "We optimize the checkout flow and reduce friction points to ensure more customers finish their purchase.",
+      },
+      {
+        title: "Slow Page Load Times",
+        description:
+          "Large product catalogs can be slow; we use advanced caching and image optimization for instant loading.",
+      },
+      {
+        title: "Mobile Checkout Issues",
+        description:
+          "We fix clunky forms and layout issues that make it difficult for mobile users to pay.",
+      },
+      {
+        title: "Poor Search Results",
+        description:
+          "We implement intelligent search that understands typos and synonyms to help users find products faster.",
+      },
+      {
+        title: "Security & Fraud Risks",
+        description:
+          "We implement robust fraud detection and secure payment handling to minimize chargebacks and risks.",
+      },
+      {
+        title: "Complex Catalog Management",
+        description:
+          "We build intuitive backends that make updating prices, stock, and descriptions simple for your team.",
+      },
+    ],
+    selectedIndex: 0,
+  },
+
+  seoServices: {
+    badge: "Scale Your Sales",
+    heading: "Ready to Build a High",
+    headingHighlight: "Performance Store?",
+    description: [
+      "Custom E-commerce Website Development Services designed for security, scalability, and sales growth.",
+      "Ideal for established retailers, manufacturers, and growing D2C brands.",
+    ],
+    services: [
+      "Custom E-commerce Platform Development",
+      "Headless Commerce & PWA Solutions",
+      "Marketplace & Multi-Vendor Systems",
+      "B2B E-commerce & Wholesale Portals",
+      "Payment & ERP Systems Integration",
+      "Post-Launch Support & Optimization",
+    ],
+    quote:
+      "E-commerce isn't about having a website; it's about building a digital experience that customers trust and return to.",
+    image: "/images/ecommerce-team.jpg",
+    ctaHeading: "Request a Free E-commerce Consultation",
+    ctaDescription:
+      "Whether you're migrating platforms or starting a new venture, our experts are ready to build your roadmap to success.",
+    ctaButton1: "START YOUR PROJECT",
+    ctaButton2: "TALK TO AN EXPERT",
+  },
+
+  faqSection: {
+    items: [
+      {
+        question: "Which e-commerce platform should I choose?",
+        answer:
+          "This depends on your size and needs. We work with Shopify, WooCommerce, and custom frameworks (like Laravel) to provide the best fit for your specific business goals.",
+      },
+      {
+        question: "Can you help me migrate from my current platform?",
+        answer:
+          "Yes, we specialize in secure migrations, ensuring your product data, customer accounts, and SEO rankings are preserved during the move.",
+      },
+      {
+        question: "Is my store going to be mobile-friendly?",
+        answer:
+          "Absolutely. We use a mobile-first design approach to ensure your store provides an excellent shopping experience on smartphones and tablets.",
+      },
+      {
+        question: "How do you handle website security?",
+        answer:
+          "We implement SSL, follow PCI compliance standards, use secure payment gateways, and perform regular security audits to protect your store.",
+      },
+      {
+        question: "How long does it take to build a full e-commerce site?",
+        answer:
+          "A standard e-commerce build typically takes 8 to 16 weeks, depending on the number of products, integrations, and custom features required.",
+      },
+      {
+        question: "Do you offer ongoing support after launch?",
+        answer:
+          "Yes, we offer monthly maintenance packages that include security updates, performance monitoring, and new feature development.",
+      },
+      {
+        question: "Can you integrate my store with my accounting software?",
+        answer:
+          "Yes, we can sync your store with tools like QuickBooks, Xero, or custom ERP systems to automate your financial reporting.",
+      },
+    ],
+  },
+};
+
+
 
 
 
@@ -6182,6 +8359,7 @@ const restaurantSeoService = placeholderService(
 );
 
 export const serviceDetailsMap: Record<string, ServiceDetail> = {
+  "web-app": webAppService,
   "doctor-seo": doctorSeoService,
   "wordpress-website": wordPressWebsiteService,
   "laravel-website": laravelWebsiteService,
