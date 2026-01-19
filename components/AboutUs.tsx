@@ -82,7 +82,7 @@ export default function AboutUs() {
           <div className="col-span-4 relative">
             <div className="relative rounded-xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+                src="/images/home/about-image.webp"
                 alt="Professional team"
                 className="w-full h-full object-cover"
               />

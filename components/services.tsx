@@ -7,6 +7,7 @@ import {
   Search,
   LifeBuoy,
   ArrowRight,
+  TrendingUp,
 } from "lucide-react";
 
 const services = [
@@ -14,56 +15,59 @@ const services = [
     id: 0,
     name: "Website Development",
     icon: Globe,
-    image: "/images/services/website-development.png",
+    image: "/images/home/website-development.webp",
     description:
-      "We make website that help your business work better. They are fast, safe, and easy to use.",
+      "We build custom websites that help your business work better and grow online. Our websites are designed to be fast, secure, and easy for users to navigate across all devices. Every project focuses on performance, reliability, and long-term scalability to support your business goals.",
     features: [
-      "Made just for your business needs",
-      "Safe and reliable",
-      "Works fast without delays",
-      "Connects easily with your current tools",
+      "Custom-built for your business needs",
+      "Secure, stable, and reliable structure",
+      "Fast loading and smooth performance",
+      "Easy integration with existing tools and systems",
     ],
   },
+
   {
     id: 1,
-    name: "Mobile App Development",
-    icon: Zap,
-    image: "/images/services/web-app-development.png",
+    name: "Digital Marketing",
+    icon: TrendingUp,
+    image: "/images/home/digital-marketing.webp",
     description:
-      "We create mobile apps for iPhone and Android that people enjoy using.",
+      "We help businesses grow online using data-driven digital marketing strategies designed to attract the right audience. Our approach focuses on increasing visibility, engaging potential customers, and turning traffic into real leads and sales. Every campaign is carefully planned, tracked, and optimised to deliver measurable and long-term growth.",
     features: [
-      "Works on iPhone and Android",
-      "Simple and easy to use",
-      "Fast and smooth",
-      "Helps your business grow",
+      "SEO and search visibility growth",
+      "Social media marketing and audience engagement",
+      "Paid advertising for faster and targeted results",
+      "Lead generation, sales, and brand growth",
     ],
   },
+
   {
     id: 2,
     name: "SEO Optimisation",
     icon: Smartphone,
-    image: "/images/services/mobile-app-development.jpg",
+    image: "/images/home/seo-optimisation.webp",
     description:
-      "Our SEO services help your website show up higher on Google so more people can find you.",
+      "Our SEO services help your website rank higher on Google and other search engines, making it easier for potential customers to find your business. We use advanced strategies, including AI-powered SEO and Generative Engine Optimisation (GEO), to target the right keywords and improve your website’s visibility. The result is increased traffic, higher engagement, and more qualified leads for your business.",
     features: [
-      "Improve your website pages",
-      "Reach local customers in Australia",
-      "Use AI SEO & Generative Engine Optimisation (GEO)",
-      "Get more visitors with smart keywords",
+      "Optimise website pages for search engines",
+      "Reach local customers in Australia and beyond",
+      "Leverage AI SEO & Generative Engine Optimisation (GEO)",
+      "Attract more visitors with strategic keywords",
     ],
   },
+
   {
     id: 3,
     name: "IT Support",
     icon: Search,
-    image: "/images/services/seo-optimization.png",
+    image: "/images/home/it-support.webp",
     description:
-      "We help keep your computers and systems safe and running well.",
+      "Our IT Support services ensure your computers, networks, and systems remain secure, reliable, and fully operational. We provide proactive monitoring, troubleshooting, and maintenance to prevent downtime and keep your business running smoothly. From hardware and software issues to system upgrades, our team supports your IT needs as your business grows and evolves.",
     features: [
-      "24/7 help when you need it",
-      "Keep systems updated and secure",
-      "Help with hardware and software",
-      "Grow your IT as your business grows",
+      "24/7 assistance whenever you need it",
+      "Keep systems updated, secure, and running smoothly",
+      "Support for hardware, software, and network issues",
+      "Scale your IT infrastructure as your business grows",
     ],
   },
 ];
@@ -117,7 +121,7 @@ export default function Services() {
               {activeService.name}
             </h3>
 
-            <p className="text-slate-600 text-lg mb-6">
+            <p className="text-slate-800 text-lg mb-6">
               {activeService.description}
             </p>
 

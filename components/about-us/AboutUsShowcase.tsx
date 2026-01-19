@@ -24,7 +24,7 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center py-10 lg:py-14">
           <div className="flex justify-center">
             <img
-              src="https://ossisto.com/wp-content/uploads/2024/09/Top-Project-Management-Companies-for-Seamless-Project-Execution.webp"
+              src="/images/about-us/about-1.webp"
               alt="Team collaboration"
               className="w-full h-[400px] rounded-xl shadow-xl"
             />
@@ -91,7 +91,7 @@ export default function AboutSection() {
           <div className="relative order-1 lg:order-2 flex justify-center">
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl opacity-0 pointer-events-none"></div>
             <img
-              src="https://images.pexels.com/photos/3182807/pexels-photo-3182807.jpeg?auto=compress&cs=tinysrgb&w=500"
+              src="/images/about-us/about-2.webp"
               alt="Team working"
               className="w-full h-[400px] rounded-3xl shadow-2xl"
             />
