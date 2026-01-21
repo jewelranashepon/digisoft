@@ -23,7 +23,7 @@ export const services: ServiceItem[] = [
     description: "Custom WordPress websites optimized for speed and security.",
     longDescription:
       "We design and develop high-performance WordPress websites that are secure, SEO-friendly, and easy to manage. Perfect for businesses that want flexibility and growth.",
-    image: "/images/web-1.avif",
+    image: "/images/web-development/wordpress-website.webp",
     category: "web-dev",
     features: [
       "Custom WordPress themes",
@@ -38,7 +38,7 @@ export const services: ServiceItem[] = [
     description: "Scalable web applications tailored to your business needs.",
     longDescription:
       "We build modern web applications using the latest technologies to ensure performance, scalability, and long-term reliability.",
-    image: "/images/web-2.avif",
+    image: "/images/web-development/web-app.webp",
     category: "web-dev",
     features: [
       "Custom dashboards",
@@ -53,7 +53,7 @@ export const services: ServiceItem[] = [
     description: "Robust Laravel-powered websites and systems.",
     longDescription:
       "Laravel websites built for speed, security, and complex business logic. Ideal for advanced applications and enterprise projects.",
-    image: "/images/web-1.avif",
+    image: "/images/web-development/laravel-website.webp",
     category: "web-dev",
     features: [
       "MVC architecture",
@@ -68,7 +68,7 @@ export const services: ServiceItem[] = [
     description: "Fully custom websites designed for performance and growth.",
     longDescription:
       "We build custom websites from scratch to match your exact business requirements with pixel-perfect UI and optimized performance.",
-    image: "/images/web-2.avif",
+    image: "/images/web-development/custom-website.webp",
     category: "web-dev",
     features: [
       "Tailored design",
@@ -83,7 +83,7 @@ export const services: ServiceItem[] = [
     description: "Affordable websites for small businesses.",
     longDescription:
       "Professional websites designed to help small businesses establish credibility and attract customers online.",
-    image: "/images/web-1.avif",
+    image: "/images/web-development/small-business-website.webp",
     category: "web-dev",
     features: [
       "Affordable pricing",
@@ -98,7 +98,7 @@ export const services: ServiceItem[] = [
     description: "High-converting Shopify eCommerce websites.",
     longDescription:
       "We build conversion-focused Shopify stores that are easy to manage and optimized for sales.",
-    image: "/images/web-2.avif",
+    image: "/images/web-development/shopify-website.webp",
     category: "web-dev",
     features: [
       "Custom Shopify themes",
@@ -113,7 +113,7 @@ export const services: ServiceItem[] = [
     description: "SEO-optimized affiliate websites for passive income.",
     longDescription:
       "We create affiliate websites designed to rank on Google and generate long-term passive income.",
-    image: "/images/web-1.avif",
+    image: "/images/web-development/affiliate-website.webp",
     category: "web-dev",
     features: [
       "Niche research",
@@ -128,7 +128,7 @@ export const services: ServiceItem[] = [
     description: "Powerful online stores built to maximize sales.",
     longDescription:
       "Custom eCommerce solutions designed to increase conversions, improve UX, and scale with your business.",
-    image: "/images/web-2.avif",
+    image: "/images/web-development/ecommerce-website.webp",
     category: "web-dev",
     features: [
       "Secure checkout",
@@ -254,12 +254,7 @@ export const services: ServiceItem[] = [
       "Restaurant websites designed to showcase menus, accept bookings, and attract diners.",
     image: "/images/web-2.avif",
     category: "web-design",
-    features: [
-      "Online menus",
-      "Table booking",
-      "Mobile friendly",
-      "Local SEO",
-    ],
+    features: ["Online menus", "Table booking", "Mobile friendly", "Local SEO"],
   },
 
   /* =============================
