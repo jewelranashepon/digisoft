@@ -64,14 +64,16 @@ export default function Header() {
 
                 {showServices && (
                   <>
+                    {/* Backdrop */}
                     <div
-                      className="fixed inset-0 bg-black/10 backdrop-blur-sm"
+                      className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
                       style={{ top: "81px" }}
                       onClick={() => setShowServices(false)}
                     />
 
+                    {/* Mega Menu */}
                     <div
-                      className="fixed left-0 w-full mt-0 bg-white border-t border-gray-100 shadow-2xl rounded-2xl"
+                      className="fixed left-0 w-full bg-white shadow-2xl rounded-3xl border-t border-gray-100 z-50"
                       style={{ top: "81px" }}
                       onMouseEnter={() => {
                         const w = window as any;
@@ -85,400 +87,226 @@ export default function Header() {
                         }, 150);
                       }}
                     >
-                      <div className="max-w-7xl mx-auto py-12">
-                        <div className="grid grid-cols-5 gap-8">
-                          <div className="space-y-6">
-                            <div>
-                              <h3 className="text-sm font-semibold text-blue-600 tracking-wider mb-4">
-                                Web Development
-                              </h3>
-
-                              <ul className="space-y-3">
-                                <li>
+                      <div className="max-w-7xl mx-auto px-6 py-12">
+                        <div className="grid grid-cols-5 gap-10">
+                          {/* Web Development */}
+                          <div>
+                            <h3 className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-600">
+                              Web Development
+                            </h3>
+                            <ul className="space-y-3">
+                              {[
+                                [
+                                  "WordPress Website",
+                                  "/services/wordpress-website",
+                                ],
+                                ["Web App Development", "/services/web-app"],
+                                [
+                                  "Laravel Website",
+                                  "/services/laravel-website",
+                                ],
+                                ["Custom Website", "/services/custom-website"],
+                                [
+                                  "Small Business Website",
+                                  "/services/small-business-website",
+                                ],
+                                [
+                                  "Shopify Website",
+                                  "/services/shopify-website",
+                                ],
+                                [
+                                  "Affiliate Website",
+                                  "/services/affiliate-website",
+                                ],
+                                [
+                                  "Ecommerce Website",
+                                  "/services/ecommerce-website",
+                                ],
+                              ].map(([label, link]) => (
+                                <li key={link}>
                                   <a
-                                    href="/services/wordpress-website"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                    href={link}
+                                    className="group flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition"
                                   >
-                                    <span className="text-orange-600">»</span>
-                                    <span>WordPress Website</span>
+                                    <span className="text-orange-500 group-hover:translate-x-1 transition">
+                                      →
+                                    </span>
+                                    {label}
                                   </a>
                                 </li>
-
-                                <li>
-                                  <a
-                                    href="/services/web-app"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Web App</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="/services/laravel-website"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Laravel Website</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="/services/custom-website"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Custom Website</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="/services/small-business-website"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Small Business Website</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="/services/shopify-website"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Shopify Website</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="/services/affiliate-website"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Affiliate Website</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="/services/ecommerce-website"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Ecommerce Website</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
+                              ))}
+                            </ul>
                           </div>
 
-                          <div className="space-y-6">
-                            <div>
-                              <h3 className="text-sm font-semibold text-blue-600 tracking-wider mb-4">
-                                Web Design
-                              </h3>
-
-                              <ul className="space-y-3">
-                                <li>
+                          {/* Web Design */}
+                          <div>
+                            <h3 className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-600">
+                              Web Design
+                            </h3>
+                            <ul className="space-y-3">
+                              {[
+                                [
+                                  "NDIS Web Design",
+                                  "/services/ndis-web-design",
+                                ],
+                                [
+                                  "Cleaning Web Design",
+                                  "/services/cleaning-web-design",
+                                ],
+                                [
+                                  "Doctor Web Design",
+                                  "/services/doctor-web-design",
+                                ],
+                                [
+                                  "Dentist Web Design",
+                                  "/services/dentist-web-design",
+                                ],
+                                [
+                                  "Law Firm Web Design",
+                                  "/services/law-firm-web-design",
+                                ],
+                                [
+                                  "Accounting Web Design",
+                                  "/services/accounting-web-design",
+                                ],
+                                [
+                                  "Tourism Web Design",
+                                  "/services/tourism-web-design",
+                                ],
+                                [
+                                  "Restaurant Web Design",
+                                  "/services/restaurant-web-design",
+                                ],
+                              ].map(([label, link]) => (
+                                <li key={link}>
                                   <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
+                                    href={link}
+                                    className="group flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition"
                                   >
-                                    <span className="text-orange-600">»</span>
-                                    <span>NDIS Web Design</span>
+                                    <span className="text-orange-500 group-hover:translate-x-1 transition">
+                                      →
+                                    </span>
+                                    {label}
                                   </a>
                                 </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Cleaning Web Design</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Doctor Web Design</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Dentist Web Design</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Law Firm Web Design</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Accounting Web Design</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Tourism Web Design</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Restaurant Web Design</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
+                              ))}
+                            </ul>
                           </div>
 
-                          <div className="space-y-6">
-                            <div>
-                              <h3 className="text-sm font-semibold text-blue-600 tracking-wider mb-4">
-                                Digital Marketing
-                              </h3>
-
-                              <ul className="space-y-3">
-                                <li>
+                          {/* Digital Marketing */}
+                          <div>
+                            <h3 className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-600">
+                              Digital Marketing
+                            </h3>
+                            <ul className="space-y-3">
+                              {[
+                                [
+                                  "Local SEO for Small Business",
+                                  "/services/local-seo",
+                                ],
+                                ["Search Engine Optimisation", "/services/seo"],
+                                ["eCommerce SEO", "/services/ecommerce-seo"],
+                                ["Search Engine Marketing", "/services/sem"],
+                                [
+                                  "Content Marketing",
+                                  "/services/content-marketing",
+                                ],
+                                [
+                                  "Social Media Marketing",
+                                  "/services/social-media-marketing",
+                                ],
+                                [
+                                  "Email Marketing",
+                                  "/services/email-marketing",
+                                ],
+                              ].map(([label, link]) => (
+                                <li key={link}>
                                   <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
+                                    href={link}
+                                    className="group flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition"
                                   >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Local SEO for Small Business</span>
+                                    <span className="text-orange-500 group-hover:translate-x-1 transition">
+                                      →
+                                    </span>
+                                    {label}
                                   </a>
                                 </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Search Engine Optimisation</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>eCommerce SEO</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Search Engine Marketing</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Content Marketing</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Social Media Marketing</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600 hover:text-blue-600 transition-colors duration-200"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Email Marketing</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
+                              ))}
+                            </ul>
                           </div>
 
-                          <div className="space-y-6">
-                            <div>
-                              <h3 className="text-sm font-semibold text-blue-600 tracking-wider mb-4">
-                                Local SEO
-                              </h3>
-
-                              <ul className="space-y-3">
-                                <li>
+                          {/* Local SEO */}
+                          <div>
+                            <h3 className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-600">
+                              Local SEO
+                            </h3>
+                            <ul className="space-y-3">
+                              {[
+                                ["NDIS SEO", "/services/ndis-seo"],
+                                ["Law Firm SEO", "/services/law-firm-seo"],
+                                ["Accounting SEO", "/services/accounting-seo"],
+                                ["Doctor SEO", "/services/doctor-seo"],
+                                ["Dentist SEO", "/services/dentist-seo"],
+                                ["Cleaning SEO", "/services/cleaning-seo"],
+                                ["Tourism SEO", "/services/tourism-seo"],
+                                ["Restaurant SEO", "/services/restaurant-seo"],
+                              ].map(([label, link]) => (
+                                <li key={link}>
                                   <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
+                                    href={link}
+                                    className="group flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition"
                                   >
-                                    <span className="text-orange-600">»</span>
-                                    <span>NDIS SEO</span>
+                                    <span className="text-orange-500 group-hover:translate-x-1 transition">
+                                      →
+                                    </span>
+                                    {label}
                                   </a>
                                 </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Law Firm SEO</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Accounting SEO</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Doctor SEO</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Dentist SEO</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Cleaning SEO</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Tourism SEO</span>
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a
-                                    href="#"
-                                    className="flex items-center gap-2 text-sm text-orange-600"
-                                  >
-                                    <span className="text-orange-600">»</span>
-                                    <span>Restaurant SEO</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
+                              ))}
+                            </ul>
                           </div>
 
-                          <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-xl p-6 border border-blue-100">
+                          {/* Highlighted CTA */}
+                          <div className="rounded-2xl bg-gradient-to-br from-blue-50 to-gray-50 p-6 border border-blue-100">
                             <h3 className="text-sm font-semibold text-gray-900 mb-4">
                               Popular Packages
                             </h3>
-                            <ul className="space-y-3">
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 border border-transparent hover:border-blue-200"
-                                >
-                                  <span className="text-sm font-medium text-gray-700 group-hover:text-blue-600">
-                                    Web Development
-                                  </span>
-                                  <ArrowUpRight
-                                    size={16}
-                                    className="text-gray-400 group-hover:text-blue-600 transition-colors"
-                                  />
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#"
-                                  className="group flex items-center justify-between p-3 bg-white rounded-lg hover:shadow-md transition-all duration-200 border border-transparent hover:border-blue-200"
-                                >
-                                  <span className="text-sm font-medium text-gray-700 group-hover:text-blue-600">
-                                    SEO Packages
-                                  </span>
-                                  <ArrowUpRight
-                                    size={16}
-                                    className="text-gray-400 group-hover:text-blue-600 transition-colors"
-                                  />
-                                </a>
-                              </li>
-                            </ul>
+
+                            <div className="space-y-3">
+                              <a
+                                href="/packages/web-development"
+                                className="flex items-center justify-between p-3 bg-white rounded-xl hover:shadow-md transition"
+                              >
+                                <span className="text-sm font-medium text-gray-700">
+                                  Web Development Packages
+                                </span>
+                                <ArrowUpRight
+                                  size={16}
+                                  className="text-blue-600"
+                                />
+                              </a>
+
+                              <a
+                                href="/packages/seo"
+                                className="flex items-center justify-between p-3 bg-white rounded-xl hover:shadow-md transition"
+                              >
+                                <span className="text-sm font-medium text-gray-700">
+                                  SEO Packages
+                                </span>
+                                <ArrowUpRight
+                                  size={16}
+                                  className="text-blue-600"
+                                />
+                              </a>
+                            </div>
 
                             <div className="mt-6 pt-6 border-t border-gray-200">
                               <p className="text-xs text-gray-500 mb-3">
                                 Need a custom solution?
                               </p>
                               <a
-                                href="#"
-                                className="text-sm font-medium text-blue-600 hover:text-blue-700 flex items-center gap-1"
+                                href="/contact"
+                                className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700"
                               >
                                 Talk to an expert
                                 <ArrowUpRight size={14} />
@@ -490,6 +318,7 @@ export default function Header() {
                     </div>
                   </>
                 )}
+                
               </div>
 
               <a
