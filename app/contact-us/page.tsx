@@ -33,7 +33,7 @@ const ContactUs = () => {
   >("idle");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -42,16 +42,26 @@ const ContactUs = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus("idle");
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error("Failed");
+
       setSubmitStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setSubmitStatus("idle"), 4000);
-    } catch {
+    } catch (error) {
       setSubmitStatus("error");
-      setTimeout(() => setSubmitStatus("idle"), 4000);
     } finally {
       setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus("idle"), 4000);
     }
   };
 
@@ -84,19 +94,22 @@ const ContactUs = () => {
                     {
                       icon: Phone,
                       title: "Phone Support",
-                      val: "+1 (555) 123-4567",
+                      val: "0414082729",
+                      href: "tel:+61414082729",
                       color: "text-blue-400",
                     },
                     {
                       icon: Mail,
                       title: "Email Inquiry",
-                      val: "contact@enterprise.com",
+                      val: "info@codexadigital.com.au",
+                      href: "mailto:info@codexadigital.com.au",
                       color: "text-cyan-400",
                     },
                     {
                       icon: MapPin,
                       title: "Headquarters",
-                      val: "123 Business St, San Francisco",
+                      val: "63 Raglan Ave, Edwardstown, SA 5039",
+                      href: "https://maps.google.com/?q=63+Raglan+Ave+Edwardstown+SA+5039",
                       color: "text-blue-400",
                     },
                   ].map((item, i) => (
@@ -104,13 +117,26 @@ const ContactUs = () => {
                       <div className="p-4 bg-slate-800 rounded-2xl border border-slate-700 group-hover:border-cyan-500/50 transition-all duration-300">
                         <item.icon size={24} className={item.color} />
                       </div>
+
                       <div>
                         <p className="text-xs font-bold text-slate-400 tracking-widest mb-1">
                           {item.title}
                         </p>
-                        <p className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+
+                        <a
+                          href={item.href}
+                          target={
+                            item.title === "Headquarters" ? "_blank" : undefined
+                          }
+                          rel={
+                            item.title === "Headquarters"
+                              ? "noopener noreferrer"
+                              : undefined
+                          }
+                          className="text-lg font-semibold text-white hover:text-cyan-400 transition-colors"
+                        >
                           {item.val}
-                        </p>
+                        </a>
                       </div>
                     </div>
                   ))}
@@ -155,7 +181,7 @@ const ContactUs = () => {
                       value={formData.name}
                       onChange={handleChange}
                       className="w-full px-5 py-3 bg-slate-100 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-900 placeholder:text-slate-400"
-                      placeholder="John Doe"
+                      placeholder="Enter your name"
                       required
                     />
                   </div>
@@ -170,7 +196,7 @@ const ContactUs = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-5 py-3 bg-slate-100 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-900 placeholder:text-slate-400"
-                      placeholder="john@example.com"
+                      placeholder="Enter your email"
                       required
                     />
                   </div>
@@ -185,7 +211,7 @@ const ContactUs = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     className="w-full px-5 py-3 bg-slate-100 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-900 placeholder:text-slate-400"
-                    placeholder="Project Inquiry"
+                    placeholder="Enter your subject"
                     required
                   />
                 </div>
@@ -200,7 +226,7 @@ const ContactUs = () => {
                     onChange={handleChange}
                     rows={4}
                     className="w-full px-5 py-4 bg-slate-100 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all text-slate-900 placeholder:text-slate-400 resize-none"
-                    placeholder="Tell us about your goals..."
+                    placeholder="Type your message here..."
                     required
                   />
                 </div>
@@ -233,6 +259,12 @@ const ContactUs = () => {
                     </p>
                   </div>
                 )}
+
+                {submitStatus === "error" && (
+                  <div className="text-red-600 bg-red-50 p-5 rounded-2xl border border-red-200">
+                    ❌ Failed to send message. Please try again.
+                  </div>
+                )}
               </form>
             </div>
           </div>
@@ -240,11 +272,10 @@ const ContactUs = () => {
       </div>
 
       {/* MAP LOCATION SECTION */}
-      <div className="relative w-full h-[500px] overflow-hidden rounded-2xl shadow-xl">
-        {/* Google Map iframe */}
+      <div className="relative w-full h-[500px] overflow-hidden rounded-2xl shadow-xl border border-slate-200">
         <iframe
-          title="Office Location"
-          src="https://www.google.com/maps?q=Dhaka,Bangladesh&z=13&output=embed"
+          title="Codexa Digital Office Location"
+          src="https://www.google.com/maps?q=63+Raglan+Ave,+Edwardstown+SA+5039,+Australia&z=15&output=embed"
           className="w-full h-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

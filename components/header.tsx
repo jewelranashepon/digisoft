@@ -202,11 +202,11 @@ export default function Header() {
                               {[
                                 [
                                   "Local SEO for Small Business",
-                                  "/services/local-seo",
+                                  "/services/local-seo-small-business",
                                 ],
-                                ["Search Engine Optimisation", "/services/seo"],
+                                ["Search Engine Optimisation", "/services/seo-optimisation"],
                                 ["eCommerce SEO", "/services/ecommerce-seo"],
-                                ["Search Engine Marketing", "/services/sem"],
+                                ["Search Engine Marketing", "/services/search-engine-marketing"],
                                 [
                                   "Content Marketing",
                                   "/services/content-marketing",
