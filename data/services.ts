@@ -147,7 +147,7 @@ export const services: ServiceItem[] = [
     description: "NDIS-compliant web design for providers.",
     longDescription:
       "Professional and compliant web design solutions for NDIS providers to build trust and generate leads.",
-    image: "/images/web-1.avif",
+    image: "/images/website/ndis-web-design.webp",
     category: "web-design",
     features: [
       "NDIS compliance",
@@ -162,7 +162,7 @@ export const services: ServiceItem[] = [
     description: "Professional websites for cleaning companies.",
     longDescription:
       "Modern and conversion-focused websites for cleaning businesses to attract more local clients.",
-    image: "/images/web-2.avif",
+    image: "/images/website/cleaning-website.webp",
     category: "web-design",
     features: [
       "Local SEO structure",
@@ -177,7 +177,7 @@ export const services: ServiceItem[] = [
     description: "Medical websites built for trust and bookings.",
     longDescription:
       "Healthcare-focused website designs that improve patient trust and appointment bookings.",
-    image: "/images/web-1.avif",
+    image: "/images/website/doctor-website.webp",
     category: "web-design",
     features: [
       "Appointment booking",
@@ -192,7 +192,7 @@ export const services: ServiceItem[] = [
     description: "Modern dental clinic website designs.",
     longDescription:
       "Professional dental websites designed to convert visitors into patients.",
-    image: "/images/web-2.avif",
+    image: "/images/website/dentists-website.webp",
     category: "web-design",
     features: [
       "Online bookings",
@@ -207,7 +207,7 @@ export const services: ServiceItem[] = [
     description: "Professional web design for law firms.",
     longDescription:
       "Elegant and authoritative law firm websites that build credibility and generate leads.",
-    image: "/images/web-1.avif",
+    image: "/images/website/law-firms-website.webp",
     category: "web-design",
     features: [
       "Professional branding",
@@ -222,7 +222,7 @@ export const services: ServiceItem[] = [
     description: "Clean and credible websites for accountants.",
     longDescription:
       "Accounting websites designed to communicate trust, expertise, and professionalism.",
-    image: "/images/web-2.avif",
+    image: "/images/website/accounting-websiter.webp",
     category: "web-design",
     features: [
       "Professional UI",
@@ -237,7 +237,7 @@ export const services: ServiceItem[] = [
     description: "Attractive websites for tourism businesses.",
     longDescription:
       "Visually appealing websites designed to attract tourists and increase bookings.",
-    image: "/images/web-1.avif",
+    image: "/images/website/travel-website.webp",
     category: "web-design",
     features: [
       "Booking integration",
@@ -252,7 +252,7 @@ export const services: ServiceItem[] = [
     description: "Restaurant websites with menus & online booking.",
     longDescription:
       "Restaurant websites designed to showcase menus, accept bookings, and attract diners.",
-    image: "/images/web-2.avif",
+    image: "/images/website/restaurant-website.webp",
     category: "web-design",
     features: ["Online menus", "Table booking", "Mobile friendly", "Local SEO"],
   },
