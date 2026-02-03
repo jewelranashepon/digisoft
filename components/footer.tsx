@@ -1,49 +1,66 @@
-import { ArrowRight, Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import {
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+} from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   const services = {
     webDevelopment: [
-      'WordPress Website',
-      'Web App',
-      'Laravel Website',
-      'Custom Website',
-      'Small Business Website',
-      'Shopify Website',
-      'Affiliate Website',
-      'Ecommerce Website',
+      "WordPress Website",
+      "Web App",
+      "Laravel Website",
+      "Custom Website",
+      "Small Business Website",
+      "Shopify Website",
+      "Affiliate Website",
+      "Ecommerce Website",
     ],
     webDesign: [
-      'NDIS Web Design',
-      'Cleaning Web Design',
-      'Doctor Web Design',
-      'Dentist Web Design',
-      'Law Firm Web Design',
-      'Accounting Web Design',
-      'Tourism Web Design',
-      'Restaurant Web Design',
+      "NDIS Web Design",
+      "Cleaning Web Design",
+      "Doctor Web Design",
+      "Dentist Web Design",
+      "Law Firm Web Design",
+      "Accounting Web Design",
+      "Tourism Web Design",
+      "Restaurant Web Design",
     ],
     digitalMarketing: [
-      'Local SEO for Small Business',
-      'Search Engine Optimisation',
-      'eCommerce SEO',
-      'Search Engine Marketing',
-      'Content Marketing',
-      'Social Media Marketing',
-      'Email Marketing',
+      "Local SEO for Small Business",
+      "Search Engine Optimisation",
+      "eCommerce SEO",
+      "Search Engine Marketing",
+      "Content Marketing",
+      "Social Media Marketing",
+      "Email Marketing",
     ],
     localSEO: [
-      'NDIS SEO',
-      'Law Firm SEO',
-      'Accounting SEO',
-      'Doctor SEO',
-      'Dentist SEO',
-      'Cleaning SEO',
-      'Tourism SEO',
-      'Restaurant SEO',
+      "NDIS SEO",
+      "Law Firm SEO",
+      "Accounting SEO",
+      "Doctor SEO",
+      "Dentist SEO",
+      "Cleaning SEO",
+      "Tourism SEO",
+      "Restaurant SEO",
     ],
   };
 
-  const quickLinks = ['Home', 'About Us', 'Services', 'Portfolio', 'Blog', 'Contact Us'];
+  const quickLinks = [
+    "Home",
+    "About Us",
+    "Services",
+    "Portfolio",
+    "Blog",
+    "Contact Us",
+  ];
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -51,21 +68,26 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12">
           <div className="lg:col-span-3">
             <div className="mb-6 group cursor-pointer inline-block">
-              <h2 className="text-3xl font-bold transition-transform duration-300 group-hover:scale-105">
-                <span className="text-blue-500">Codexa</span>
-                <br />
-                <span className="text-orange-500">Digital</span>
-              </h2>
+              <Image
+                src="/images/main-logo-3.png"
+                alt="Codexa Digital Web & Software Agency"
+                width={130}
+                height={50}
+                priority
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
             </div>
+
             <p className="text-slate-300 mb-6 leading-relaxed">
-              Empowering businesses with cutting-edge digital solutions. From web development to SEO, we deliver excellence.
+              Empowering businesses with cutting-edge digital solutions. From
+              web development to SEO, we deliver excellence.
             </p>
             <div className="flex gap-4">
               {[
-                { Icon: Facebook, href: '#' },
-                { Icon: Twitter, href: '#' },
-                { Icon: Linkedin, href: '#' },
-                { Icon: Instagram, href: '#' },
+                { Icon: Facebook, href: "#" },
+                { Icon: Twitter, href: "#" },
+                { Icon: Linkedin, href: "#" },
+                { Icon: Instagram, href: "#" },
               ].map(({ Icon, href }, index) => (
                 <a
                   key={index}
@@ -101,7 +123,9 @@ const Footer = () => {
 
           <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-blue-400">Web Development</h3>
+              <h3 className="text-lg font-semibold mb-6 text-blue-400">
+                Web Development
+              </h3>
               <ul className="space-y-3">
                 {services.webDevelopment.map((service, index) => (
                   <li key={index}>
@@ -117,7 +141,9 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-blue-400">Web Design</h3>
+              <h3 className="text-lg font-semibold mb-6 text-blue-400">
+                Web Design
+              </h3>
               <ul className="space-y-3">
                 {services.webDesign.map((service, index) => (
                   <li key={index}>
@@ -133,7 +159,9 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-blue-400">Digital Marketing</h3>
+              <h3 className="text-lg font-semibold mb-6 text-blue-400">
+                Digital Marketing
+              </h3>
               <ul className="space-y-3">
                 {services.digitalMarketing.map((service, index) => (
                   <li key={index}>
@@ -149,7 +177,9 @@ const Footer = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-6 text-blue-400">Local SEO</h3>
+              <h3 className="text-lg font-semibold mb-6 text-blue-400">
+                Local SEO
+              </h3>
               <ul className="space-y-3">
                 {services.localSEO.map((service, index) => (
                   <li key={index}>
@@ -205,13 +235,22 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
             <p>© 2024 Codexa Digital. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-blue-400 transition-colors duration-300">
+              <a
+                href="#"
+                className="hover:text-blue-400 transition-colors duration-300"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-blue-400 transition-colors duration-300">
+              <a
+                href="#"
+                className="hover:text-blue-400 transition-colors duration-300"
+              >
                 Terms of Service
               </a>
-              <a href="#" className="hover:text-blue-400 transition-colors duration-300">
+              <a
+                href="#"
+                className="hover:text-blue-400 transition-colors duration-300"
+              >
                 Cookie Policy
               </a>
             </div>
