@@ -375,7 +375,7 @@ export const services: ServiceItem[] = [
     description: "SEO strategies for NDIS providers.",
     longDescription:
       "SEO services designed specifically for NDIS providers to generate qualified leads.",
-    image: "/images/services/ndis-seo.jpg",
+    image: "/images/seo/ndis-seo.webp",
     category: "seo",
     features: [
       "NDIS keywords",
@@ -390,7 +390,7 @@ export const services: ServiceItem[] = [
     description: "SEO solutions for legal businesses.",
     longDescription:
       "SEO strategies to help law firms rank higher and attract quality cases.",
-    image: "/images/services/law-seo.jpg",
+    image: "/images/seo/law-seo.webp",
     category: "seo",
     features: [
       "Legal keywords",
@@ -405,7 +405,7 @@ export const services: ServiceItem[] = [
     description: "SEO services for accountants.",
     longDescription:
       "SEO solutions that help accounting firms attract more local clients.",
-    image: "/images/services/accounting-seo.jpg",
+    image: "/images/seo/accounting-seo.webp",
     category: "seo",
     features: [
       "Local SEO",
@@ -420,7 +420,7 @@ export const services: ServiceItem[] = [
     description: "Medical SEO to attract more patients.",
     longDescription:
       "Healthcare-focused SEO strategies to increase patient bookings.",
-    image: "/images/services/doctor-seo.jpg",
+    image: "/images/seo/doctor-seo.webp",
     category: "seo",
     features: [
       "Local SEO",
@@ -435,7 +435,7 @@ export const services: ServiceItem[] = [
     description: "Dental SEO strategies for local rankings.",
     longDescription:
       "Dental SEO services designed to dominate local search results.",
-    image: "/images/services/dentist-seo.jpg",
+    image: "/images/seo/dentist-seo.webp",
     category: "seo",
     features: [
       "Local dental keywords",
@@ -450,7 +450,7 @@ export const services: ServiceItem[] = [
     description: "SEO services for cleaning companies.",
     longDescription:
       "SEO strategies to help cleaning companies get more local clients.",
-    image: "/images/services/cleaning-seo.jpg",
+    image: "/images/seo/cleaning-seo.webp",
     category: "seo",
     features: [
       "Local SEO",
@@ -465,7 +465,7 @@ export const services: ServiceItem[] = [
     description: "SEO solutions for tourism businesses.",
     longDescription:
       "SEO strategies designed to attract travelers and boost bookings.",
-    image: "/images/services/tourism-seo.jpg",
+    image: "/images/seo/tourism-seo.webp",
     category: "seo",
     features: [
       "Travel keywords",
@@ -480,7 +480,7 @@ export const services: ServiceItem[] = [
     description: "Local SEO for restaurants.",
     longDescription:
       "Restaurant SEO strategies designed to increase foot traffic and bookings.",
-    image: "/images/services/restaurant-seo.jpg",
+    image: "/images/seo/restaurant-seo.webp",
     category: "seo",
     features: [
       "Google Maps ranking",

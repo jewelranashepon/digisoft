@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
 import { Home, Info, Briefcase, Layers, FileText, Phone } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,27 +15,29 @@ export default function Header() {
         <div className="mt-2 rounded-2xl bg-black/50 backdrop-blur-lg border border-white/30 shadow-xl px-5">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
-              <img
-                src="/images/logo.png"
-                alt="Codexa"
-                className="w-68 h-auto object-contain"
+              <Image
+                src="/images/main-logo-3.png"
+                alt="Codexa Digital Web & Software Agency"
+                width={130}
+                height={50}
+                priority
               />
             </div>
 
             <nav className="hidden lg:flex items-center gap-1">
-              <a
+              <Link
                 href="/"
                 className="px-4 py-2 text-sm font-medium text-white hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
               >
                 Home
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/about-us"
                 className="px-4 py-2 text-sm font-medium text-white hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
               >
                 About Us
-              </a>
+              </Link>
 
               <div
                 className="relative"
@@ -49,7 +53,7 @@ export default function Header() {
                   }, 150);
                 }}
               >
-                <a
+                <Link
                   href="/services"
                   className="px-4 py-2 text-sm font-medium text-white hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200 flex items-center gap-1.5"
                 >
@@ -60,7 +64,7 @@ export default function Header() {
                       showServices ? "rotate-180" : ""
                     }`}
                   />
-                </a>
+                </Link>
 
                 {showServices && (
                   <>
@@ -124,7 +128,7 @@ export default function Header() {
                                 ],
                               ].map(([label, link]) => (
                                 <li key={link}>
-                                  <a
+                                  <Link
                                     href={link}
                                     className="group flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition"
                                   >
@@ -132,7 +136,7 @@ export default function Header() {
                                       →
                                     </span>
                                     {label}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
@@ -179,7 +183,7 @@ export default function Header() {
                                 ],
                               ].map(([label, link]) => (
                                 <li key={link}>
-                                  <a
+                                  <Link
                                     href={link}
                                     className="group flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition"
                                   >
@@ -187,7 +191,7 @@ export default function Header() {
                                       →
                                     </span>
                                     {label}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
@@ -204,9 +208,15 @@ export default function Header() {
                                   "Local SEO for Small Business",
                                   "/services/local-seo-small-business",
                                 ],
-                                ["Search Engine Optimisation", "/services/seo-optimisation"],
+                                [
+                                  "Search Engine Optimisation",
+                                  "/services/seo-optimisation",
+                                ],
                                 ["eCommerce SEO", "/services/ecommerce-seo"],
-                                ["Search Engine Marketing", "/services/search-engine-marketing"],
+                                [
+                                  "Search Engine Marketing",
+                                  "/services/search-engine-marketing",
+                                ],
                                 [
                                   "Content Marketing",
                                   "/services/content-marketing",
@@ -221,7 +231,7 @@ export default function Header() {
                                 ],
                               ].map(([label, link]) => (
                                 <li key={link}>
-                                  <a
+                                  <Link
                                     href={link}
                                     className="group flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition"
                                   >
@@ -229,7 +239,7 @@ export default function Header() {
                                       →
                                     </span>
                                     {label}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
@@ -252,7 +262,7 @@ export default function Header() {
                                 ["Restaurant SEO", "/services/restaurant-seo"],
                               ].map(([label, link]) => (
                                 <li key={link}>
-                                  <a
+                                  <Link
                                     href={link}
                                     className="group flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition"
                                   >
@@ -260,7 +270,7 @@ export default function Header() {
                                       →
                                     </span>
                                     {label}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
@@ -273,7 +283,7 @@ export default function Header() {
                             </h3>
 
                             <div className="space-y-3">
-                              <a
+                              <Link
                                 href="/packages/web-development"
                                 className="flex items-center justify-between p-3 bg-white rounded-xl hover:shadow-md transition"
                               >
@@ -284,9 +294,9 @@ export default function Header() {
                                   size={16}
                                   className="text-blue-600"
                                 />
-                              </a>
+                              </Link>
 
-                              <a
+                              <Link
                                 href="/packages/seo"
                                 className="flex items-center justify-between p-3 bg-white rounded-xl hover:shadow-md transition"
                               >
@@ -297,20 +307,20 @@ export default function Header() {
                                   size={16}
                                   className="text-blue-600"
                                 />
-                              </a>
+                              </Link>
                             </div>
 
                             <div className="mt-6 pt-6 border-t border-gray-200">
                               <p className="text-xs text-gray-500 mb-3">
                                 Need a custom solution?
                               </p>
-                              <a
+                              <Link
                                 href="/contact"
                                 className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700"
                               >
                                 Talk to an expert
                                 <ArrowUpRight size={14} />
-                              </a>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -318,39 +328,38 @@ export default function Header() {
                     </div>
                   </>
                 )}
-                
               </div>
 
-              <a
+              <Link
                 href="/portfolio"
                 className="px-4 py-2 text-sm font-medium text-white hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
               >
                 Portfolio
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/blog"
                 className="px-4 py-2 text-sm font-medium text-white hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
               >
                 Blog
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/contact-us"
                 className="px-4 py-2 text-sm font-medium text-white hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
               >
                 Contact Us
-              </a>
+              </Link>
             </nav>
 
             <div className="hidden lg:flex items-center gap-4">
               {/* Secondary – White Button */}
-              <a
+              <Link
                 href="#"
                 className="inline-flex items-center gap-1.5 rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:bg-slate-100 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-transparent"
               >
                 Get In Touch
                 <ArrowUpRight size={14} />
-              </a>
+              </Link>
 
               {/* Primary – Brand Button */}
               <button className="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-cyan-600 px-5 py-3 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:bg-blue-700 hover:shadow-lg active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent">
@@ -368,56 +377,56 @@ export default function Header() {
 
           {isOpen && (
             <nav className="lg:hidden border-t border-gray-100 py-4 space-y-1 animate-in slide-in-from-top duration-200">
-              <a
+              <Link
                 href="#"
                 className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-blue-400 rounded-lg transition-colors"
               >
                 <Home size={18} />
                 Home
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="#"
                 className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-blue-400 rounded-lg transition-colors"
               >
                 <Info size={18} />
                 About
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="#"
                 className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-blue-400 rounded-lg transition-colors"
               >
                 <Briefcase size={18} />
                 Services
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="#"
                 className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-blue-400 rounded-lg transition-colors"
               >
                 <Layers size={18} />
                 Case Studies
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="#"
                 className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-blue-400 rounded-lg transition-colors"
               >
                 <FileText size={18} />
                 Blog
-              </a>
+              </Link>
 
               {/* CTA Section */}
               <div className="pt-5 space-y-3">
                 {/* Secondary CTA – White Button */}
-                <a
+                <Link
                   href="#"
                   className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:bg-slate-100 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-transparent"
                 >
                   Get In Touch
                   <ArrowUpRight size={16} />
-                </a>
+                </Link>
 
                 {/* Primary CTA – Brand Button */}
                 <button className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:from-blue-700 hover:to-indigo-700 hover:shadow-lg active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent">
