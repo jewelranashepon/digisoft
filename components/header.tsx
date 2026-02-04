@@ -5,6 +5,15 @@ import { Home, Info, Briefcase, Layers, FileText, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
+const mobileParentMenu = [
+  { label: "Home", href: "/", icon: Home },
+  { label: "About Us", href: "/about-us", icon: Info },
+  { label: "Services", href: "/services", icon: Briefcase },
+  { label: "Portfolio", href: "/portfolio", icon: Layers },
+  { label: "Blog", href: "/blog", icon: FileText },
+  { label: "Contact Us", href: "/contact-us", icon: Phone },
+];
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [showServices, setShowServices] = useState(false);
@@ -375,64 +384,44 @@ export default function Header() {
             </button>
           </div>
 
+          {/* Mobile Menus  */}
           {isOpen && (
-            <nav className="lg:hidden border-t border-gray-100 py-4 space-y-1 animate-in slide-in-from-top duration-200">
-              <Link
-                href="#"
-                className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-blue-400 rounded-lg transition-colors"
-              >
-                <Home size={18} />
-                Home
-              </Link>
+            <nav className="lg:hidden border-t border-white/10 py-4 space-y-1 animate-in slide-in-from-top duration-200">
+              {mobileParentMenu.map((item) => {
+                const Icon = item.icon;
 
-              <Link
-                href="#"
-                className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-blue-400 rounded-lg transition-colors"
-              >
-                <Info size={18} />
-                About
-              </Link>
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-blue-400 rounded-lg transition"
+                  >
+                    <Icon size={18} />
+                    {item.label}
+                  </Link>
+                );
+              })}
 
-              <Link
-                href="#"
-                className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-blue-400 rounded-lg transition-colors"
-              >
-                <Briefcase size={18} />
-                Services
-              </Link>
-
-              <Link
-                href="#"
-                className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-blue-400 rounded-lg transition-colors"
-              >
-                <Layers size={18} />
-                Case Studies
-              </Link>
-
-              <Link
-                href="#"
-                className="flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-blue-400 rounded-lg transition-colors"
-              >
-                <FileText size={18} />
-                Blog
-              </Link>
-
-              {/* CTA Section */}
+              {/* CTA */}
               <div className="pt-5 space-y-3">
-                {/* Secondary CTA – White Button */}
                 <Link
-                  href="#"
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:bg-slate-100 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-transparent"
+                  href="/contact-us"
+                  onClick={() => setIsOpen(false)}
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-slate-800"
                 >
                   Get In Touch
                   <ArrowUpRight size={16} />
                 </Link>
 
-                {/* Primary CTA – Brand Button */}
-                <button className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:from-blue-700 hover:to-indigo-700 hover:shadow-lg active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent">
+                <Link
+                  href="/contact-us"
+                  onClick={() => setIsOpen(false)}
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2.5 text-sm font-semibold text-white"
+                >
                   <Phone size={16} />
                   Contact Us
-                </button>
+                </Link>
               </div>
             </nav>
           )}
