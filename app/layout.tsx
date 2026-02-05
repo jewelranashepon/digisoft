@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://codexadigital.com.au"),
+
+  verification: {
+    other: {
+      "msvalidate.01": "241242D9631764958ABF3DA16A942D7B",
+    },
+  },
 
   title: {
     default: "Codexa Digital | Web Design & SEO Agency Australia",
@@ -71,6 +78,21 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-X6XV7WVRC4"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-X6XV7WVRC4');
+          `}
+        </Script>
+
         <Header />
         {children}
         <Footer />
