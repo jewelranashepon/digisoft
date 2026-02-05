@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://codexadigital.com.au"),
 
   verification: {
+    google: "Dswfy3YGqK3viwjDpuG8xOldfQEJWugHyPJ6vmWLQzs",
     other: {
       "msvalidate.01": "241242D9631764958ABF3DA16A942D7B",
     },
