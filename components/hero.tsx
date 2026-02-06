@@ -39,7 +39,7 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden pt-20 xl:pt-28 pb-10 px-4 sm:px-6 lg:px-8">
+    <section className="relative h-[60vh] sm:h-[60vh] md:h-[65vh] lg:min-h-screen overflow-hidden pt-20 xl:pt-28 pb-10 px-5 sm:px-8 lg:px-10">
       {/* BACKGROUND */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -60,29 +60,29 @@ export default function HeroSlider() {
       </AnimatePresence>
 
       {/* CONTENT */}
-      <div className="relative container max-w-7xl mx-auto min-h-[calc(100vh-7rem)] flex items-center">
+      <div className="relative container max-w-7xl mx-auto h-full flex items-center justify-center lg:justify-start">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
-            className="space-y-8 max-w-4xl"
+            className="space-y-6 sm:space-y-8 max-w-4xl text-center lg:text-left w-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white text-shadow-lg">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white text-shadow-lg">
               {slides[index].title}{" "}
               <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 {slides[index].highlight}
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-200 leading-relaxed max-w-2xl text-shadow-lg">
+            <p className="text-sm sm:text-xl lg:text-xl text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0 text-shadow-lg">
               {slides[index].description}
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-2">
-              <button className="group px-8 py-4 bg-gradient-to-br from-blue-600 to-cyan-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:scale-[1.05] flex items-center gap-2">
+            <div className="flex sm:flex-col sm:flex-row gap-3 sm:gap-4 pt-2 justify-center lg:justify-start">
+              <button className="group px-4 sm:px-8 py-2 sm:py-4 bg-gradient-to-br from-blue-600 to-cyan-600 text-sm md:text-base text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:scale-[1.05] flex items-center gap-2 justify-center">
                 Learn More
                 <ArrowRight
                   size={18}
@@ -90,7 +90,7 @@ export default function HeroSlider() {
                 />
               </button>
 
-              <button className="px-8 py-4 bg-white backdrop-blur-md border-2 border-white/20 text-slate-800 rounded-xl font-semibold hover:bg-white/20 hover:border-white/30 transition-all duration-300">
+              <button className="px-4 sm:px-8 py-2 sm:py-4 bg-white backdrop-blur-md border-2 border-white/20 text-sm md:text-base text-slate-800 rounded-xl font-semibold hover:bg-white/20 hover:border-white/30 transition-all duration-300">
                 Let’s Talk →
               </button>
             </div>

@@ -22,14 +22,16 @@ export default function Header() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl transition-all duration-300">
       <div className="container mx-auto px-4">
         <div className="mt-2 rounded-2xl bg-black/50 backdrop-blur-lg border border-white/30 shadow-xl px-5">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center">
+          <div className="flex justify-between items-center h-14 md:h-20 lg:h-20">
+            <div className="flex items-center w-auto relative h-[50px] sm:h-[50px] md:h-[50px]">
               <Image
                 src="/images/main-logo-3.png"
                 alt="Codexa Digital Web & Software Agency"
-                width={130}
-                height={50}
+                className="h-[45px] w-[120px] sm:h-[50px] sm:w-[130px] md:h-[60px] md:w-[150px]"
+                style={{ objectFit: "contain" }}
                 priority
+                width={130} // fallback for Next.js Image
+                height={50} // fallback for Next.js Image
               />
             </div>
 
