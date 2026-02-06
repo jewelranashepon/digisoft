@@ -1,6 +1,17 @@
 "use client";
 import { useState } from "react";
-import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
+import {
+  Menu,
+  X,
+  ArrowUpRight,
+  ChevronDown,
+  MapPin,
+  Palette,
+  Code2,
+  TrendingUp,
+  ChevronRight,
+  Megaphone,
+} from "lucide-react";
 import { Home, Info, Briefcase, Layers, FileText, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -87,8 +98,9 @@ export default function Header() {
                     />
 
                     {/* Mega Menu */}
+                    {/* Mega Menu */}
                     <div
-                      className="fixed left-0 w-full bg-white shadow-2xl rounded-3xl border-t border-gray-100 z-50"
+                      className="fixed left-0 w-full bg-white border-b border-gray-100 z-50 shadow-xl rounded-b-3xl"
                       style={{ top: "81px" }}
                       onMouseEnter={() => {
                         const w = window as any;
@@ -102,15 +114,16 @@ export default function Header() {
                         }, 150);
                       }}
                     >
-                      <div className="max-w-7xl mx-auto px-6 py-12">
-                        <div className="grid grid-cols-5 gap-10">
-                          {/* Web Development */}
-                          <div>
-                            <h3 className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-600">
-                              Web Development
-                            </h3>
-                            <ul className="space-y-3">
-                              {[
+                      <div className="max-w-7xl mx-auto px-8 py-10">
+                        <div className="grid grid-cols-4 gap-6">
+                          {[
+                            {
+                              title: "Web Development",
+                              description:
+                                "Custom built high-performance websites.",
+                              color: "blue",
+                              icon: <Code2 className="w-5 h-5" />,
+                              links: [
                                 [
                                   "WordPress Website",
                                   "/services/wordpress-website",
@@ -137,29 +150,14 @@ export default function Header() {
                                   "Ecommerce Website",
                                   "/services/ecommerce-website",
                                 ],
-                              ].map(([label, link]) => (
-                                <li key={link}>
-                                  <Link
-                                    href={link}
-                                    className="group flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition"
-                                  >
-                                    <span className="text-orange-500 group-hover:translate-x-1 transition">
-                                      →
-                                    </span>
-                                    {label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          {/* Web Design */}
-                          <div>
-                            <h3 className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-600">
-                              Web Design
-                            </h3>
-                            <ul className="space-y-3">
-                              {[
+                              ],
+                            },
+                            {
+                              title: "Web Design",
+                              description: "Industry specific UI/UX solutions.",
+                              color: "emerald",
+                              icon: <Palette className="w-5 h-5" />,
+                              links: [
                                 [
                                   "NDIS Web Design",
                                   "/services/ndis-web-design",
@@ -192,29 +190,15 @@ export default function Header() {
                                   "Restaurant Web Design",
                                   "/services/restaurant-web-design",
                                 ],
-                              ].map(([label, link]) => (
-                                <li key={link}>
-                                  <Link
-                                    href={link}
-                                    className="group flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition"
-                                  >
-                                    <span className="text-orange-500 group-hover:translate-x-1 transition">
-                                      →
-                                    </span>
-                                    {label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          {/* Digital Marketing */}
-                          <div>
-                            <h3 className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-600">
-                              Digital Marketing
-                            </h3>
-                            <ul className="space-y-3">
-                              {[
+                              ],
+                            },
+                            {
+                              title: "Digital Marketing",
+                              description:
+                                "Scale your reach and conversion rates.",
+                              color: "orange",
+                              icon: <Megaphone className="w-5 h-5" />,
+                              links: [
                                 [
                                   "Local SEO for Small Business",
                                   "/services/local-seo-small-business",
@@ -240,29 +224,14 @@ export default function Header() {
                                   "Email Marketing",
                                   "/services/email-marketing",
                                 ],
-                              ].map(([label, link]) => (
-                                <li key={link}>
-                                  <Link
-                                    href={link}
-                                    className="group flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition"
-                                  >
-                                    <span className="text-orange-500 group-hover:translate-x-1 transition">
-                                      →
-                                    </span>
-                                    {label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          {/* Local SEO */}
-                          <div>
-                            <h3 className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-600">
-                              Local SEO
-                            </h3>
-                            <ul className="space-y-3">
-                              {[
+                              ],
+                            },
+                            {
+                              title: "Local SEO",
+                              description: "Dominating local search results.",
+                              color: "cyan",
+                              icon: <MapPin className="w-5 h-5" />,
+                              links: [
                                 ["NDIS SEO", "/services/ndis-seo"],
                                 ["Law Firm SEO", "/services/law-firm-seo"],
                                 ["Accounting SEO", "/services/accounting-seo"],
@@ -271,69 +240,48 @@ export default function Header() {
                                 ["Cleaning SEO", "/services/cleaning-seo"],
                                 ["Tourism SEO", "/services/tourism-seo"],
                                 ["Restaurant SEO", "/services/restaurant-seo"],
-                              ].map(([label, link]) => (
-                                <li key={link}>
-                                  <Link
-                                    href={link}
-                                    className="group flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 transition"
-                                  >
-                                    <span className="text-orange-500 group-hover:translate-x-1 transition">
-                                      →
-                                    </span>
-                                    {label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+                              ],
+                            },
+                          ].map((section) => (
+                            <div
+                              key={section.title}
+                              className="group/card bg-gray-50/50 border border-gray-100 rounded-2xl p-5 transition-all duration-300 hover:bg-white hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1"
+                            >
+                              {/* Card Header */}
+                              <div className="flex items-start gap-4 mb-6">
+                                <div
+                                  className={`p-2.5 rounded-xl bg-white shadow-sm text-${section.color}-600 group-hover/card:scale-110 transition-transform duration-300`}
+                                >
+                                  {section.icon}
+                                </div>
+                                <div>
+                                  <h3 className="text-sm font-bold text-gray-900 tracking-tight">
+                                    {section.title}
+                                  </h3>
+                                  <p className="text-[11px] text-gray-700 leading-tight mt-1">
+                                    {section.description}
+                                  </p>
+                                </div>
+                              </div>
 
-                          {/* Highlighted CTA */}
-                          <div className="rounded-2xl bg-gradient-to-br from-blue-50 to-gray-50 p-6 border border-blue-100">
-                            <h3 className="text-sm font-semibold text-gray-900 mb-4">
-                              Popular Packages
-                            </h3>
-
-                            <div className="space-y-3">
-                              <Link
-                                href="/packages/web-development"
-                                className="flex items-center justify-between p-3 bg-white rounded-xl hover:shadow-md transition"
-                              >
-                                <span className="text-sm font-medium text-gray-700">
-                                  Web Development Packages
-                                </span>
-                                <ArrowUpRight
-                                  size={16}
-                                  className="text-blue-600"
-                                />
-                              </Link>
-
-                              <Link
-                                href="/packages/seo"
-                                className="flex items-center justify-between p-3 bg-white rounded-xl hover:shadow-md transition"
-                              >
-                                <span className="text-sm font-medium text-gray-700">
-                                  SEO Packages
-                                </span>
-                                <ArrowUpRight
-                                  size={16}
-                                  className="text-blue-600"
-                                />
-                              </Link>
+                              {/* Links List */}
+                              <ul className="space-y-1">
+                                {section.links.map(([label, link]) => (
+                                  <li key={link}>
+                                    <Link
+                                      href={link}
+                                      className="flex items-center text-sm text-gray-800 hover:text-gray-900 hover:font-medium transition-all duration-200 py-1.5 rounded-md"
+                                    >
+                                      <ChevronRight
+                                        className={`w-3 h-3 mr-1.5 opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all text-${section.color}-500`}
+                                      />
+                                      {label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
                             </div>
-
-                            <div className="mt-6 pt-6 border-t border-gray-200">
-                              <p className="text-xs text-gray-500 mb-3">
-                                Need a custom solution?
-                              </p>
-                              <Link
-                                href="/contact"
-                                className="inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700"
-                              >
-                                Talk to an expert
-                                <ArrowUpRight size={14} />
-                              </Link>
-                            </div>
-                          </div>
+                          ))}
                         </div>
                       </div>
                     </div>

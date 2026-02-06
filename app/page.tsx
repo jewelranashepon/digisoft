@@ -7,6 +7,7 @@ import ProcessFlow from "@/components/process-flow";
 import ProcessTimeline from "@/components/process-timeline";
 import ServiceCards from "@/components/service-cards";
 import Services from "@/components/services";
+import ServiceLocations from "@/components/ServiceSection";
 import Testimonial from "@/components/testimonial";
 import Image from "next/image";
 
@@ -21,7 +22,8 @@ export default function Home() {
       <FAQComponent />
       <Testimonial />
       <CTA />
-      <Clients />
+      <ServiceLocations />
+      {/* <Clients /> */}
     </div>
   );
 }

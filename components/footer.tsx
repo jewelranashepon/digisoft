@@ -13,9 +13,8 @@ import {
   Rocket,
   ShieldCheck,
   MousePointer2,
-  Globe,
-  Navigation,
 } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   const categories = [
@@ -23,55 +22,76 @@ const Footer = () => {
       title: "Web Development",
       icon: <Rocket className="w-4 h-4 text-indigo-400" />,
       items: [
-        "WordPress Website",
-        "Web App",
-        "Laravel Website",
-        "Custom Website",
-        "Small Business Website",
-        "Shopify Website",
-        "Affiliate Website",
-        "Ecommerce Website",
+        { label: "WordPress Website", link: "/services/wordpress-website" },
+        { label: "Web App", link: "/services/web-app" },
+        { label: "Laravel Website", link: "/services/laravel-website" },
+        { label: "Custom Website", link: "/services/custom-website" },
+        {
+          label: "Small Business Website",
+          link: "/services/small-business-website",
+        },
+        { label: "Shopify Website", link: "/services/shopify-website" },
+        { label: "Affiliate Website", link: "/services/affiliate-website" },
+        { label: "Ecommerce Website", link: "/services/ecommerce-website" },
       ],
     },
     {
       title: "Web Design",
       icon: <MousePointer2 className="w-4 h-4 text-blue-400" />,
       items: [
-        "NDIS Web Design",
-        "Cleaning Web Design",
-        "Doctor Web Design",
-        "Dentist Web Design",
-        "Law Firm Web Design",
-        "Accounting Web Design",
-        "Tourism Web Design",
-        "Restaurant Web Design",
+        { label: "NDIS Web Design", link: "/services/ndis-web-design" },
+        { label: "Cleaning Web Design", link: "/services/cleaning-web-design" },
+        { label: "Doctor Web Design", link: "/services/doctor-web-design" },
+        { label: "Dentist Web Design", link: "/services/dentist-web-design" },
+        { label: "Law Firm Web Design", link: "/services/law-firm-web-design" },
+        {
+          label: "Accounting Web Design",
+          link: "/services/accounting-web-design",
+        },
+        { label: "Tourism Web Design", link: "/services/tourism-web-design" },
+        {
+          label: "Restaurant Web Design",
+          link: "/services/restaurant-web-design",
+        },
       ],
     },
     {
       title: "Marketing",
       icon: <Globe2 className="w-4 h-4 text-emerald-400" />,
       items: [
-        "Local SEO for Small Business",
-        "Search Engine Optimisation",
-        "eCommerce SEO",
-        "Search Engine Marketing",
-        "Content Marketing",
-        "Social Media Marketing",
-        "Email Marketing",
+        {
+          label: "Local SEO for Small Business",
+          link: "/services/local-seo-small-business",
+        },
+        {
+          label: "Search Engine Optimisation",
+          link: "/services/seo-optimisation",
+        },
+        { label: "eCommerce SEO", link: "/services/ecommerce-seo" },
+        {
+          label: "Search Engine Marketing",
+          link: "/services/search-engine-marketing",
+        },
+        { label: "Content Marketing", link: "/services/content-marketing" },
+        {
+          label: "Social Media Marketing",
+          link: "/services/social-media-marketing",
+        },
+        { label: "Email Marketing", link: "/services/email-marketing" },
       ],
     },
     {
       title: "Local SEO",
       icon: <ShieldCheck className="w-4 h-4 text-orange-400" />,
       items: [
-        "NDIS SEO",
-        "Law Firm SEO",
-        "Accounting SEO",
-        "Doctor SEO",
-        "Dentist SEO",
-        "Cleaning SEO",
-        "Tourism SEO",
-        "Restaurant SEO",
+        { label: "NDIS SEO", link: "/services/ndis-seo" },
+        { label: "Law Firm SEO", link: "/services/law-firm-seo" },
+        { label: "Accounting SEO", link: "/services/accounting-seo" },
+        { label: "Doctor SEO", link: "/services/doctor-seo" },
+        { label: "Dentist SEO", link: "/services/dentist-seo" },
+        { label: "Cleaning SEO", link: "/services/cleaning-seo" },
+        { label: "Tourism SEO", link: "/services/tourism-seo" },
+        { label: "Restaurant SEO", link: "/services/restaurant-seo" },
       ],
     },
   ];
@@ -112,7 +132,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Dynamic Service Grid (All 31 Services) */}
+          {/* Dynamic Service Grid (All Services with Links) */}
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
             {categories.map((cat) => (
               <div key={cat.title} className="space-y-6">
@@ -126,14 +146,14 @@ const Footer = () => {
                 </div>
                 <ul className="space-y-3">
                   {cat.items.map((item) => (
-                    <li key={item}>
-                      <a
-                        href="#"
+                    <li key={item.label}>
+                      <Link
+                        href={item.link}
                         className="text-sm text-white/80 hover:text-indigo-400 transition-colors flex items-center group"
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-indigo-500/40 mr-2 group-hover:bg-indigo-400 group-hover:scale-125 transition-all" />
-                        {item}
-                      </a>
+                        {item.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -142,105 +162,13 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Global Service Locations – Corporate Light Aesthetic */}
-        <div className="w-full bg-[#020617] py-10 mb-10 rounded-3xl border-t border-white/5">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            {/* Minimalist Header */}
-            <div className="flex flex-col items-center text-center mb-10">
-              <h3 className="text-3xl font-bold text-white tracking-tight">
-                Our Service <span className="text-blue-500">Locations</span>
-              </h3>
-              <div className="h-1 w-12 bg-blue-600 rounded-full mt-4" />
-            </div>
-
-            {/* Location Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {[
-                {
-                  title: "SEO Services",
-                  cities: [
-                    "Hobart",
-                    "Perth",
-                    "Sydney",
-                    "Brisbane",
-                    "Adelaide",
-                    "Melbourne",
-                    "Canberra",
-                    "Queensland",
-                    "Gold Coast",
-                    "Darwin",
-                    "Newcastle",
-                    "Wagga Wagga",
-                  ],
-                },
-                {
-                  title: "Web Design & Development",
-                  cities: [
-                    "Hobart",
-                    "Perth",
-                    "Sydney",
-                    "Brisbane",
-                    "Adelaide",
-                    "Melbourne",
-                    "Canberra",
-                    "Queensland",
-                    "Gold Coast",
-                    "Darwin",
-                    "Newcastle",
-                    "Wagga Wagga",
-                  ],
-                },
-              ].map((section, idx) => (
-                <div
-                  key={idx}
-                  className="group relative overflow-hidden rounded-[2rem] border border-white/5 bg-slate-900/50 p-8 transition-all hover:bg-slate-900/30"
-                >
-                  {/* Section Heading */}
-                  <div className="flex items-center gap-3 mb-8">
-                    <div className="h-1 w-4 bg-blue-500 rounded-full" />
-                    <h4 className="text-sm font-bold uppercase tracking-[0.15em] text-slate-200">
-                      {section.title}
-                    </h4>
-                  </div>
-
-                  {/* City Grid */}
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-6">
-                    {section.cities.map((city) => (
-                      <a
-                        key={city}
-                        href={`#${city.toLowerCase().replace(/\s+/g, "-")}`}
-                        className="group/link flex items-center gap-2 text-sm font-medium text-white/80 transition-all hover:text-white"
-                      >
-                        <MapPin
-                          size={12}
-                          className="text-cyan-500 transition-colors group-hover/link:text-blue-500"
-                        />
-                        <span className="relative">
-                          {city}
-                          <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-blue-500 transition-all group-hover/link:w-full" />
-                        </span>
-                      </a>
-                    ))}
-                  </div>
-
-                  {/* Stylized Watermark Background */}
-                  <span className="absolute -bottom-4 -right-2 text-7xl font-black text-white/[0.02] pointer-events-none uppercase italic select-none">
-                    {idx === 0 ? "SEO" : "WEB"}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Global Contact Bar – Compact Luxury */}
+        {/* Contact & CTA */}
         <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#060c1a]/80 p-[1px] shadow-2xl backdrop-blur-sm">
-          {/* Subtler Ambient Glows */}
           <div className="pointer-events-none absolute -top-12 -left-12 h-40 w-40 rounded-full bg-indigo-600/10 blur-[60px]" />
           <div className="pointer-events-none absolute -bottom-12 -right-12 h-40 w-40 rounded-full bg-cyan-500/5 blur-[60px]" />
 
           <div className="relative rounded-[calc(1.5rem-1px)] bg-[#060c1a]/95 px-8 py-6 flex flex-col lg:flex-row items-center justify-between gap-8">
-            {/* Contact Info - Optimized Horizontal Layout */}
+            {/* Contact Info */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-10 gap-y-4 w-full lg:w-auto">
               {[
                 {
@@ -274,7 +202,7 @@ const Footer = () => {
               ))}
             </div>
 
-            {/* CTA - Compacted with sleek gradient */}
+            {/* CTA */}
             <button className="group relative flex items-center gap-3 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:shadow-[0_0_25px_rgba(79,70,229,0.4)] hover:-translate-y-0.5 active:scale-95">
               <span className="relative z-10">Get in Touch</span>
               <ArrowRight
@@ -292,15 +220,15 @@ const Footer = () => {
               © 2026 Codexa Digital
             </p>
             <div className="hidden md:flex gap-6 text-xs font-medium">
-              <a href="#" className="hover:text-white transition-colors">
+              <Link href="#" className="hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+              </Link>
+              <Link href="#" className="hover:text-white transition-colors">
                 Terms of Use
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+              </Link>
+              <Link href="#" className="hover:text-white transition-colors">
                 Sitemap
-              </a>
+              </Link>
             </div>
           </div>
           <div className="flex items-center gap-2 text-xs">
