@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import PageBanner from "@/components/common/PageBanner";
 import CTA from "@/components/cta";
+import ServiceLocations from "@/components/ServiceSection";
 
 interface FormData {
   name: string;
@@ -281,6 +282,8 @@ const ContactUs = () => {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
+
+      <ServiceLocations />
 
       <CTA />
     </div>

@@ -289,6 +289,13 @@ export default function Header() {
                 )}
               </div>
 
+               <Link
+                href="/packages"
+                className="px-4 py-2 text-sm font-medium text-white hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
+              >
+                Packages
+              </Link>
+
               <Link
                 href="/portfolio"
                 className="px-4 py-2 text-sm font-medium text-white hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
