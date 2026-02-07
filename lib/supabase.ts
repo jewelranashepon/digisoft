@@ -1,10 +1,21 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+// Load environment variables
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-export const supabase = createClient(supabaseUrl, supabaseKey);
+// Warning if env vars are missing (helps debugging)
+if (!supabaseUrl || !supabaseKey) {
+  console.warn(
+    '⚠️ Supabase environment variables are missing. ' +
+    'Some features may fail at runtime. Make sure NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY are set.'
+  );
+}
 
+// Create Supabase client safely
+export const supabase = createClient(supabaseUrl ?? '', supabaseKey ?? '');
+
+// Type for Blog posts
 export type BlogPost = {
   id: string;
   title: string;
@@ -17,20 +28,7 @@ export type BlogPost = {
   updated_at: string;
 };
 
-
-
-
-
-
-
-
-
-
-
-
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-
-
+// Type for package requests
 export interface PackageRequest {
   id?: string;
   business_name: string;
@@ -44,10 +42,16 @@ export interface PackageRequest {
   updated_at?: string;
 }
 
+// Function to submit a package request
 export async function submitPackageRequest(
   data: Omit<PackageRequest, 'id' | 'created_at' | 'updated_at'>
 ): Promise<{ success: boolean; error?: string }> {
   try {
+    if (!supabaseUrl || !supabaseKey) {
+      // Fail gracefully if Supabase is not configured
+      return { success: false, error: 'Supabase is not configured properly.' };
+    }
+
     const { error } = await supabase.from('package_requests').insert([data]);
 
     if (error) {
