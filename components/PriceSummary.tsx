@@ -20,7 +20,7 @@ export function PriceSummary({
   const totalPrice = calculateTotalPrice(selectedServices);
 
   return (
-    <Card className="sticky top-4 border-gray-200">
+    <Card className="border-gray-200">
       <CardHeader>
         <CardTitle className="text-xl">Price Summary</CardTitle>
       </CardHeader>
