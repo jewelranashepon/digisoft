@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Loader2 } from 'lucide-react';
-import { submitPackageRequest } from '@/lib/supabase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -46,17 +45,23 @@ export function CustomPackageForm({
     setIsSubmitting(true);
 
     try {
-      const result = await submitPackageRequest({
-        business_name: formData.businessName,
-        email: formData.email,
-        phone: formData.phone,
-        message: formData.message,
-        selected_services: selectedServices,
-        total_price: totalPrice,
-        package_type: packageType,
+      const response = await fetch('/api/packages/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          business_name: formData.businessName,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          selected_services: selectedServices,
+          total_price: totalPrice,
+          package_type: packageType,
+        }),
       });
 
-      if (result.success) {
+      if (response.ok) {
         toast({
           title: 'Request Submitted!',
           description: 'We will contact you shortly to discuss your package.',
@@ -69,13 +74,14 @@ export function CustomPackageForm({
           message: '',
         });
       } else {
+        const errorData = await response.json();
         toast({
           title: 'Submission Failed',
-          description: result.error || 'Please try again later.',
+          description: errorData.error || 'Please try again later.',
           variant: 'destructive',
         });
       }
-    } catch {
+    } catch (error) {
       toast({
         title: 'Error',
         description: 'An unexpected error occurred. Please try again.',
@@ -87,24 +93,16 @@ export function CustomPackageForm({
   };
 
   return (
-    <Card className="rounded-2xl border border-gray-200 bg-white shadow-sm">
-      <CardHeader className="pb-4">
-        <CardTitle className="text-xl font-semibold text-gray-900">
-          Your Information
-        </CardTitle>
-        <p className="text-sm text-gray-500">
-          Please provide accurate details so we can contact you.
-        </p>
+    <Card className="border-gray-200">
+      <CardHeader>
+        <CardTitle className="text-xl">Your Information</CardTitle>
       </CardHeader>
-
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Business Name */}
-          <div className="space-y-1.5">
-            <Label className="text-sm font-medium text-gray-700">
-              Business Name *
-            </Label>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="businessName">Business Name *</Label>
             <Input
+              id="businessName"
               placeholder="Your business name"
               value={formData.businessName}
               onChange={(e) =>
@@ -112,86 +110,70 @@ export function CustomPackageForm({
               }
               required
               disabled={isSubmitting}
-              className="h-11 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500"
             />
           </div>
 
-          {/* Email */}
-          <div className="space-y-1.5">
-            <Label className="text-sm font-medium text-gray-700">
-              Email Address *
-            </Label>
+          <div className="space-y-2">
+            <Label htmlFor="email">Email Address *</Label>
             <Input
+              id="email"
               type="email"
-              placeholder="you@company.com"
+              placeholder="your@email.com"
               value={formData.email}
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
               required
               disabled={isSubmitting}
-              className="h-11 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500"
             />
           </div>
 
-          {/* Phone */}
-          <div className="space-y-1.5">
-            <Label className="text-sm font-medium text-gray-700">
-              Phone Number
-            </Label>
+          <div className="space-y-2">
+            <Label htmlFor="phone">Phone Number</Label>
             <Input
+              id="phone"
               type="tel"
-              placeholder="+880 1XXX-XXXXXX"
+              placeholder="+1 (555) 000-0000"
               value={formData.phone}
               onChange={(e) =>
                 setFormData({ ...formData, phone: e.target.value })
               }
               disabled={isSubmitting}
-              className="h-11 rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500"
             />
           </div>
 
-          {/* Message */}
-          <div className="space-y-1.5">
-            <Label className="text-sm font-medium text-gray-700">
-              Additional Information
-            </Label>
+          <div className="space-y-2">
+            <Label htmlFor="message">Additional Information</Label>
             <Textarea
-              placeholder="Briefly describe your goals, timeline, or requirements..."
+              id="message"
+              placeholder="Tell us about your project requirements..."
               rows={4}
               value={formData.message}
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
               }
               disabled={isSubmitting}
-              className="rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500"
             />
           </div>
 
-          {/* Submit Button */}
           <Button
             type="submit"
+            className="w-full"
             size="lg"
             disabled={isSubmitting || selectedServices.length === 0}
-            className="h-12 w-full rounded-xl font-semibold text-white
-              bg-gradient-to-r from-blue-600 to-indigo-600
-              hover:from-blue-700 hover:to-indigo-700
-              shadow-lg shadow-blue-500/30
-              transition-all disabled:opacity-60 disabled:shadow-none"
           >
             {isSubmitting ? (
               <>
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                Submitting Request…
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Submitting...
               </>
             ) : (
               'Submit Package Request'
             )}
           </Button>
 
-          {/* Helper */}
           {selectedServices.length === 0 && (
-            <p className="text-center text-sm text-gray-500">
+            <p className="text-sm text-center text-gray-500">
               Please select at least one service to continue
             </p>
           )}
