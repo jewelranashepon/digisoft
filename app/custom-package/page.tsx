@@ -1,19 +1,20 @@
-'use client';
+"use client";
 
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
-import Link from 'next/link';
-import { ArrowLeft, Sparkles } from 'lucide-react';
-import { packages } from '@/data/packages';
-import { ServiceSelector } from '@/components/ServiceSelector';
-import { PriceSummary } from '@/components/PriceSummary';
-import { CustomPackageForm } from '@/components/CustomPackageForm';
-import { Button } from '@/components/ui/button';
-import { Toaster } from '@/components/ui/toaster';
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { ArrowLeft, Sparkles } from "lucide-react";
+import { packages } from "@/data/packages";
+import { ServiceSelector } from "@/components/ServiceSelector";
+import { PriceSummary } from "@/components/PriceSummary";
+import { CustomPackageForm } from "@/components/CustomPackageForm";
+import { Button } from "@/components/ui/button";
+import { Toaster } from "@/components/ui/toaster";
+import PageBanner from "@/components/common/PageBanner";
 
 function CustomPackageContent() {
   const searchParams = useSearchParams();
-  const packageId = searchParams.get('package');
+  const packageId = searchParams.get("package");
 
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [packageType, setPackageType] = useState<string | undefined>();
@@ -32,7 +33,7 @@ function CustomPackageContent() {
     setSelectedServices((prev) =>
       prev.includes(serviceId)
         ? prev.filter((id) => id !== serviceId)
-        : [...prev, serviceId]
+        : [...prev, serviceId],
     );
   };
 
@@ -42,6 +43,11 @@ function CustomPackageContent() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <PageBanner
+        title="Create Your Custom "
+        highlight="Package"
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Packages" }]}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         <div className="mb-8">
           <Link href="/packages">
@@ -60,10 +66,12 @@ function CustomPackageContent() {
                 Build Your Custom Package
               </h1>
               <p className="text-lg text-gray-600">
-                Select the services you need and see your price update in real-time.
+                Select the services you need and see your price update in
+                real-time.
                 {packageType && (
                   <span className="ml-1 text-blue-600 font-medium">
-                    Starting from {packages.find(p => p.id === packageType)?.name}
+                    Starting from{" "}
+                    {packages.find((p) => p.id === packageType)?.name}
                   </span>
                 )}
               </p>
@@ -97,8 +105,8 @@ function CustomPackageContent() {
             Need Help Choosing?
           </h3>
           <p className="text-sm text-gray-600 mb-4">
-            Our team is here to help you select the right services for your business.
-            Contact us for a free consultation.
+            Our team is here to help you select the right services for your
+            business. Contact us for a free consultation.
           </p>
           <Button variant="outline" size="sm">
             Schedule Consultation
@@ -112,14 +120,16 @@ function CustomPackageContent() {
 
 export default function CustomPackagePage() {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-600 border-r-transparent"></div>
-          <p className="mt-4 text-gray-600">Loading...</p>
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center">
+          <div className="text-center">
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-600 border-r-transparent"></div>
+            <p className="mt-4 text-gray-600">Loading...</p>
+          </div>
         </div>
-      </div>
-    }>
+      }
+    >
       <CustomPackageContent />
     </Suspense>
   );
