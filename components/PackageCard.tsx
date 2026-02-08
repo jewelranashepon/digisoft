@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { Check, Star, ShoppingCart, Settings2 } from 'lucide-react';
-import { Package } from '@/data/packages';
-import { Button } from '@/components/ui/button';
+import Link from "next/link";
+import { Check, Star, ShoppingCart, Settings2 } from "lucide-react";
+import { Package } from "@/data/packages";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -9,9 +9,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { calculateTotalPrice } from '@/data/service-price';
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { calculateTotalPrice } from "@/data/service-price";
 
 interface PackageCardProps {
   package: Package;
@@ -22,12 +22,12 @@ export function PackageCard({ package: pkg }: PackageCardProps) {
 
   // Professional Dark Blue Palette Styles
   const cardStyles = pkg.isPopular
-    ? 'border-slate-800 shadow-2xl scale-105 z-10 bg-slate-50/50 ring-1 ring-slate-900/5'
-    : 'border-slate-200 hover:border-slate-400 shadow-sm hover:shadow-md';
+    ? "border-slate-800 shadow-2xl scale-105 z-10 bg-slate-50/50 ring-1 ring-slate-900/5"
+    : "border-slate-200 hover:border-slate-400 shadow-sm hover:shadow-md";
 
   const buyButtonStyles = pkg.isPopular
-    ? 'bg-slate-900 hover:bg-slate-800 text-white shadow-lg shadow-slate-200'
-    : 'bg-blue-900 hover:bg-blue-800 text-white shadow-md shadow-blue-100';
+    ? "bg-slate-900 hover:bg-slate-800 text-white shadow-lg shadow-slate-200"
+    : "bg-blue-900 hover:bg-blue-800 text-white shadow-md shadow-blue-100";
 
   return (
     <Card
@@ -62,9 +62,7 @@ export function PackageCard({ package: pkg }: PackageCardProps) {
             <span className="text-4xl font-bold tracking-tight text-slate-900">
               ${totalPrice.toLocaleString()}
             </span>
-            <span className="text-sm font-medium text-slate-400">
-              /usd
-            </span>
+            <span className="text-sm font-medium text-slate-400">/usd</span>
           </div>
           <p className="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-[0.2em]">
             Professional Grade
@@ -85,15 +83,15 @@ export function PackageCard({ package: pkg }: PackageCardProps) {
 
       <CardFooter className="pt-6 pb-8 px-8 flex flex-col gap-3">
         {/* Main CTA */}
-        <Link href={`/checkout?package=${pkg.id}`} className="w-full">
-          <Button 
+        <Link href={`/packages/checkout?package=${pkg.id}`} className="w-full">
+          <Button
             className={`w-full h-11 font-semibold transition-all duration-200 rounded-md active:scale-[0.98] ${buyButtonStyles}`}
           >
             <ShoppingCart className="mr-2 h-4 w-4" />
             Get Started
           </Button>
         </Link>
-        
+
         {/* Secondary CTA */}
         <Link href={`/custom-package?package=${pkg.id}`} className="w-full">
           <Button

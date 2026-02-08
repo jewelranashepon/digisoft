@@ -1,3 +1,4 @@
+// data/service-price.ts
 export interface Service {
   id: string;
   name: string;

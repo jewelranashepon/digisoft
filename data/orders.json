@@ -1,0 +1,107 @@
+[
+  {
+    "id": "order_1770559482344",
+    "createdAt": "2026-02-08T14:04:42.344Z",
+    "customer": {
+      "name": "Jewel Rana Shepon",
+      "email": "jewelranashepon420@gmail.com",
+      "details": "wqhdkjJK"
+    },
+    "packageId": "business-website",
+    "packageName": "Business Website",
+    "services": [
+      {
+        "id": "wordpress-website",
+        "name": "WordPress Website",
+        "price": 2500,
+        "category": "Web Development",
+        "description": "Custom WordPress website with modern design"
+      },
+      {
+        "id": "local-seo-small-business",
+        "name": "Local SEO for Small Business",
+        "price": 800,
+        "category": "Digital Marketing",
+        "description": "Monthly local SEO service for small businesses"
+      },
+      {
+        "id": "email-marketing",
+        "name": "Email Marketing",
+        "price": 600,
+        "category": "Digital Marketing",
+        "description": "Email campaign management"
+      }
+    ],
+    "totalPrice": 3900
+  },
+  {
+    "id": "order_1770562103558",
+    "createdAt": "2026-02-08T14:48:23.558Z",
+    "orderType": "custom-package",
+    "customer": {
+      "name": "Sadia Sultana",
+      "email": "sadia@gmail.com",
+      "phone": "01773097310",
+      "details": "Argent package:"
+    },
+    "services": [
+      {
+        "id": "wordpress-website",
+        "name": "WordPress Website",
+        "price": 2500,
+        "category": "Web Development",
+        "description": "Custom WordPress website with modern design"
+      },
+      {
+        "id": "shopify-website",
+        "name": "Shopify Website",
+        "price": 3000,
+        "category": "Web Development",
+        "description": "E-commerce store on Shopify platform"
+      },
+      {
+        "id": "ndis-web-design",
+        "name": "NDIS Web Design",
+        "price": 2800,
+        "category": "Web Design",
+        "description": "Specialized design for NDIS providers"
+      },
+      {
+        "id": "dentist-web-design",
+        "name": "Dentist Web Design",
+        "price": 3200,
+        "category": "Web Design",
+        "description": "Dental practice website design"
+      },
+      {
+        "id": "local-seo-small-business",
+        "name": "Local SEO for Small Business",
+        "price": 800,
+        "category": "Digital Marketing",
+        "description": "Monthly local SEO service for small businesses"
+      },
+      {
+        "id": "social-media-marketing",
+        "name": "Social Media Marketing",
+        "price": 900,
+        "category": "Digital Marketing",
+        "description": "Social media management and advertising"
+      },
+      {
+        "id": "accounting-seo",
+        "name": "Accounting SEO",
+        "price": 1200,
+        "category": "Local SEO",
+        "description": "Accounting firm SEO services"
+      },
+      {
+        "id": "cleaning-seo",
+        "name": "Cleaning SEO",
+        "price": 900,
+        "category": "Local SEO",
+        "description": "Cleaning service SEO"
+      }
+    ],
+    "totalPrice": 15300
+  }
+]
