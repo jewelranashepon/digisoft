@@ -11,6 +11,7 @@ import {
   TrendingUp,
   ChevronRight,
   Megaphone,
+  Calculator,
 } from "lucide-react";
 import { Home, Info, Briefcase, Layers, FileText, Phone } from "lucide-react";
 import Link from "next/link";
@@ -20,6 +21,8 @@ const mobileParentMenu = [
   { label: "Home", href: "/", icon: Home },
   { label: "About Us", href: "/about-us", icon: Info },
   { label: "Services", href: "/services", icon: Briefcase },
+  {label: "Packages", href: "/packages", icon: Layers },
+  { label: "Cost Calculator", href: "/cost-calculator", icon: Calculator },
   { label: "Portfolio", href: "/portfolio", icon: Layers },
   { label: "Blog", href: "/blog", icon: FileText },
   { label: "Contact Us", href: "/contact-us", icon: Phone },
@@ -294,6 +297,13 @@ export default function Header() {
                 className="px-4 py-2 text-sm font-medium text-white hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
               >
                 Packages
+              </Link>
+
+               <Link
+                href="/cost-calculator"
+                className="px-4 py-2 text-sm font-medium text-white hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
+              >
+                Cost Calculator
               </Link>
 
               <Link
