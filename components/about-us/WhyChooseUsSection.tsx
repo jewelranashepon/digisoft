@@ -6,60 +6,60 @@ import {
   Headset,
   BarChart3,
   Medal,
-} from "lucide-react";
+} from "lucide-react"; // replace with suitable icons if needed
 
 export default function WhyChooseUsSection() {
   const reasons = [
     {
       icon: Rocket,
-      title: "Lightning Fast",
+      title: "Results-Focused Strategies",
       description:
-        "Optimized workflows that cut delivery time by 40% without sacrificing precision.",
+        "We don’t guess or use generic plans. Every strategy is made around your business goals. Our focus is on real growth, not just numbers that look good.",
       color: "from-amber-500/10 to-orange-500/10",
       iconColor: "text-orange-600",
       borderColor: "group-hover:border-orange-200",
     },
     {
       icon: ShieldCheck,
-      title: "Secure & Reliable",
+      title: "Custom Solutions for Every Business",
       description:
-        "SOC2 compliant infrastructure ensuring your intellectual property stays yours.",
+        "Every business is different, and so are our plans. We create campaigns that match your industry, audience, and budget. This helps get better results and long-term success.",
       color: "from-blue-500/10 to-cyan-500/10",
       iconColor: "text-blue-600",
       borderColor: "group-hover:border-blue-200",
     },
     {
       icon: Sparkles,
-      title: "Innovative Solutions",
+      title: "Experienced Digital Specialists",
       description:
-        "Leveraging proprietary AI models to solve legacy problems in modern ways.",
+        "Our team has skilled experts in all areas of digital marketing. From SEO to ads, every task is done by a professional. You get high-quality work backed by real experience.",
       color: "from-purple-500/10 to-pink-500/10",
       iconColor: "text-purple-600",
       borderColor: "group-hover:border-purple-200",
     },
     {
       icon: Headset,
-      title: "Dedicated Support",
+      title: "Clear & Honest Communication",
       description:
-        "Direct access to senior engineers, not just a ticketing queue. We're here 24/7.",
+        "We keep everything simple and easy to understand. You will always know what we are doing and why. No confusing words, just clear updates and advice.",
       color: "from-emerald-500/10 to-teal-500/10",
       iconColor: "text-emerald-600",
       borderColor: "group-hover:border-emerald-200",
     },
     {
       icon: BarChart3,
-      title: "Measurable Growth",
+      title: "Data-Driven Optimisation",
       description:
-        "Real-time analytics dashboards to track every KPI and ROI metric that matters.",
+        "We watch performance and study customer behaviour closely. Campaigns are always improved to get better results. All decisions are based on real data, not guesses.",
       color: "from-indigo-500/10 to-blue-500/10",
       iconColor: "text-indigo-600",
       borderColor: "group-hover:border-indigo-200",
     },
     {
       icon: Medal,
-      title: "Award Winning",
+      title: "Long-Term Growth Mindset",
       description:
-        "Voted 'Best in Category' 3 years running by industry leading publications.",
+        "We focus on lasting success, not quick wins. Our strategies grow with your business over time. Your long-term digital growth is always our priority.",
       color: "from-rose-500/10 to-red-500/10",
       iconColor: "text-rose-600",
       borderColor: "group-hover:border-rose-200",

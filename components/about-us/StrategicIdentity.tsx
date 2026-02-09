@@ -9,7 +9,7 @@ export default function StrategicIdentity() {
       label: "The Purpose",
       icon: Target,
       description:
-        "To empower global enterprises through scalable, intuitive technology that simplifies complexity and accelerates human potential.",
+        "Our mission is to help businesses grow online with smart, honest, and effective digital marketing. We create simple strategies that bring real results and long-term value for our clients.",
       color: "blue",
       gridClass: "lg:col-span-2",
     },
@@ -55,12 +55,12 @@ export default function StrategicIdentity() {
                 Our Mission
               </h4>
               <p className="text-xl text-white/80 leading-relaxed max-w-xl">
-                To empower global enterprises through scalable, intuitive
-                technology that{" "}
+                Our mission is to help businesses grow online with{" "}
                 <span className="text-orange-600 font-medium">
-                  simplifies complexity
-                </span>{" "}
-                and accelerates human potential.
+                  smart, honest, and effective digital marketing
+                </span>
+                . We create simple strategies that bring real results and
+                long-term value for our clients.
               </p>
             </div>
           </div>
@@ -78,9 +78,10 @@ export default function StrategicIdentity() {
               </span> */}
               <h4 className="text-2xl font-bold text-white mb-4">Our Vision</h4>
               <p className="text-white/80 leading-relaxed">
-                To be the architectural backbone of the next digital revolution,
-                where technology and human creativity coexist in perfect
-                harmony.
+                Our vision is to be a trusted digital growth partner for
+                businesses across Australia. We stay ahead of digital trends to
+                deliver modern solutions that keep our clients competitive
+                online.
               </p>
               <div className="mt-auto pt-8">
                 <div className="h-[1px] w-full bg-slate-800 mb-6" />
@@ -113,12 +114,24 @@ export default function StrategicIdentity() {
                 </div>
                 <h4 className="text-3xl font-bold mb-2">Our Values</h4>
                 <p className="text-white/80 mb-6">
-                  The non-negotiable principles that define our daily conduct.
+                  We believe in{" "}
+                  <span className="text-orange-600 font-medium">
+                    honesty, quality work, and clear communication
+                  </span>
+                  . Every choice we make is guided by transparency and data. We
+                  focus on building long-term partnerships, not just quick wins.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full md:w-auto">
-                {values.map((value, i) => (
+                {[
+                  "Honesty",
+                  "Quality Work",
+                  "Clear Communication",
+                  "Transparency",
+                  "Data-Driven Decisions",
+                  "Long-Term Partnerships",
+                ].map((value, i) => (
                   <div
                     key={i}
                     className="flex items-center gap-4 bg-white/10 backdrop-blur-sm border border-white/10 p-5 rounded-2xl hover:bg-white/20 transition-all cursor-default"

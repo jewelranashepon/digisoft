@@ -33,16 +33,32 @@ export default function AboutSection() {
           <div className="space-y-4">
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold text-slate-950 mt-3 leading-tight">
-                Exclusive project management agency
+                Who We Are
               </h2>
             </div>
 
             <p className="text-base sm:text-lg text-slate-900 leading-relaxed">
-              Saasland is a exclusive project management agency. We provide
-              better solutions for you. We create custom landing pages with
-              Saasland and converts more visitors than any website, create
-              visually appealing data visualizations and insightful dashboards
-              in minutes.
+              Codexa Digital is a modern digital marketing agency that helps
+              businesses grow online across Australia. We work with startups and
+              small to medium businesses to build a strong online presence and
+              reach the right customers. Our goal is to use clear and smart
+              strategies that bring real, long-term results.
+            </p>
+
+            <p className="text-base sm:text-lg text-slate-900 leading-relaxed">
+              Know about us how we provide complete digital marketing services
+              such as SEO, website design, social media marketing, and online
+              advertising. Every business is different, so we create custom
+              plans based on your goals, industry, and budget. We believe simple
+              ideas work best when they are done the right way.
+            </p>
+
+            <p className="text-base sm:text-lg text-slate-900 leading-relaxed">
+              At Codexa Digital, we value honesty, quality work, and steady
+              growth. We keep communication clear and explain things in easy
+              language. Our team follows the latest market trends and customer
+              behaviour to help your brand stay visible, relevant, and
+              competitive.
             </p>
 
             <div className="grid sm:grid-cols-3 gap-6 pt-4">
@@ -64,14 +80,28 @@ export default function AboutSection() {
           <div className="space-y-4 order-2 lg:order-1">
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold text-slate-950 mt-3 leading-tight">
-                We work with 10+ years of experience
+                How We Help Your Business Grow?{" "}
               </h2>
             </div>
 
             <p className="text-base sm:text-lg text-slate-800 leading-relaxed">
-              We are working since 2010. In 10 plus years, we solve so many
-              problems and we gather so much experience in this era. We work
-              with love and patient.
+              Our team of experienced digital experts can manage all your online
+              marketing needs. We focus on simple and practical strategies that
+              help your business grow and deliver clear, measurable results.
+            </p>
+
+            <p className="text-base sm:text-lg text-slate-800 leading-relaxed">
+              We specialise in Digital Marketing, SEO, Social Media Marketing,
+              and Web Development. This means you get complete digital solutions
+              in one place. We closely monitor every campaign and make regular
+              improvements to increase performance and returns.
+            </p>
+
+            <p className="text-base sm:text-lg text-slate-800 leading-relaxed">
+              We don’t just run campaigns we guide you at every step. We study
+              your business goals, industry, and target audience to find the
+              best digital marketing strategies and improve them over time for
+              steady growth.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 gap-y-5">
