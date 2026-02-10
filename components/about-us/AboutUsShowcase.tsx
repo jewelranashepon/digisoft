@@ -2,9 +2,8 @@ import { Check } from "lucide-react";
 
 export default function AboutSection() {
   const topStats = [
-    { value: "50k+", label: "Monthly active user" },
-    { value: "15k+", label: "Project Complete" },
-    { value: "10+", label: "Year Experience" },
+    { value: "1k+", label: "Project Complete" },
+    { value: "5+", label: "Year Experience" },
   ];
 
   const advantages = [

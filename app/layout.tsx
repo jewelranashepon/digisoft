@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://codexadigital.com.au"),
+  // Changed to include WWW
+  metadataBase: new URL("https://www.codexadigital.com.au"),
 
   verification: {
     google: "Dswfy3YGqK3viwjDpuG8xOldfQEJWugHyPJ6vmWLQzs",
@@ -43,7 +44,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Codexa Digital",
     description: "Web Design, Development & SEO Agency in Australia",
-    url: "https://codexadigital.com.au",
+    // Changed to include WWW
+    url: "https://www.codexadigital.com.au",
     siteName: "Codexa Digital",
     images: [
       {
