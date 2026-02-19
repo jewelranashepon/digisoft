@@ -96,7 +96,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* <Header /> */}
+        <Header />
         {children}
         <Footer />
       </body>

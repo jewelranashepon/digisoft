@@ -1,15 +1,21 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { useToast } from '@/hooks/use-toast';
-import { TiptapEditor } from './tiptap-editor';
-import { ImageUploader } from './image-uploader';
-import { Loader2 } from 'lucide-react';
-import { generateSlug } from '@/lib/validations';
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { useToast } from "@/hooks/use-toast";
+import { TiptapEditor } from "./tiptap-editor";
+import { ImageUploader } from "./image-uploader";
+import { Loader2 } from "lucide-react";
+import { generateSlug } from "@/lib/validations";
 
 interface Category {
   id: string;
@@ -34,28 +40,48 @@ export function PostForm({ postId, initialData }: PostFormProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
   const [tags, setTags] = useState<Tag[]>([]);
-  const [uploadedImages, setUploadedImages] = useState<string[]>(initialData?.images || []);
-  const [featuredImage, setFeaturedImage] = useState(initialData?.featuredImage || '');
+  const [uploadedImages, setUploadedImages] = useState<string[]>(
+    initialData?.images || [],
+  );
+  const [featuredImage, setFeaturedImage] = useState(
+    initialData?.featuredImage || "",
+  );
 
   const [formData, setFormData] = useState({
-    title: initialData?.title || '',
-    slug: initialData?.slug || '',
-    excerpt: initialData?.excerpt || '',
-    content: initialData?.content || '',
-    status: initialData?.status || 'draft',
-    categoryId: initialData?.categoryId || '',
-    metaTitle: initialData?.metaTitle || '',
-    metaDescription: initialData?.metaDescription || '',
-    metaKeywords: initialData?.metaKeywords || '',
+    title: initialData?.title || "",
+    slug: initialData?.slug || "",
+    excerpt: initialData?.excerpt || "",
+    content: initialData?.content || "",
+    status: initialData?.status || "draft",
+    categoryId: initialData?.categoryId || "",
+    metaTitle: initialData?.metaTitle || "",
+    metaDescription: initialData?.metaDescription || "",
+    metaKeywords: initialData?.metaKeywords || "",
     selectedTags: initialData?.tags?.map((t: any) => t.id) || [],
   });
+
+  const handleFeaturedUpload = (files: any[]) => {
+    if (!files || files.length === 0) return;
+    setFeaturedImage(files[0].url);
+  };
+
+  const handleGalleryUpload = (files: any[]) => {
+    if (!files || files.length === 0) return;
+
+    const newUrls = files.map((f) => f.url);
+
+    setUploadedImages((prev) => [
+      ...prev,
+      ...newUrls.filter((url) => url !== featuredImage),
+    ]);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const [categoriesRes, tagsRes] = await Promise.all([
-          fetch('/api/categories'),
-          fetch('/api/tags'),
+          fetch("/api/categories"),
+          fetch("/api/tags"),
         ]);
 
         const categoriesData = await categoriesRes.json();
@@ -68,24 +94,28 @@ export function PostForm({ postId, initialData }: PostFormProps) {
           setTags(tagsData.tags);
         }
       } catch (error) {
-        console.error('Failed to fetch categories and tags:', error);
+        console.error("Failed to fetch categories and tags:", error);
       }
     };
 
     fetchData();
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
 
     // Auto-generate slug from title
-    if (name === 'title' && !initialData?.id) {
+    if (name === "title" && !initialData?.id) {
       const slug = generateSlug(value);
-      setFormData(prev => ({
+      setFormData((prev) => ({
         ...prev,
         slug,
       }));
@@ -93,10 +123,10 @@ export function PostForm({ postId, initialData }: PostFormProps) {
   };
 
   const handleTagToggle = (tagId: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       selectedTags: prev.selectedTags.includes(tagId)
-        ? prev.selectedTags.filter(id => id !== tagId)
+        ? prev.selectedTags.filter((id) => id !== tagId)
         : [...prev.selectedTags, tagId],
     }));
   };
@@ -113,13 +143,13 @@ export function PostForm({ postId, initialData }: PostFormProps) {
         tags: formData.selectedTags,
       };
 
-      const url = postId ? `/api/posts/${postId}` : '/api/posts';
-      const method = postId ? 'PUT' : 'POST';
+      const url = postId ? `/api/posts/${postId}` : "/api/posts";
+      const method = postId ? "PUT" : "POST";
 
       const response = await fetch(url, {
         method,
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(postPayload),
       });
@@ -128,24 +158,26 @@ export function PostForm({ postId, initialData }: PostFormProps) {
 
       if (!response.ok) {
         toast({
-          title: 'Error',
-          description: data.error || 'Failed to save post',
-          variant: 'destructive',
+          title: "Error",
+          description: data.error || "Failed to save post",
+          variant: "destructive",
         });
         return;
       }
 
       toast({
-        title: 'Success',
-        description: postId ? 'Post updated successfully' : 'Post created successfully',
+        title: "Success",
+        description: postId
+          ? "Post updated successfully"
+          : "Post created successfully",
       });
 
-      router.push('/admin/posts');
+      router.push("/admin/posts");
     } catch (error) {
       toast({
-        title: 'Error',
-        description: 'Failed to save post',
-        variant: 'destructive',
+        title: "Error",
+        description: "Failed to save post",
+        variant: "destructive",
       });
     } finally {
       setIsLoading(false);
@@ -221,7 +253,7 @@ export function PostForm({ postId, initialData }: PostFormProps) {
             className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
           >
             <option value="">Select a category</option>
-            {categories.map(cat => (
+            {categories.map((cat) => (
               <option key={cat.id} value={cat.id}>
                 {cat.name}
               </option>
@@ -238,15 +270,15 @@ export function PostForm({ postId, initialData }: PostFormProps) {
         </CardHeader>
         <CardContent>
           <div className="flex flex-wrap gap-2">
-            {tags.map(tag => (
+            {tags.map((tag) => (
               <button
                 key={tag.id}
                 type="button"
                 onClick={() => handleTagToggle(tag.id)}
                 className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                   formData.selectedTags.includes(tag.id)
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
+                    ? "bg-blue-600 text-white"
+                    : "bg-slate-200 text-slate-700 hover:bg-slate-300"
                 }`}
               >
                 {tag.name}
@@ -257,34 +289,89 @@ export function PostForm({ postId, initialData }: PostFormProps) {
       </Card>
 
       {/* Featured Image */}
-      <ImageUploader
-        multiple={false}
-        onFilesUploaded={(files) => {
-          if (files.length > 0) {
-            setFeaturedImage(files[0].url);
-          }
-        }}
-      />
+      <Card>
+        <CardHeader>
+          <CardTitle>Featured Image</CardTitle>
+          <CardDescription>
+            This image will be used as the main thumbnail
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <ImageUploader
+            key="featured-uploader"
+            multiple={false}
+            onFilesUploaded={handleFeaturedUpload}
+          />
+
+          {featuredImage && (
+            <div className="mt-3">
+              <img
+                src={featuredImage}
+                alt="Featured Preview"
+                className="w-48 rounded-lg border"
+              />
+            </div>
+          )}
+        </CardContent>
+      </Card>
 
       {/* Content */}
       <TiptapEditor
         value={formData.content}
-        onChange={(value) => setFormData(prev => ({ ...prev, content: value }))}
+        onChange={(value) =>
+          setFormData((prev) => ({ ...prev, content: value }))
+        }
       />
 
       {/* Gallery Images */}
-      <ImageUploader
-        multiple={true}
-        onFilesUploaded={(files) => {
-          setUploadedImages(prev => [...prev, ...files.map(f => f.url)]);
-        }}
-      />
+      <Card>
+        <CardHeader>
+          <CardTitle>Gallery Images</CardTitle>
+          <CardDescription>
+            These images will appear inside the post
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <ImageUploader
+            key="gallery-uploader"
+            multiple={true}
+            onFilesUploaded={handleGalleryUpload}
+          />
+
+          {uploadedImages.length > 0 && (
+            <div className="grid grid-cols-3 gap-3">
+              {uploadedImages.map((img, index) => (
+                <div key={index} className="relative">
+                  <img
+                    src={img}
+                    alt="Gallery"
+                    className="w-full h-32 object-cover rounded-lg border"
+                  />
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setUploadedImages((prev) =>
+                        prev.filter((_, i) => i !== index),
+                      )
+                    }
+                    className="absolute top-1 right-1 bg-red-600 text-white text-xs px-2 py-1 rounded"
+                  >
+                    ✕
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+        </CardContent>
+      </Card>
 
       {/* SEO */}
       <Card>
         <CardHeader>
           <CardTitle>SEO Settings</CardTitle>
-          <CardDescription>Optimize your post for search engines</CardDescription>
+          <CardDescription>
+            Optimize your post for search engines
+          </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
@@ -353,11 +440,7 @@ export function PostForm({ postId, initialData }: PostFormProps) {
 
       {/* Submit Buttons */}
       <div className="flex gap-4 justify-end">
-        <Button
-          type="button"
-          variant="outline"
-          onClick={() => router.back()}
-        >
+        <Button type="button" variant="outline" onClick={() => router.back()}>
           Cancel
         </Button>
         <Button
@@ -368,10 +451,12 @@ export function PostForm({ postId, initialData }: PostFormProps) {
           {isLoading ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              {postId ? 'Updating...' : 'Creating...'}
+              {postId ? "Updating..." : "Creating..."}
             </>
+          ) : postId ? (
+            "Update Post"
           ) : (
-            postId ? 'Update Post' : 'Create Post'
+            "Create Post"
           )}
         </Button>
       </div>

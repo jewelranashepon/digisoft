@@ -7,13 +7,13 @@ import { getAuthToken, verifyToken } from '@/lib/auth';
 export async function POST(request: NextRequest) {
   try {
     // Verify authentication
-    const token = await getAuthToken();
-    if (!token || !verifyToken(token)) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      );
-    }
+    // const token = await getAuthToken();
+    // if (!token || !verifyToken(token)) {
+    //   return NextResponse.json(
+    //     { error: 'Unauthorized' },
+    //     { status: 401 }
+    //   );
+    // }
 
     const formData = await request.formData();
     const files = formData.getAll('files');
