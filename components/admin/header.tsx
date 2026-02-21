@@ -1,55 +1,34 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useSession, signOut } from 'next-auth/react'; // NextAuth hooks
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import { LogOut, User } from 'lucide-react';
-
-interface Admin {
-  id: string;
-  email: string;
-  name: string;
-}
+import { LogOut, User, Loader2 } from 'lucide-react';
 
 export default function AdminHeader() {
   const router = useRouter();
   const { toast } = useToast();
-  const [admin, setAdmin] = useState<Admin | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchAdmin = async () => {
-      try {
-        const response = await fetch('/api/auth/verify');
-        const data = await response.json();
-
-        if (data.authenticated && data.admin) {
-          setAdmin(data.admin);
-        }
-      } catch (error) {
-        console.error('Failed to fetch admin:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchAdmin();
-  }, []);
+  
+  // Automatically fetches the admin session
+  const { data: session, status } = useSession();
+  const isLoading = status === "loading";
 
   const handleLogout = async () => {
     try {
-      const response = await fetch('/api/auth/logout', {
-        method: 'POST',
+      // signOut handles cookie clearing and CSRF tokens automatically
+      await signOut({ 
+        redirect: false, // Allows us to show the toast first
+        callbackUrl: '/login' 
       });
 
-      if (response.ok) {
-        toast({
-          title: 'Logged out',
-          description: 'You have been logged out successfully',
-        });
-        router.push('/admin/login');
-      }
+      toast({
+        title: 'Logged out',
+        description: 'You have been logged out successfully',
+      });
+
+      router.push('/login');
+      router.refresh(); 
     } catch (error) {
       toast({
         title: 'Error',
@@ -66,22 +45,28 @@ export default function AdminHeader() {
       </div>
 
       <div className="flex items-center gap-4">
-        {!isLoading && admin && (
+        {!isLoading && session?.user && (
           <div className="flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-lg">
             <User className="h-4 w-4 text-slate-600" />
-            <span className="text-sm font-medium text-slate-700">{admin.name}</span>
+            <span className="text-sm font-medium text-slate-700">
+              {session.user.name}
+            </span>
           </div>
         )}
 
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={handleLogout}
-          className="text-red-600 border-red-200 hover:bg-red-50"
-        >
-          <LogOut className="h-4 w-4 mr-2" />
-          Logout
-        </Button>
+        {isLoading ? (
+          <Loader2 className="h-4 w-4 animate-spin text-slate-400" />
+        ) : (
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleLogout}
+            className="text-red-600 border-red-200 hover:bg-red-50"
+          >
+            <LogOut className="h-4 w-4 mr-2" />
+            Logout
+          </Button>
+        )}
       </div>
     </header>
   );
