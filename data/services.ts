@@ -266,7 +266,7 @@ export const services: ServiceItem[] = [
     description: "Increase local visibility and leads.",
     longDescription:
       "Local SEO strategies that help small businesses dominate Google Maps and local search results.",
-    image: "/images/services/local-seo.jpg",
+    image: "/images/digital-marketing/local-seo-for-small-business.webp",
     category: "marketing",
     features: [
       "Google Maps ranking",
@@ -281,7 +281,7 @@ export const services: ServiceItem[] = [
     description: "Rank higher on Google with proven SEO strategies.",
     longDescription:
       "Comprehensive SEO services designed to increase rankings, traffic, and conversions.",
-    image: "/images/services/seo.jpg",
+    image: "/images/digital-marketing/search-engine-optimisation.webp",
     category: "marketing",
     features: [
       "Keyword research",
@@ -296,7 +296,7 @@ export const services: ServiceItem[] = [
     description: "SEO strategies for online stores.",
     longDescription:
       "SEO solutions designed specifically for eCommerce websites to drive sales.",
-    image: "/images/services/ecommerce-seo.jpg",
+    image: "/images/digital-marketing/ecommerce-seo.webp",
     category: "marketing",
     features: [
       "Product SEO",
@@ -311,7 +311,7 @@ export const services: ServiceItem[] = [
     description: "Paid ads that drive traffic and conversions.",
     longDescription:
       "Data-driven paid advertising campaigns to maximize ROI and leads.",
-    image: "/images/services/sem.jpg",
+    image: "/images/digital-marketing/search-engine-marketing.webp",
     category: "marketing",
     features: [
       "Google Ads",
@@ -326,7 +326,7 @@ export const services: ServiceItem[] = [
     description: "Content strategies that convert visitors into customers.",
     longDescription:
       "Strategic content marketing designed to build authority and drive organic growth.",
-    image: "/images/services/content-marketing.jpg",
+    image: "/images/digital-marketing/content-marketing.webp",
     category: "marketing",
     features: [
       "Blog content",
@@ -341,7 +341,7 @@ export const services: ServiceItem[] = [
     description: "Grow your brand across social platforms.",
     longDescription:
       "Engaging social media campaigns designed to increase reach and engagement.",
-    image: "/images/services/social-media.jpg",
+    image: "/images/digital-marketing/social-media-marketing.webp",
     category: "marketing",
     features: [
       "Content creation",
@@ -356,7 +356,7 @@ export const services: ServiceItem[] = [
     description: "Targeted email campaigns that convert.",
     longDescription:
       "High-converting email marketing strategies for customer retention and sales.",
-    image: "/images/services/email-marketing.jpg",
+    image: "/images/digital-marketing/email-marketing.webp",
     category: "marketing",
     features: [
       "Campaign automation",
