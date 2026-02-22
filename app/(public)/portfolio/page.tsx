@@ -86,7 +86,7 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1400",
     large: true,
     tags: ["React", "JavaScript", "UI/UX"],
-    repo: "https://github.com/jewelranashepon/interior-studio-ace",
+    // repo: "https://github.com/jewelranashepon/interior-studio-ace",
   },
   {
     id: "real-estate-arabia",
@@ -98,7 +98,7 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1400",
     large: false,
     tags: ["React", "JavaScript", "Real Estate"],
-    repo: "https://github.com/jewelranashepon/real-estate-arabia",
+    // repo: "https://github.com/jewelranashepon/real-estate-arabia",
   },
   {
     id: "vision-2030",
@@ -110,7 +110,7 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&q=80&w=1400",
     large: false,
     tags: ["React", "Next.js", "Data Viz"],
-    repo: "https://github.com/jewelranashepon/vision-2030",
+    // repo: "https://github.com/jewelranashepon/vision-2030",
   },
   {
     id: "bd-weather",
@@ -122,7 +122,7 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&q=80&w=1400",
     large: true,
     tags: ["React", "Weather API", "Dashboard"],
-    repo: "https://github.com/jewelranashepon/BD-WEATHER-FORECAST-SHOW",
+    // repo: "https://github.com/jewelranashepon/BD-WEATHER-FORECAST-SHOW",
   },
   {
     id: "moving-texas",
@@ -134,7 +134,7 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1400",
     large: false,
     tags: ["React", "JavaScript", "Services"],
-    repo: "https://github.com/jewelranashepon/moving-texas",
+    // repo: "https://github.com/jewelranashepon/moving-texas",
   },
   {
     id: "food-saver",
@@ -146,7 +146,7 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=1400",
     large: false,
     tags: ["React", "JavaScript", "Community"],
-    repo: "https://github.com/jewelranashepon/Food-Saver",
+    // repo: "https://github.com/jewelranashepon/Food-Saver",
   },
   {
     id: "ecommerc",
@@ -158,7 +158,7 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1400",
     large: true,
     tags: ["React", "JavaScript", "E-Commerce"],
-    repo: "https://github.com/jewelranashepon/ecommerc",
+    // repo: "https://github.com/jewelranashepon/ecommerc",
   },
 ];
 
@@ -375,7 +375,7 @@ export default function PortfolioPage() {
             className="flex items-center gap-4 mb-14"
           >
             <GoldBar />
-            <Label>Jewel Rana · Frontend Developer · Dhaka, Bangladesh</Label>
+            <Label>Codexa Digital</Label>
           </motion.div>
 
           {/* Headline */}
@@ -606,7 +606,7 @@ export default function PortfolioPage() {
                 </p>
               </div>
               <a
-                href="https://github.com/jewelranashepon"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 className="gh-btn mt-12 self-start inline-flex items-center gap-4 font-mono-alt text-[9px] tracking-[0.3em] uppercase px-8 py-4 rounded-sm border cursor-pointer no-underline transition-all duration-300"
