@@ -22,7 +22,7 @@ const Fonts = () => (
       content: '';
       position: fixed; inset: 0; z-index: 9998; pointer-events: none;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-      opacity: 0.025;
+      opacity: 0.03;
       animation: grain 6s steps(8) infinite;
     }
     @keyframes grain {
@@ -41,11 +41,11 @@ const Fonts = () => (
 
     .proj-img {
       transition: transform 1.3s cubic-bezier(.16,1,.3,1), filter 0.8s ease;
-      filter: grayscale(100%) brightness(0.2);
+      filter: grayscale(60%) brightness(0.28);
     }
     .proj-card:hover .proj-img {
       transform: scale(1.07);
-      filter: grayscale(15%) brightness(0.42);
+      filter: grayscale(10%) brightness(0.5);
     }
 
     .btn-line {
@@ -55,7 +55,7 @@ const Fonts = () => (
     .case-btn:hover .btn-line { width: 54px; }
 
     .gh-btn:hover {
-      border-color: rgba(201,169,110,.55) !important;
+      border-color: rgba(201,169,110,.75) !important;
       color: #C9A96E !important;
     }
 
@@ -64,6 +64,35 @@ const Fonts = () => (
     .stat-item:hover { transform: translateY(-4px); }
   `}</style>
 );
+
+/* ─── COLOR TOKENS ─── */
+// Base palette — rich dark navy replacing all blacks
+const C = {
+  // Page backgrounds
+  bg: "#07101f", // deepest navy (was #0a0a0e)
+  bgCard: "#0c1828", // card navy (was #0d0d11)
+  bgDark: "#091220", // slightly deeper (was #0c0c10)
+  bgStrip: "#0a1525", // marquee strip (was #0c0c10)
+
+  // Borders (gold-tinted)
+  border: "rgba(201,169,110,.13)",
+  borderMd: "rgba(201,169,110,.09)",
+  borderSm: "rgba(201,169,110,.07)",
+
+  // Text — much lighter / clearer
+  textPrimary: "#eef3fc", // crisp near-white with blue tint (was #f0e8db)
+  textSecondary: "#8fa8c8", // readable blue-grey (was #5e5666 — too dark)
+  textMuted: "#4a6180", // muted blue (was #3e3846)
+
+  // Accent
+  gold: "#C9A96E",
+  goldFaint: "rgba(201,169,110,.06)",
+  goldGlow: "rgba(201,169,110,.07)",
+
+  // Ambient glow colors — navy-infused
+  glow1: "rgba(30,90,200,.09)",
+  glow2: "rgba(201,169,110,.04)",
+};
 
 /* ─── PROJECTS ─── */
 const TABS = [
@@ -86,7 +115,6 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1400",
     large: true,
     tags: ["React", "JavaScript", "UI/UX"],
-    // repo: "https://github.com/jewelranashepon/interior-studio-ace",
   },
   {
     id: "real-estate-arabia",
@@ -98,7 +126,6 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1400",
     large: false,
     tags: ["React", "JavaScript", "Real Estate"],
-    // repo: "https://github.com/jewelranashepon/real-estate-arabia",
   },
   {
     id: "vision-2030",
@@ -110,7 +137,6 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1586724237569-f3d0c1dee8c6?auto=format&fit=crop&q=80&w=1400",
     large: false,
     tags: ["React", "Next.js", "Data Viz"],
-    // repo: "https://github.com/jewelranashepon/vision-2030",
   },
   {
     id: "bd-weather",
@@ -122,7 +148,6 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&q=80&w=1400",
     large: true,
     tags: ["React", "Weather API", "Dashboard"],
-    // repo: "https://github.com/jewelranashepon/BD-WEATHER-FORECAST-SHOW",
   },
   {
     id: "moving-texas",
@@ -134,7 +159,6 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1400",
     large: false,
     tags: ["React", "JavaScript", "Services"],
-    // repo: "https://github.com/jewelranashepon/moving-texas",
   },
   {
     id: "food-saver",
@@ -146,7 +170,6 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=1400",
     large: false,
     tags: ["React", "JavaScript", "Community"],
-    // repo: "https://github.com/jewelranashepon/Food-Saver",
   },
   {
     id: "ecommerc",
@@ -158,7 +181,6 @@ const PROJECTS = [
     img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1400",
     large: true,
     tags: ["React", "JavaScript", "E-Commerce"],
-    // repo: "https://github.com/jewelranashepon/ecommerc",
   },
 ];
 
@@ -181,22 +203,22 @@ const MARQUEE_ITEMS = [
 const Label = ({ children }) => (
   <span
     className="font-mono-alt text-[9px] tracking-[0.38em] uppercase"
-    style={{ color: "#C9A96E" }}
+    style={{ color: C.gold }}
   >
     {children}
   </span>
 );
 const GoldBar = () => (
-  <div className="h-px w-8 shrink-0" style={{ background: "#C9A96E" }} />
+  <div className="h-px w-8 shrink-0" style={{ background: C.gold }} />
 );
 const PillTag = ({ children }) => (
   <span
     className="font-mono-alt text-[8px] tracking-[0.25em] uppercase px-3 py-1.5 rounded-sm border"
     style={{
-      background: "rgba(10,10,14,.72)",
+      background: "rgba(7,16,31,.8)",
       backdropFilter: "blur(16px)",
-      borderColor: "rgba(201,169,110,.18)",
-      color: "#ddd5c5",
+      borderColor: "rgba(201,169,110,.22)",
+      color: "#b8cce0", // clear light blue-grey
     }}
   >
     {children}
@@ -218,7 +240,7 @@ const ProjectCard = ({ p, i }) => (
         ? "col-span-12 lg:col-span-8 min-h-[600px]"
         : "col-span-12 md:col-span-6 lg:col-span-4 min-h-[500px]",
     ].join(" ")}
-    style={{ borderColor: "rgba(201,169,110,.1)", background: "#0d0d11" }}
+    style={{ borderColor: C.border, background: C.bgCard }}
   >
     {/* Image */}
     <div className="absolute inset-0 overflow-hidden">
@@ -231,7 +253,7 @@ const ProjectCard = ({ p, i }) => (
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to top, rgba(10,10,14,1) 0%, rgba(10,10,14,.5) 50%, rgba(10,10,14,.06) 100%)",
+            "linear-gradient(to top, rgba(7,16,31,0.6) 0%, rgba(7,16,31,0.3) 50%, rgba(7,16,31,0.05) 100%)",
         }}
       />
     </div>
@@ -249,10 +271,10 @@ const ProjectCard = ({ p, i }) => (
         rel="noopener noreferrer"
         className="gh-btn w-9 h-9 rounded-full border flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 shrink-0"
         style={{
-          borderColor: "rgba(201,169,110,.22)",
-          background: "rgba(10,10,14,.6)",
+          borderColor: "rgba(201,169,110,.28)",
+          background: "rgba(7,16,31,.7)",
           backdropFilter: "blur(14px)",
-          color: "#6b6070",
+          color: "#8fa8c8",
         }}
       >
         <Github size={13} />
@@ -264,12 +286,12 @@ const ProjectCard = ({ p, i }) => (
       <div className="flex items-center gap-3">
         <div
           className="w-[5px] h-[5px] rounded-full shrink-0"
-          style={{ background: "#C9A96E" }}
+          style={{ background: C.gold }}
         />
         <Label>{p.sub}</Label>
         <div
           className="flex-1 h-px"
-          style={{ background: "rgba(201,169,110,.1)" }}
+          style={{ background: "rgba(201,169,110,.12)" }}
         />
         <Label>{p.year}</Label>
       </div>
@@ -280,7 +302,7 @@ const ProjectCard = ({ p, i }) => (
           fontSize: p.large
             ? "clamp(2.6rem,4.2vw,4.5rem)"
             : "clamp(2rem,2.8vw,3rem)",
-          color: "#f0e8db",
+          color: C.textPrimary,
         }}
       >
         {p.title}
@@ -288,7 +310,7 @@ const ProjectCard = ({ p, i }) => (
 
       <p
         className="font-ui font-light text-sm leading-relaxed max-w-[360px] opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
-        style={{ color: "#6e6476" }}
+        style={{ color: "#9ab8d4" }} /* clear readable blue on hover */
       >
         {p.desc}
       </p>
@@ -299,10 +321,10 @@ const ProjectCard = ({ p, i }) => (
           target="_blank"
           rel="noopener noreferrer"
           className="case-btn flex items-center gap-3 bg-transparent border-none cursor-pointer p-0 font-mono-alt text-[9px] tracking-[0.28em] uppercase no-underline"
-          style={{ color: "#C9A96E" }}
+          style={{ color: C.gold }}
         >
           View on GitHub
-          <div className="btn-line h-px" style={{ background: "#C9A96E" }} />
+          <div className="btn-line h-px" style={{ background: C.gold }} />
         </a>
       </div>
     </div>
@@ -328,7 +350,7 @@ export default function PortfolioPage() {
   return (
     <div
       className="font-ui min-h-screen overflow-x-hidden pt-20"
-      style={{ background: "#0a0a0e", color: "#f0e8db" }}
+      style={{ background: C.bg, color: C.textPrimary }}
     >
       <Fonts />
 
@@ -337,30 +359,39 @@ export default function PortfolioPage() {
         ref={heroRef}
         className="relative min-h-screen flex flex-col justify-end px-8 md:px-16 pb-20 overflow-hidden"
       >
-        {/* Ambient glows */}
+        {/* Ambient glows — navy-blue tinted */}
         <div
           className="absolute top-[-8%] right-[-4%] w-[70vw] h-[70vw] rounded-full pointer-events-none"
           style={{
             background:
-              "radial-gradient(circle, rgba(201,169,110,.052) 0%, transparent 62%)",
+              "radial-gradient(circle, rgba(30,90,200,.09) 0%, transparent 62%)",
           }}
         />
         <div
           className="absolute bottom-[-8%] left-[-4%] w-[50vw] h-[50vw] rounded-full pointer-events-none"
           style={{
             background:
-              "radial-gradient(circle, rgba(201,169,110,.028) 0%, transparent 68%)",
+              "radial-gradient(circle, rgba(201,169,110,.05) 0%, transparent 68%)",
           }}
         />
+        {/* Additional navy glow center */}
+        <div
+          className="absolute top-[30%] left-[30%] w-[40vw] h-[40vw] rounded-full pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(20,60,160,.06) 0%, transparent 65%)",
+          }}
+        />
+
         {/* Left vertical rule */}
         <div
           className="absolute left-8 md:left-16 top-0 bottom-0 w-px pointer-events-none"
-          style={{ background: "rgba(201,169,110,.055)" }}
+          style={{ background: "rgba(201,169,110,.07)" }}
         />
         {/* Top horizontal rule */}
         <div
           className="absolute top-0 left-0 right-0 h-px pointer-events-none"
-          style={{ background: "rgba(201,169,110,.05)" }}
+          style={{ background: "rgba(201,169,110,.06)" }}
         />
 
         <motion.div
@@ -391,7 +422,7 @@ export default function PortfolioPage() {
                 className={`font-display leading-[0.83] tracking-tight ${italic ? "italic font-light" : "font-bold"}`}
                 style={{
                   fontSize: "clamp(3.8rem, 9.5vw, 10rem)",
-                  color: italic ? "#C9A96E" : "#f0e8db",
+                  color: italic ? C.gold : C.textPrimary,
                 }}
               >
                 {text}
@@ -408,7 +439,7 @@ export default function PortfolioPage() {
           >
             <p
               className="font-ui font-light text-base md:text-lg leading-relaxed max-w-[440px]"
-              style={{ color: "#5e5666" }}
+              style={{ color: C.textSecondary }}
             >
               React & JavaScript developer building real-world platforms — from
               Saudi real estate marketplaces to interior studios, weather tools,
@@ -423,7 +454,7 @@ export default function PortfolioPage() {
                   {i > 0 && (
                     <div
                       className="h-14 w-px"
-                      style={{ background: "rgba(201,169,110,.18)" }}
+                      style={{ background: "rgba(201,169,110,.2)" }}
                     />
                   )}
                   <div className="text-right">
@@ -431,7 +462,7 @@ export default function PortfolioPage() {
                       className="font-display font-bold leading-none"
                       style={{
                         fontSize: "clamp(2rem, 3.5vw, 3.2rem)",
-                        color: "#f0e8db",
+                        color: C.textPrimary,
                       }}
                     >
                       {v}
@@ -453,18 +484,17 @@ export default function PortfolioPage() {
             className="mt-10 flex items-center gap-4"
           >
             <a
-              href="https://github.com/jewelranashepon"
-              target="_blank"
+              href="/services"
               rel="noopener noreferrer"
               className="gh-btn inline-flex items-center gap-3 font-mono-alt text-[9px] tracking-[0.28em] uppercase px-6 py-3 rounded-sm border no-underline transition-all duration-300"
               style={{
-                color: "#5e5666",
-                borderColor: "rgba(201,169,110,.14)",
-                background: "rgba(201,169,110,.03)",
+                color: C.textSecondary,
+                borderColor: "rgba(201,169,110,.18)",
+                background: "rgba(201,169,110,.04)",
               }}
             >
               <Github size={12} />
-              github.com/jewelranashepon
+              View All Services
             </a>
           </motion.div>
         </motion.div>
@@ -490,8 +520,8 @@ export default function PortfolioPage() {
       <div
         className="overflow-hidden border-y"
         style={{
-          borderColor: "rgba(201,169,110,.07)",
-          background: "#0c0c10",
+          borderColor: "rgba(201,169,110,.08)",
+          background: C.bgStrip,
           padding: "18px 0",
         }}
       >
@@ -502,11 +532,11 @@ export default function PortfolioPage() {
               className="font-display italic whitespace-nowrap inline-flex items-center gap-8 px-8"
               style={{
                 fontSize: "19px",
-                color: i % 3 === 1 ? "#C9A96E" : "#28242e",
+                color: i % 3 === 1 ? C.gold : "#2a3f5c", // navy-blue muted text
               }}
             >
               {item}
-              <span style={{ color: "rgba(201,169,110,.15)", fontSize: "8px" }}>
+              <span style={{ color: "rgba(201,169,110,.18)", fontSize: "8px" }}>
                 ◆
               </span>
             </span>
@@ -520,7 +550,7 @@ export default function PortfolioPage() {
         <div
           className="sticky top-0 z-50"
           style={{
-            background: "rgba(10,10,14,.92)",
+            background: "rgba(7,16,31,.93)",
             backdropFilter: "blur(24px)",
           }}
         >
@@ -531,14 +561,14 @@ export default function PortfolioPage() {
                   key={t}
                   onClick={() => setTab(t)}
                   className="relative font-mono-alt text-[8.5px] tracking-[0.3em] uppercase px-4 py-3 bg-transparent border-none cursor-pointer transition-colors duration-300 whitespace-nowrap"
-                  style={{ color: tab === t ? "#f0e8db" : "#3e3846" }}
+                  style={{ color: tab === t ? C.textPrimary : C.textMuted }}
                 >
                   {t}
                   {tab === t && (
                     <motion.div
                       layoutId="tl"
                       className="absolute bottom-0 left-0 right-0 h-px"
-                      style={{ background: "#C9A96E" }}
+                      style={{ background: C.gold }}
                       transition={{
                         type: "spring",
                         stiffness: 380,
@@ -555,7 +585,7 @@ export default function PortfolioPage() {
           </div>
           <div
             className="h-px"
-            style={{ background: "rgba(201,169,110,.06)" }}
+            style={{ background: "rgba(201,169,110,.07)" }}
           />
         </div>
 
@@ -573,14 +603,14 @@ export default function PortfolioPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="col-span-12 mt-2 grid grid-cols-1 md:grid-cols-2 rounded-sm overflow-hidden border"
-            style={{ borderColor: "rgba(201,169,110,.1)" }}
+            style={{ borderColor: C.border }}
           >
             {/* Left */}
             <div
               className="p-14 md:p-16 flex flex-col justify-between border-r"
               style={{
-                background: "#0d0d11",
-                borderColor: "rgba(201,169,110,.08)",
+                background: C.bgCard,
+                borderColor: "rgba(201,169,110,.09)",
               }}
             >
               <div>
@@ -589,16 +619,16 @@ export default function PortfolioPage() {
                   className="font-display font-light italic leading-[0.88] tracking-tight mt-6 mb-6"
                   style={{
                     fontSize: "clamp(2.6rem,3.8vw,4.2rem)",
-                    color: "#f0e8db",
+                    color: C.textPrimary,
                   }}
                 >
                   Let's build
                   <br />
-                  <span style={{ color: "#C9A96E" }}>something together.</span>
+                  <span style={{ color: C.gold }}>something together.</span>
                 </h3>
                 <p
                   className="font-ui font-light text-sm leading-relaxed max-w-sm"
-                  style={{ color: "#5e5666" }}
+                  style={{ color: C.textSecondary }}
                 >
                   React & JavaScript developer based in Dhaka — available for
                   freelance projects, full-time roles, and open-source
@@ -611,8 +641,8 @@ export default function PortfolioPage() {
                 rel="noopener noreferrer"
                 className="gh-btn mt-12 self-start inline-flex items-center gap-4 font-mono-alt text-[9px] tracking-[0.3em] uppercase px-8 py-4 rounded-sm border cursor-pointer no-underline transition-all duration-300"
                 style={{
-                  color: "#5e5666",
-                  borderColor: "rgba(201,169,110,.18)",
+                  color: C.textSecondary,
+                  borderColor: "rgba(201,169,110,.2)",
                   background: "transparent",
                 }}
               >
@@ -624,7 +654,7 @@ export default function PortfolioPage() {
             {/* Right — gold */}
             <div
               className="p-14 md:p-16 flex flex-col justify-between"
-              style={{ background: "#C9A96E" }}
+              style={{ background: C.gold }}
             >
               <div>
                 {[
@@ -652,23 +682,23 @@ export default function PortfolioPage() {
                   <div
                     key={i}
                     className="flex items-center justify-between py-4 border-b last:border-b-0"
-                    style={{ borderColor: "rgba(10,10,14,.11)" }}
+                    style={{ borderColor: "rgba(7,16,31,.13)" }}
                   >
                     <div>
                       <span
                         className="font-ui text-sm font-semibold block"
-                        style={{ color: "#0a0a0e" }}
+                        style={{ color: "#07101f" }}
                       >
                         {label}
                       </span>
                       <span
                         className="font-mono-alt text-[8px] tracking-widest"
-                        style={{ color: "rgba(10,10,14,.42)" }}
+                        style={{ color: "rgba(7,16,31,.45)" }}
                       >
                         {detail}
                       </span>
                     </div>
-                    <Plus size={12} color="rgba(10,10,14,.3)" />
+                    <Plus size={12} color="rgba(7,16,31,.3)" />
                   </div>
                 ))}
               </div>
@@ -676,7 +706,7 @@ export default function PortfolioPage() {
                 className="font-display italic mt-8 leading-snug"
                 style={{
                   fontSize: "clamp(1.2rem,2vw,1.6rem)",
-                  color: "rgba(10,10,14,.35)",
+                  color: "rgba(7,16,31,.38)",
                 }}
               >
                 "Build it real. Ship it clean. Make it count."
@@ -689,7 +719,7 @@ export default function PortfolioPage() {
       {/* ══════════ STATS ══════════ */}
       <section
         className="px-8 md:px-16 py-24 border-t max-w-[1600px] mx-auto"
-        style={{ borderColor: "rgba(201,169,110,.07)" }}
+        style={{ borderColor: C.borderSm }}
       >
         <div className="flex items-center gap-4 mb-16">
           <GoldBar />
@@ -697,7 +727,7 @@ export default function PortfolioPage() {
         </div>
         <div
           className="grid grid-cols-2 md:grid-cols-4 border-l"
-          style={{ borderColor: "rgba(201,169,110,.1)" }}
+          style={{ borderColor: "rgba(201,169,110,.11)" }}
         >
           {[
             { v: "7", l: "Featured Projects" },
@@ -716,13 +746,13 @@ export default function PortfolioPage() {
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="stat-item px-8 md:px-10 py-12 border-r border-b md:border-b-0"
-              style={{ borderColor: "rgba(201,169,110,.08)" }}
+              style={{ borderColor: "rgba(201,169,110,.09)" }}
             >
               <div
                 className="font-display font-bold leading-none tracking-tight mb-4"
                 style={{
                   fontSize: "clamp(2.8rem,4.2vw,4.8rem)",
-                  color: "#f0e8db",
+                  color: C.textPrimary,
                 }}
               >
                 {v}
@@ -730,7 +760,7 @@ export default function PortfolioPage() {
               <div className="flex items-center gap-2">
                 <div
                   className="w-[5px] h-[5px] rounded-full shrink-0"
-                  style={{ background: "#C9A96E" }}
+                  style={{ background: C.gold }}
                 />
                 <Label>{l}</Label>
               </div>
@@ -742,7 +772,7 @@ export default function PortfolioPage() {
       {/* ══════════ TECH STACK ══════════ */}
       <section
         className="px-8 md:px-16 py-24 border-t max-w-[1600px] mx-auto"
-        style={{ borderColor: "rgba(201,169,110,.07)" }}
+        style={{ borderColor: C.borderSm }}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           {/* Left — sticky */}
@@ -755,16 +785,16 @@ export default function PortfolioPage() {
               className="font-display font-light leading-[0.87] tracking-tight mb-10"
               style={{
                 fontSize: "clamp(2.8rem,4.8vw,5.2rem)",
-                color: "#f0e8db",
+                color: C.textPrimary,
               }}
             >
               Tools of
               <br />
-              <em style={{ color: "#C9A96E" }}>the craft.</em>
+              <em style={{ color: C.gold }}>the craft.</em>
             </h2>
             <p
               className="font-ui font-light text-sm md:text-base leading-relaxed max-w-sm"
-              style={{ color: "#5e5666" }}
+              style={{ color: C.textSecondary }}
             >
               Rooted in the JavaScript ecosystem — from pixel-perfect React UIs
               to API-connected full-stack applications across diverse real-world
@@ -808,19 +838,19 @@ export default function PortfolioPage() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.09, duration: 0.7 }}
                 className="flex gap-8 py-8 border-b group cursor-default"
-                style={{ borderColor: "rgba(201,169,110,.07)" }}
+                style={{ borderColor: "rgba(201,169,110,.08)" }}
               >
                 <Label>{n}</Label>
                 <div>
                   <p
                     className="font-ui text-sm font-semibold mb-2 transition-colors duration-300 group-hover:text-[#C9A96E]"
-                    style={{ color: "#f0e8db", fontWeight: 600 }}
+                    style={{ color: C.textPrimary, fontWeight: 600 }}
                   >
                     {t}
                   </p>
                   <p
                     className="font-ui font-light text-sm leading-relaxed"
-                    style={{ color: "#5e5666" }}
+                    style={{ color: C.textSecondary }}
                   >
                     {d}
                   </p>
