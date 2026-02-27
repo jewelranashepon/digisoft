@@ -2,6 +2,10 @@ export interface ServiceDetail {
   id: string;
   title: string;
   description: string;
+  meta?: {
+    title: string;
+    description: string;
+  };
   heroSection: {
     badge: string;
     heading: string;
@@ -91,6 +95,12 @@ export const doctorSeoService: ServiceDetail = {
   id: "doctor-seo",
   title: "Doctor SEO",
   description: "Medical SEO to attract more patients.",
+  // ✅ ADD THIS
+  meta: {
+    title: "SEO For Doctors | Local SEO for Doctors and Medical Clinics",
+    description:
+      "Grow your medical practice with expert SEO for doctors. We help clinics rank locally, attract patients, and increase appointments. Get in touch with us today!",
+  },
   heroSection: {
     badge: "🏥 Doctor SEO Services",
     heading: "Data-Driven & AI-Powered SEO Strategies for Doctors",
@@ -395,6 +405,11 @@ export const cleaningSeoService: ServiceDetail = {
   title: "Cleaning SEO",
   description:
     "SEO services to grow cleaning businesses with more calls and bookings.",
+  meta: {
+    title: "Cleaning Company SEO Agency | Local SEO for House Cleaners",
+    description:
+      "Grow your cleaning business with expert cleaning company SEO services. We help house cleaners rank higher in local search, attract more clients, and increase bookings fast. Contact us today!",
+  },
 
   heroSection: {
     badge: "🧹 Cleaning SEO Services",
@@ -691,6 +706,12 @@ export const accountingWebDesignService: ServiceDetail = {
   title: "Accounting Web Design",
   description:
     "Professional web design services to help accounting firms attract clients, build trust, and grow online.",
+  meta: {
+    title:
+      "Accounting Website Design | Web Design for Accounting Firms | Codexa Digital",
+    description:
+      "Codexa Digital provides custom web design and development services for accounting firms. We create fast, secure, and professional accounting websites that build trust and generate enquiries. Reach out to us today!",
+  },
 
   heroSection: {
     badge: "📊 Accounting Web Design Services",
@@ -994,7 +1015,11 @@ export const tourismWebDesignService: ServiceDetail = {
   title: "Tourism Web Design",
   description:
     "Engaging web design services to help tourism and travel businesses attract travelers and increase bookings.",
-
+  meta: {
+    title: "Tourism Website Design | Travel & Tourism Websites",
+    description:
+      "Codexa Digital specialises in travel and tourism website design, crafting engaging and high-performing websites for tour operators, travel agencies, and hospitality businesses. Get your tourism website built today!",
+  },
   heroSection: {
     badge: "🌍 Tourism Web Design Services",
     heading: "Engaging Web Design for",
@@ -1297,6 +1322,12 @@ export const dentistWebDesignService: ServiceDetail = {
   title: "Dentist Web Design",
   description:
     "Patient-focused web design services to help dentists and dental clinics attract more patients and increase appointment bookings.",
+  meta: {
+    title:
+      "Dentist Web Design Services | Dental Website Design Company | Codexa Digital",
+    description:
+      "Codexa Digital provides professional dental website design services for dentists and clinics. We create modern, fast, and patient-focused websites that attract new patients and help your practice grow online. Contact us today!",
+  },
 
   heroSection: {
     badge: "🦷 Dentist Web Design Services",
@@ -1599,6 +1630,11 @@ export const lawFirmWebDesignService: ServiceDetail = {
   title: "Law Firm Web Design",
   description:
     "Professional web design services to help law firms and legal professionals build trust, authority, and attract more qualified client enquiries.",
+  meta: {
+    title: "Law Firm Web Design | Web Design for Law Firms | Codexa Digital",
+    description:
+      "Codexa Digital builds professional, intuitive, and secure websites for law firms. Our web design services help legal practices generate quality leads, build trust, and grow online. Contact us today to start your law firm website.",
+  },
 
   heroSection: {
     badge: "⚖️ Law Firm Web Design Services",
@@ -2174,7 +2210,8 @@ export const seoOptimisationService: ServiceDetail = {
           "SEO does not give instant results. Most websites start seeing improvements in traffic and rankings within 3 to 6 months. Strong and lasting results grow over time as your website gains trust and authority.",
       },
       {
-        question: "How can I check if SEO is working for my business or product?",
+        question:
+          "How can I check if SEO is working for my business or product?",
         answer:
           "You can track SEO success by checking website traffic, keyword rankings, enquiries, calls, and form submissions. If more people are finding your site and taking action, your SEO is working.",
       },
@@ -2212,6 +2249,12 @@ export const ndisWebDesignService: ServiceDetail = {
   title: "NDIS Web Design",
   description:
     "Professional NDIS website design and development services for providers. Build trust, improve accessibility, and increase enquiries with a clear and easy-to-use website.",
+  meta: {
+    title:
+      "Best NDIS Website Design | Affordable NDIS Web Design | Codexa Digital",
+    description:
+      "Custom NDIS website design and development focused on accessibility, clear messaging, and real results for NDIS providers across Australia. Get your own professional NDIS website today!",
+  },
 
   heroSection: {
     badge: "🌐 NDIS Website Design Services",
@@ -2533,6 +2576,11 @@ export const cleaningWebDesignService: ServiceDetail = {
   description:
     "Professional cleaning company website design services. Build trust, improve visibility, and convert visitors into booked clients with a user-friendly, mobile-friendly website.",
 
+  meta: {
+    title: "Cleaning Company Website Design | Professional Cleaning Websites",
+    description:
+      "Looking for a high-converting cleaning company website? We design professional, mobile-friendly, and SEO-optimised websites that help cleaning businesses generate leads and grow faster. Get started today!",
+  },
   heroSection: {
     badge: "🌟 Cleaning Website Design Services",
     heading: "We Provide World Class",
@@ -2829,6 +2877,11 @@ export const doctorWebDesignService: ServiceDetail = {
   description:
     "Professional doctor and healthcare website design services. Build trust, improve visibility, and convert visitors into patients with a patient-friendly, mobile-responsive website.",
 
+  meta: {
+    title: "Medical & Doctor Web Design | Healthcare Website Design Experts",
+    description:
+      "Looking for a professional medical website? We design secure, modern, and SEO-optimised websites for doctors and healthcare practices to attract more patients and grow online. Contact us today!",
+  },
   heroSection: {
     badge: "🏥 Doctor Website Design Services",
     heading: "Modern & Patient-Focused Web Design",
@@ -3118,6 +3171,11 @@ export const restaurantWebDesignService: ServiceDetail = {
   description:
     "Professional web design for restaurants, cafes, bars, and food businesses. Improve visibility, engage visitors, and convert them into loyal customers with modern, mobile-friendly websites.",
 
+  meta: {
+    title: "Restaurant Web Design Services | Restaurant & Cafe Website Experts",
+    description:
+      "Looking for a high-converting restaurant website? We design modern, fast, and mobile-friendly websites for restaurants and cafes to increase bookings and grow your brand. Start your project today!",
+  },
   heroSection: {
     badge: "🍽️ Restaurant Website Design Services",
     heading: "Modern & Engaging Web Design",
@@ -3410,7 +3468,6 @@ export const restaurantWebDesignService: ServiceDetail = {
   },
 };
 
-
 // Seo Service Section Data Start Here:
 export const ndisSeoService: ServiceDetail = {
   id: "ndis-seo",
@@ -3418,6 +3475,11 @@ export const ndisSeoService: ServiceDetail = {
   description:
     "Result-focused SEO services for NDIS providers to increase visibility, attract participant enquiries, and achieve long-term growth through local and strategic SEO.",
 
+  meta: {
+    title: "NDIS SEO Services | SEO for NDIS Providers in Australia",
+    description:
+      "Looking to attract more NDIS participants? Our specialised NDIS SEO services help providers rank higher in Google, increase enquiries, and grow sustainably. Book your free strategy call today!",
+  },
   heroSection: {
     badge: "🌱 Grow Your NDIS Business with Digital Marketing",
     heading: "NDIS SEO Services",
@@ -3673,7 +3735,8 @@ export const ndisSeoService: ServiceDetail = {
           "Most people search online for NDIS services. Good SEO increases visibility, trust, and enquiries.",
       },
       {
-        question: "3. What marketing methods work best for NDIS service providers?",
+        question:
+          "3. What marketing methods work best for NDIS service providers?",
         answer:
           "The best marketing methods for NDIS providers include NDIS SEO, local SEO, a clear website, and good online reviews. These help people find your services easily when they search online.",
       },
@@ -3683,7 +3746,8 @@ export const ndisSeoService: ServiceDetail = {
           "SEO helps your website appear higher on Google. With a good NDIS SEO strategy, more people can find your services, visit your website, and contact you.",
       },
       {
-        question: "5. What digital marketing tips should NDIS providers follow?",
+        question:
+          "5. What digital marketing tips should NDIS providers follow?",
         answer:
           "NDIS providers should: Use simple language on their website, focus on local SEO for NDIS providers, keep their Google Business Profile updated, and ask happy clients for reviews. These steps help build trust and attract enquiries.",
       },
@@ -3711,14 +3775,18 @@ export const ndisSeoService: ServiceDetail = {
   },
 };
 
-
-// Digital Marketing Data Start Here 
+// Digital Marketing Data Start Here
 export const localSeoSmallBusinessService: ServiceDetail = {
   id: "local-seo-small-business",
   title: "Local SEO Services for Small Business",
   description:
     "Affordable and proven Local SEO services to help small businesses in Australia appear on Google, attract nearby customers, and grow steadily.",
 
+  meta: {
+    title: "Local SEO Services for Small Businesses | Codexa Digital",
+    description:
+      "Want more local customers? Our local SEO services help small businesses rank higher in Google Maps and local search results. Get discovered by people near you and grow faster. Start today!",
+  },
   heroSection: {
     badge: "🚀 Boost Your Small Business with Local SEO",
     heading: "Local SEO Services",
@@ -3982,7 +4050,8 @@ export const localSeoSmallBusinessService: ServiceDetail = {
           "Most small businesses spend a small monthly amount. The cost depends on your goals, location, and competition, but local SEO is usually affordable.",
       },
       {
-        question: "What is the 80/20 rule in SEO, and how can small businesses use it?",
+        question:
+          "What is the 80/20 rule in SEO, and how can small businesses use it?",
         answer:
           "The 80/20 rule means that a few SEO actions bring most results. Small businesses should focus on the most important keywords, pages, and local searches.",
       },
@@ -4021,6 +4090,11 @@ export const ecommerceSeoService: ServiceDetail = {
   description:
     "Result-driven eCommerce SEO services to help online stores grow traffic, increase sales, and build long-term brand visibility on Google.",
 
+  meta: {
+    title: "eCommerce SEO Services | Online Store SEO Experts",
+    description:
+      "Struggling to grow your online store? Our data-driven eCommerce SEO services help increase traffic, improve product rankings, and drive more sales. Get your free strategy session today!",
+  },
   heroSection: {
     badge: "🛒 eCommerce SEO Marketing",
     heading: "Get Your Online Store",
@@ -4256,7 +4330,8 @@ export const ecommerceSeoService: ServiceDetail = {
       "Authority Building & Backlinks",
       "Sales & Conversion Tracking",
     ],
-    quote: "We help online businesses turn search visibility into actual sales and checkouts.",
+    quote:
+      "We help online businesses turn search visibility into actual sales and checkouts.",
     image: "/images/ecommerce-team.jpg",
     ctaHeading: "Book Your Free eCommerce SEO Consultation Today!",
     ctaDescription:
@@ -4269,27 +4344,33 @@ export const ecommerceSeoService: ServiceDetail = {
     items: [
       {
         question: "What does eCommerce SEO do?",
-        answer: "It improves product and category rankings on Google to increase sales and visibility for your online store.",
+        answer:
+          "It improves product and category rankings on Google to increase sales and visibility for your online store.",
       },
       {
         question: "Is SEO important for online stores?",
-        answer: "Yes. SEO helps customers find your products without you having to pay for every single click through advertising.",
+        answer:
+          "Yes. SEO helps customers find your products without you having to pay for every single click through advertising.",
       },
       {
         question: "How long before results appear?",
-        answer: "Most stores see progress in 3–6 months, with stronger and more sustainable results growing over time.",
+        answer:
+          "Most stores see progress in 3–6 months, with stronger and more sustainable results growing over time.",
       },
       {
         question: "How can I track SEO success?",
-        answer: "You can track success through keyword rankings, organic traffic, product clicks, and actual sales/enquiries.",
+        answer:
+          "You can track success through keyword rankings, organic traffic, product clicks, and actual sales/enquiries.",
       },
       {
         question: "Does eCommerce SEO work on mobile?",
-        answer: "Yes. In fact, it is essential. Mobile-friendly stores rank significantly better and convert more customers.",
+        answer:
+          "Yes. In fact, it is essential. Mobile-friendly stores rank significantly better and convert more customers.",
       },
       {
         question: "Should SEO be updated regularly?",
-        answer: "Yes. Ongoing updates are required to keep your store competitive, visible, and aligned with search engine changes.",
+        answer:
+          "Yes. Ongoing updates are required to keep your store competitive, visible, and aligned with search engine changes.",
       },
     ],
   },
@@ -4453,13 +4534,18 @@ const placeholderService = (
   },
 });
 
-
 export const searchEngineMarketingService: ServiceDetail = {
   id: "search-engine-marketing",
   title: "Search Engine Marketing (SEM) Services",
   description:
     "Increase visibility, traffic, and sales through smart paid and organic search strategies designed for fast and measurable results.",
 
+  meta: {
+    title:
+      "Trusted Search Engine Marketing Agency | SEM Experts | Codexa Digital",
+    description:
+      "Drive more leads and clicks with our expert search engine marketing services. We create high-performing SEM campaigns that help your business reach the right customers fast. Contact Codexa Digital today!",
+  },
   heroSection: {
     badge: "🚀 SEM & Paid Search Experts",
     heading: "Grow Faster Online with Powerful",
@@ -4695,7 +4781,8 @@ export const searchEngineMarketingService: ServiceDetail = {
       "Conversion Tracking Setup",
       "Competitor Ad Analysis",
     ],
-    quote: "We turn your marketing budget into a powerful tool for customer acquisition and growth.",
+    quote:
+      "We turn your marketing budget into a powerful tool for customer acquisition and growth.",
     image: "/images/sem-team-collaboration.jpg",
     ctaHeading: "Book Your Free SEM Consultation Today!",
     ctaDescription:
@@ -4708,44 +4795,52 @@ export const searchEngineMarketingService: ServiceDetail = {
     items: [
       {
         question: "What is Search Engine Marketing (SEM)?",
-        answer: "SEM uses paid ads to help your business appear on Google search results quickly, targeting specific keywords and audiences.",
+        answer:
+          "SEM uses paid ads to help your business appear on Google search results quickly, targeting specific keywords and audiences.",
       },
       {
         question: "Is SEM better than SEO?",
-        answer: "SEM delivers faster results, while SEO builds long-term organic growth. Using both together usually provides the best overall visibility.",
+        answer:
+          "SEM delivers faster results, while SEO builds long-term organic growth. Using both together usually provides the best overall visibility.",
       },
       {
         question: "How soon can SEM show results?",
-        answer: "Most campaigns show results within days once the ads go live and are approved by the search platform.",
+        answer:
+          "Most campaigns show results within days once the ads go live and are approved by the search platform.",
       },
       {
         question: "How do I track SEM success?",
-        answer: "You can track success through clicks, cost-per-lead, total sales, and your return on ad spend (ROAS).",
+        answer:
+          "You can track success through clicks, cost-per-lead, total sales, and your return on ad spend (ROAS).",
       },
       {
         question: "Does SEM work on mobile devices?",
-        answer: "Yes. In fact, the majority of SEM traffic today comes from mobile users, so we optimise all campaigns for phones.",
+        answer:
+          "Yes. In fact, the majority of SEM traffic today comes from mobile users, so we optimise all campaigns for phones.",
       },
       {
         question: "Should SEM campaigns be updated regularly?",
-        answer: "Yes. Regular updates, bid adjustments, and ad testing help improve performance and reduce your overall costs.",
+        answer:
+          "Yes. Regular updates, bid adjustments, and ad testing help improve performance and reduce your overall costs.",
       },
       {
         question: "Is Search Engine Marketing the Same as SEO or Paid Search?",
-        answer: "SEM mainly focuses on paid search ads (PPC). SEO is different because it improves organic rankings without paying for clicks. A complete strategy uses both.",
+        answer:
+          "SEM mainly focuses on paid search ads (PPC). SEO is different because it improves organic rankings without paying for clicks. A complete strategy uses both.",
       },
       {
         question: "Is Google Ads Part of Search Engine Marketing?",
-        answer: "Yes. Google Ads is the most popular tool for SEM, allowing businesses to show ads at the top of search results and on partner websites.",
+        answer:
+          "Yes. Google Ads is the most popular tool for SEM, allowing businesses to show ads at the top of search results and on partner websites.",
       },
       {
         question: "How Do I Choose a Search Engine Marketing Agency?",
-        answer: "Look for a trusted agency with proven results. Ensure they offer keyword research, transparent tracking, and ongoing optimisation by experienced consultants.",
+        answer:
+          "Look for a trusted agency with proven results. Ensure they offer keyword research, transparent tracking, and ongoing optimisation by experienced consultants.",
       },
     ],
   },
 };
-
 
 export const contentMarketingService: ServiceDetail = {
   id: "content-marketing",
@@ -4753,6 +4848,11 @@ export const contentMarketingService: ServiceDetail = {
   description:
     "Grow your brand and build trust with expert content marketing strategies designed to improve visibility, engagement, and conversions.",
 
+  meta: {
+    title: "Content Marketing Agency | Content Strategy & SEO Experts",
+    description:
+      "Looking to grow through content? We create SEO-focused blogs, website copy, and strategic content marketing campaigns that attract traffic, build authority, and convert customers. Get started today!",
+  },
   heroSection: {
     badge: "✍️ Expert Content Marketing",
     heading: "Grow Your Brand with",
@@ -4988,7 +5088,8 @@ export const contentMarketingService: ServiceDetail = {
       "Social Media Content",
       "Email Marketing Content",
     ],
-    quote: "Helpful content is the bridge that turns a stranger into a loyal customer.",
+    quote:
+      "Helpful content is the bridge that turns a stranger into a loyal customer.",
     image: "/images/content-team-working.jpg",
     ctaHeading: "Book Your Free Content Marketing Consultation Today!",
     ctaDescription:
@@ -5001,36 +5102,42 @@ export const contentMarketingService: ServiceDetail = {
     items: [
       {
         question: "What is content marketing?",
-        answer: "Content marketing involves creating and sharing valuable blogs, guides, and posts to attract, educate, and convert your target audience.",
+        answer:
+          "Content marketing involves creating and sharing valuable blogs, guides, and posts to attract, educate, and convert your target audience.",
       },
       {
         question: "Is content marketing better than SEO?",
-        answer: "SEO helps you rank in search results, while content marketing engages and converts those visitors. Together, they are the key to long-term growth.",
+        answer:
+          "SEO helps you rank in search results, while content marketing engages and converts those visitors. Together, they are the key to long-term growth.",
       },
       {
         question: "How soon can I see results?",
-        answer: "Content marketing usually shows measurable results in 3–6 months, as search engines index your content and your brand authority grows.",
+        answer:
+          "Content marketing usually shows measurable results in 3–6 months, as search engines index your content and your brand authority grows.",
       },
       {
         question: "How do I measure success?",
-        answer: "We track metrics like organic traffic, social shares, time-on-page, leads generated, and total conversions.",
+        answer:
+          "We track metrics like organic traffic, social shares, time-on-page, leads generated, and total conversions.",
       },
       {
         question: "Does content marketing work on mobile devices?",
-        answer: "Yes. Mobile-friendly content is essential for reaching readers where they are and is a major ranking factor for Google.",
+        answer:
+          "Yes. Mobile-friendly content is essential for reaching readers where they are and is a major ranking factor for Google.",
       },
       {
         question: "Should content marketing strategies be updated regularly?",
-        answer: "Yes. Updating older content keeps it relevant for users and helps maintain high search rankings as information changes.",
+        answer:
+          "Yes. Updating older content keeps it relevant for users and helps maintain high search rankings as information changes.",
       },
       {
         question: "How do I choose a content marketing agency?",
-        answer: "Look for an agency with proven results, a clear data-driven strategy, strong SEO skills, and a commitment to ongoing optimisation.",
+        answer:
+          "Look for an agency with proven results, a clear data-driven strategy, strong SEO skills, and a commitment to ongoing optimisation.",
       },
     ],
   },
 };
-
 
 export const socialMediaMarketingService: ServiceDetail = {
   id: "social-media-marketing",
@@ -5038,6 +5145,11 @@ export const socialMediaMarketingService: ServiceDetail = {
   description:
     "Grow your brand awareness, engagement, and sales across major platforms with data-driven social media marketing and professional management.",
 
+  meta: {
+    title: "Social Media Marketing Agency Australia | SMM Experts",
+    description:
+      "Looking to grow your brand on social media? Our Australia-based SMM experts create high-converting ad campaigns, engaging content, and data-driven strategies that deliver real business results. Get started today!",
+  },
   heroSection: {
     badge: "📱 Social Media Marketing That Helps Your Business Grow",
     heading: "Social Media Marketing",
@@ -5273,7 +5385,8 @@ export const socialMediaMarketingService: ServiceDetail = {
       "Brand Growth & Engagement",
       "Competitor Social Analysis",
     ],
-    quote: "Social media is about building a community around your brand, not just broadcasting ads.",
+    quote:
+      "Social media is about building a community around your brand, not just broadcasting ads.",
     image: "/images/social-media-team.jpg",
     ctaHeading: "Book Your Free Social Media Marketing Consultation Today!",
     ctaDescription:
@@ -5286,36 +5399,43 @@ export const socialMediaMarketingService: ServiceDetail = {
     items: [
       {
         question: "What is social media marketing?",
-        answer: "It uses social platforms like Facebook and Instagram to promote your brand, connect with customers, and grow sales.",
+        answer:
+          "It uses social platforms like Facebook and Instagram to promote your brand, connect with customers, and grow sales.",
       },
       {
         question: "Is social media marketing good for small businesses?",
-        answer: "Yes. Social media marketing for small business helps reach highly targeted customers with much lower budgets than traditional ads.",
+        answer:
+          "Yes. Social media marketing for small business helps reach highly targeted customers with much lower budgets than traditional ads.",
       },
       {
         question: "How long before I see results?",
-        answer: "Most businesses see a boost in engagement within weeks and stronger results in leads and sales within 2–3 months.",
+        answer:
+          "Most businesses see a boost in engagement within weeks and stronger results in leads and sales within 2–3 months.",
       },
       {
         question: "Do you manage ads and content?",
-        answer: "Yes. Our full social media management includes professional content creation, regular posting, and paid ad management.",
+        answer:
+          "Yes. Our full social media management includes professional content creation, regular posting, and paid ad management.",
       },
       {
         question: "Does social media marketing work on mobile?",
-        answer: "Absolutely. Most users browse social media on mobile, so all our campaigns are designed to be mobile-friendly.",
+        answer:
+          "Absolutely. Most users browse social media on mobile, so all our campaigns are designed to be mobile-friendly.",
       },
       {
         question: "Do I need a social media marketing consultant?",
-        answer: "A consultant helps create the right plan, target the right audience, and improve results, saving you time and money.",
+        answer:
+          "A consultant helps create the right plan, target the right audience, and improve results, saving you time and money.",
       },
       {
-        question: "What is the difference between social media management and advertising?",
-        answer: "Management is about organic posting and engaging with followers. Advertising uses paid budgets to reach new people faster. Both work together for growth.",
+        question:
+          "What is the difference between social media management and advertising?",
+        answer:
+          "Management is about organic posting and engaging with followers. Advertising uses paid budgets to reach new people faster. Both work together for growth.",
       },
     ],
   },
 };
-
 
 export const emailMarketingService: ServiceDetail = {
   id: "email-marketing",
@@ -5323,6 +5443,12 @@ export const emailMarketingService: ServiceDetail = {
   description:
     "Nurture leads, retain customers, and drive consistent sales with data-driven and AI-powered email marketing strategies.",
 
+  meta: {
+    title:
+      "Email Marketing Services | Professional Email Marketing & Newsletters",
+    description:
+      "Boost engagement and conversions with our professional email marketing services. From strategy and content creation to automation and newsletters, we help turn subscribers into loyal customers.",
+  },
   heroSection: {
     badge: "📧 AI-Powered Email Marketing",
     heading: "Data-Driven & AI-Powered",
@@ -5558,7 +5684,8 @@ export const emailMarketingService: ServiceDetail = {
       "Newsletter Design & Management",
       "E-commerce Retention Flows",
     ],
-    quote: "Email is the only channel where you truly own the connection with your audience.",
+    quote:
+      "Email is the only channel where you truly own the connection with your audience.",
     image: "/images/email-campaign-team.jpg",
     ctaHeading: "Ready to Boost Your Email ROI?",
     ctaDescription:
@@ -5607,7 +5734,6 @@ export const emailMarketingService: ServiceDetail = {
     ],
   },
 };
-
 
 export const accountingSeoService: ServiceDetail = {
   id: "accounting-seo",
@@ -5883,7 +6009,8 @@ export const accountingSeoService: ServiceDetail = {
           "SEO increases organic traffic, supports brand credibility, and generates qualified leads that complement other marketing channels.",
       },
       {
-        question: "What is digital marketing, and why is it important for accountants?",
+        question:
+          "What is digital marketing, and why is it important for accountants?",
         answer:
           "Digital marketing includes SEO, PPC, content marketing, email campaigns, and social media. It helps accounting firms grow online visibility and attract clients efficiently.",
       },
@@ -5910,7 +6037,6 @@ export const accountingSeoService: ServiceDetail = {
     ],
   },
 };
-
 
 // Website Development Services
 export const laravelWebsiteService: ServiceDetail = {
@@ -6169,7 +6295,8 @@ export const laravelWebsiteService: ServiceDetail = {
           "Laravel website development is the process of building secure and scalable web applications using the Laravel PHP framework.",
       },
       {
-        question: "Why should I choose Laravel for web application development?",
+        question:
+          "Why should I choose Laravel for web application development?",
         answer:
           "Laravel offers strong security, clean architecture, scalability, and excellent performance, making it ideal for modern web applications.",
       },
@@ -6202,14 +6329,17 @@ export const laravelWebsiteService: ServiceDetail = {
   },
 };
 
-
-
 export const customWebsiteService: ServiceDetail = {
   id: "custom-website",
   title: "Custom Website Development Services",
   description:
     "Professional Custom Website Development Services designed to help businesses stand out online, improve credibility, and drive conversions through high-quality, scalable, and SEO-friendly websites.",
 
+  meta: {
+    title: "Custom Website Development Company | Bespoke Web Solutions",
+    description:
+      "We build bespoke, high-performance custom websites designed for scalability, SEO, and conversions. Partner with Codexa Digital for a powerful online presence tailored to your business.",
+  },
   heroSection: {
     badge: "💻 Custom Website Development Services",
     heading: "Custom Website",
@@ -6460,7 +6590,8 @@ export const customWebsiteService: ServiceDetail = {
           "Custom website development is the process of designing and building a website specifically for your business goals, users, and requirements without using pre-built templates.",
       },
       {
-        question: "Why should I choose custom website design instead of a template?",
+        question:
+          "Why should I choose custom website design instead of a template?",
         answer:
           "Custom websites offer better performance, flexibility, branding control, SEO, and scalability compared to template-based websites.",
       },
@@ -6504,6 +6635,11 @@ export const wordPressWebsiteService: ServiceDetail = {
   description:
     "Professional WordPress Website Development Services designed to build fast, secure, and scalable websites that help businesses grow online, improve visibility, and convert visitors into customers.",
 
+  meta: {
+    title: "WordPress Website Development Company | WP Experts",
+    description:
+      "Looking for a powerful WordPress website? Our WordPress experts design responsive, high-performing, and scalable websites that attract customers and boost conversions. Start your project today!",
+  },
   heroSection: {
     badge: "🧩 WordPress Website Development Services",
     heading: "Professional WordPress",
@@ -6589,63 +6725,62 @@ export const wordPressWebsiteService: ServiceDetail = {
     ],
   },
 
- processSection: {
-  heading: "Our Step-by-Step",
-  headingHighlight: "WordPress Development Process",
-  description:
-    "A clear and structured WordPress development process designed to deliver performance, usability, security, and long-term business growth.",
-  steps: [
-    {
-      icon: "search",
-      title: "Discovery & Requirements Analysis",
-      description:
-        "We start by understanding your business goals, target audience, content needs, and competitors to define the right WordPress strategy.",
-      color: "text-emerald-600",
-      bg: "bg-emerald-50",
-    },
-    {
-      icon: "layout",
-      title: "Website Structure & Planning",
-      description:
-        "We plan the site structure, page hierarchy, and content flow to ensure a strong user experience and SEO-friendly foundation.",
-      color: "text-blue-600",
-      bg: "bg-blue-50",
-    },
-    {
-      icon: "pen-tool",
-      title: "Custom Design & UI Development",
-      description:
-        "Custom WordPress designs are created to match your brand identity, improve engagement, and support conversions.",
-      color: "text-purple-600",
-      bg: "bg-purple-50",
-    },
-    {
-      icon: "code",
-      title: "WordPress Development & Integration",
-      description:
-        "We develop the website using clean code, custom themes or plugins, and integrate required features and functionality.",
-      color: "text-orange-600",
-      bg: "bg-orange-50",
-    },
-    {
-      icon: "check-circle",
-      title: "Testing & Quality Assurance",
-      description:
-        "Thorough testing across browsers and devices ensures speed, security, responsiveness, and stable performance before launch.",
-      color: "text-pink-600",
-      bg: "bg-pink-50",
-    },
-    {
-      icon: "rocket",
-      title: "Launch & Ongoing Optimisation",
-      description:
-        "After launch, we monitor performance, apply optimisations, and provide support to keep your WordPress site growing.",
-      color: "text-cyan-600",
-      bg: "bg-cyan-50",
-    },
-  ],
-},
-
+  processSection: {
+    heading: "Our Step-by-Step",
+    headingHighlight: "WordPress Development Process",
+    description:
+      "A clear and structured WordPress development process designed to deliver performance, usability, security, and long-term business growth.",
+    steps: [
+      {
+        icon: "search",
+        title: "Discovery & Requirements Analysis",
+        description:
+          "We start by understanding your business goals, target audience, content needs, and competitors to define the right WordPress strategy.",
+        color: "text-emerald-600",
+        bg: "bg-emerald-50",
+      },
+      {
+        icon: "layout",
+        title: "Website Structure & Planning",
+        description:
+          "We plan the site structure, page hierarchy, and content flow to ensure a strong user experience and SEO-friendly foundation.",
+        color: "text-blue-600",
+        bg: "bg-blue-50",
+      },
+      {
+        icon: "pen-tool",
+        title: "Custom Design & UI Development",
+        description:
+          "Custom WordPress designs are created to match your brand identity, improve engagement, and support conversions.",
+        color: "text-purple-600",
+        bg: "bg-purple-50",
+      },
+      {
+        icon: "code",
+        title: "WordPress Development & Integration",
+        description:
+          "We develop the website using clean code, custom themes or plugins, and integrate required features and functionality.",
+        color: "text-orange-600",
+        bg: "bg-orange-50",
+      },
+      {
+        icon: "check-circle",
+        title: "Testing & Quality Assurance",
+        description:
+          "Thorough testing across browsers and devices ensures speed, security, responsiveness, and stable performance before launch.",
+        color: "text-pink-600",
+        bg: "bg-pink-50",
+      },
+      {
+        icon: "rocket",
+        title: "Launch & Ongoing Optimisation",
+        description:
+          "After launch, we monitor performance, apply optimisations, and provide support to keep your WordPress site growing.",
+        color: "text-cyan-600",
+        bg: "bg-cyan-50",
+      },
+    ],
+  },
 
   whyChooseUs: {
     heading: "Why Choose Us for",
@@ -6815,6 +6950,11 @@ export const webAppService: ServiceDetail = {
   description:
     "Advanced Web Application Development Services designed to build secure, scalable, and high-performance web applications that support complex business operations, user engagement, and long-term digital growth.",
 
+  meta: {
+    title: "Custom Web Application Development Company | Web App Experts",
+    description:
+      "Looking to develop a high-performance web application? Our expert team builds secure, scalable, and user-focused web apps that streamline operations and drive business growth. Start your project today!",
+  },
   heroSection: {
     badge: "⚙️ Web Application Development Services",
     heading: "Custom Web",
@@ -7035,8 +7175,7 @@ export const webAppService: ServiceDetail = {
       },
       {
         title: "Disconnected Tools & Systems",
-        description:
-          "APIs and integrations unify data and workflows.",
+        description: "APIs and integrations unify data and workflows.",
       },
       {
         title: "High Maintenance Costs",
@@ -7114,13 +7253,17 @@ export const webAppService: ServiceDetail = {
   },
 };
 
-
 export const smallBusinessWebsiteService: ServiceDetail = {
   id: "small-business-website",
   title: "Small Business Website Development Services",
   description:
     "Professional Small Business Website Development Services designed to establish a strong online presence, generate leads, and provide a professional digital storefront for local businesses and startups.",
 
+  meta: {
+    title: "Small Business Website Development | Affordable Web Design",
+    description:
+      "Need a website for your small business? We create affordable, high-converting, and mobile-friendly websites designed to increase visibility and bring in more customers. Get started today!",
+  },
   heroSection: {
     badge: "⚡ Affordable & Professional Websites",
     heading: "Small Business",
@@ -7420,14 +7563,17 @@ export const smallBusinessWebsiteService: ServiceDetail = {
   },
 };
 
-
-
 export const shopifyWebsiteService: ServiceDetail = {
   id: "shopify-website",
   title: "Shopify E-commerce Development Services",
   description:
     "Professional Shopify Website Development Services designed to build high-converting, scalable, and secure online stores that drive sales and simplify business management.",
 
+  meta: {
+    title: "Shopify Development Company | Custom Shopify Store Experts",
+    description:
+      "Looking to build a high-converting Shopify store? Our Shopify experts design SEO-friendly, mobile-optimised, and scalable eCommerce websites that drive traffic and boost sales. Start your project today!",
+  },
   heroSection: {
     badge: "🛍️ Expert Shopify Solutions",
     heading: "Custom Shopify",
@@ -7733,6 +7879,12 @@ export const affiliateWebsiteService: ServiceDetail = {
   description:
     "Professional Affiliate Website Development Services focused on building high-traffic, high-conversion niche sites that maximize passive income through strategic design and SEO.",
 
+  meta: {
+    title:
+      "Affiliate Website Development Services | Affiliate Marketing Websites | Codexa Digital",
+    description:
+      "Build a high-performing affiliate marketing website designed for SEO, traffic growth, and passive income. Codexa Digital creates fast, scalable, and conversion-focused affiliate websites that maximise commissions.",
+  },
   heroSection: {
     badge: "💰 Build Your Passive Income Asset",
     heading: "High-Converting",
@@ -8038,6 +8190,11 @@ export const ecommerceWebsiteService: ServiceDetail = {
   description:
     "Professional E-commerce Website Development Services focused on creating secure, high-conversion online stores that streamline shopping experiences and maximize digital revenue.",
 
+  meta: {
+    title: "eCommerce Website Development Company | Online Store Experts",
+    description:
+      "Looking to build a high-converting online store? Our eCommerce experts design scalable, mobile-optimised, and SEO-ready websites that drive traffic and maximise sales. Start your project today!",
+  },
   heroSection: {
     badge: "🛒 Scalable E-commerce Solutions",
     heading: "Custom E-commerce",
@@ -8093,7 +8250,7 @@ export const ecommerceWebsiteService: ServiceDetail = {
         title: "Shipping & Logistics Automation",
         description:
           "Automated shipping rate calculations, label generation, and real-time order tracking integrations with major carriers.",
-      color: "text-purple-600",
+        color: "text-purple-600",
         bg: "bg-purple-50",
       },
       {
@@ -8337,19 +8494,7 @@ export const ecommerceWebsiteService: ServiceDetail = {
   },
 };
 
-
-
-
-
-
-
-
-
-
-
 const lawFirmSeoService = placeholderService("law-firm-seo", "Law Firm SEO");
-
-
 
 const dentistSeoService = placeholderService("dentist-seo", "Dentist SEO");
 const tourismSeoService = placeholderService("tourism-seo", "Tourism SEO");

@@ -11,7 +11,7 @@ import SeoServices from "@/components/services/seo-services";
 import FaqSection from "@/components/services/faq-section";
 
 /* =========================
-   ✅ FIXED METADATA
+   ✅ ENHANCED METADATA-
 ========================= */
 export async function generateMetadata({
   params,
@@ -20,47 +20,76 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = params;
 
-  const service = services.find((s) => s.id === slug);
+  // First find basic service from services array
+  const baseService = services.find((s) => s.id === slug);
 
-  if (!service) {
+  if (!baseService) {
     return {
-      title: "Service Not Found",
+      title: "All Services | Codexa Digital",
       description: "The requested service does not exist.",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
-  const canonicalUrl = `https://codexadigital.com.au/services/${service.id}`;
+  // Now get full details
+  const serviceDetails = getServiceDetails(slug, baseService.title);
+
+  const canonicalUrl = `https://www.codexadigital.com.au/services/${slug}`;
+
+  const description =
+    serviceDetails.meta?.description ||
+    baseService.longDescription ||
+    baseService.description;
+
+  const title =
+    serviceDetails.meta?.title ||
+    `${baseService.title} Services in Australia | Codexa Digital`;
+
+  const imageUrl =
+    serviceDetails.heroSection?.image ||
+    baseService.image ||
+    "https://www.codexadigital.com.au/og-image.jpg";
 
   return {
-    title: `${service.title} | Codexa Digital`,
-    description: service.longDescription || service.description,
+    metadataBase: new URL("https://www.codexadigital.com.au"),
+
+    title,
+    description,
 
     alternates: {
       canonical: canonicalUrl,
     },
 
     openGraph: {
-      title: `${service.title} | Codexa Digital`,
-      description: service.description,
+      title,
+      description,
       url: canonicalUrl,
       siteName: "Codexa Digital",
+      locale: "en_AU",
+      type: "article",
       images: [
         {
-          url: service.image,
+          url: imageUrl,
           width: 1200,
           height: 630,
-          alt: service.title,
+          alt: baseService.title,
         },
       ],
-      locale: "en_AU",
-      type: "website",
     },
 
     twitter: {
       card: "summary_large_image",
-      title: `${service.title} | Codexa Digital`,
-      description: service.description,
-      images: [service.image],
+      title,
+      description,
+      images: [imageUrl],
+    },
+
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }
