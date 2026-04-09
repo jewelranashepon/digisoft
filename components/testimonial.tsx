@@ -69,7 +69,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4 text-slate-900">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight mb-4">
             What Our Clients{" "}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
               Say

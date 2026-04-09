@@ -203,13 +203,15 @@ const Footer = () => {
             </div>
 
             {/* CTA */}
-            <button className="group relative flex items-center gap-3 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:shadow-[0_0_25px_rgba(79,70,229,0.4)] hover:-translate-y-0.5 active:scale-95">
-              <span className="relative z-10">Get in Touch</span>
-              <ArrowRight
-                size={16}
-                className="relative z-10 transition-transform group-hover:translate-x-1"
-              />
-            </button>
+            <Link href="/contact-us">
+              <button className="group relative flex items-center gap-3 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:shadow-[0_0_25px_rgba(79,70,229,0.4)] hover:-translate-y-0.5 active:scale-95 cursor-pointer">
+                <span className="relative z-10">Get in Touch</span>
+                <ArrowRight
+                  size={16}
+                  className="relative z-10 transition-transform group-hover:translate-x-1"
+                />
+              </button>
+            </Link>
           </div>
         </div>
 

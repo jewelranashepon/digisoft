@@ -330,21 +330,16 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-4">
               {/* Secondary – White Button */}
               <Link
-                href="#"
-                className="inline-flex items-center gap-1.5 rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-800 shadow-sm transition-all duration-200 hover:bg-slate-100 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-transparent"
+                href="/contact-us"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-br from-blue-600 to-cyan-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-slate-100 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-transparent"
               >
                 Get In Touch
                 <ArrowUpRight size={14} />
               </Link>
-
-              {/* Primary – Brand Button */}
-              <button className="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-cyan-600 px-5 py-3 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:bg-blue-700 hover:shadow-lg active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent">
-                Contact Us
-              </button>
             </div>
 
             <button
-              className="lg:hidden p-2 text-white hover:bg-gray-100 rounded-lg transition-colors"
+              className="lg:hidden p-2 text-white hover:text-black hover:bg-gray-100 rounded-lg transition-colors"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X size={30} /> : <Menu size={30} />}
@@ -375,19 +370,10 @@ export default function Header() {
                 <Link
                   href="/contact-us"
                   onClick={() => setIsOpen(false)}
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-slate-800"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2.5 text-sm font-semibold text-white"
                 >
                   Get In Touch
                   <ArrowUpRight size={16} />
-                </Link>
-
-                <Link
-                  href="/contact-us"
-                  onClick={() => setIsOpen(false)}
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2.5 text-sm font-semibold text-white"
-                >
-                  <Phone size={16} />
-                  Contact Us
                 </Link>
               </div>
             </nav>

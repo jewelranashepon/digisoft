@@ -39,9 +39,9 @@ export default function AboutUs() {
     <section className="h-auto bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="mb-5 text-center max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-4xl lg:text-6xl font-serif leading-tight mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight mb-4">
             Rank and Boost Your Business with {" "}<br/>
-            <span className="italic text-blue-600">Codexa Digital</span>
+            <span className="text-sky-600">Codexa Digital</span>
           </h2>
 
           <p className="text-black text-lg leading-relaxed">

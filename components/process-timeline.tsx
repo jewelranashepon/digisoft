@@ -211,7 +211,7 @@ export default function ProcessCards() {
       <div className="max-w-7xl mx-auto relative">
         {/* HEADER */}
         <div className="mb-16 w-full text-center">
-          <h2 className="text-5xl md:text-6xl font-semibold mb-6 text-white leading-tight tracking-tight">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl text-white font-bold leading-[1.1] tracking-tight">
             Why Businesses{" "}
             <span className="bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-clip-text text-transparent">
               Choose Us
@@ -242,16 +242,6 @@ export default function ProcessCards() {
               <p className="text-white/70 text-lg leading-relaxed font-light mb-6 group-hover:text-slate-300 transition-colors duration-300">
                 {step.description}
               </p>
-
-              {/* CTA */}
-              <div className="flex items-center gap-2 text-teal-400 font-medium text-sm transition-all duration-300">
-                <span>Learn more</span>
-                <ArrowRight
-                  size={16}
-                  className="group-hover:translate-x-1 transition-transform duration-300"
-                  strokeWidth={2.5}
-                />
-              </div>
 
               {/* Corner glow */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-500/10 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl -z-10"></div>

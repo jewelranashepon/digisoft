@@ -9,6 +9,7 @@ import {
   ArrowRight,
   TrendingUp,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const services = [
   {
@@ -76,13 +77,15 @@ export default function Services() {
   const [active, setActive] = useState(1);
   const activeService = services[active];
   const IconComponent = activeService.icon;
+  const router = useRouter();
+
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="mb-16 text-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-slate-900">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
             What Services{" "}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
               Do We Provide?
@@ -98,7 +101,7 @@ export default function Services() {
               <button
                 key={index}
                 onClick={() => setActive(index)}
-                className={`px-5 py-3 rounded-xl font-semibold transition-all ${
+                className={`px-5 py-3 rounded-xl font-semibold transition-all cursor-pointer ${
                   active === index
                     ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg"
                     : "bg-white border border-slate-200 text-slate-700 hover:border-blue-400"
@@ -139,7 +142,10 @@ export default function Services() {
               ))}
             </div>
 
-            <button className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition">
+            <button
+              onClick={() => router.push("/contact-us")}
+              className="inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition cursor-pointer"
+            >
               Get Started
               <ArrowRight size={20} />
             </button>

@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const slides = [
   {
@@ -30,6 +31,8 @@ const slides = [
 
 export default function HeroSlider() {
   const [index, setIndex] = useState(0);
+  const router = useRouter();
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -82,7 +85,10 @@ export default function HeroSlider() {
             </p>
 
             <div className="flex sm:flex-col sm:flex-row gap-3 sm:gap-4 pt-2 justify-center lg:justify-start">
-              <button className="group px-4 sm:px-8 py-2 sm:py-4 bg-gradient-to-br from-blue-600 to-cyan-600 text-sm md:text-base text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:scale-[1.05] flex items-center gap-2 justify-center">
+              <button
+                onClick={() => router.push("/about-us")}
+                className="group px-4 sm:px-8 py-2 sm:py-3 bg-gradient-to-br from-blue-600 to-cyan-600 text-sm md:text-base text-white rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:scale-[1.05] flex items-center gap-2 justify-center cursor-pointer"
+              >
                 Learn More
                 <ArrowRight
                   size={18}
@@ -90,7 +96,10 @@ export default function HeroSlider() {
                 />
               </button>
 
-              <button className="px-4 sm:px-8 py-2 sm:py-4 bg-white backdrop-blur-md border-2 border-white/20 text-sm md:text-base text-slate-800 rounded-xl font-semibold hover:bg-white/20 hover:border-white/30 transition-all duration-300">
+              <button
+                onClick={() => router.push("/contact-us")}
+                className="px-4 sm:px-8 py-2 sm:py-3 bg-white backdrop-blur-md border-2 border-white/20 text-sm md:text-base text-slate-800 rounded-xl font-semibold hover:bg-white/20 hover:border-white/30 transition-all duration-300 cursor-pointer"
+              >
                 Let’s Talk →
               </button>
             </div>

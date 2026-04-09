@@ -79,7 +79,7 @@ export default function FAQComponent() {
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight mb-4">
             <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-slate-900 bg-clip-text text-transparent">
               Frequently Asked{" "}
             </span>
@@ -102,7 +102,7 @@ export default function FAQComponent() {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-5 flex items-start justify-between gap-4 text-left transition-colors duration-200"
+                  className="w-full px-6 py-5 flex items-start justify-between gap-4 text-left transition-colors duration-200 cursor-pointer"
                 >
                   <div className="flex items-start gap-4 flex-1">
                     <div

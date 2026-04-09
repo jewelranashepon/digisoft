@@ -55,7 +55,7 @@ export default function ProcessFlow() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl lg:text-6xl font-semibold text-slate-900 max-w-5xl mx-auto leading-tight">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight">
             Our Marketing Process for Your <br />
             <span className="text-blue-600">Online Presence</span>
           </h2>
@@ -86,11 +86,6 @@ export default function ProcessFlow() {
               <p className="text-slate-300 leading-relaxed mb-6 text-lg">
                 {process.description}
               </p>
-
-              <div className="inline-flex items-center gap-2 text-blue-300 font-medium">
-                Learn More
-                <ArrowRight size={18} />
-              </div>
             </div>
           ))}
         </div>
