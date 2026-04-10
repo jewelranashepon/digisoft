@@ -75,7 +75,7 @@ export default function HeroSlider() {
           >
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white text-shadow-lg">
               {slides[index].title}{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text text-transparent">
                 {slides[index].highlight}
               </span>
             </h1>

@@ -5,17 +5,19 @@ export async function POST(req: Request) {
   try {
     const { name, email, subject, message } = await req.json();
 
+    // validation
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: "All fields are required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
+    // SMTP transporter (Hostinger)
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
       port: Number(process.env.EMAIL_PORT),
-      secure: false,
+      secure: Number(process.env.EMAIL_PORT) === 465,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -24,24 +26,23 @@ export async function POST(req: Request) {
 
     await transporter.sendMail({
       from: `"Contact Form" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_TO, // 👈 YOUR EMAIL
+      to: process.env.EMAIL_TO,
       replyTo: email,
       subject: `📩 ${subject}`,
       html: `
-        <h3>New Contact Message</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
+        <h2>New Contact Message</h2>
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Message:</b> ${message}</p>
       `,
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error(error);
+    console.error("EMAIL ERROR:", error);
     return NextResponse.json(
-      { error: "Email sending failed" },
-      { status: 500 }
+      { error: "Failed to send email" },
+      { status: 500 },
     );
   }
 }
