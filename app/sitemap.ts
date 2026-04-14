@@ -1,24 +1,35 @@
 import { MetadataRoute } from "next";
 import { services } from "@/data/services";
 
-export const revalidate = 3600; // revalidate every 1 hour
+export const revalidate = 3600; // 1 hour
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.codexadigital.com.au";
 
+  // ==============================
+  // ✅ STEP 1: FETCH BLOGS SAFELY
+  // ==============================
+  let blogs: any[] = [];
+
   try {
-    // ==============================
-    // 🔥 FETCH ALL BLOG POSTS
-    // ==============================
-    // ⚠️ IMPORTANT: use high limit to get all posts
     const blogRes = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/blog/published?limit=1000`,
-      { next: { revalidate: 3600 } },
+      `${baseUrl}/api/blog/published?limit=1000`,
+      {
+        next: { revalidate: 3600 },
+      }
     );
 
-    const blogData = await blogRes.json();
-    const blogs = blogData?.posts || [];
+    if (!blogRes.ok) {
+      throw new Error(`Failed to fetch blogs: ${blogRes.status}`);
+    }
 
+    const blogData = await blogRes.json();
+    blogs = blogData?.posts || [];
+  } catch (error) {
+    console.error("❌ Blog fetch failed:", error);
+  }
+
+  try {
     // ==============================
     // 🔹 STATIC PAGES
     // ==============================
@@ -74,10 +85,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ];
 
     // ==============================
-    // 🔥 DYNAMIC SERVICES (LOCAL FILE)
+    // 🔥 SERVICES (SAFE)
     // ==============================
-    const servicePages: MetadataRoute.Sitemap = services
-      .filter((service) => service.id)
+    const servicePages: MetadataRoute.Sitemap = (services || [])
+      .filter((service) => service?.id)
       .map((service) => ({
         url: `${baseUrl}/services/${service.id}`,
         lastModified: new Date(),
@@ -86,13 +97,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       }));
 
     // ==============================
-    // 🔥 DYNAMIC BLOGS
+    // 🔥 BLOG PAGES (SAFE)
     // ==============================
-    const blogPages: MetadataRoute.Sitemap = blogs
-      .filter((post: any) => post.slug)
+    const blogPages: MetadataRoute.Sitemap = (blogs || [])
+      .filter((post: any) => post?.slug)
       .map((post: any) => ({
         url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: new Date(post.updatedAt || post.createdAt || new Date()),
+        lastModified: new Date(
+          post.updatedAt || post.createdAt || new Date()
+        ),
         changeFrequency: "weekly",
         priority: 0.8,
       }));
@@ -102,8 +115,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // ==============================
     return [...staticPages, ...servicePages, ...blogPages];
   } catch (error) {
-    console.error("Sitemap error:", error);
+    console.error("❌ Sitemap error:", error);
 
+    // अंतिम fallback → at least homepage
     return [
       {
         url: `${baseUrl}/`,

@@ -21,7 +21,7 @@ const mobileParentMenu = [
   { label: "Home", href: "/", icon: Home },
   { label: "About Us", href: "/about-us", icon: Info },
   { label: "Services", href: "/services", icon: Briefcase },
-  {label: "Packages", href: "/packages", icon: Layers },
+  { label: "Packages", href: "/packages", icon: Layers },
   { label: "Cost Calculator", href: "/cost-calculator", icon: Calculator },
   { label: "Portfolio", href: "/portfolio", icon: Layers },
   { label: "Blog", href: "/blog", icon: FileText },
@@ -38,15 +38,17 @@ export default function Header() {
         <div className="mt-2 rounded-2xl bg-black/50 backdrop-blur-lg border border-white/30 shadow-xl px-5">
           <div className="flex justify-between items-center h-14 md:h-20 lg:h-20">
             <div className="flex items-center w-auto relative h-[50px] sm:h-[50px] md:h-[50px]">
-              <Image
-                src="/images/main-logo-3.png"
-                alt="Codexa Digital Web & Software Agency"
-                className="h-[45px] w-[120px] sm:h-[50px] sm:w-[130px] md:h-[60px] md:w-[150px]"
-                style={{ objectFit: "contain" }}
-                priority
-                width={130} // fallback for Next.js Image
-                height={50} // fallback for Next.js Image
-              />
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/images/main-logo-3.png"
+                  alt="Codexa Digital Web & Software Agency"
+                  className="h-[45px] w-[120px] sm:h-[50px] sm:w-[130px] md:h-[60px] md:w-[150px]"
+                  style={{ objectFit: "contain" }}
+                  priority
+                  width={130} // fallback for Next.js Image
+                  height={50} // fallback for Next.js Image
+                />
+              </Link>
             </div>
 
             <nav className="hidden lg:flex items-center gap-1">
@@ -292,14 +294,14 @@ export default function Header() {
                 )}
               </div>
 
-               <Link
+              <Link
                 href="/packages"
                 className="px-4 py-2 text-sm font-medium text-white hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
               >
                 Packages
               </Link>
 
-               <Link
+              <Link
                 href="/cost-calculator"
                 className="px-4 py-2 text-sm font-medium text-white hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
               >

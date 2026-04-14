@@ -175,9 +175,19 @@ const Footer = () => {
                   icon: Mail,
                   text: "info@codexadigital.com.au",
                   label: "Email",
+                  href: "mailto:info@codexadigital.com.au",
                 },
-                { icon: Phone, text: "0414 082 729", label: "Phone" },
-                { icon: MapPin, text: "Edwardstown, SA", label: "Office" },
+                {
+                  icon: Phone,
+                  text: "0414 082 729",
+                  label: "Phone",
+                  href: "tel:0414082729",
+                },
+                {
+                  icon: MapPin,
+                  text: "Edwardstown, SA",
+                  label: "Office",
+                },
               ].map((contact, i) => (
                 <div
                   key={i}
@@ -194,9 +204,19 @@ const Footer = () => {
                     <span className="text-[9px] uppercase tracking-widest text-slate-500 font-bold leading-none mb-1">
                       {contact.label}
                     </span>
-                    <span className="text-slate-200 text-sm font-medium tracking-tight hover:text-indigo-400 transition-colors cursor-pointer leading-none">
-                      {contact.text}
-                    </span>
+
+                    {contact.href ? (
+                      <a
+                        href={contact.href}
+                        className="text-slate-200 text-sm font-medium tracking-tight hover:text-indigo-400 transition-colors cursor-pointer leading-none"
+                      >
+                        {contact.text}
+                      </a>
+                    ) : (
+                      <span className="text-slate-200 text-sm font-medium tracking-tight leading-none">
+                        {contact.text}
+                      </span>
+                    )}
                   </div>
                 </div>
               ))}
