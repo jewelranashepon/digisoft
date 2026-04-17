@@ -112,6 +112,15 @@ const ContactUsComponent = () => {
                       val: "63 Raglan Ave, Edwardstown, SA 5039",
                       href: "https://maps.google.com/?q=63+Raglan+Ave+Edwardstown+SA+5039",
                       color: "text-blue-400",
+                      external: true,
+                    },
+                    {
+                      icon: MapPin,
+                      title: "Google Business",
+                      val: "View on Google",
+                      href: "https://share.google/21uaYDvoiRPOgnzlb",
+                      color: "text-teal-400",
+                      external: true,
                     },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-5 group">
@@ -126,13 +135,9 @@ const ContactUsComponent = () => {
 
                         <a
                           href={item.href}
-                          target={
-                            item.title === "Headquarters" ? "_blank" : undefined
-                          }
+                          target={item.external ? "_blank" : undefined}
                           rel={
-                            item.title === "Headquarters"
-                              ? "noopener noreferrer"
-                              : undefined
+                            item.external ? "noopener noreferrer" : undefined
                           }
                           className="text-lg font-semibold text-white hover:text-cyan-400 transition-colors"
                         >

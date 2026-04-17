@@ -27,10 +27,6 @@ export async function generateMetadata({
     return {
       title: "All Services | Codexa Digital",
       description: "The requested service does not exist.",
-      robots: {
-        index: false,
-        follow: false,
-      },
     };
   }
 
@@ -87,10 +83,6 @@ export async function generateMetadata({
       images: [imageUrl],
     },
 
-    robots: {
-      index: true,
-      follow: true,
-    },
   };
 }
 
@@ -99,11 +91,11 @@ export async function generateMetadata({
 ========================= */
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }
 
 export default async function ServiceDetailsPage({ params }: Props) {
-  const { slug } = await params;
+  const { slug } = params;
 
   const service = services.find((s) => s.id === slug);
   if (!service) notFound();
