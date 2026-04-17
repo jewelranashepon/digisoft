@@ -83,6 +83,10 @@ export async function generateMetadata({
       images: [imageUrl],
     },
 
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 
@@ -91,11 +95,11 @@ export async function generateMetadata({
 ========================= */
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export default async function ServiceDetailsPage({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const service = services.find((s) => s.id === slug);
   if (!service) notFound();
