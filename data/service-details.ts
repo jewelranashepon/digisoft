@@ -126,7 +126,7 @@ export const doctorSeoService: ServiceDetail = {
       "By combining local SEO for doctor websites, content optimisation, and technical improvements, we help your practice attract qualified patients regularly—supporting growth, stability, and long-term success.",
     ],
     buttonText: "Get Help With Your Doctor SEO",
-    image: "/images/doctor-consultation.jpg",
+    image: "/images/doctor-seo-hero.jpg",
   },
 
   seoServicesDetails: {
@@ -438,7 +438,7 @@ export const cleaningSeoService: ServiceDetail = {
       "As a trusted cleaning company SEO agency, we focus on long-term growth and credibility. Strong Cleaning SEO improves your website rankings, builds trust, and presents your business as professional and reliable. Every strategy is tailored to your services, service areas, and goals—whether you offer residential or commercial cleaning.",
     ],
     buttonText: "Get Help With Cleaning SEO",
-    image: "/images/cleaning-consultation.jpg",
+    image: "/images/cleaning-seo-hero.jpg",
   },
 
   seoServicesDetails: {
