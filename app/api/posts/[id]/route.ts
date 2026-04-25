@@ -1,203 +1,122 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/db';
-import { getAuthToken, verifyToken } from '@/lib/auth';
-import { updatePostSchema } from '@/lib/validations';
+import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/lib/db";
 
-// GET single post
-export async function GET(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
-  try {
-    const { id } = await params;
-
-    const post = await prisma.post.findUnique({
-      where: { id },
-      include: {
-        category: true,
-        tags: {
-          include: { tag: true },
-        },
-      },
-    });
-
-    if (!post) {
-      return NextResponse.json(
-        { error: 'Post not found' },
-        { status: 404 }
-      );
-    }
-
-    return NextResponse.json(
-      {
-        success: true,
-        post: {
-          ...post,
-          tags: post.tags.map(pt => pt.tag),
-        },
-      },
-      { status: 200 }
-    );
-  } catch (error: any) {
-    console.error('[Post GET Error]', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch post' },
-      { status: 500 }
-    );
-  }
-}
-
-// PUT update post
 export async function PUT(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } },
 ) {
   try {
-    // Verify authentication
-    // const token = await getAuthToken();
-    // if (!token || !verifyToken(token)) {
-    //   return NextResponse.json(
-    //     { error: 'Unauthorized' },
-    //     { status: 401 }
-    //   );
-    // }
-
-    const { id } = await params;
+    const postId = params.id;
     const body = await request.json();
 
-    // Validate input
-    const validatedData = updatePostSchema.parse(body);
+    const {
+      title,
+      slug,
+      excerpt,
+      content,
+      status,
+      categoryId,
+      metaTitle,
+      metaDescription,
+      metaKeywords,
+      images,
+      featuredImage,
+      tags,
+    } = body;
 
-    // Check if post exists
-    const existingPost = await prisma.post.findUnique({
-      where: { id },
-    });
-
-    if (!existingPost) {
+    if (!title || !slug || !content) {
       return NextResponse.json(
-        { error: 'Post not found' },
-        { status: 404 }
+        { error: "Missing required fields: title, slug, content" },
+        { status: 400 },
       );
     }
 
-    // Check if new slug already exists (if slug is being updated)
-    if (validatedData.slug && validatedData.slug !== existingPost.slug) {
-      const slugExists = await prisma.post.findUnique({
-        where: { slug: validatedData.slug },
-      });
-
-      if (slugExists) {
-        return NextResponse.json(
-          { error: 'Slug already exists' },
-          { status: 400 }
-        );
-      }
-    }
-
-    // Prepare update data
-    const updateData: any = {
-      ...validatedData,
-    };
-
-    // Handle status change to published
-    if (validatedData.status === 'published' && existingPost.status !== 'published') {
-      updateData.publishedAt = new Date();
-    }
-
-    // Update tags if provided
-    let tagUpdates = undefined;
-    if (validatedData.tags) {
-      tagUpdates = {
-        deleteMany: {},
-        create: validatedData.tags.map(tagId => ({
-          tag: { connect: { id: tagId } },
-        })),
-      };
-    }
-
+    // Update post with Prisma
     const post = await prisma.post.update({
-      where: { id },
+      where: { id: postId },
       data: {
-        ...updateData,
-        tags: tagUpdates,
+        title,
+        slug,
+        excerpt: excerpt || null,
+        content,
+        status,
+        featuredImage: featuredImage?.url || null,
+        metaTitle: metaTitle || null,
+        metaDescription: metaDescription || null,
+        metaKeywords: metaKeywords || null,
+        images: images?.map((img: any) => img.url) || [],
+        publishedAt: status === "published" ? new Date() : null,
+        categoryId: categoryId || null,
+        tags: {
+          deleteMany: {},
+          create: tags
+            ? tags.map((tagId: string) => ({
+                tagId,
+              }))
+            : [],
+        },
       },
       include: {
-        category: true,
         tags: {
-          include: { tag: true },
+          include: {
+            tag: true,
+          },
         },
+        category: true,
       },
     });
 
-    return NextResponse.json(
-      {
-        success: true,
-        message: 'Post updated successfully',
-        post: {
-          ...post,
-          tags: post.tags.map(pt => pt.tag),
-        },
-      },
-      { status: 200 }
-    );
+    return NextResponse.json({
+      success: true,
+      post,
+    });
   } catch (error: any) {
-    console.error('[Post PUT Error]', error);
+    console.error("PUT error:", error);
 
-    if (error.name === 'ZodError') {
+    if (error.code === "P2025") {
+      return NextResponse.json({ error: "Post not found" }, { status: 404 });
+    }
+
+    if (error.code === "P2002") {
       return NextResponse.json(
-        { error: 'Invalid input', details: error.errors },
-        { status: 400 }
+        { error: "A post with this slug already exists" },
+        { status: 400 },
       );
     }
 
     return NextResponse.json(
-      { error: 'Failed to update post' },
-      { status: 500 }
+      { error: "Failed to update post" },
+      { status: 500 },
     );
   }
 }
 
-// DELETE post
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: { id: string } },
 ) {
   try {
-    // Verify authentication
-    const token = await getAuthToken();
-    if (!token || !verifyToken(token)) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      );
-    }
+    const postId = params.id;
 
-    const { id } = await params;
-
-    const post = await prisma.post.findUnique({
-      where: { id },
-    });
-
-    if (!post) {
-      return NextResponse.json(
-        { error: 'Post not found' },
-        { status: 404 }
-      );
-    }
-
+    // Delete the post (tags will be cascade deleted)
     await prisma.post.delete({
-      where: { id },
+      where: { id: postId },
     });
 
-    return NextResponse.json(
-      { success: true, message: 'Post deleted successfully' },
-      { status: 200 }
-    );
+    return NextResponse.json({
+      success: true,
+      message: "Post deleted successfully",
+    });
   } catch (error: any) {
-    console.error('[Post DELETE Error]', error);
+    console.error("DELETE error:", error);
+
+    if (error.code === "P2025") {
+      return NextResponse.json({ error: "Post not found" }, { status: 404 });
+    }
+
     return NextResponse.json(
-      { error: 'Failed to delete post' },
-      { status: 500 }
+      { error: "Failed to delete post" },
+      { status: 500 },
     );
   }
 }

@@ -1,99 +1,107 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { writeFile, mkdir } from 'fs/promises';
-import { join } from 'path';
-import sharp from 'sharp';
-import { getAuthToken, verifyToken } from '@/lib/auth';
+import { NextRequest, NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
+import { getExtensionFromMime } from "@/lib/ext-from-mime";
+
+// Use service role key for server-side operations (bypasses RLS)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseServiceKey =
+  process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SECRET_KEY;
+
+if (!supabaseUrl || !supabaseServiceKey) {
+  throw new Error("Missing Supabase environment variables");
+}
+
+// Service role client for admin operations
+const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
+  auth: {
+    autoRefreshToken: false,
+    persistSession: false,
+  },
+});
 
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
-    const files = formData.getAll('files');
+    const files = formData.getAll("files") as File[];
 
     if (!files || files.length === 0) {
-      return NextResponse.json(
-        { error: 'No files provided' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "No files provided" }, { status: 400 });
     }
 
     const uploadedFiles = [];
+    const bucketName = process.env.NEXT_PUBLIC_SUPABASE_BUCKET;
+
+    if (!bucketName) {
+      return NextResponse.json(
+        { error: "Bucket name not configured" },
+        { status: 500 },
+      );
+    }
 
     for (const file of files) {
-      if (!(file instanceof File)) continue;
-
       // Validate file
       if (file.size > 5 * 1024 * 1024) {
         return NextResponse.json(
-          { error: 'File size exceeds 5MB limit' },
-          { status: 400 }
+          { error: `File ${file.name} exceeds 5MB limit` },
+          { status: 400 },
         );
       }
 
-      const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
-      if (!allowedTypes.includes(file.type)) {
+      if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
         return NextResponse.json(
-          { error: 'Only JPEG, PNG, and WebP images are allowed' },
-          { status: 400 }
+          { error: `File ${file.name} has unsupported format` },
+          { status: 400 },
         );
       }
 
-      // Create date-based directory structure
-      const now = new Date();
-      const year = now.getFullYear();
-      const month = String(now.getMonth() + 1).padStart(2, '0');
-      const day = String(now.getDate()).padStart(2, '0');
-      const uploadDir = join(
-        process.cwd(),
-        'public/uploads',
-        String(year),
-        month,
-        day
-      );
+      // Create unique filename
+      const ext = getExtensionFromMime(file.type);
+      const timestamp = Date.now();
+      const random = Math.random().toString(36).substring(7);
+      const filename = `${timestamp}-${random}.${ext}`;
+      const path = `posts/${filename}`;
 
-      try {
-        await mkdir(uploadDir, { recursive: true });
-      } catch (e) {
-        console.error('Error creating directory:', e);
+      // Convert file to buffer
+      const buffer = await file.arrayBuffer();
+
+      // Upload to Supabase using admin client (bypasses RLS)
+      const { data, error } = await supabaseAdmin.storage
+        .from(bucketName)
+        .upload(path, buffer, {
+          contentType: file.type,
+          upsert: false,
+        });
+
+      if (error) {
+        console.error("Supabase upload error:", error);
+        return NextResponse.json(
+          { error: `Failed to upload ${file.name}: ${error.message}` },
+          { status: 500 },
+        );
       }
 
-      // Generate unique filename
-      const timestamp = Date.now();
-      const randomString = Math.random().toString(36).substring(2, 8);
-      const originalName = file.name.replace(/\.[^/.]+$/, '');
-      const fileName = `${originalName}-${timestamp}-${randomString}.webp`;
-      const filePath = join(uploadDir, fileName);
-      const publicPath = `/uploads/${year}/${month}/${day}/${fileName}`;
-
-      // Read file buffer
-      const bytes = await file.arrayBuffer();
-      const buffer = Buffer.from(bytes);
-
-      // Optimize image with sharp
-      await sharp(buffer)
-        .webp({ quality: 80 })
-        .toFile(filePath);
+      // Get public URL
+      const {
+        data: { publicUrl },
+      } = supabaseAdmin.storage.from(bucketName).getPublicUrl(path);
 
       uploadedFiles.push({
-        filename: fileName,
-        path: publicPath,
-        url: publicPath,
+        filename: file.name,
+        path: data.path,
+        url: publicUrl,
         size: file.size,
       });
     }
 
+    return NextResponse.json({
+      success: true,
+      files: uploadedFiles,
+    });
+  } catch (error) {
+    console.error("Upload error:", error);
     return NextResponse.json(
-      {
-        success: true,
-        message: `Successfully uploaded ${uploadedFiles.length} file(s)`,
-        files: uploadedFiles,
-      },
-      { status: 200 }
-    );
-  } catch (error: any) {
-    console.error('[Upload Error]', error);
-    return NextResponse.json(
-      { error: 'Failed to upload files' },
-      { status: 500 }
+      { error: "Internal server error" },
+      { status: 500 },
     );
   }
 }

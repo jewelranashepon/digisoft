@@ -128,7 +128,7 @@ export function ImageUploader({
   };
 
   return (
-    <Card className="w-full border-slate-200">
+    <Card>
       <CardHeader>
         <CardTitle>
           {label || (multiple ? "Gallery Images" : "Featured Image")}
@@ -137,65 +137,64 @@ export function ImageUploader({
           Drag and drop images or click to select. Max 5MB per image.
         </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent>
         <div
           onDragEnter={handleDragEnter}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
-          className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors ${isDragging ? "border-blue-500 bg-blue-50" : "border-slate-300 bg-slate-50 hover:border-slate-400"}`}
+          className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors ${
+            isDragging
+              ? "border-blue-500 bg-blue-50"
+              : "border-gray-300 hover:border-gray-400"
+          }`}
         >
           <input
             type="file"
-            id={`file-input-${multiple ? "gallery" : "featured"}`}
             multiple={multiple}
-            accept="image/jpeg,image/png,image/webp"
             onChange={(e) => handleFiles(e.target.files)}
             disabled={isUploading}
             className="hidden"
+            accept="image/jpeg,image/png,image/webp"
+            id="file-upload"
           />
-          <label
-            htmlFor={`file-input-${multiple ? "gallery" : "featured"}`}
-            className="flex flex-col items-center justify-center cursor-pointer"
-          >
-            <Upload className="h-8 w-8 text-slate-400 mb-2" />
-            <p className="text-sm font-medium text-slate-700">
+          <label htmlFor="file-upload" className="cursor-pointer">
+            <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />
+            <p className="text-sm font-medium text-gray-700">
               {isUploading
                 ? "Uploading..."
                 : "Click to upload or drag and drop"}
             </p>
-            <p className="text-xs text-slate-500 mt-1">
-              PNG, JPG or WebP (max. 5MB)
-            </p>
+            <p className="text-xs text-gray-500">PNG, JPG or WebP (max. 5MB)</p>
           </label>
         </div>
 
         {uploadedFiles.length > 0 && (
-          <div className="space-y-2">
-            <h3 className="text-sm font-medium text-slate-700">
+          <div className="mt-6">
+            <h3 className="text-sm font-semibold text-gray-900 mb-3">
               Uploaded Images ({uploadedFiles.length})
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {uploadedFiles.map((file) => (
                 <div
                   key={file.url}
-                  className="relative group border border-slate-200 rounded-lg overflow-hidden bg-slate-50"
+                  className="relative group rounded-lg overflow-hidden border"
                 >
                   <Image
                     src={file.url}
                     alt={file.filename}
                     width={200}
                     height={200}
-                    className="w-full h-32 object-cover"
+                    className="w-full h-40 object-cover"
                   />
                   <button
                     onClick={() => removeFile(file.url)}
                     className="absolute top-1 right-1 bg-red-500 text-white p-1 rounded opacity-0 group-hover:opacity-100 transition-opacity"
                   >
-                    <X className="h-4 w-4" />
+                    <X size={16} />
                   </button>
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-xs p-1 truncate">
+                  <p className="text-xs text-gray-600 p-2 bg-gray-50 truncate">
                     {file.filename}
-                  </div>
+                  </p>
                 </div>
               ))}
             </div>

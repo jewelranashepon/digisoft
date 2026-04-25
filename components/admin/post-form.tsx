@@ -16,6 +16,7 @@ import { TiptapEditor } from "./tiptap-editor";
 import { ImageUploader } from "./image-uploader";
 import { Loader2 } from "lucide-react";
 import { generateSlug } from "@/lib/validations";
+import Image from "next/image";
 
 interface Category {
   id: string;
@@ -29,6 +30,13 @@ interface Tag {
   slug: string;
 }
 
+interface UploadedFile {
+  filename: string;
+  path: string;
+  url: string;
+  size: number;
+}
+
 interface PostFormProps {
   postId?: string;
   initialData?: any;
@@ -40,11 +48,11 @@ export function PostForm({ postId, initialData }: PostFormProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
   const [tags, setTags] = useState<Tag[]>([]);
-  const [uploadedImages, setUploadedImages] = useState<string[]>(
+  const [uploadedImages, setUploadedImages] = useState<UploadedFile[]>(
     initialData?.images || [],
   );
-  const [featuredImage, setFeaturedImage] = useState(
-    initialData?.featuredImage || "",
+  const [featuredImage, setFeaturedImage] = useState<UploadedFile | null>(
+    initialData?.featuredImage || null,
   );
 
   const [formData, setFormData] = useState({
@@ -60,20 +68,19 @@ export function PostForm({ postId, initialData }: PostFormProps) {
     selectedTags: initialData?.tags?.map((t: any) => t.id) || [],
   });
 
-  const handleFeaturedUpload = (files: any[]) => {
+  const handleFeaturedUpload = (files: UploadedFile[]) => {
     if (!files || files.length === 0) return;
-    setFeaturedImage(files[0].url);
+    setFeaturedImage(files[0]);
   };
 
-  const handleGalleryUpload = (files: any[]) => {
+  const handleGalleryUpload = (files: UploadedFile[]) => {
     if (!files || files.length === 0) return;
 
-    const newUrls = files.map((f) => f.url);
+    const newImages = files.filter(
+      (f) => !uploadedImages.some((img) => img.url === f.url),
+    );
 
-    setUploadedImages((prev) => [
-      ...prev,
-      ...newUrls.filter((url) => url !== featuredImage),
-    ]);
+    setUploadedImages((prev) => [...prev, ...newImages]);
   };
 
   useEffect(() => {
@@ -131,7 +138,7 @@ export function PostForm({ postId, initialData }: PostFormProps) {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
@@ -139,7 +146,7 @@ export function PostForm({ postId, initialData }: PostFormProps) {
       const postPayload = {
         ...formData,
         images: uploadedImages,
-        featuredImage,
+        featuredImage: featuredImage,
         tags: formData.selectedTags,
       };
 
@@ -194,46 +201,42 @@ export function PostForm({ postId, initialData }: PostFormProps) {
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
+            <label className="block text-sm font-medium text-gray-900 mb-1">
               Title *
             </label>
             <Input
               name="title"
-              type="text"
-              placeholder="Enter post title"
               value={formData.title}
               onChange={handleChange}
+              placeholder="Enter post title"
               required
-              className="bg-white"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
+            <label className="block text-sm font-medium text-gray-900 mb-1">
               Slug *
             </label>
             <Input
               name="slug"
-              type="text"
-              placeholder="post-slug"
               value={formData.slug}
               onChange={handleChange}
+              placeholder="auto-generated-from-title"
               required
-              className="bg-white"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
+            <label className="block text-sm font-medium text-gray-900 mb-1">
               Excerpt
             </label>
             <textarea
               name="excerpt"
-              placeholder="Short excerpt of your post"
               value={formData.excerpt}
               onChange={handleChange}
-              rows={2}
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              placeholder="Brief description of the post"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              rows={3}
             />
           </div>
         </CardContent>
@@ -249,8 +252,7 @@ export function PostForm({ postId, initialData }: PostFormProps) {
             name="categoryId"
             value={formData.categoryId}
             onChange={handleChange}
-            required
-            className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md"
           >
             <option value="">Select a category</option>
             {categories.map((cat) => (
@@ -273,13 +275,13 @@ export function PostForm({ postId, initialData }: PostFormProps) {
             {tags.map((tag) => (
               <button
                 key={tag.id}
-                type="button"
                 onClick={() => handleTagToggle(tag.id)}
                 className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                   formData.selectedTags.includes(tag.id)
                     ? "bg-blue-600 text-white"
                     : "bg-slate-200 text-slate-700 hover:bg-slate-300"
                 }`}
+                type="button"
               >
                 {tag.name}
               </button>
@@ -298,17 +300,18 @@ export function PostForm({ postId, initialData }: PostFormProps) {
         </CardHeader>
         <CardContent className="space-y-4">
           <ImageUploader
-            key="featured-uploader"
-            multiple={false}
             onFilesUploaded={handleFeaturedUpload}
+            multiple={false}
+            label="Featured Image"
           />
 
           {featuredImage && (
-            <div className="mt-3">
-              <img
-                src={featuredImage}
-                alt="Featured Preview"
-                className="w-48 rounded-lg border"
+            <div className="relative w-full h-64 rounded-lg overflow-hidden border">
+              <Image
+                src={featuredImage.url}
+                alt="Featured"
+                fill
+                className="object-cover"
               />
             </div>
           )}
@@ -316,12 +319,19 @@ export function PostForm({ postId, initialData }: PostFormProps) {
       </Card>
 
       {/* Content */}
-      <TiptapEditor
-        value={formData.content}
-        onChange={(value) =>
-          setFormData((prev) => ({ ...prev, content: value }))
-        }
-      />
+      <Card>
+        <CardHeader>
+          <CardTitle>Content</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <TiptapEditor
+            value={formData.content}
+            onChange={(value) =>
+              setFormData((prev) => ({ ...prev, content: value }))
+            }
+          />
+        </CardContent>
+      </Card>
 
       {/* Gallery Images */}
       <Card>
@@ -333,33 +343,43 @@ export function PostForm({ postId, initialData }: PostFormProps) {
         </CardHeader>
         <CardContent className="space-y-4">
           <ImageUploader
-            key="gallery-uploader"
-            multiple={true}
             onFilesUploaded={handleGalleryUpload}
+            multiple={true}
+            label="Gallery Images"
           />
 
           {uploadedImages.length > 0 && (
-            <div className="grid grid-cols-3 gap-3">
-              {uploadedImages.map((img, index) => (
-                <div key={index} className="relative">
-                  <img
-                    src={img}
-                    alt="Gallery"
-                    className="w-full h-32 object-cover rounded-lg border"
-                  />
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setUploadedImages((prev) =>
-                        prev.filter((_, i) => i !== index),
-                      )
-                    }
-                    className="absolute top-1 right-1 bg-red-600 text-white text-xs px-2 py-1 rounded"
+            <div className="mt-6">
+              <h3 className="text-sm font-semibold text-gray-900 mb-3">
+                Images in Gallery ({uploadedImages.length})
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {uploadedImages.map((img, index) => (
+                  <div
+                    key={index}
+                    className="relative group rounded-lg overflow-hidden border"
                   >
-                    ✕
-                  </button>
-                </div>
-              ))}
+                    <Image
+                      src={img.url}
+                      alt={img.filename}
+                      width={200}
+                      height={200}
+                      className="w-full h-40 object-cover"
+                    />
+                    <button
+                      onClick={() =>
+                        setUploadedImages((prev) =>
+                          prev.filter((_, i) => i !== index),
+                        )
+                      }
+                      className="absolute top-1 right-1 bg-red-600 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity"
+                      type="button"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </CardContent>
@@ -375,46 +395,40 @@ export function PostForm({ postId, initialData }: PostFormProps) {
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
+            <label className="block text-sm font-medium text-gray-900 mb-1">
               Meta Title
             </label>
             <Input
               name="metaTitle"
-              type="text"
-              placeholder="Max 60 characters"
-              maxLength={60}
               value={formData.metaTitle}
               onChange={handleChange}
-              className="bg-white"
+              placeholder="SEO title for search results"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
+            <label className="block text-sm font-medium text-gray-900 mb-1">
               Meta Description
             </label>
             <textarea
               name="metaDescription"
-              placeholder="Max 160 characters"
-              maxLength={160}
               value={formData.metaDescription}
               onChange={handleChange}
-              rows={2}
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              placeholder="Description shown in search results"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md"
+              rows={3}
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
+            <label className="block text-sm font-medium text-gray-900 mb-1">
               Keywords
             </label>
             <Input
               name="metaKeywords"
-              type="text"
-              placeholder="Comma separated keywords"
               value={formData.metaKeywords}
               onChange={handleChange}
-              className="bg-white"
+              placeholder="Comma-separated keywords"
             />
           </div>
         </CardContent>
@@ -430,7 +444,7 @@ export function PostForm({ postId, initialData }: PostFormProps) {
             name="status"
             value={formData.status}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md"
           >
             <option value="draft">Draft</option>
             <option value="published">Published</option>
@@ -439,27 +453,25 @@ export function PostForm({ postId, initialData }: PostFormProps) {
       </Card>
 
       {/* Submit Buttons */}
-      <div className="flex gap-4 justify-end">
-        <Button type="button" variant="outline" onClick={() => router.back()}>
-          Cancel
-        </Button>
-        <Button
-          type="submit"
-          disabled={isLoading}
-          className="bg-blue-600 hover:bg-blue-700 text-white"
-        >
-          {isLoading ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              {postId ? "Updating..." : "Creating..."}
-            </>
-          ) : postId ? (
-            "Update Post"
-          ) : (
-            "Create Post"
-          )}
-        </Button>
-      </div>
+      <Card>
+        <CardContent className="pt-6 flex gap-4">
+          <Button onClick={() => router.back()} variant="outline" type="button">
+            Cancel
+          </Button>
+          <Button disabled={isLoading} type="submit">
+            {isLoading ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                {postId ? "Updating..." : "Creating..."}
+              </>
+            ) : postId ? (
+              "Update Post"
+            ) : (
+              "Create Post"
+            )}
+          </Button>
+        </CardContent>
+      </Card>
     </form>
   );
 }

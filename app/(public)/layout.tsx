@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  }, 
+  },
 };
 
 export default function RootLayout({
@@ -79,6 +79,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* Google Analytics */}

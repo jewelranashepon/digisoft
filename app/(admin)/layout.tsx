@@ -40,18 +40,11 @@
 //   );
 // }
 
-
-
-
-
-
-
-
 import { getServerSession } from "next-auth/next";
 import { redirect } from "next/navigation";
 import AdminSidebar from "@/components/admin/sidebar";
 import AdminHeader from "@/components/admin/header";
-import "@/app/globals.css"; 
+import "@/app/globals.css";
 import AuthProvider from "@/components/providers/SessionProvider";
 
 export const metadata = {
@@ -59,11 +52,17 @@ export const metadata = {
   description: "Manage your blog posts and content",
 };
 
-export default function AdminLayout({ children }: { children: React.ReactNode }) {
+export default function AdminLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className="bg-slate-100">
-        <AuthProvider> {/* Wraps the admin section in the NextAuth context */}
+      <body suppressHydrationWarning className="bg-slate-100">
+        <AuthProvider>
+          {" "}
+          {/* Wraps the admin section in the NextAuth context */}
           <div className="flex h-screen">
             <AdminSidebar />
             <div className="flex-1 flex flex-col overflow-hidden">

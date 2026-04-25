@@ -16,7 +16,6 @@
 //   );
 // }
 
-
 import "@/app/globals.css"; // Note the @ path to avoid relative depth issues
 
 export const metadata = {
@@ -32,7 +31,7 @@ export default function AuthLayout({
   return (
     <html lang="en">
       {/* No Header or Footer here - fully isolated */}
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

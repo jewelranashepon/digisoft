@@ -1,33 +1,54 @@
 /**
- * app/api/upload/route.ts
+ * app/api/image-upload/route.ts
  *
  * Next.js App Router image-upload API.
+ * Uses Supabase Storage for persistent image hosting.
  *
- * ── Storage options ──────────────────────────────────────────────────────────
- *  A) LOCAL DISK (default, zero config, dev-friendly)
- *     Saves to  public/uploads/<uuid>.<ext>
- *     Served at /uploads/<uuid>.<ext>
- *
- *  B) AWS S3 / Cloudflare R2
- *     Install:   npm i @aws-sdk/client-s3 @aws-sdk/s3-request-presigner
- *     Uncomment the S3 block below and set env vars.
- *
- *  C) Cloudinary
- *     Install:   npm i cloudinary
- *     Uncomment the Cloudinary block below and set env vars.
- * ────────────────────────────────────────────────────────────────────────────
+ * ── Setup Required ─────────────────────────────────────────────────────────
+ * 1. Create a storage bucket in Supabase named "codexadigital" (make it public)
+ * 2. Add environment variables:
+ *    - NEXT_PUBLIC_SUPABASE_URL (your project URL)
+ *    - NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY (new publishable key from Supabase)
+ *    - SUPABASE_SECRET_KEY (new secret key from Supabase)
+ *    - NEXT_PUBLIC_SUPABASE_BUCKET=codexadigital
+ * ───────────────────────────────────────────────────────────────────────────
  */
 
 import { NextRequest, NextResponse } from "next/server";
 import { randomUUID } from "crypto";
-import { writeFile, mkdir } from "fs/promises";
-import path from "path";
+import { createClient } from "@supabase/supabase-js";
 
-// ── Config ────────────────────────────────────────────────────────────────────
+// ── Config ───────────────────────────────────────────────────────────────────
 const MAX_SIZE_BYTES = 5 * 1024 * 1024; // 5 MB
-const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/svg+xml"];
+const ALLOWED_TYPES = [
+  "image/jpeg",
+  "image/png",
+  "image/webp",
+  "image/gif",
+  "image/svg+xml",
+];
 
-// ── Helper: extension from MIME ───────────────────────────────────────────────
+// Supabase configuration (new API keys)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabasePublishableKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+const supabaseSecretKey = process.env.SUPABASE_SECRET_KEY;
+const supabaseBucket =
+  process.env.NEXT_PUBLIC_SUPABASE_BUCKET || "codexa";
+
+// Initialize Supabase client
+const getSupabaseClient = () => {
+  // Use secret key for server-side operations
+  if (supabaseSecretKey && supabaseUrl) {
+    return createClient(supabaseUrl, supabaseSecretKey);
+  }
+  // Fall back to publishable key
+  if (supabaseUrl && supabasePublishableKey) {
+    return createClient(supabaseUrl, supabasePublishableKey);
+  }
+  return null;
+};
+
+// ── Helper: extension from MIME ─────────────────────────────────────────────
 function extFromMime(mime: string): string {
   const map: Record<string, string> = {
     "image/jpeg": "jpg",
@@ -40,7 +61,7 @@ function extFromMime(mime: string): string {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// POST /api/upload
+// POST /api/image-upload
 // ─────────────────────────────────────────────────────────────────────────────
 export async function POST(req: NextRequest) {
   try {
@@ -56,7 +77,7 @@ export async function POST(req: NextRequest) {
     if (!ALLOWED_TYPES.includes(file.type)) {
       return NextResponse.json(
         { error: `File type "${file.type}" is not allowed` },
-        { status: 415 }
+        { status: 415 },
       );
     }
 
@@ -65,94 +86,66 @@ export async function POST(req: NextRequest) {
     if (buffer.byteLength > MAX_SIZE_BYTES) {
       return NextResponse.json(
         { error: "File exceeds the 5 MB size limit" },
-        { status: 413 }
+        { status: 413 },
       );
     }
 
-    // ── OPTION A: Local disk ─────────────────────────────────────────────────
-    const url = await saveLocally(buffer, file.type);
-
-    // ── OPTION B: AWS S3 / Cloudflare R2 ────────────────────────────────────
-    // const url = await saveToS3(buffer, file.type);
-
-    // ── OPTION C: Cloudinary ─────────────────────────────────────────────────
-    // const url = await saveToCloudinary(buffer, file.type);
+    // 4. Upload to Supabase Storage
+    const url = await saveToSupabase(buffer, file.type);
 
     return NextResponse.json({ url }, { status: 200 });
   } catch (err) {
-    console.error("[upload] unexpected error:", err);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    console.error("[image-upload] unexpected error:", err);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
+    );
   }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// OPTION A — Local disk
+// Upload to Supabase Storage
 // ─────────────────────────────────────────────────────────────────────────────
-async function saveLocally(buffer: Buffer, mime: string): Promise<string> {
-  const uploadDir = path.join(process.cwd(), "public", "uploads");
-  await mkdir(uploadDir, { recursive: true });
+async function saveToSupabase(buffer: Buffer, mime: string): Promise<string> {
+  const supabase = getSupabaseClient();
 
-  const filename = `${randomUUID()}.${extFromMime(mime)}`;
-  await writeFile(path.join(uploadDir, filename), buffer);
-
-  // Return a public URL — Next.js serves /public as root
-  return `/uploads/${filename}`;
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// OPTION B — AWS S3 / Cloudflare R2
-// Requires: npm i @aws-sdk/client-s3
-// Env vars:  AWS_REGION, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY,
-//            S3_BUCKET_NAME, S3_PUBLIC_BASE_URL (e.g. https://cdn.example.com)
-// ─────────────────────────────────────────────────────────────────────────────
-/*
-import {
-  S3Client,
-  PutObjectCommand,
-} from "@aws-sdk/client-s3";
-
-const s3 = new S3Client({ region: process.env.AWS_REGION! });
-
-async function saveToS3(buffer: Buffer, mime: string): Promise<string> {
-  const key = `uploads/${randomUUID()}.${extFromMime(mime)}`;
-  await s3.send(
-    new PutObjectCommand({
-      Bucket: process.env.S3_BUCKET_NAME!,
-      Key: key,
-      Body: buffer,
-      ContentType: mime,
-      ACL: "public-read",
-    })
-  );
-  const base = process.env.S3_PUBLIC_BASE_URL!.replace(/\/$/, "");
-  return `${base}/${key}`;
-}
-*/
-
-// ─────────────────────────────────────────────────────────────────────────────
-// OPTION C — Cloudinary
-// Requires: npm i cloudinary
-// Env vars:  CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
-// ─────────────────────────────────────────────────────────────────────────────
-/*
-import { v2 as cloudinary } from "cloudinary";
-
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
-});
-
-async function saveToCloudinary(buffer: Buffer, _mime: string): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const stream = cloudinary.uploader.upload_stream(
-      { folder: "blog-uploads", resource_type: "image" },
-      (error, result) => {
-        if (error || !result) return reject(error ?? new Error("Cloudinary upload failed"));
-        resolve(result.secure_url);
-      }
+  // Check if Supabase is configured
+  if (!supabase || !supabaseUrl) {
+    console.warn("[image-upload] Supabase not configured, upload will fail");
+    throw new Error(
+      "Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY, and SUPABASE_SECRET_KEY",
     );
-    stream.end(buffer);
-  });
+  }
+
+  try {
+    const filename = `${randomUUID()}.${extFromMime(mime)}`;
+    const filePath = `uploads/${filename}`;
+
+    console.log("[image-upload] Uploading to Supabase bucket:", supabaseBucket);
+
+    // Upload to Supabase Storage
+    const { data, error } = await supabase.storage
+      .from(supabaseBucket)
+      .upload(filePath, buffer, {
+        contentType: mime,
+        upsert: false,
+      });
+
+    if (error) {
+      console.error("[image-upload] Supabase upload error:", error);
+      throw new Error(`Upload failed: ${error.message}`);
+    }
+
+    console.log("[image-upload] Upload successful:", data.path);
+
+    // Get public URL
+    const { data: urlData } = supabase.storage
+      .from(supabaseBucket)
+      .getPublicUrl(filePath);
+
+    return urlData.publicUrl;
+  } catch (err) {
+    console.error("[image-upload] Error:", err);
+    throw err;
+  }
 }
-*/

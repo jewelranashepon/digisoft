@@ -1,168 +1,132 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/db';
-import { getAuthToken, verifyToken } from '@/lib/auth';
-import { createPostSchema } from '@/lib/validations';
+import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/lib/db";
 
-// GET all posts (admin) or published posts (public)
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
-    const isAdmin = searchParams.get('admin') === 'true';
-    const page = parseInt(searchParams.get('page') || '1');
-    const limit = parseInt(searchParams.get('limit') || '10');
-    const categoryId = searchParams.get('categoryId');
-    const search = searchParams.get('search');
+    const admin = searchParams.get("admin");
+    const page = parseInt(searchParams.get("page") || "1");
+    const limit = parseInt(searchParams.get("limit") || "10");
+    const offset = (page - 1) * limit;
 
-    // Check admin authentication if admin flag is set
-    // if (isAdmin) {
-    //   const token = await getAuthToken();
-    //   if (!token || !verifyToken(token)) {
-    //     return NextResponse.json(
-    //       { error: 'Unauthorized' },
-    //       { status: 401 }
-    //     );
-    //   }
-    // }
-
-    const where: any = {};
-    if (!isAdmin) {
-      where.status = 'published';
-    }
-    if (categoryId) {
-      where.categoryId = categoryId;
-    }
-    if (search) {
-      where.OR = [
-        { title: { contains: search, mode: 'insensitive' } },
-        { excerpt: { contains: search, mode: 'insensitive' } },
-      ];
-    }
-
-    const skip = (page - 1) * limit;
-
+    // Get all posts with pagination
     const [posts, total] = await Promise.all([
       prisma.post.findMany({
-        where,
-        include: {
-          category: true,
-          tags: {
-            include: { tag: true },
-          },
-        },
-        orderBy: { createdAt: 'desc' },
-        skip,
+        skip: offset,
         take: limit,
+        orderBy: {
+          createdAt: "desc",
+        },
+        include: {
+          tags: {
+            include: {
+              tag: true,
+            },
+          },
+          category: true,
+        },
       }),
-      prisma.post.count({ where }),
+      prisma.post.count(),
     ]);
 
-    return NextResponse.json(
-      {
-        success: true,
-        posts: posts.map(post => ({
-          ...post,
-          tags: post.tags.map(pt => pt.tag),
-        })),
-        pagination: {
-          page,
-          limit,
-          total,
-          pages: Math.ceil(total / limit),
-        },
+    const totalPages = Math.ceil(total / limit);
+
+    return NextResponse.json({
+      success: true,
+      posts,
+      total,
+      pagination: {
+        page,
+        limit,
+        pages: totalPages,
+        total,
       },
-      { status: 200 }
-    );
-  } catch (error: any) {
-    console.error('[Posts GET Error]', error);
+    });
+  } catch (error) {
+    console.error("GET error:", error);
     return NextResponse.json(
-      { error: 'Failed to fetch posts' },
-      { status: 500 }
+      { error: "Internal server error" },
+      { status: 500 },
     );
   }
 }
 
-// POST create new post
 export async function POST(request: NextRequest) {
   try {
-    // Verify authentication
-    // const token = await getAuthToken();
-    // if (!token || !verifyToken(token)) {
-    //   return NextResponse.json(
-    //     { error: 'Unauthorized' },
-    //     { status: 401 }
-    //   );
-    // }
-
     const body = await request.json();
 
-    // Validate input
-    const validatedData = createPostSchema.parse(body);
+    const {
+      title,
+      slug,
+      excerpt,
+      content,
+      status,
+      categoryId,
+      metaTitle,
+      metaDescription,
+      metaKeywords,
+      images,
+      featuredImage,
+      tags,
+    } = body;
 
-    // Check if slug already exists
-    const existingPost = await prisma.post.findUnique({
-      where: { slug: validatedData.slug },
-    });
-
-    if (existingPost) {
+    if (!title || !slug || !content) {
       return NextResponse.json(
-        { error: 'Slug already exists' },
-        { status: 400 }
+        { error: "Missing required fields: title, slug, content" },
+        { status: 400 },
       );
     }
 
-    // Create post with tags
+    // Create post with Prisma
     const post = await prisma.post.create({
       data: {
-        title: validatedData.title,
-        slug: validatedData.slug,
-        excerpt: validatedData.excerpt,
-        content: validatedData.content,
-        featuredImage: validatedData.featuredImage,
-        images: validatedData.images || [],
-        status: validatedData.status,
-        metaTitle: validatedData.metaTitle,
-        metaDescription: validatedData.metaDescription,
-        metaKeywords: validatedData.metaKeywords,
-        categoryId: validatedData.categoryId,
-        publishedAt: validatedData.status === 'published' ? new Date() : null,
+        title,
+        slug,
+        excerpt: excerpt || null,
+        content,
+        status,
+        featuredImage: featuredImage?.url || null,
+        metaTitle: metaTitle || null,
+        metaDescription: metaDescription || null,
+        metaKeywords: metaKeywords || null,
+        images: images?.map((img: any) => img.url) || [],
+        publishedAt: status === "published" ? new Date() : null,
+        categoryId: categoryId || null,
         tags: {
-          create: (validatedData.tags || []).map(tagId => ({
-            tag: { connect: { id: tagId } },
-          })),
+          create: tags
+            ? tags.map((tagId: string) => ({
+                tagId,
+              }))
+            : [],
         },
       },
       include: {
-        category: true,
         tags: {
-          include: { tag: true },
+          include: {
+            tag: true,
+          },
         },
+        category: true,
       },
     });
 
-    return NextResponse.json(
-      {
-        success: true,
-        message: 'Post created successfully',
-        post: {
-          ...post,
-          tags: post.tags.map(pt => pt.tag),
-        },
-      },
-      { status: 201 }
-    );
+    return NextResponse.json({
+      success: true,
+      post,
+    });
   } catch (error: any) {
-    console.error('[Posts POST Error]', error);
+    console.error("POST error:", error);
 
-    if (error.name === 'ZodError') {
+    if (error.code === "P2002") {
       return NextResponse.json(
-        { error: 'Invalid input', details: error.errors },
-        { status: 400 }
+        { error: "A post with this slug already exists" },
+        { status: 400 },
       );
     }
 
     return NextResponse.json(
-      { error: 'Failed to create post' },
-      { status: 500 }
+      { error: "Failed to create post" },
+      { status: 500 },
     );
   }
 }
