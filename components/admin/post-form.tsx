@@ -49,10 +49,24 @@ export function PostForm({ postId, initialData }: PostFormProps) {
   const [categories, setCategories] = useState<Category[]>([]);
   const [tags, setTags] = useState<Tag[]>([]);
   const [uploadedImages, setUploadedImages] = useState<UploadedFile[]>(
-    initialData?.images || [],
+    Array.isArray(initialData?.images)
+      ? initialData.images.map((url: string) => ({
+          url,
+          path: url,
+          filename: "",
+          size: 0,
+        }))
+      : [],
   );
   const [featuredImage, setFeaturedImage] = useState<UploadedFile | null>(
-    initialData?.featuredImage || null,
+    initialData?.featuredImage
+      ? {
+          url: initialData.featuredImage,
+          path: initialData.featuredImage,
+          filename: "",
+          size: 0,
+        }
+      : null,
   );
 
   const [formData, setFormData] = useState({
@@ -65,7 +79,7 @@ export function PostForm({ postId, initialData }: PostFormProps) {
     metaTitle: initialData?.metaTitle || "",
     metaDescription: initialData?.metaDescription || "",
     metaKeywords: initialData?.metaKeywords || "",
-    selectedTags: initialData?.tags?.map((t: any) => t.id) || [],
+    selectedTags: initialData?.tags?.map((t: any) => t.tag?.id || t.id) || [],
   });
 
   const handleFeaturedUpload = (files: UploadedFile[]) => {

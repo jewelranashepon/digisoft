@@ -1,12 +1,48 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 
-export async function PUT(
+export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } },
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
-    const postId = params.id;
+    const { id: postId } = await params;
+
+    const post = await prisma.post.findUnique({
+      where: { id: postId },
+      include: {
+        tags: {
+          include: {
+            tag: true,
+          },
+        },
+        category: true,
+      },
+    });
+
+    if (!post) {
+      return NextResponse.json({ error: "Post not found" }, { status: 404 });
+    }
+
+    return NextResponse.json({
+      success: true,
+      post,
+    });
+  } catch (error) {
+    console.error("GET error:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
+    );
+  }
+}
+
+export async function PUT(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> },
+) {
+  try {
+    const { id: postId } = await params;
     const body = await request.json();
 
     const {
@@ -93,10 +129,10 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } },
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
-    const postId = params.id;
+    const { id: postId } = await params;
 
     // Delete the post (tags will be cascade deleted)
     await prisma.post.delete({
