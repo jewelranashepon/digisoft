@@ -12,12 +12,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let blogs: any[] = [];
 
   try {
-    const blogRes = await fetch(
-      `${baseUrl}/api/blog/published?limit=1000`,
-      {
-        next: { revalidate: 3600 },
-      }
-    );
+    const blogRes = await fetch(`${baseUrl}/api/blog/published?limit=1000`, {
+      next: { revalidate: 3600 },
+    });
 
     if (!blogRes.ok) {
       throw new Error(`Failed to fetch blogs: ${blogRes.status}`);
@@ -25,6 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     const blogData = await blogRes.json();
     blogs = blogData?.posts || [];
+    console.log(`✅ Sitemap: Loaded ${blogs.length} blog posts`);
   } catch (error) {
     console.error("❌ Blog fetch failed:", error);
   }
@@ -50,7 +48,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: `${baseUrl}/services`,
         lastModified: new Date(),
         changeFrequency: "weekly",
-        priority: 0.9,
+        priority: 0.95,
       },
       {
         url: `${baseUrl}/packages`,
@@ -85,7 +83,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ];
 
     // ==============================
-    // 🔥 SERVICES (SAFE)
+    // 🔥 SERVICES (PRE-GENERATED PAGES)
     // ==============================
     const servicePages: MetadataRoute.Sitemap = (services || [])
       .filter((service) => service?.id)
@@ -93,8 +91,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: `${baseUrl}/services/${service.id}`,
         lastModified: new Date(),
         changeFrequency: "monthly",
-        priority: 0.9,
+        priority: 0.85,
       }));
+
+    console.log(
+      `✅ Sitemap: Generated ${servicePages.length} service detail pages`,
+    );
 
     // ==============================
     // 🔥 BLOG PAGES (SAFE)
@@ -103,9 +105,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .filter((post: any) => post?.slug)
       .map((post: any) => ({
         url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: new Date(
-          post.updatedAt || post.createdAt || new Date()
-        ),
+        lastModified: new Date(post.updatedAt || post.createdAt || new Date()),
         changeFrequency: "weekly",
         priority: 0.8,
       }));
@@ -113,16 +113,40 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // ==============================
     // ✅ FINAL SITEMAP
     // ==============================
-    return [...staticPages, ...servicePages, ...blogPages];
+    const finalSitemap = [...staticPages, ...servicePages, ...blogPages];
+    console.log(
+      `✅ Sitemap: Total URLs = ${finalSitemap.length} (${staticPages.length} static + ${servicePages.length} services + ${blogPages.length} blogs)`,
+    );
+
+    return finalSitemap;
   } catch (error) {
     console.error("❌ Sitemap error:", error);
 
-    // अंतिम fallback → at least homepage
-    return [
+    // Fallback with critical pages
+    const fallbackSitemap: MetadataRoute.Sitemap = [
       {
         url: `${baseUrl}/`,
         lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: 1,
+      },
+      {
+        url: `${baseUrl}/services`,
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: 0.95,
+      },
+      {
+        url: `${baseUrl}/blog`,
+        lastModified: new Date(),
+        changeFrequency: "weekly",
+        priority: 0.9,
       },
     ];
+
+    console.log(
+      `⚠️ Sitemap: Using fallback with ${fallbackSitemap.length} URLs`,
+    );
+    return fallbackSitemap;
   }
 }

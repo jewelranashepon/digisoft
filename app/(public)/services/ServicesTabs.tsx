@@ -41,7 +41,8 @@ export default function ServicesTabs() {
 
   return (
     <section className="container mx-auto px-4 py-20">
-      {/* TABS */}
+
+      {/* ================= TABS (UNCHANGED) ================= */}
       <Tabs
         value={activeTab}
         onValueChange={(v) => setActiveTab(v as Category)}
@@ -72,7 +73,17 @@ export default function ServicesTabs() {
         </TabsList>
       </Tabs>
 
-      {/* SERVICE CARDS */}
+      {/* ================= SEO FIX (NO DESIGN CHANGE) ================= */}
+      {/* Hidden full link list for Google crawler */}
+      <div className="hidden">
+        {services.map((service) => (
+          <Link key={service.id} href={`/services/${service.id}`}>
+            {service.title}
+          </Link>
+        ))}
+      </div>
+
+      {/* ================= SERVICE CARDS (UNCHANGED DESIGN) ================= */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12">
         {filteredServices.map((service) => (
           <article

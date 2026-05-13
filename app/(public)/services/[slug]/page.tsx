@@ -13,6 +13,13 @@ import FaqSection from "@/components/services/faq-section";
 /* =========================
    ✅ ENHANCED METADATA-
 ========================= */
+export const dynamic = "force-static";
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  return services.map((service) => ({ slug: service.id }));
+}
+
 export async function generateMetadata({
   params,
 }: {
